@@ -42,6 +42,6 @@ typedef enum {
 
 
 - (void)showInLocationType:(CJPopupViewLocation)locationType animationType:(CJPopupViewAnimation)animationType;
-- (void)dismissWithAnimationType:(CJPopupViewAnimation)animationType;
+- (void)dismissPopupViewWithAnimationType:(CJPopupViewAnimation)animationType;
 
 @end

@@ -36,7 +36,10 @@
 
 
 - (void)dismissPopupView:(UIView *)view{
-    [view dismissWithAnimationType:CJPopupViewAnimationCATransform3D];
+    [view dismissPopupViewWithAnimationType:CJPopupViewAnimationCATransform3D];
+    
+    NSString *message = @"[alert show]应该放在dismiss...之后，否则会造成dismiss...所对应的keywindow不对应";
+    [[[UIAlertView alloc]initWithTitle:@"注意" message:message delegate:nil cancelButtonTitle:@"好的，一定注意" otherButtonTitles:nil] show];
 }
 
 

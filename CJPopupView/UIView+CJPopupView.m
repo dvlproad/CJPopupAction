@@ -52,7 +52,7 @@
 //        if (self.canDismissAutomatic) {
             CGRect dismissControlFrame = CGRectMake(0, 0, keywindow.frame.size.width, keywindow.frame.size.height);
             UIControl * dismissControl = [[UIControl alloc] initWithFrame:dismissControlFrame];
-            [dismissControl addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
+            [dismissControl addTarget:self action:@selector(dismissControlAction) forControlEvents:UIControlEventTouchUpInside];
             dismissControl.backgroundColor = [UIColor clearColor];
             [overlay addSubview:dismissControl];
 //        }
@@ -102,11 +102,11 @@
     }
 }
 
-- (void)dismiss{
-    [self dismissWithAnimationType:CJPopupViewAnimationNormal];
+- (void)dismissControlAction{
+    [self dismissPopupViewWithAnimationType:CJPopupViewAnimationNormal];
 }
 
-- (void)dismissWithAnimationType:(CJPopupViewAnimation)animationType
+- (void)dismissPopupViewWithAnimationType:(CJPopupViewAnimation)animationType
 {
     UIWindow * keywindow = [[UIApplication sharedApplication] keyWindow];
     if (keywindow.subviews.count < 2) {
