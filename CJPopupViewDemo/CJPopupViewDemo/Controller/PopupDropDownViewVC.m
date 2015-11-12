@@ -27,9 +27,22 @@
     
     UIView *customView = [[UIView alloc]initWithFrame:CGRectMake(x, 0, w, h)];
     customView.backgroundColor = [UIColor greenColor];
+    sender.tag = 10;    //技巧：为避免每个弹出框的tag一样，这里设置sender.tag，从而弹出框的tag就是sender.tag+固定值了
     [sender popupDropDownView:customView inLowestSuperview:self.view complete:^{
         NSLog(@"完成");
     }];
+    
+    
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>下面代码可加可不加>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+    //__weak id sender_weak = self; //否知block循环
+    [sender setBlockTapBGComplete:^{
+        NSLog(@"111...block_TapBGComplete");
+        
+    } blockHideDropDownViewComplete:^{
+        NSLog(@"222...block_HideDropDownViewComplete");
+        
+    }];
+    //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<//
 }
 
 - (IBAction)popup_DropDwonView2:(UIButton *)sender{ //Clip Subviews
@@ -40,12 +53,13 @@
     
     UIView *customView = [[UIView alloc]initWithFrame:CGRectMake(x, 0, w, h)];
     customView.backgroundColor = [UIColor greenColor];
+    sender.tag = 120;
     [sender popupDropDownView:customView inLowestSuperview:self.smallView1 complete:^{
         NSLog(@"完成");
     }];
 }
 
-- (IBAction)popup_DropDwonView3:(UIButton *)sender{ //Clip Subviews
+- (IBAction)popup_DropDwonView3:(UIButton *)sender{
     CGFloat w = CGRectGetWidth(sender.frame);
     CGFloat h = 50;
     CGPoint origin = [sender.superview convertPoint:sender.frame.origin toView:self.view];
@@ -53,6 +67,7 @@
     
     UIView *customView = [[UIView alloc]initWithFrame:CGRectMake(x, 0, w, h)];
     customView.backgroundColor = [UIColor greenColor];
+    sender.tag = 30;
     [sender popupDropDownView:customView inLowestSuperview:self.view complete:^{
         NSLog(@"完成");
     }];
