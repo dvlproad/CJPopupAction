@@ -1,5 +1,5 @@
 //
-//  UIView+CJPopupView.h
+//  UIView+PopupInWindow.h
 //  CJPopupViewDemo
 //
 //  Created by lichq on 6/22/15.
@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 typedef enum{
-    CJPopupViewLocationBottom = 0,
-    CJPopupViewLocationCenter
-}CJPopupViewLocation;
+    PopupInWindowLocationBottom = 0,
+    PopupInWindowLocationCenter
+}PopupInWindowLocation;
 
 typedef enum {
 //    MJPopupViewAnimationFade = 0,
@@ -31,7 +31,7 @@ typedef enum {
 
 
 
-@interface UIView (CJPopupView){
+@interface UIView (PopupInWindow){
     
 }
 //@property(nonatomic, strong) id customView;
@@ -41,7 +41,7 @@ typedef enum {
 
 
 
-- (void)showInLocationType:(CJPopupViewLocation)locationType animationType:(CJPopupViewAnimation)animationType;
-- (void)dismissPopupViewWithAnimationType:(CJPopupViewAnimation)animationType;
+- (void)popupInWindowLocationType:(PopupInWindowLocation)locationType animationType:(CJPopupViewAnimation)animationType;
+- (void)dismissPopupViewInWindowWithAnimationType:(CJPopupViewAnimation)animationType;
 
 @end

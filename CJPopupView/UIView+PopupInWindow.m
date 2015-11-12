@@ -1,18 +1,18 @@
 //
-//  UIView+CJPopupView.m
+//  UIView+PopupInWindow.m
 //  CJPopupViewDemo
 //
 //  Created by lichq on 6/22/15.
 //  Copyright (c) 2015 ciyouzen. All rights reserved.
 //
 
-#import "UIView+CJPopupView.h"
+#import "UIView+PopupInWindow.h"
 #define kPopupViewAnimationDuration 0.3f
 #define kCJPopupViewTag     23942
 #define kCJOverlayViewTag   23945
 
 
-@implementation UIView (CJPopupView)
+@implementation UIView (PopupInWindow)
 
 
 //- (BOOL)canDismissAutomatic{
@@ -29,7 +29,7 @@
 #pragma mark - 显示/隐藏
 
 
-- (void)showInLocationType:(CJPopupViewLocation)locationType animationType:(CJPopupViewAnimation)animationType
+- (void)popupInWindowLocationType:(PopupInWindowLocation)locationType animationType:(CJPopupViewAnimation)animationType
 {
 //    self.locationType = locationType;
     
@@ -67,7 +67,7 @@
         [keywindow addSubview:self];
         
         
-        if (locationType == CJPopupViewLocationBottom) {
+        if (locationType == PopupInWindowLocationBottom) {
 //        if (locationType == CJPopupViewLocationBottom && animationType == CJPopupViewAnimationNormal) {
             self.frame = CGRectMake(0, keywindow.frame.size.height, keywindow.frame.size.width, self.frame.size.height);
             [UIView animateWithDuration:kPopupViewAnimationDuration animations:^{
@@ -75,7 +75,7 @@
             }];
             
 //        }else if (locationType == CJPopupViewLocationCenter && animationType == CJPopupViewAnimationCATransform3D){
-        }else if (locationType == CJPopupViewLocationCenter){
+        }else if (locationType == PopupInWindowLocationCenter){
             self.center = keywindow.center;
             /* 动画
              self.alpha = 0;
@@ -103,10 +103,10 @@
 }
 
 - (void)dismissControlAction{
-    [self dismissPopupViewWithAnimationType:CJPopupViewAnimationNormal];
+    [self dismissPopupViewInWindowWithAnimationType:CJPopupViewAnimationNormal];
 }
 
-- (void)dismissPopupViewWithAnimationType:(CJPopupViewAnimation)animationType
+- (void)dismissPopupViewInWindowWithAnimationType:(CJPopupViewAnimation)animationType
 {
     UIWindow * keywindow = [[UIApplication sharedApplication] keyWindow];
     if (keywindow.subviews.count < 2) {

@@ -7,10 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "UIView+CJPopupView.h"
-#import "WelcomeViewToPop.h"
+#import "PopupInWindowVC.h"
+#import "PopupDropDownViewVC.h"
 
-@interface ViewController ()<CJPopupViewDelegate>
+@interface ViewController ()
 
 @end
 
@@ -19,28 +19,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = NSLocalizedString(@"PopupViewDemo", nil);
+}
+
+- (IBAction)goPopupInWindowVC:(id)sender{
+    PopupInWindowVC *vc = [[PopupInWindowVC alloc]initWithNibName:@"PopupInWindowVC" bundle:nil];
+    vc.title = [sender titleForState:UIControlStateNormal];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)goPopupDropDownViewVC:(id)sender{
+    PopupDropDownViewVC *vc = [[PopupDropDownViewVC alloc]initWithNibName:@"PopupDropDownViewVC" bundle:nil];
+    vc.title = [sender titleForState:UIControlStateNormal];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
-- (IBAction)popupView_bottom:(id)sender{
-    WelcomeViewToPop *view = (WelcomeViewToPop *)[[[NSBundle mainBundle] loadNibNamed:@"WelcomeViewToPop" owner:nil options:nil] lastObject];
-    view.delegate = self;
-    [view showInLocationType:CJPopupViewLocationBottom animationType:CJPopupViewAnimationCATransform3D];
-}
-
-- (IBAction)popupView_center:(id)sender{
-    WelcomeViewToPop *view = (WelcomeViewToPop *)[[[NSBundle mainBundle] loadNibNamed:@"WelcomeViewToPop" owner:nil options:nil] lastObject];
-    view.delegate = self;
-    [view showInLocationType:CJPopupViewLocationCenter animationType:CJPopupViewAnimationCATransform3D];
-}
-
-
-- (void)dismissPopupView:(UIView *)view{
-    [view dismissPopupViewWithAnimationType:CJPopupViewAnimationCATransform3D];
-    
-    NSString *message = @"[alert show]应该放在dismiss...之后，否则会造成dismiss...所对应的keywindow不对应";
-    [[[UIAlertView alloc]initWithTitle:@"注意" message:message delegate:nil cancelButtonTitle:@"好的，一定注意" otherButtonTitles:nil] show];
-}
 
 
 - (void)didReceiveMemoryWarning {

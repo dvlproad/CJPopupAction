@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CJPopupView"
-  s.version      = "0.0.14"
+  s.version      = "1.0.0"
   s.summary      = "This is a category of UIView to popup himself."
 
   s.description  = <<-DESC
@@ -53,8 +53,9 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "dvlproad" => "913168921@qq.com" }
+  # s.author             = { "dvlproad" => "913168921@qq.com" }
   # Or just: s.author    = "dvlproad"
+  s.author    		 = "dvlproad"
   # s.authors            = { "dvlproad" => "913168921@qq.com" }
   # s.social_media_url   = "http://twitter.com/dvlproad"
 
@@ -78,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "0.0.14" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "1.0.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
