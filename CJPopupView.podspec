@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "CJPopupView"
   s.version      = "1.0.0"
-  s.summary      = "This is a category of UIView to popup himself."
+  s.summary      = "UIView的类别，用来实现UIView弹出popupView的一个Uiew的类别"
 
   s.description  = <<-DESC
                    A longer description of CJPopupView in Markdown format.
