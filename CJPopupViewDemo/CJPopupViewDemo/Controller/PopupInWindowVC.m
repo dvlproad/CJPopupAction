@@ -22,7 +22,7 @@
 }
 
 
-- (IBAction)popupInWindow_center:(UIButton *)sender{
+- (IBAction)popupInWindow_center:(id)sender{
     WelcomeViewToPop *view = (WelcomeViewToPop *)[[[NSBundle mainBundle] loadNibNamed:@"WelcomeViewToPop" owner:nil options:nil] lastObject];
     view.delegate = self;
     [view popupInWindowLocationType:PopupInWindowLocationCenter animationType:CJPopupViewAnimationCATransform3D];

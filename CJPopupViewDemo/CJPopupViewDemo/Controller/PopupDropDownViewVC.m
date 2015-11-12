@@ -20,8 +20,38 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-- (IBAction)popup_DropDwonView:(UIButton *)sender{
-    UIView *customView = [[UIView alloc]initWithFrame:CGRectMake(10, 0, CGRectGetWidth(self.view.frame)-20, 100)];
+- (IBAction)popup_DropDwonView1:(UIButton *)sender{
+    CGFloat x = CGRectGetMinX(sender.frame);
+    CGFloat w = CGRectGetWidth(sender.frame);
+    CGFloat h = 100;
+    
+    UIView *customView = [[UIView alloc]initWithFrame:CGRectMake(x, 0, w, h)];
+    customView.backgroundColor = [UIColor greenColor];
+    [sender popupDropDownView:customView inLowestSuperview:self.view complete:^{
+        NSLog(@"完成");
+    }];
+}
+
+- (IBAction)popup_DropDwonView2:(UIButton *)sender{ //Clip Subviews
+    CGFloat w = CGRectGetWidth(sender.frame);
+    CGFloat h = 50;
+    CGFloat x = CGRectGetMinX(sender.frame);
+    
+    
+    UIView *customView = [[UIView alloc]initWithFrame:CGRectMake(x, 0, w, h)];
+    customView.backgroundColor = [UIColor greenColor];
+    [sender popupDropDownView:customView inLowestSuperview:self.smallView1 complete:^{
+        NSLog(@"完成");
+    }];
+}
+
+- (IBAction)popup_DropDwonView3:(UIButton *)sender{ //Clip Subviews
+    CGFloat w = CGRectGetWidth(sender.frame);
+    CGFloat h = 50;
+    CGPoint origin = [sender.superview convertPoint:sender.frame.origin toView:self.view];
+    CGFloat x = origin.x;
+    
+    UIView *customView = [[UIView alloc]initWithFrame:CGRectMake(x, 0, w, h)];
     customView.backgroundColor = [UIColor greenColor];
     [sender popupDropDownView:customView inLowestSuperview:self.view complete:^{
         NSLog(@"完成");

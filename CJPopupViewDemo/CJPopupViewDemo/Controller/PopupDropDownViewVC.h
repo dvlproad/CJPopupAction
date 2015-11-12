@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PopupDropDownViewVC : UIViewController
+@interface PopupDropDownViewVC : UIViewController{
+    
+}
+@property(nonatomic, weak) IBOutlet UIView *smallView1;
+@property(nonatomic, weak) IBOutlet UIView *smallView2;
 
 @end

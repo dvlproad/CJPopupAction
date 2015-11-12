@@ -73,7 +73,7 @@
     //第一个参数必须为所要转化的rect的视图的父视图，这里可以将父视图直接写出，也可用该视图的superview来替代，这样更方便
     //NSLog(@"rectInSuperView_self = %@", NSStringFromCGRect(rectInSuperView_self));
     
-    CGFloat x = self.frame.origin.x;
+    CGFloat x = rectInSuperView_self.origin.x;
     CGFloat y = rectInSuperView_self.origin.y + self.frame.size.height;
     CGFloat w = self.frame.size.width;
     
