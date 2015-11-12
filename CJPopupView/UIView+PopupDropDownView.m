@@ -134,6 +134,7 @@
     [self hideDropDownView_popupDropDownView];
 }
 
+#pragma mark - 隐藏DropDownView的方法
 - (void)hideDropDownView_popupDropDownView{
     UIView *extendView = [self.lowestSuperviewLocation viewWithTag:kTagExtendView];
     UIView *tapV = [self.lowestSuperviewLocation viewWithTag:kTagTapV];

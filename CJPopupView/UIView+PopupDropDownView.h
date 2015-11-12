@@ -17,4 +17,6 @@
 - (void)popupDropDownView:(UIView *)extendView_m inLowestSuperview:(UIView *)lowestSuperview complete:(void(^)(void))block;
 - (void)setBlockTapBGComplete:(void(^)(void))block_TapBGComplete_m blockHideDropDownViewComplete:(void(^)(void))block_HideComplete_m;
 
+- (void)hideDropDownView_popupDropDownView;//隐藏DropDownView的方法
+
 @end

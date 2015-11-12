@@ -28,9 +28,15 @@
     UIView *customView = [[UIView alloc]initWithFrame:CGRectMake(x, 0, w, h)];
     customView.backgroundColor = [UIColor greenColor];
     sender.tag = 10;    //技巧：为避免每个弹出框的tag一样，这里设置sender.tag，从而弹出框的tag就是sender.tag+固定值了
-    [sender popupDropDownView:customView inLowestSuperview:self.view complete:^{
-        NSLog(@"完成");
-    }];
+    
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        [sender popupDropDownView:customView inLowestSuperview:self.view complete:^{
+            NSLog(@"完成");
+        }];
+    }else{
+        [sender hideDropDownView_popupDropDownView];
+    }
     
     
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>下面代码可加可不加>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
