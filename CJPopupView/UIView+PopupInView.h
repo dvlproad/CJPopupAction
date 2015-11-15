@@ -18,6 +18,6 @@
 - (void)popupInView:(UIView *)overlay atLocationPoint:(CGPoint)locationPoint withSize:(CGSize)size_self complete:(void(^)(void))block;
 - (void)setBlockTapBGComplete:(void(^)(void))block_TapBGComplete_m blockHideDropDownViewComplete:(void(^)(void))block_HideComplete_m;
 
-- (void)dismissPopupView_popupInView;//隐藏DropDownView的方法
+- (void)dismissPopupView_popupInView;
 
 @end
