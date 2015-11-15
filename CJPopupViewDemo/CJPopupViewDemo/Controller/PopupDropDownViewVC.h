@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface PopupDropDownViewVC : UIViewController{
-    
+    UIView *popupView1;
+    UIView *popupView2;
+    UIView *popupView3;
 }
 @property(nonatomic, weak) IBOutlet UIView *smallView1;
 @property(nonatomic, weak) IBOutlet UIView *smallView2;

@@ -9,8 +9,7 @@
 #import "UIView+PopupDropDownView.h"
 #import <objc/runtime.h>
 
-#define kTagExtendView  (self.tag + 8881)   //技巧：为避免每个弹出框的tag一样，这里加上self.tag
-#define kTagTapV        (self.tag + 8882)
+#define kTagTapV        (self.tag + 8882)   //技巧：为避免每个弹出框的点击背景的tag一样，这里加上self.tag
 
 @implementation UIView (PopupDropDownView)
 
@@ -48,68 +47,49 @@
 
 
 #pragma mark - 要调用的方法
-- (void)popupDropDownView:(UIView *)extendView_m inLowestSuperview:(UIView *)lowestSuperview complete:(void(^)(void))block{
+- (void)popupInView:(UIView *)overlay atLocationPoint:(CGPoint)locationPoint withSize:(CGSize)size_self complete:(void(^)(void))block{
     
-    //UIView *popupView = [keywindow viewWithTag:kCJPopupViewTag];
-    //UIView *overlay = [keywindow viewWithTag:kCJOverlayViewTag];
-    UIView *extendView = [self.lowestSuperviewLocation viewWithTag:kTagExtendView];
+    self.lowestSuperviewLocation = overlay;;
+    
     UIView *tapV = [self.lowestSuperviewLocation viewWithTag:kTagTapV];
-    
-    if (extendView) {
-        [extendView removeFromSuperview];
+    if (tapV) { //tapV是指radioButtons组合下的点击区域（不包括radioButtons区域），用来点击之后隐藏列表
+        [self removeFromSuperview];
         [tapV removeFromSuperview];
-        extendView = nil;
-        tapV = nil;
-    }
-    
-    self.lowestSuperviewLocation = lowestSuperview;
-    
-    //执行隐藏的手势视图
-    extendView = extendView_m;
-    
-    extendView.tag = kTagExtendView;
-    
-    
-    //radioButtons在superView中对应的y、rect值为：
-    CGRect rectInSuperView_self = [self.superview convertRect:self.frame toView:self.lowestSuperviewLocation];
-    //第一个参数必须为所要转化的rect的视图的父视图，这里可以将父视图直接写出，也可用该视图的superview来替代，这样更方便
-    //NSLog(@"rectInSuperView_self = %@", NSStringFromCGRect(rectInSuperView_self));
-    
-    CGFloat x = rectInSuperView_self.origin.x;
-    CGFloat y = rectInSuperView_self.origin.y + self.frame.size.height;
-    CGFloat w = self.frame.size.width;
-    
-    if (!tapV) { //tapV是指radioButtons组合下的点击区域（不包括radioButtons区域），用来点击之后隐藏列表
+    }else{
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bgTappedAction_popupDropDownView:)];
-        
-        CGFloat h = self.lowestSuperviewLocation.frame.size.height - self.frame.origin.y - self.frame.size.height;
-        
-        tapV = [[UIView alloc] initWithFrame:CGRectMake(x, y , w, h)];
+        tapV = [[UIView alloc] initWithFrame:CGRectZero];
         tapV.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.5];
         tapV.tag = kTagTapV;
         [tapV addGestureRecognizer:tapGesture];
     }
     [self.lowestSuperviewLocation addSubview:tapV];
+    [self.lowestSuperviewLocation addSubview:self];
     
-    x = extendView_m.frame.origin.x;
-    w = extendView_m.frame.size.width;
     
-    CGFloat h_extendView = extendView.frame.size.height;
-    CGRect rect = CGRectMake(x, y, w, 0);
-    extendView.frame = rect;
-    [self.lowestSuperviewLocation addSubview:extendView];
+    CGFloat x = locationPoint.x;
+    CGFloat y_self = locationPoint.y;
+    CGFloat y_tapV = locationPoint.y;
+    CGFloat w = size_self.width;
     
-    //动画设置位置
+    CGFloat h_self_show = size_self.height;
+    CGFloat h_self_hide = 0;
+    CGFloat h_tapV = self.lowestSuperviewLocation.frame.size.height - y_tapV;
+    
+    CGRect rect_self_hide = CGRectMake(x, y_self, w, h_self_hide);
+    CGRect rect_self_show = CGRectMake(x, y_self, w, h_self_show);
+    CGRect rect_tapV = CGRectMake(x, y_tapV , w, h_tapV);
+    
+    //动画设置
+    [tapV setFrame:rect_tapV];
+    [self setFrame:rect_self_hide];
     [UIView animateWithDuration:0.3 animations:^{
         tapV.alpha = 0.2;
-        extendView.alpha = 0.2;
+        self.alpha = 0.2;
         
         tapV.alpha = 1.0;
-        extendView.alpha = 1.0;
-        
-        CGRect rect_extendView = extendView.frame;
-        rect_extendView.size.height = h_extendView;
-        extendView.frame = rect_extendView;
+        self.alpha = 1.0;
+    
+        [self setFrame:rect_self_show];
     }];
     
     if(block){
@@ -131,27 +111,32 @@
         self.block_TapBGComplete();
     }
     
-    [self hideDropDownView_popupDropDownView];
+    [self dismiss_popupDropDownView];
 }
 
 #pragma mark - 隐藏DropDownView的方法
-- (void)hideDropDownView_popupDropDownView{
-    UIView *extendView = [self.lowestSuperviewLocation viewWithTag:kTagExtendView];
+- (void)dismiss_popupDropDownView{
+    if (self.lowestSuperviewLocation == nil) {
+        NSLog(@"Error: 请检查是否是重新生成了popupView，而导致self.lowestSuperviewLocation == nil");
+        return;
+    }
+    
     UIView *tapV = [self.lowestSuperviewLocation viewWithTag:kTagTapV];
     
-    CGRect rect = extendView.frame;
-    rect.size.height = 0;
+    CGRect rect_self_hide = self.frame;//此时rect_self_hide = rect_self_show;
+    rect_self_hide.size.height = 0;
     [UIView animateWithDuration:0.3 animations:^{
         tapV.alpha = 1.0f;
-        extendView.alpha = 1.0f;
+        self.alpha = 1.0f;
         
         //要设置成0，不设置非零值如0.2，是为了防止在显示出来的时候，在0.3秒内很快按两次按钮，仍有view存在
         tapV.alpha = 0.0f;
-        extendView.alpha = 0.0f;
+        self.alpha = 0.0f;
         
-        extendView.frame = rect;
+        [self setFrame:rect_self_hide];
+        
     }completion:^(BOOL finished) {
-        [extendView removeFromSuperview];
+        [self removeFromSuperview];
         [tapV removeFromSuperview];
     }];
     
