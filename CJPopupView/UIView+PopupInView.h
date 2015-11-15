@@ -16,8 +16,8 @@
 
 
 - (void)popupInView:(UIView *)overlay atLocationPoint:(CGPoint)locationPoint withSize:(CGSize)size_self complete:(void(^)(void))block;
-- (void)setBlockTapBGComplete:(void(^)(void))block_TapBGComplete_m blockHideDropDownViewComplete:(void(^)(void))block_HideComplete_m;
+- (void)setBlockTapBGComplete:(void(^)(void))block_TapBGComplete_m blockPopupViewDismissComplete:(void(^)(void))block_HideComplete_m;
 
-- (void)dismissPopupView_popupInView;
+- (void)dismissFromSuperView_popupInView;
 
 @end

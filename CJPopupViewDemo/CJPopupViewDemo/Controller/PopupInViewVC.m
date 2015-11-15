@@ -43,7 +43,7 @@
             NSLog(@"完成");
         }];
     }else{
-        [popupView1 dismissPopupView_popupInView];
+        [popupView1 dismissFromSuperView_popupInView];
     }
     
     
@@ -52,8 +52,8 @@
         NSLog(@"111...block_TapBGComplete");
         sender.selected = !sender.selected;
         
-    } blockHideDropDownViewComplete:^{
-        NSLog(@"222...block_HideDropDownViewComplete");
+    } blockPopupViewDismissComplete:^{
+        NSLog(@"222...blockPopupViewDismissComplete");
         
     }];
     //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<//
@@ -68,7 +68,7 @@
         
         popupView2 = popupView;
     }
-    [self popupDropDownView:popupView2 inView:self.smallView1 underButton:sender withHeight:50];
+    [self popupDropDownView:popupView2 inView:self.smallView1 underView:sender withHeight:50 complete:nil];
 }
 
 - (IBAction)popup_DropDwonView3:(UIButton *)sender{
@@ -79,27 +79,25 @@
         
         popupView3 = popupView;
     }
-    [self popupDropDownView:popupView3 inView:self.view underButton:sender withHeight:50];
+    [self popupDropDownView:popupView3 inView:self.view underView:sender withHeight:50 complete:nil];
 }
 
-- (void)popupDropDownView:(UIView *)popupView inView:(UIView *)popupSuperview underButton:(UIButton *)btn withHeight:(CGFloat)h_popupView{
-    CGPoint pointBtnConvert = [btn.superview convertPoint:btn.frame.origin toView:popupSuperview];
-    CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(btn.frame));
-    CGSize size_popupView = CGSizeMake(CGRectGetWidth(btn.frame), h_popupView);
+- (void)popupDropDownView:(UIView *)popupView inView:(UIView *)popupSuperview underView:(UIButton *)sender withHeight:(CGFloat)h_popupView complete:(void(^)(void))block{
+    CGPoint pointBtnConvert = [sender.superview convertPoint:sender.frame.origin toView:popupSuperview];
+    CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
+    CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
     
-    btn.selected = !btn.selected;
-    if (btn.selected) {
-        [popupView popupInView:popupSuperview atLocationPoint:pointLocation withSize:size_popupView complete:^{
-            //NSLog(@"完成");
-        }];
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        [popupView popupInView:popupSuperview atLocationPoint:pointLocation withSize:size_popupView complete:block];
     }else{
-        [popupView dismissPopupView_popupInView];
+        [popupView dismissFromSuperView_popupInView];
     }
     
     [popupView setBlockTapBGComplete:^{
-        btn.selected = !btn.selected;
+        sender.selected = !sender.selected;
         
-    } blockHideDropDownViewComplete:^{
+    } blockPopupViewDismissComplete:^{
         
     }];
 }

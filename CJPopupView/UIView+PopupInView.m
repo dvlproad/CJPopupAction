@@ -98,7 +98,7 @@
 }
 
 
-- (void)setBlockTapBGComplete:(void(^)(void))block_TapBGComplete_m blockHideDropDownViewComplete:(void(^)(void))block_HideComplete_m{
+- (void)setBlockTapBGComplete:(void(^)(void))block_TapBGComplete_m blockPopupViewDismissComplete:(void(^)(void))block_HideComplete_m{
     self.block_TapBGComplete = block_TapBGComplete_m;
     self.block_HideComplete = block_HideComplete_m;
 }
@@ -111,11 +111,11 @@
         self.block_TapBGComplete();
     }
     
-    [self dismissPopupView_popupInView];
+    [self dismissFromSuperView_popupInView];
 }
 
-#pragma mark - 隐藏DropDownView的方法
-- (void)dismissPopupView_popupInView{
+#pragma mark - 隐藏PopupView的方法
+- (void)dismissFromSuperView_popupInView{
     if (self.lowestSuperviewLocation == nil) {
         NSLog(@"Error: 请检查是否是重新生成了popupView，而导致self.lowestSuperviewLocation == nil");
         return;
