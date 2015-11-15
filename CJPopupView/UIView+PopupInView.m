@@ -1,17 +1,17 @@
 //
-//  UIView+PopupDropDownView.m
+//  UIView+PopupInView.m
 //  CJPopupViewDemo
 //
 //  Created by lichq on 15/11/12.
 //  Copyright (c) 2015年 ciyouzen. All rights reserved.
 //
 
-#import "UIView+PopupDropDownView.h"
+#import "UIView+PopupInView.h"
 #import <objc/runtime.h>
 
 #define kTagTapV        (self.tag + 8882)   //技巧：为避免每个弹出框的点击背景的tag一样，这里加上self.tag
 
-@implementation UIView (PopupDropDownView)
+@implementation UIView (PopupInView)
 
 #pragma mark - 在类别中添加属性
 @dynamic lowestSuperviewLocation;
@@ -56,7 +56,7 @@
         [self removeFromSuperview];
         [tapV removeFromSuperview];
     }else{
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bgTappedAction_popupDropDownView:)];
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bgTappedAction_popupInView:)];
         tapV = [[UIView alloc] initWithFrame:CGRectZero];
         tapV.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.5];
         tapV.tag = kTagTapV;
@@ -105,17 +105,17 @@
 
 
 #pragma mark - 内部私有方法
-- (void)bgTappedAction_popupDropDownView:(UITapGestureRecognizer *)tap{
+- (void)bgTappedAction_popupInView:(UITapGestureRecognizer *)tap{
     //先block_TapBGComplete，再hideCurrentExtendView,顺序反了容易造成错误
     if (self.block_TapBGComplete) {
         self.block_TapBGComplete();
     }
     
-    [self dismiss_popupDropDownView];
+    [self dismissPopupView_popupInView];
 }
 
 #pragma mark - 隐藏DropDownView的方法
-- (void)dismiss_popupDropDownView{
+- (void)dismissPopupView_popupInView{
     if (self.lowestSuperviewLocation == nil) {
         NSLog(@"Error: 请检查是否是重新生成了popupView，而导致self.lowestSuperviewLocation == nil");
         return;

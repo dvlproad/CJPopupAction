@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "PopupInWindowVC.h"
-#import "PopupDropDownViewVC.h"
+#import "PopupInViewVC.h"
 
 @interface ViewController ()
 
@@ -28,8 +28,8 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (IBAction)goPopupDropDownViewVC:(id)sender{
-    PopupDropDownViewVC *vc = [[PopupDropDownViewVC alloc]initWithNibName:@"PopupDropDownViewVC" bundle:nil];
+- (IBAction)goPopupInViewVC:(id)sender{
+    PopupInViewVC *vc = [[PopupInViewVC alloc]initWithNibName:@"PopupInViewVC" bundle:nil];
     vc.title = [sender titleForState:UIControlStateNormal];
     [self.navigationController pushViewController:vc animated:YES];
 }

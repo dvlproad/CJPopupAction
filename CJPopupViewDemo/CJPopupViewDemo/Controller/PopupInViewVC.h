@@ -1,5 +1,5 @@
 //
-//  PopupDropDownViewVC.h
+//  PopupInViewVC.h
 //  CJPopupViewDemo
 //
 //  Created by lichq on 15/11/12.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PopupDropDownViewVC : UIViewController{
+@interface PopupInViewVC : UIViewController{
     UIView *popupView1;
     UIView *popupView2;
     UIView *popupView3;

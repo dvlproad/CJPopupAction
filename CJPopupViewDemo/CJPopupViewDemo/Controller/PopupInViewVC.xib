@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupDropDownViewVC">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupInViewVC">
             <connections>
                 <outlet property="smallView1" destination="elS-oa-PH2" id="voy-Lz-o4O"/>
                 <outlet property="smallView2" destination="Rrx-Or-sn2" id="PIe-bq-neM"/>

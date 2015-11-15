@@ -1,19 +1,19 @@
 //
-//  PopupDropDownViewVC.m
+//  PopupInViewVC.m
 //  CJPopupViewDemo
 //
 //  Created by lichq on 15/11/12.
 //  Copyright (c) 2015年 ciyouzen. All rights reserved.
 //
 
-#import "PopupDropDownViewVC.h"
+#import "PopupInViewVC.h"
 #import "CJPopupView.h"
 
-@interface PopupDropDownViewVC ()
+@interface PopupInViewVC ()
 
 @end
 
-@implementation PopupDropDownViewVC
+@implementation PopupInViewVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,7 +43,7 @@
             NSLog(@"完成");
         }];
     }else{
-        [popupView1 dismiss_popupDropDownView];
+        [popupView1 dismissPopupView_popupInView];
     }
     
     
@@ -93,7 +93,7 @@
             //NSLog(@"完成");
         }];
     }else{
-        [popupView dismiss_popupDropDownView];
+        [popupView dismissPopupView_popupInView];
     }
     
     [popupView setBlockTapBGComplete:^{

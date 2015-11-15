@@ -11,9 +11,9 @@
 		805A17BE1BF43ECE00424769 /* WelcomeViewToPop.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805A17BC1BF43ECE00424769 /* WelcomeViewToPop.xib */; };
 		805A17C21BF43EFD00424769 /* PopupInWindowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17C01BF43EFD00424769 /* PopupInWindowVC.m */; };
 		805A17C31BF43EFD00424769 /* PopupInWindowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805A17C11BF43EFD00424769 /* PopupInWindowVC.xib */; };
-		805A17C71BF44CBD00424769 /* UIView+PopupDropDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17C61BF44CBD00424769 /* UIView+PopupDropDownView.m */; };
-		805A17CE1BF478F200424769 /* PopupDropDownViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17CC1BF478F200424769 /* PopupDropDownViewVC.m */; };
-		805A17CF1BF478F200424769 /* PopupDropDownViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805A17CD1BF478F200424769 /* PopupDropDownViewVC.xib */; };
+		805A17C71BF44CBD00424769 /* UIView+PopupInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17C61BF44CBD00424769 /* UIView+PopupInView.m */; };
+		805A17CE1BF478F200424769 /* PopupInViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17CC1BF478F200424769 /* PopupInViewVC.m */; };
+		805A17CF1BF478F200424769 /* PopupInViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805A17CD1BF478F200424769 /* PopupInViewVC.xib */; };
 		8064A1BB1B38606F001D88F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8064A1BA1B38606F001D88F4 /* main.m */; };
 		8064A1BE1B38606F001D88F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8064A1BD1B38606F001D88F4 /* AppDelegate.m */; };
 		8064A1C11B38606F001D88F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8064A1C01B38606F001D88F4 /* ViewController.m */; };
@@ -42,11 +42,11 @@
 		805A17C01BF43EFD00424769 /* PopupInWindowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupInWindowVC.m; sourceTree = "<group>"; };
 		805A17C11BF43EFD00424769 /* PopupInWindowVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupInWindowVC.xib; sourceTree = "<group>"; };
 		805A17C41BF44ACD00424769 /* CJPopupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJPopupView.h; sourceTree = "<group>"; };
-		805A17C51BF44CBD00424769 /* UIView+PopupDropDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PopupDropDownView.h"; sourceTree = "<group>"; };
-		805A17C61BF44CBD00424769 /* UIView+PopupDropDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PopupDropDownView.m"; sourceTree = "<group>"; };
-		805A17CB1BF478F200424769 /* PopupDropDownViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupDropDownViewVC.h; sourceTree = "<group>"; };
-		805A17CC1BF478F200424769 /* PopupDropDownViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupDropDownViewVC.m; sourceTree = "<group>"; };
-		805A17CD1BF478F200424769 /* PopupDropDownViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupDropDownViewVC.xib; sourceTree = "<group>"; };
+		805A17C51BF44CBD00424769 /* UIView+PopupInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PopupInView.h"; sourceTree = "<group>"; };
+		805A17C61BF44CBD00424769 /* UIView+PopupInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PopupInView.m"; sourceTree = "<group>"; };
+		805A17CB1BF478F200424769 /* PopupInViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupInViewVC.h; sourceTree = "<group>"; };
+		805A17CC1BF478F200424769 /* PopupInViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupInViewVC.m; sourceTree = "<group>"; };
+		805A17CD1BF478F200424769 /* PopupInViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupInViewVC.xib; sourceTree = "<group>"; };
 		8064A1B51B38606F001D88F4 /* CJPopupViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJPopupViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8064A1B91B38606F001D88F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8064A1BA1B38606F001D88F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,9 +88,9 @@
 				805A17BF1BF43EFD00424769 /* PopupInWindowVC.h */,
 				805A17C01BF43EFD00424769 /* PopupInWindowVC.m */,
 				805A17C11BF43EFD00424769 /* PopupInWindowVC.xib */,
-				805A17CB1BF478F200424769 /* PopupDropDownViewVC.h */,
-				805A17CC1BF478F200424769 /* PopupDropDownViewVC.m */,
-				805A17CD1BF478F200424769 /* PopupDropDownViewVC.xib */,
+				805A17CB1BF478F200424769 /* PopupInViewVC.h */,
+				805A17CC1BF478F200424769 /* PopupInViewVC.m */,
+				805A17CD1BF478F200424769 /* PopupInViewVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,8 +173,8 @@
 				805A17C41BF44ACD00424769 /* CJPopupView.h */,
 				8064A1E21B386492001D88F4 /* UIView+PopupInWindow.h */,
 				8064A1E31B386492001D88F4 /* UIView+PopupInWindow.m */,
-				805A17C51BF44CBD00424769 /* UIView+PopupDropDownView.h */,
-				805A17C61BF44CBD00424769 /* UIView+PopupDropDownView.m */,
+				805A17C51BF44CBD00424769 /* UIView+PopupInView.h */,
+				805A17C61BF44CBD00424769 /* UIView+PopupInView.m */,
 			);
 			name = CJPopupView;
 			path = ../../CJPopupView;
@@ -261,7 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8064A1C41B38606F001D88F4 /* Main.storyboard in Resources */,
-				805A17CF1BF478F200424769 /* PopupDropDownViewVC.xib in Resources */,
+				805A17CF1BF478F200424769 /* PopupInViewVC.xib in Resources */,
 				805A17BE1BF43ECE00424769 /* WelcomeViewToPop.xib in Resources */,
 				805A17C31BF43EFD00424769 /* PopupInWindowVC.xib in Resources */,
 				8064A1C91B38606F001D88F4 /* LaunchScreen.xib in Resources */,
@@ -285,8 +285,8 @@
 			files = (
 				8064A1C11B38606F001D88F4 /* ViewController.m in Sources */,
 				8064A1E41B386492001D88F4 /* UIView+PopupInWindow.m in Sources */,
-				805A17CE1BF478F200424769 /* PopupDropDownViewVC.m in Sources */,
-				805A17C71BF44CBD00424769 /* UIView+PopupDropDownView.m in Sources */,
+				805A17CE1BF478F200424769 /* PopupInViewVC.m in Sources */,
+				805A17C71BF44CBD00424769 /* UIView+PopupInView.m in Sources */,
 				8064A1BE1B38606F001D88F4 /* AppDelegate.m in Sources */,
 				805A17BD1BF43ECE00424769 /* WelcomeViewToPop.m in Sources */,
 				805A17C21BF43EFD00424769 /* PopupInWindowVC.m in Sources */,
