@@ -113,11 +113,11 @@
         self.showPopupInViewIndependentCode_blockTapBGComplete();
     }
     
-    [self showPopupInViewIndependentCode_dismissPopupView];
+    [self showPopupInViewIndependentCode_dismissPopupViewAnimated:YES];
 }
 
 #pragma mark - 隐藏PopupView的方法
-- (void)showPopupInViewIndependentCode_dismissPopupView{
+- (void)showPopupInViewIndependentCode_dismissPopupViewAnimated:(BOOL)animated{
     if (self.showPopupInViewIndependentCode_lowestSuperviewLocation == nil) {
         NSLog(@"Error: 请检查是否是重新生成了popupView，而导致self.lowestSuperviewLocation == nil");
         return;
@@ -126,22 +126,28 @@
     UIView *tapV = [self.showPopupInViewIndependentCode_lowestSuperviewLocation viewWithTag:kTagTapV_ShowPopupInView];
     UIView *popupView = [self.showPopupInViewIndependentCode_lowestSuperviewLocation viewWithTag:kTagPopupView_ShowPopupInView];
     
-    CGRect rect_popupView_hide = self.frame;//此时rect_self_hide = rect_self_show;
-    rect_popupView_hide.size.height = 0;
-    [UIView animateWithDuration:0.3 animations:^{
-        tapV.alpha = 1.0f;
-        popupView.alpha = 1.0f;
-        
-        //要设置成0，不设置非零值如0.2，是为了防止在显示出来的时候，在0.3秒内很快按两次按钮，仍有view存在
-        tapV.alpha = 0.0f;
-        popupView.alpha = 0.0f;
-        
-        [popupView setFrame:rect_popupView_hide];
-        
-    }completion:^(BOOL finished) {
+    if (animated) {
+        CGRect rect_popupView_hide = self.frame;//此时rect_self_hide = rect_self_show;
+        rect_popupView_hide.size.height = 0;
+        [UIView animateWithDuration:0.3 animations:^{
+            tapV.alpha = 1.0f;
+            popupView.alpha = 1.0f;
+            
+            //要设置成0，不设置非零值如0.2，是为了防止在显示出来的时候，在0.3秒内很快按两次按钮，仍有view存在
+            tapV.alpha = 0.0f;
+            popupView.alpha = 0.0f;
+            
+            [popupView setFrame:rect_popupView_hide];
+            
+        }completion:^(BOOL finished) {
+            [popupView removeFromSuperview];
+            [tapV removeFromSuperview];
+        }];
+    }else{
         [popupView removeFromSuperview];
         [tapV removeFromSuperview];
-    }];
+    }
+    
     
     if (self.showPopupInViewIndependentCode_blockHideComplete) {
         self.showPopupInViewIndependentCode_blockHideComplete();

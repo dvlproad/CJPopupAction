@@ -40,7 +40,7 @@
         }];
         
     }else{
-        [sender showPopupInView_dismissPopupView];
+        [sender showHisDropDownView_dismissPopupViewAnimated:YES];
     }
     
 }
@@ -66,7 +66,7 @@
         }];
         
     }else{
-        [sender showPopupInView_dismissPopupView];
+        [sender showHisDropDownView_dismissPopupViewAnimated:YES];
     }
 }
 
@@ -89,7 +89,7 @@
             
         }];
     }else{
-        [sender showPopupInView_dismissPopupView];
+        [sender showHisDropDownView_dismissPopupViewAnimated:YES];
     }
 }
 

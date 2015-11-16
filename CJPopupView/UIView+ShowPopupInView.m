@@ -41,8 +41,8 @@
 
 
 #pragma mark - 隐藏PopupView的方法
-- (void)showPopupInView_dismissPopupView{
-    [self.popupView_show popupInView_dismissFromSuperViewAnimated:NO];
+- (void)showPopupInView_dismissPopupViewAnimated:(BOOL)animated{
+    [self.popupView_show popupInView_dismissFromSuperViewAnimated:animated];
 }
 
 @end

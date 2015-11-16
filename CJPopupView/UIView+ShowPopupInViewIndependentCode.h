@@ -17,6 +17,6 @@
 
 - (void)showPopupViewIndependentCode:(UIView *)popupView InView:(UIView *)overlay atLocationPoint:(CGPoint)locationPoint withSize:(CGSize)size_popupView showComplete:(void(^)(void))block_Show tapBGComplete:(void(^)(void))block_TapBG hideComplete:(void(^)(void))block_Hide;
 
-- (void)showPopupInViewIndependentCode_dismissPopupView;
+- (void)showPopupInViewIndependentCode_dismissPopupViewAnimated:(BOOL)animated;
 
 @end

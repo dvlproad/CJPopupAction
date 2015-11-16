@@ -22,4 +22,10 @@
     [sender showPopupView:popupView InView:popupSuperview atLocationPoint:pointLocation withSize:size_popupView showComplete:block_Show tapBGComplete:block_TapBG hideComplete:block_Hide];
 }
 
+- (void)showHisDropDownView_dismissPopupViewAnimated:(BOOL)animated{
+    UIView *sender = self;
+    
+    [sender showPopupInView_dismissPopupViewAnimated:animated];
+}
+
 @end

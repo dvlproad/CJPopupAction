@@ -49,7 +49,7 @@
         }];
         
     }else{
-        [sender showPopupInView_dismissPopupView];
+        [sender showPopupInView_dismissPopupViewAnimated:YES];
     }
 
 }
@@ -83,7 +83,7 @@
         }];
         
     }else{
-        [sender showPopupInView_dismissPopupView];
+        [sender showPopupInView_dismissPopupViewAnimated:YES];
     }
 }
 
@@ -115,7 +115,7 @@
         }];
         
     }else{
-        [sender showPopupInView_dismissPopupView];
+        [sender showPopupInView_dismissPopupViewAnimated:YES];
     }
 }
 
