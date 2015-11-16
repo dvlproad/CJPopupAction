@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupInViewVC">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowHisDropDownViewVC">
             <connections>
                 <outlet property="smallView1" destination="elS-oa-PH2" id="voy-Lz-o4O"/>
                 <outlet property="smallView2" destination="Rrx-Or-sn2" id="PIe-bq-neM"/>
@@ -19,11 +19,11 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zop-zk-Cef">
                     <rect key="frame" x="10" y="64" width="300" height="30"/>
                     <color key="backgroundColor" red="0.78017430929999998" green="0.86903425099999998" blue="0.62558724349999995" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="PopupInView1">
+                    <state key="normal" title="ShowHisDropDownView1">
                         <color key="titleColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
-                        <action selector="popupInView1:" destination="-1" eventType="touchUpInside" id="Hfh-KF-xJa"/>
+                        <action selector="showPopupInView1:" destination="-1" eventType="touchUpInside" id="kTP-JE-Ovy"/>
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elS-oa-PH2">
@@ -37,7 +37,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="popupInView2:" destination="-1" eventType="touchUpInside" id="HsM-Zj-xmR"/>
+                                <action selector="showPopupInView2:" destination="-1" eventType="touchUpInside" id="P1Z-qM-oKi"/>
                             </connections>
                         </button>
                     </subviews>
@@ -54,7 +54,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="popupInView3:" destination="-1" eventType="touchUpInside" id="sRg-gR-Mt1"/>
+                                <action selector="showPopupInView3:" destination="-1" eventType="touchUpInside" id="CAP-Eh-8Lz"/>
                             </connections>
                         </button>
                     </subviews>

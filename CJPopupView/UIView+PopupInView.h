@@ -10,14 +10,14 @@
 
 @interface UIView (PopupInView)
 
-@property (nonatomic, retain) UIView *lowestSuperviewLocation;//最底层的supverview
-@property (nonatomic, copy) void(^block_TapBGComplete)(void);
-@property (nonatomic, copy) void(^block_HideComplete)(void);
+@property (nonatomic, retain) UIView *popupInView_lowestSuperviewLocation;//最底层的supverview
+@property (nonatomic, copy) void(^popupInView_blockTapBGComplete)(void);
+@property (nonatomic, copy) void(^popupInView_blockHideComplete)(void);
 
 
-- (void)popupInView:(UIView *)overlay atLocationPoint:(CGPoint)locationPoint withSize:(CGSize)size_self complete:(void(^)(void))block;
-- (void)setBlockTapBGComplete:(void(^)(void))block_TapBGComplete_m blockPopupViewDismissComplete:(void(^)(void))block_HideComplete_m;
+- (void)popupInView:(UIView *)overlay atLocationPoint:(CGPoint)locationPoint withSize:(CGSize)size_self showComplete:(void(^)(void))block_Show tapBGComplete:(void(^)(void))block_TapBG hideComplete:(void(^)(void))block_Hide;
 
-- (void)dismissFromSuperView_popupInView;
+//专为ShowPopupInView而扩展的animated参数，防止隐藏是否由于动画太长，而导致的问题
+- (void)popupInView_dismissFromSuperViewAnimated:(BOOL)animated;
 
 @end

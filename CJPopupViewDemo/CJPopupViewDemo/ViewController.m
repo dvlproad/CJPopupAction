@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "PopupInWindowVC.h"
 #import "PopupInViewVC.h"
+#import "ShowPopupInViewVC.h"
+#import "ShowHisDropDownViewVC.h"
 
 @interface ViewController ()
 
@@ -34,8 +36,17 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (IBAction)goShowPopupInViewVC:(id)sender{
+    ShowPopupInViewVC *vc = [[ShowPopupInViewVC alloc]initWithNibName:@"ShowPopupInViewVC" bundle:nil];
+    vc.title = [sender titleForState:UIControlStateNormal];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
-
+- (IBAction)goShowHisDropDownViewVC:(id)sender{
+    ShowHisDropDownViewVC *vc = [[ShowHisDropDownViewVC alloc]initWithNibName:@"ShowHisDropDownViewVC" bundle:nil];
+    vc.title = [sender titleForState:UIControlStateNormal];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

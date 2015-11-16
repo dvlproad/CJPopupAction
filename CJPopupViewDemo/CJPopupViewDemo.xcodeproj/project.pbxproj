@@ -22,6 +22,13 @@
 		8064A1C91B38606F001D88F4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8064A1C71B38606F001D88F4 /* LaunchScreen.xib */; };
 		8064A1D51B38606F001D88F4 /* CJPopupViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8064A1D41B38606F001D88F4 /* CJPopupViewDemoTests.m */; };
 		8064A1E41B386492001D88F4 /* UIView+PopupInWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8064A1E31B386492001D88F4 /* UIView+PopupInWindow.m */; };
+		808AEA781BF96A820021968B /* UIView+ShowPopupInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 808AEA771BF96A820021968B /* UIView+ShowPopupInView.m */; };
+		808AEA7C1BF96AA00021968B /* ShowPopupInViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 808AEA7A1BF96AA00021968B /* ShowPopupInViewVC.m */; };
+		808AEA7D1BF96AA00021968B /* ShowPopupInViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 808AEA7B1BF96AA00021968B /* ShowPopupInViewVC.xib */; };
+		808AEA801BF973550021968B /* UIView+ShowPopupInViewIndependentCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 808AEA7F1BF973550021968B /* UIView+ShowPopupInViewIndependentCode.m */; };
+		808AEA831BF982E20021968B /* UIView+ShowHisDropDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 808AEA821BF982E20021968B /* UIView+ShowHisDropDownView.m */; };
+		808AEA871BF9938A0021968B /* ShowHisDropDownViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 808AEA851BF9938A0021968B /* ShowHisDropDownViewVC.m */; };
+		808AEA881BF9938A0021968B /* ShowHisDropDownViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 808AEA861BF9938A0021968B /* ShowHisDropDownViewVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +69,18 @@
 		8064A1D41B38606F001D88F4 /* CJPopupViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJPopupViewDemoTests.m; sourceTree = "<group>"; };
 		8064A1E21B386492001D88F4 /* UIView+PopupInWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PopupInWindow.h"; sourceTree = "<group>"; };
 		8064A1E31B386492001D88F4 /* UIView+PopupInWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PopupInWindow.m"; sourceTree = "<group>"; };
+		808AEA761BF96A820021968B /* UIView+ShowPopupInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ShowPopupInView.h"; sourceTree = "<group>"; };
+		808AEA771BF96A820021968B /* UIView+ShowPopupInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShowPopupInView.m"; sourceTree = "<group>"; };
+		808AEA791BF96AA00021968B /* ShowPopupInViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowPopupInViewVC.h; sourceTree = "<group>"; };
+		808AEA7A1BF96AA00021968B /* ShowPopupInViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPopupInViewVC.m; sourceTree = "<group>"; };
+		808AEA7B1BF96AA00021968B /* ShowPopupInViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowPopupInViewVC.xib; sourceTree = "<group>"; };
+		808AEA7E1BF973550021968B /* UIView+ShowPopupInViewIndependentCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ShowPopupInViewIndependentCode.h"; sourceTree = "<group>"; };
+		808AEA7F1BF973550021968B /* UIView+ShowPopupInViewIndependentCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShowPopupInViewIndependentCode.m"; sourceTree = "<group>"; };
+		808AEA811BF982E20021968B /* UIView+ShowHisDropDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ShowHisDropDownView.h"; sourceTree = "<group>"; };
+		808AEA821BF982E20021968B /* UIView+ShowHisDropDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShowHisDropDownView.m"; sourceTree = "<group>"; };
+		808AEA841BF9938A0021968B /* ShowHisDropDownViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHisDropDownViewVC.h; sourceTree = "<group>"; };
+		808AEA851BF9938A0021968B /* ShowHisDropDownViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowHisDropDownViewVC.m; sourceTree = "<group>"; };
+		808AEA861BF9938A0021968B /* ShowHisDropDownViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowHisDropDownViewVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +110,12 @@
 				805A17CB1BF478F200424769 /* PopupInViewVC.h */,
 				805A17CC1BF478F200424769 /* PopupInViewVC.m */,
 				805A17CD1BF478F200424769 /* PopupInViewVC.xib */,
+				808AEA791BF96AA00021968B /* ShowPopupInViewVC.h */,
+				808AEA7A1BF96AA00021968B /* ShowPopupInViewVC.m */,
+				808AEA7B1BF96AA00021968B /* ShowPopupInViewVC.xib */,
+				808AEA841BF9938A0021968B /* ShowHisDropDownViewVC.h */,
+				808AEA851BF9938A0021968B /* ShowHisDropDownViewVC.m */,
+				808AEA861BF9938A0021968B /* ShowHisDropDownViewVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,6 +200,12 @@
 				8064A1E31B386492001D88F4 /* UIView+PopupInWindow.m */,
 				805A17C51BF44CBD00424769 /* UIView+PopupInView.h */,
 				805A17C61BF44CBD00424769 /* UIView+PopupInView.m */,
+				808AEA761BF96A820021968B /* UIView+ShowPopupInView.h */,
+				808AEA771BF96A820021968B /* UIView+ShowPopupInView.m */,
+				808AEA7E1BF973550021968B /* UIView+ShowPopupInViewIndependentCode.h */,
+				808AEA7F1BF973550021968B /* UIView+ShowPopupInViewIndependentCode.m */,
+				808AEA811BF982E20021968B /* UIView+ShowHisDropDownView.h */,
+				808AEA821BF982E20021968B /* UIView+ShowHisDropDownView.m */,
 			);
 			name = CJPopupView;
 			path = ../../CJPopupView;
@@ -260,10 +291,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				808AEA881BF9938A0021968B /* ShowHisDropDownViewVC.xib in Resources */,
 				8064A1C41B38606F001D88F4 /* Main.storyboard in Resources */,
 				805A17CF1BF478F200424769 /* PopupInViewVC.xib in Resources */,
 				805A17BE1BF43ECE00424769 /* WelcomeViewToPop.xib in Resources */,
 				805A17C31BF43EFD00424769 /* PopupInWindowVC.xib in Resources */,
+				808AEA7D1BF96AA00021968B /* ShowPopupInViewVC.xib in Resources */,
 				8064A1C91B38606F001D88F4 /* LaunchScreen.xib in Resources */,
 				8064A1C61B38606F001D88F4 /* Images.xcassets in Resources */,
 			);
@@ -283,14 +316,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				808AEA7C1BF96AA00021968B /* ShowPopupInViewVC.m in Sources */,
 				8064A1C11B38606F001D88F4 /* ViewController.m in Sources */,
 				8064A1E41B386492001D88F4 /* UIView+PopupInWindow.m in Sources */,
 				805A17CE1BF478F200424769 /* PopupInViewVC.m in Sources */,
 				805A17C71BF44CBD00424769 /* UIView+PopupInView.m in Sources */,
+				808AEA781BF96A820021968B /* UIView+ShowPopupInView.m in Sources */,
 				8064A1BE1B38606F001D88F4 /* AppDelegate.m in Sources */,
 				805A17BD1BF43ECE00424769 /* WelcomeViewToPop.m in Sources */,
+				808AEA831BF982E20021968B /* UIView+ShowHisDropDownView.m in Sources */,
+				808AEA801BF973550021968B /* UIView+ShowPopupInViewIndependentCode.m in Sources */,
 				805A17C21BF43EFD00424769 /* PopupInWindowVC.m in Sources */,
 				8064A1BB1B38606F001D88F4 /* main.m in Sources */,
+				808AEA871BF9938A0021968B /* ShowHisDropDownViewVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
