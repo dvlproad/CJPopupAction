@@ -12,6 +12,8 @@
 #import "ShowPopupInViewVC.h"
 #import "ShowHisDropDownViewVC.h"
 
+#import "CJShowDropViewController.h"
+
 @interface ViewController ()
 
 @end
@@ -47,6 +49,14 @@
     vc.title = [sender titleForState:UIControlStateNormal];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+- (IBAction)goCJShowDropViewController:(id)sender{
+    CJShowDropViewController *vc = [[CJShowDropViewController alloc]initWithNibName:@"CJShowDropViewController" bundle:nil];
+    vc.title = [sender titleForState:UIControlStateNormal];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

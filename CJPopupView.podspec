@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CJPopupView"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "UIView的类别，用来实现UIView弹出popupView的一个Uiew的类别"
 
   s.description  = <<-DESC
@@ -53,10 +53,10 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  # s.author             = { "dvlproad" => "913168921@qq.com" }
+  # s.author             = { "dvlproad" => "studyroad@qq.com" }
   # Or just: s.author    = "dvlproad"
   s.author    		 = "dvlproad"
-  # s.authors            = { "dvlproad" => "913168921@qq.com" }
+  # s.authors            = { "dvlproad" => "studyroad@qq.com" }
   # s.social_media_url   = "http://twitter.com/dvlproad"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "1.1.1" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "1.1.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

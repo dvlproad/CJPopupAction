@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		783079E71D7720E4009689F3 /* UIView+CJShowDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783079E61D7720E4009689F3 /* UIView+CJShowDropView.m */; };
+		783079EB1D772159009689F3 /* CJShowDropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783079E91D772159009689F3 /* CJShowDropViewController.m */; };
+		783079EC1D772159009689F3 /* CJShowDropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783079EA1D772159009689F3 /* CJShowDropViewController.xib */; };
 		805A17BD1BF43ECE00424769 /* WelcomeViewToPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17BB1BF43ECE00424769 /* WelcomeViewToPop.m */; };
 		805A17BE1BF43ECE00424769 /* WelcomeViewToPop.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805A17BC1BF43ECE00424769 /* WelcomeViewToPop.xib */; };
 		805A17C21BF43EFD00424769 /* PopupInWindowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17C01BF43EFD00424769 /* PopupInWindowVC.m */; };
@@ -42,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		783079E51D7720E4009689F3 /* UIView+CJShowDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJShowDropView.h"; sourceTree = "<group>"; };
+		783079E61D7720E4009689F3 /* UIView+CJShowDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJShowDropView.m"; sourceTree = "<group>"; };
+		783079E81D772159009689F3 /* CJShowDropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJShowDropViewController.h; sourceTree = "<group>"; };
+		783079E91D772159009689F3 /* CJShowDropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJShowDropViewController.m; sourceTree = "<group>"; };
+		783079EA1D772159009689F3 /* CJShowDropViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJShowDropViewController.xib; sourceTree = "<group>"; };
 		805A17BA1BF43ECE00424769 /* WelcomeViewToPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewToPop.h; sourceTree = "<group>"; };
 		805A17BB1BF43ECE00424769 /* WelcomeViewToPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewToPop.m; sourceTree = "<group>"; };
 		805A17BC1BF43ECE00424769 /* WelcomeViewToPop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewToPop.xib; sourceTree = "<group>"; };
@@ -116,6 +124,9 @@
 				808AEA841BF9938A0021968B /* ShowHisDropDownViewVC.h */,
 				808AEA851BF9938A0021968B /* ShowHisDropDownViewVC.m */,
 				808AEA861BF9938A0021968B /* ShowHisDropDownViewVC.xib */,
+				783079E81D772159009689F3 /* CJShowDropViewController.h */,
+				783079E91D772159009689F3 /* CJShowDropViewController.m */,
+				783079EA1D772159009689F3 /* CJShowDropViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,6 +206,8 @@
 		8064A1DE1B386099001D88F4 /* CJPopupView */ = {
 			isa = PBXGroup;
 			children = (
+				783079E51D7720E4009689F3 /* UIView+CJShowDropView.h */,
+				783079E61D7720E4009689F3 /* UIView+CJShowDropView.m */,
 				805A17C41BF44ACD00424769 /* CJPopupView.h */,
 				8064A1E21B386492001D88F4 /* UIView+PopupInWindow.h */,
 				8064A1E31B386492001D88F4 /* UIView+PopupInWindow.m */,
@@ -297,6 +310,7 @@
 				805A17BE1BF43ECE00424769 /* WelcomeViewToPop.xib in Resources */,
 				805A17C31BF43EFD00424769 /* PopupInWindowVC.xib in Resources */,
 				808AEA7D1BF96AA00021968B /* ShowPopupInViewVC.xib in Resources */,
+				783079EC1D772159009689F3 /* CJShowDropViewController.xib in Resources */,
 				8064A1C91B38606F001D88F4 /* LaunchScreen.xib in Resources */,
 				8064A1C61B38606F001D88F4 /* Images.xcassets in Resources */,
 			);
@@ -325,9 +339,11 @@
 				8064A1BE1B38606F001D88F4 /* AppDelegate.m in Sources */,
 				805A17BD1BF43ECE00424769 /* WelcomeViewToPop.m in Sources */,
 				808AEA831BF982E20021968B /* UIView+ShowHisDropDownView.m in Sources */,
+				783079EB1D772159009689F3 /* CJShowDropViewController.m in Sources */,
 				808AEA801BF973550021968B /* UIView+ShowPopupInViewIndependentCode.m in Sources */,
 				805A17C21BF43EFD00424769 /* PopupInWindowVC.m in Sources */,
 				8064A1BB1B38606F001D88F4 /* main.m in Sources */,
+				783079E71D7720E4009689F3 /* UIView+CJShowDropView.m in Sources */,
 				808AEA871BF9938A0021968B /* ShowHisDropDownViewVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
