@@ -9,19 +9,46 @@
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 
-typedef void(^CJTapViewTappedAction)(UIView *view);
+typedef void(^CJTapBlankViewCompleteBlock)(UIView *view);
+typedef void(^CJHideExtendViewCompleteBlock)(UIView *view);
+typedef void(^CJShowExtendViewCompleteBlock)(void);
 
 @interface UIView (CJShowDropView)
-
-@property (nonatomic, strong) UIView *cjExtendView; /**< 弹出视图 */
-@property (nonatomic, strong) UIView *cjShowInView; /**< 弹出视图被add到的view */
-@property (nonatomic, strong) UIView *cjTapView;    /**< 空白区域 */
-
-@property (nonatomic, copy) CJTapViewTappedAction cjTapViewTappedAction;    /**< 点击空白区域执行的操作 */
 
 @property (nonatomic, assign, getter=isCJExtendViewShowing) BOOL cjExtendViewShowing;   /**< 判断当前是否有弹出视图显示 */
 
 
+/**
+ *  将本View以size大小弹出到showInView视图中location位置
+ *
+ *  @param showInView                  弹出视图的父view
+ *  @param location                    弹出视图的位置
+ *  @param size                        弹出视图的大小
+ *  @param showExtendViewCompleteBlock 显示弹出视图后的操作
+ *  @param tapBlankViewCompleteBlock   点击空白区域后的操作
+ *  @param hideExtendViewCompleteBlock 隐藏弹出视图后的操作
+ */
+- (void)cj_popupInView:(UIView *)showInView
+       atLocationPoint:(CGPoint)location
+              withSize:(CGSize)size
+          showComplete:(CJShowExtendViewCompleteBlock)showExtendViewCompleteBlock
+         tapBGComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock
+          hideComplete:(CJHideExtendViewCompleteBlock)hideExtendViewCompleteBlock;
+
+/**
+ *  <#Description#>
+ *
+ *  @param showInView                  弹出视图的父view
+ *  @param accordingView               根据accordingView来取得弹出视图的应该的位置和大小
+ *  @param showExtendViewCompleteBlock 显示弹出视图后的操作
+ *  @param tapBlankViewCompleteBlock   点击空白区域后的操作
+ *  @param hideExtendViewCompleteBlock 隐藏弹出视图后的操作
+ */
+- (void)cj_popupInView:(UIView *)showInView
+             underView:(UIView *)accordingView
+          showComplete:(CJShowExtendViewCompleteBlock)showExtendViewCompleteBlock
+         tapBGComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock
+          hideComplete:(CJHideExtendViewCompleteBlock)hideExtendViewCompleteBlock;
 /**
  *  显示弹出下拉视图
  *

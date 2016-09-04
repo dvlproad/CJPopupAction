@@ -41,11 +41,18 @@
         [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
         [popupView addSubview:btn];
         
-        [button cj_showDropDownExtendView:popupView withShowInView:self.view completeBlock:^{
-            NSLog(@"completeBlock");
+        [popupView cj_popupInView:self.view underView:button showComplete:^{
+            
+        } tapBGComplete:^(UIView *view) {
+            
+        } hideComplete:^(UIView *view) {
+            
         }];
+//        [button cj_showDropDownExtendView:popupView withShowInView:self.view completeBlock:^{
+//            NSLog(@"completeBlock");
+//        }];
     } else {
-        [button cj_hideDropDownExtendView];
+//        [button cj_hideDropDownExtendView];
     }
 }
 
