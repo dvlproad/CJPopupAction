@@ -41,25 +41,28 @@
         [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
         [popupView addSubview:btn];
         
-        [popupView cj_popupInView:self.view underView:button showComplete:^{
+        [button cj_showDropDownView:popupView withShowInView:self.view showComplete:^{
+            NSLog(@"显示完成");
+        } tapBlankComplete:^() {
+            NSLog(@"点击背景完成");
+            button.selected = !button.selected;
             
-        } tapBGComplete:^(UIView *view) {
-            
-        } hideComplete:^(UIView *view) {
-            
+        } hideComplete:^() {
+            NSLog(@"隐藏完成");
         }];
-//        [button cj_showDropDownExtendView:popupView withShowInView:self.view completeBlock:^{
-//            NSLog(@"completeBlock");
-//        }];
+        
     } else {
-//        [button cj_hideDropDownExtendView];
+        [button cj_hideDropDownViewAnimated:YES];
     }
 }
 
-- (IBAction)btnAction:(id)sender{
+- (IBAction)btnAction:(id)sender {
     NSString *text = [NSString stringWithFormat:@"%d", rand()%10];
     NSLog(@"text = %@", text);
     [self.button setTitle:text forState:UIControlStateNormal];
+    
+    self.button.selected = !self.button.selected;
+    [self.button cj_hideDropDownViewAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,6 +10,7 @@
 		783079E71D7720E4009689F3 /* UIView+CJShowDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783079E61D7720E4009689F3 /* UIView+CJShowDropView.m */; };
 		783079EB1D772159009689F3 /* CJShowDropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783079E91D772159009689F3 /* CJShowDropViewController.m */; };
 		783079EC1D772159009689F3 /* CJShowDropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783079EA1D772159009689F3 /* CJShowDropViewController.xib */; };
+		7843494C1D7D4C1900697002 /* UIView+CJPopupInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7843494B1D7D4C1900697002 /* UIView+CJPopupInView.m */; };
 		805A17BD1BF43ECE00424769 /* WelcomeViewToPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17BB1BF43ECE00424769 /* WelcomeViewToPop.m */; };
 		805A17BE1BF43ECE00424769 /* WelcomeViewToPop.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805A17BC1BF43ECE00424769 /* WelcomeViewToPop.xib */; };
 		805A17C21BF43EFD00424769 /* PopupInWindowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17C01BF43EFD00424769 /* PopupInWindowVC.m */; };
@@ -50,6 +51,8 @@
 		783079E81D772159009689F3 /* CJShowDropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJShowDropViewController.h; sourceTree = "<group>"; };
 		783079E91D772159009689F3 /* CJShowDropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJShowDropViewController.m; sourceTree = "<group>"; };
 		783079EA1D772159009689F3 /* CJShowDropViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJShowDropViewController.xib; sourceTree = "<group>"; };
+		7843494A1D7D4C1900697002 /* UIView+CJPopupInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJPopupInView.h"; sourceTree = "<group>"; };
+		7843494B1D7D4C1900697002 /* UIView+CJPopupInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJPopupInView.m"; sourceTree = "<group>"; };
 		805A17BA1BF43ECE00424769 /* WelcomeViewToPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewToPop.h; sourceTree = "<group>"; };
 		805A17BB1BF43ECE00424769 /* WelcomeViewToPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewToPop.m; sourceTree = "<group>"; };
 		805A17BC1BF43ECE00424769 /* WelcomeViewToPop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewToPop.xib; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 		8064A1DE1B386099001D88F4 /* CJPopupView */ = {
 			isa = PBXGroup;
 			children = (
+				7843494A1D7D4C1900697002 /* UIView+CJPopupInView.h */,
+				7843494B1D7D4C1900697002 /* UIView+CJPopupInView.m */,
 				783079E51D7720E4009689F3 /* UIView+CJShowDropView.h */,
 				783079E61D7720E4009689F3 /* UIView+CJShowDropView.m */,
 				805A17C41BF44ACD00424769 /* CJPopupView.h */,
@@ -338,6 +343,7 @@
 				808AEA781BF96A820021968B /* UIView+ShowPopupInView.m in Sources */,
 				8064A1BE1B38606F001D88F4 /* AppDelegate.m in Sources */,
 				805A17BD1BF43ECE00424769 /* WelcomeViewToPop.m in Sources */,
+				7843494C1D7D4C1900697002 /* UIView+CJPopupInView.m in Sources */,
 				808AEA831BF982E20021968B /* UIView+ShowHisDropDownView.m in Sources */,
 				783079EB1D772159009689F3 /* CJShowDropViewController.m in Sources */,
 				808AEA801BF973550021968B /* UIView+ShowPopupInViewIndependentCode.m in Sources */,
