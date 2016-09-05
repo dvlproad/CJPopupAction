@@ -92,7 +92,7 @@ static NSString *cjPopupViewShowingKey = @"cjPopupViewShowing";
 #pragma mark - 底层接口
 /** 完整的描述请参见文件头部 */
 - (void)cj_popupInView:(UIView *)popupSuperView
-       atLocationPoint:(CGPoint)location
+            atLocation:(CGPoint)location
               withSize:(CGSize)size
           showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
       tapBlankComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock

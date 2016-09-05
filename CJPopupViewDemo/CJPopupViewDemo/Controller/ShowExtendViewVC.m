@@ -1,48 +1,56 @@
 //
-//  ShowHisDropDownViewVC.m
+//  ShowExtendViewVC.m
 //  CJPopupViewDemo
 //
 //  Created by lichq on 15/11/16.
 //  Copyright (c) 2015年 ciyouzen. All rights reserved.
 //
 
-#import "ShowHisDropDownViewVC.h"
-#import "CJPopupView.h"
+#import "ShowExtendViewVC.h"
+#import "UIView+CJShowExtendView.h"
 
-@interface ShowHisDropDownViewVC ()
+@interface ShowExtendViewVC ()
 
 @end
 
-@implementation ShowHisDropDownViewVC
+@implementation ShowExtendViewVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
 
+
 - (IBAction)showPopupInView1:(UIButton *)sender{
     UIView *popupView = [[UIView alloc]initWithFrame:CGRectZero];
     popupView.backgroundColor = [UIColor greenColor];
     popupView.tag = 1001;//技巧：为避免每个弹出框的tag一样，这里设置sender.tag，从而弹出框的tag就是sender.tag+固定值了
     
+    
     sender.selected = !sender.selected;
     if (sender.selected) {
-        [sender showHisDropDownView:popupView inView:self.view withHeight:50 showComplete:^{
+        UIView *popupSuperview = self.view;
+        CGFloat h_popupView = 50;
+        
+        CGPoint pointBtnConvert = [sender.superview convertPoint:sender.frame.origin toView:popupSuperview];
+        CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
+        CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
+    
+        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView showComplete:^{
             NSLog(@"显示完成");
             
-        } tapBGComplete:^{
+        } tapBlankComplete:^{
             NSLog(@"点击背景完成");
             sender.selected = !sender.selected;
             
         } hideComplete:^{
             NSLog(@"隐藏完成");
-            
         }];
         
     }else{
-        [sender showHisDropDownView_dismissPopupViewAnimated:YES];
+        [sender cj_hideExtendViewAnimated:YES];
     }
-    
+
 }
 
 
@@ -51,22 +59,29 @@
     popupView.backgroundColor = [UIColor greenColor];
     popupView.tag = 1002;
     
+    
     sender.selected = !sender.selected;
     if (sender.selected) {
-        [sender showHisDropDownView:popupView inView:self.smallView1 withHeight:50 showComplete:^{
+        UIView *popupSuperview = self.smallView1;
+        CGFloat h_popupView = 50;
+        
+        CGPoint pointBtnConvert = [sender.superview convertPoint:sender.frame.origin toView:popupSuperview];
+        CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
+        CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
+        
+        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView showComplete:^{
             NSLog(@"显示完成");
             
-        } tapBGComplete:^{
+        } tapBlankComplete:^{
             NSLog(@"点击背景完成");
             sender.selected = !sender.selected;
             
         } hideComplete:^{
             NSLog(@"隐藏完成");
-            
         }];
         
     }else{
-        [sender showHisDropDownView_dismissPopupViewAnimated:YES];
+        [sender cj_hideExtendViewAnimated:YES];
     }
 }
 
@@ -75,21 +90,29 @@
     popupView.backgroundColor = [UIColor greenColor];
     popupView.tag = 1003;
     
+    
     sender.selected = !sender.selected;
     if (sender.selected) {
-        [sender showHisDropDownView:popupView inView:self.view withHeight:50 showComplete:^{
+        UIView *popupSuperview = self.view;
+        CGFloat h_popupView = 50;
+        
+        CGPoint pointBtnConvert = [sender.superview convertPoint:sender.frame.origin toView:popupSuperview];
+        CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
+        CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
+        
+        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView showComplete:^{
             NSLog(@"显示完成");
             
-        } tapBGComplete:^{
+        } tapBlankComplete:^{
             NSLog(@"点击背景完成");
             sender.selected = !sender.selected;
             
         } hideComplete:^{
             NSLog(@"隐藏完成");
-            
         }];
+        
     }else{
-        [sender showHisDropDownView_dismissPopupViewAnimated:YES];
+        [sender cj_hideExtendViewAnimated:YES];
     }
 }
 

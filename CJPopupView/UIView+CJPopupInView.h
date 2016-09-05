@@ -29,7 +29,7 @@ typedef void(^CJShowPopupViewCompleteBlock)(void);
  *  @param hidePopupViewCompleteBlock  隐藏弹出视图后的操作
  */
 - (void)cj_popupInView:(UIView *)showInView
-       atLocationPoint:(CGPoint)location
+            atLocation:(CGPoint)location
               withSize:(CGSize)size
           showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
       tapBlankComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock

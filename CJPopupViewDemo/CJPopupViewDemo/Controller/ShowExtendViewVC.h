@@ -1,5 +1,5 @@
 //
-//  ShowHisDropDownViewVC.h
+//  ShowExtendView.h
 //  CJPopupViewDemo
 //
 //  Created by lichq on 15/11/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShowHisDropDownViewVC : UIViewController{
+@interface ShowExtendViewVC : UIViewController{
     
 }
 @property(nonatomic, weak) IBOutlet UIView *smallView1;

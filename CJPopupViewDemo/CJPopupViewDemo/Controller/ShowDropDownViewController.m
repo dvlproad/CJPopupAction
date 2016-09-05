@@ -1,22 +1,22 @@
 //
-//  CJShowDropViewController.m
+//  ShowDropDownViewController.m
 //  CJPopupViewDemo
 //
 //  Created by 李超前 on 16/8/31.
 //  Copyright © 2016年 ciyouzen. All rights reserved.
 //
 
-#import "CJShowDropViewController.h"
-#import "UIView+CJShowDropView.h"
+#import "ShowDropDownViewController.h"
+#import "UIView+CJShowExtendView.h"
 
-@interface CJShowDropViewController () {
+@interface ShowDropDownViewController () {
     
 }
 @property (nonatomic, weak) IBOutlet UIButton *button;
 
 @end
 
-@implementation CJShowDropViewController
+@implementation ShowDropDownViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,7 +41,7 @@
         [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
         [popupView addSubview:btn];
         
-        [button cj_showDropDownView:popupView withShowInView:self.view showComplete:^{
+        [button cj_showDropDownView:popupView inView:self.view showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");
@@ -52,7 +52,7 @@
         }];
         
     } else {
-        [button cj_hideDropDownViewAnimated:YES];
+        [button cj_hideExtendViewAnimated:YES];
     }
 }
 
@@ -62,7 +62,7 @@
     [self.button setTitle:text forState:UIControlStateNormal];
     
     self.button.selected = !self.button.selected;
-    [self.button cj_hideDropDownViewAnimated:YES];
+    [self.button cj_hideExtendViewAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

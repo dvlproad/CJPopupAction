@@ -7,15 +7,10 @@
 //
 
 
-#import "UIView+PopupInWindow.h"
+#import "UIView+CJPopupInWindow.h"
 
-#import "UIView+PopupInView.h"
-//注意点：使用popupInView必须保证执行popupInView:的实例是同一个，所以需要将要popup的view设置为全局变量，否则重复点击会出现错误
-
-#import "UIView+ShowPopupInView.h"      //引用到"UIView+PopupInView.h"
-#import "UIView+ShowHisDropDownView.h"  //引用到"UIView+ShowPopupInView.h"
-
-#import "UIView+CJShowDropView.h"
+#import "UIView+CJPopupInView.h"
+#import "UIView+CJShowExtendView.h"
 
 
 /*

@@ -1,12 +1,12 @@
 //
-//  UIView+CJShowDropView.m
+//  UIView+CJShowExtendView.m
 //  CJPopupViewDemo
 //
 //  Created by lichq on 15/11/12.
 //  Copyright (c) 2015年 ciyouzen. All rights reserved.
 //
 
-#import "UIView+CJShowDropView.h"
+#import "UIView+CJShowExtendView.h"
 
 static NSString *cjExtendViewKey = @"cjExtendView";
 
@@ -29,6 +29,32 @@ static NSString *cjExtendViewKey = @"cjExtendView";
     return objc_setAssociatedObject(self, &cjExtendViewKey, cjExtendView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+#pragma mark - <#Section#>
+/** 完整的描述请参见文件头部 */
+- (void)cj_showExtendView:(UIView *)popupView
+                   inView:(UIView *)popupSuperView
+               atLocation:(CGPoint)popupViewLocation
+                 withSize:(CGSize)popupViewSize
+             showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
+         tapBlankComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock
+             hideComplete:(CJHidePopupViewCompleteBlock)hidePopupViewCompleteBlock {
+    self.cjExtendView = popupView;
+    
+    [popupView cj_popupInView:popupSuperView
+                   atLocation:popupViewLocation
+                     withSize:popupViewSize
+                 showComplete:showPopupViewCompleteBlock
+             tapBlankComplete:tapBlankViewCompleteBlock
+                 hideComplete:hidePopupViewCompleteBlock];
+}
+
+/** 完整的描述请参见文件头部 */
+- (void)cj_hideExtendViewAnimated:(BOOL)animated {
+    [self.cjExtendView cj_hidePopupViewAnimated:animated];
+}
+
+
+
 /**
  *  在popupSuperView中根据popupView与accordingView的位置关系popupViewPosition来弹出视图
  *
@@ -40,13 +66,15 @@ static NSString *cjExtendViewKey = @"cjExtendView";
  *  @param tapBlankViewCompleteBlock  点击空白区域后的操作
  *  @param hidePopupViewCompleteBlock 隐藏弹出视图后的操作
  */
-+ (void)cj_popupView:(UIView *)popupView
+- (void)cj_popupView:(UIView *)popupView
               inView:(UIView *)popupSuperView
        accordingView:(UIView *)accordingView
     relativePosition:(CJPopupViewPosition)popupViewPosition
         showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
     tapBlankComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock
         hideComplete:(CJHidePopupViewCompleteBlock)hidePopupViewCompleteBlock {
+    
+    self.cjExtendView = popupView;
     
     //accordingView在popupView的superView中对应的y、rect值为：
     CGRect accordingViewFrameInHisSuperView = [accordingView.superview convertRect:accordingView.frame toView:popupSuperView];
@@ -64,7 +92,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
     CGSize popupViewSize = CGSizeMake(popupViewWidth, popupViewHeight);
     
     [popupView cj_popupInView:popupSuperView
-              atLocationPoint:popupViewLocation
+                   atLocation:popupViewLocation
                      withSize:popupViewSize
                  showComplete:showPopupViewCompleteBlock
              tapBlankComplete:tapBlankViewCompleteBlock
@@ -75,15 +103,13 @@ static NSString *cjExtendViewKey = @"cjExtendView";
 #pragma mark - 外部接口
 /** 完整的描述请参见文件头部 */
 - (void)cj_showDropDownView:(UIView *)popupView
-             withShowInView:(UIView *)showInView
+                     inView:(UIView *)showInView
                showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
            tapBlankComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock
                hideComplete:(CJHidePopupViewCompleteBlock)hidePopupViewCompleteBlock {
     
-    self.cjExtendView = popupView;
-    
     UIView *accordingView = self;
-    [UIView cj_popupView:popupView
+    [self cj_popupView:popupView
                   inView:showInView
            accordingView:accordingView
         relativePosition:CJPopupViewPositionUnder
@@ -92,10 +118,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
             hideComplete:hidePopupViewCompleteBlock];
 }
 
-/** 完整的描述请参见文件头部 */
-- (void)cj_hideDropDownViewAnimated:(BOOL)animated {
-    [self.cjExtendView cj_hidePopupViewAnimated:animated];
-}
+
 
 
 @end

@@ -1,5 +1,5 @@
 //
-//  CJShowDropViewController.h
+//  ShowDropDownViewController.h
 //  CJPopupViewDemo
 //
 //  Created by 李超前 on 16/8/31.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CJShowDropViewController : UIViewController
+@interface ShowDropDownViewController : UIViewController
 
 @end

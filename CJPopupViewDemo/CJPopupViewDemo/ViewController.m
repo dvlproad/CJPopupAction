@@ -7,12 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "PopupInWindowVC.h"
-#import "PopupInViewVC.h"
-#import "ShowPopupInViewVC.h"
-#import "ShowHisDropDownViewVC.h"
 
-#import "CJShowDropViewController.h"
+#import "PopupInWindowVC.h"
+
+#import "PopupInViewVC.h"
+#import "ShowExtendViewVC.h"
+#import "ShowDropDownViewController.h"
 
 @interface ViewController ()
 
@@ -38,20 +38,14 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (IBAction)goShowPopupInViewVC:(id)sender{
-    ShowPopupInViewVC *vc = [[ShowPopupInViewVC alloc]initWithNibName:@"ShowPopupInViewVC" bundle:nil];
+- (IBAction)goShowExtendViewVC:(id)sender{
+    ShowExtendViewVC *vc = [[ShowExtendViewVC alloc]initWithNibName:@"ShowExtendViewVC" bundle:nil];
     vc.title = [sender titleForState:UIControlStateNormal];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (IBAction)goShowHisDropDownViewVC:(id)sender{
-    ShowHisDropDownViewVC *vc = [[ShowHisDropDownViewVC alloc]initWithNibName:@"ShowHisDropDownViewVC" bundle:nil];
-    vc.title = [sender titleForState:UIControlStateNormal];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)goCJShowDropViewController:(id)sender{
-    CJShowDropViewController *vc = [[CJShowDropViewController alloc]initWithNibName:@"CJShowDropViewController" bundle:nil];
+- (IBAction)goShowDropDownViewController:(id)sender{
+    ShowDropDownViewController *vc = [[ShowDropDownViewController alloc]initWithNibName:@"ShowDropDownViewController" bundle:nil];
     vc.title = [sender titleForState:UIControlStateNormal];
     [self.navigationController pushViewController:vc animated:YES];
 }

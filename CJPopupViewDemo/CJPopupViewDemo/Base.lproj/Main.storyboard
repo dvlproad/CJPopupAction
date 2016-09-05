@@ -53,27 +53,18 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIS-3b-zoN">
                                 <rect key="frame" x="10" y="317" width="300" height="30"/>
-                                <state key="normal" title="ShowPopupInViewVC">
+                                <state key="normal" title="ShowExtendViewVC">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="goShowPopupInViewVC:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ANj-eP-hZa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExL-I3-y2X">
-                                <rect key="frame" x="10" y="368" width="300" height="30"/>
-                                <state key="normal" title="ShowHisDropDownView">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goShowHisDropDownViewVC:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="T09-M6-0pZ"/>
+                                    <action selector="goShowExtendViewVC:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ARJ-cG-6FK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfa-uZ-arJ">
                                 <rect key="frame" x="38" y="441" width="244" height="30"/>
-                                <state key="normal" title="CJShowDropViewController"/>
+                                <state key="normal" title="ShowDropDownViewController"/>
                                 <connections>
-                                    <action selector="goCJShowDropViewController:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="puz-dK-0Zv"/>
+                                    <action selector="goShowDropDownViewController:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2J6-Dp-1eu"/>
                                 </connections>
                             </button>
                         </subviews>

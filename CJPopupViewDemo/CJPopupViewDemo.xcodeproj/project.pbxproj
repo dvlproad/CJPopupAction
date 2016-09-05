@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		783079E71D7720E4009689F3 /* UIView+CJShowDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783079E61D7720E4009689F3 /* UIView+CJShowDropView.m */; };
-		783079EB1D772159009689F3 /* CJShowDropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783079E91D772159009689F3 /* CJShowDropViewController.m */; };
-		783079EC1D772159009689F3 /* CJShowDropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783079EA1D772159009689F3 /* CJShowDropViewController.xib */; };
+		783079E71D7720E4009689F3 /* UIView+CJShowExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783079E61D7720E4009689F3 /* UIView+CJShowExtendView.m */; };
+		783079EB1D772159009689F3 /* ShowDropDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783079E91D772159009689F3 /* ShowDropDownViewController.m */; };
+		783079EC1D772159009689F3 /* ShowDropDownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783079EA1D772159009689F3 /* ShowDropDownViewController.xib */; };
 		7843494C1D7D4C1900697002 /* UIView+CJPopupInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7843494B1D7D4C1900697002 /* UIView+CJPopupInView.m */; };
 		805A17BD1BF43ECE00424769 /* WelcomeViewToPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17BB1BF43ECE00424769 /* WelcomeViewToPop.m */; };
 		805A17BE1BF43ECE00424769 /* WelcomeViewToPop.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805A17BC1BF43ECE00424769 /* WelcomeViewToPop.xib */; };
 		805A17C21BF43EFD00424769 /* PopupInWindowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17C01BF43EFD00424769 /* PopupInWindowVC.m */; };
 		805A17C31BF43EFD00424769 /* PopupInWindowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805A17C11BF43EFD00424769 /* PopupInWindowVC.xib */; };
-		805A17C71BF44CBD00424769 /* UIView+PopupInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17C61BF44CBD00424769 /* UIView+PopupInView.m */; };
 		805A17CE1BF478F200424769 /* PopupInViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17CC1BF478F200424769 /* PopupInViewVC.m */; };
 		805A17CF1BF478F200424769 /* PopupInViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805A17CD1BF478F200424769 /* PopupInViewVC.xib */; };
 		8064A1BB1B38606F001D88F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8064A1BA1B38606F001D88F4 /* main.m */; };
@@ -25,14 +24,9 @@
 		8064A1C61B38606F001D88F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8064A1C51B38606F001D88F4 /* Images.xcassets */; };
 		8064A1C91B38606F001D88F4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8064A1C71B38606F001D88F4 /* LaunchScreen.xib */; };
 		8064A1D51B38606F001D88F4 /* CJPopupViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8064A1D41B38606F001D88F4 /* CJPopupViewDemoTests.m */; };
-		8064A1E41B386492001D88F4 /* UIView+PopupInWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8064A1E31B386492001D88F4 /* UIView+PopupInWindow.m */; };
-		808AEA781BF96A820021968B /* UIView+ShowPopupInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 808AEA771BF96A820021968B /* UIView+ShowPopupInView.m */; };
-		808AEA7C1BF96AA00021968B /* ShowPopupInViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 808AEA7A1BF96AA00021968B /* ShowPopupInViewVC.m */; };
-		808AEA7D1BF96AA00021968B /* ShowPopupInViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 808AEA7B1BF96AA00021968B /* ShowPopupInViewVC.xib */; };
-		808AEA801BF973550021968B /* UIView+ShowPopupInViewIndependentCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 808AEA7F1BF973550021968B /* UIView+ShowPopupInViewIndependentCode.m */; };
-		808AEA831BF982E20021968B /* UIView+ShowHisDropDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 808AEA821BF982E20021968B /* UIView+ShowHisDropDownView.m */; };
-		808AEA871BF9938A0021968B /* ShowHisDropDownViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 808AEA851BF9938A0021968B /* ShowHisDropDownViewVC.m */; };
-		808AEA881BF9938A0021968B /* ShowHisDropDownViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 808AEA861BF9938A0021968B /* ShowHisDropDownViewVC.xib */; };
+		8064A1E41B386492001D88F4 /* UIView+CJPopupInWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8064A1E31B386492001D88F4 /* UIView+CJPopupInWindow.m */; };
+		808AEA7C1BF96AA00021968B /* ShowExtendViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 808AEA7A1BF96AA00021968B /* ShowExtendViewVC.m */; };
+		808AEA7D1BF96AA00021968B /* ShowExtendViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 808AEA7B1BF96AA00021968B /* ShowExtendViewVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		783079E51D7720E4009689F3 /* UIView+CJShowDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJShowDropView.h"; sourceTree = "<group>"; };
-		783079E61D7720E4009689F3 /* UIView+CJShowDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJShowDropView.m"; sourceTree = "<group>"; };
-		783079E81D772159009689F3 /* CJShowDropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJShowDropViewController.h; sourceTree = "<group>"; };
-		783079E91D772159009689F3 /* CJShowDropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJShowDropViewController.m; sourceTree = "<group>"; };
-		783079EA1D772159009689F3 /* CJShowDropViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJShowDropViewController.xib; sourceTree = "<group>"; };
+		783079E51D7720E4009689F3 /* UIView+CJShowExtendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJShowExtendView.h"; sourceTree = "<group>"; };
+		783079E61D7720E4009689F3 /* UIView+CJShowExtendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJShowExtendView.m"; sourceTree = "<group>"; };
+		783079E81D772159009689F3 /* ShowDropDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDropDownViewController.h; sourceTree = "<group>"; };
+		783079E91D772159009689F3 /* ShowDropDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDropDownViewController.m; sourceTree = "<group>"; };
+		783079EA1D772159009689F3 /* ShowDropDownViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDropDownViewController.xib; sourceTree = "<group>"; };
 		7843494A1D7D4C1900697002 /* UIView+CJPopupInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJPopupInView.h"; sourceTree = "<group>"; };
 		7843494B1D7D4C1900697002 /* UIView+CJPopupInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJPopupInView.m"; sourceTree = "<group>"; };
 		805A17BA1BF43ECE00424769 /* WelcomeViewToPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewToPop.h; sourceTree = "<group>"; };
@@ -60,8 +54,6 @@
 		805A17C01BF43EFD00424769 /* PopupInWindowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupInWindowVC.m; sourceTree = "<group>"; };
 		805A17C11BF43EFD00424769 /* PopupInWindowVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupInWindowVC.xib; sourceTree = "<group>"; };
 		805A17C41BF44ACD00424769 /* CJPopupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJPopupView.h; sourceTree = "<group>"; };
-		805A17C51BF44CBD00424769 /* UIView+PopupInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PopupInView.h"; sourceTree = "<group>"; };
-		805A17C61BF44CBD00424769 /* UIView+PopupInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PopupInView.m"; sourceTree = "<group>"; };
 		805A17CB1BF478F200424769 /* PopupInViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupInViewVC.h; sourceTree = "<group>"; };
 		805A17CC1BF478F200424769 /* PopupInViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupInViewVC.m; sourceTree = "<group>"; };
 		805A17CD1BF478F200424769 /* PopupInViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupInViewVC.xib; sourceTree = "<group>"; };
@@ -78,20 +70,11 @@
 		8064A1CE1B38606F001D88F4 /* CJPopupViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJPopupViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8064A1D31B38606F001D88F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8064A1D41B38606F001D88F4 /* CJPopupViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJPopupViewDemoTests.m; sourceTree = "<group>"; };
-		8064A1E21B386492001D88F4 /* UIView+PopupInWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PopupInWindow.h"; sourceTree = "<group>"; };
-		8064A1E31B386492001D88F4 /* UIView+PopupInWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PopupInWindow.m"; sourceTree = "<group>"; };
-		808AEA761BF96A820021968B /* UIView+ShowPopupInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ShowPopupInView.h"; sourceTree = "<group>"; };
-		808AEA771BF96A820021968B /* UIView+ShowPopupInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShowPopupInView.m"; sourceTree = "<group>"; };
-		808AEA791BF96AA00021968B /* ShowPopupInViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowPopupInViewVC.h; sourceTree = "<group>"; };
-		808AEA7A1BF96AA00021968B /* ShowPopupInViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPopupInViewVC.m; sourceTree = "<group>"; };
-		808AEA7B1BF96AA00021968B /* ShowPopupInViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowPopupInViewVC.xib; sourceTree = "<group>"; };
-		808AEA7E1BF973550021968B /* UIView+ShowPopupInViewIndependentCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ShowPopupInViewIndependentCode.h"; sourceTree = "<group>"; };
-		808AEA7F1BF973550021968B /* UIView+ShowPopupInViewIndependentCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShowPopupInViewIndependentCode.m"; sourceTree = "<group>"; };
-		808AEA811BF982E20021968B /* UIView+ShowHisDropDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ShowHisDropDownView.h"; sourceTree = "<group>"; };
-		808AEA821BF982E20021968B /* UIView+ShowHisDropDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShowHisDropDownView.m"; sourceTree = "<group>"; };
-		808AEA841BF9938A0021968B /* ShowHisDropDownViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHisDropDownViewVC.h; sourceTree = "<group>"; };
-		808AEA851BF9938A0021968B /* ShowHisDropDownViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowHisDropDownViewVC.m; sourceTree = "<group>"; };
-		808AEA861BF9938A0021968B /* ShowHisDropDownViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowHisDropDownViewVC.xib; sourceTree = "<group>"; };
+		8064A1E21B386492001D88F4 /* UIView+CJPopupInWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJPopupInWindow.h"; sourceTree = "<group>"; };
+		8064A1E31B386492001D88F4 /* UIView+CJPopupInWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJPopupInWindow.m"; sourceTree = "<group>"; };
+		808AEA791BF96AA00021968B /* ShowExtendViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowExtendViewVC.h; sourceTree = "<group>"; };
+		808AEA7A1BF96AA00021968B /* ShowExtendViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowExtendViewVC.m; sourceTree = "<group>"; };
+		808AEA7B1BF96AA00021968B /* ShowExtendViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowExtendViewVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,15 +104,12 @@
 				805A17CB1BF478F200424769 /* PopupInViewVC.h */,
 				805A17CC1BF478F200424769 /* PopupInViewVC.m */,
 				805A17CD1BF478F200424769 /* PopupInViewVC.xib */,
-				808AEA791BF96AA00021968B /* ShowPopupInViewVC.h */,
-				808AEA7A1BF96AA00021968B /* ShowPopupInViewVC.m */,
-				808AEA7B1BF96AA00021968B /* ShowPopupInViewVC.xib */,
-				808AEA841BF9938A0021968B /* ShowHisDropDownViewVC.h */,
-				808AEA851BF9938A0021968B /* ShowHisDropDownViewVC.m */,
-				808AEA861BF9938A0021968B /* ShowHisDropDownViewVC.xib */,
-				783079E81D772159009689F3 /* CJShowDropViewController.h */,
-				783079E91D772159009689F3 /* CJShowDropViewController.m */,
-				783079EA1D772159009689F3 /* CJShowDropViewController.xib */,
+				808AEA791BF96AA00021968B /* ShowExtendViewVC.h */,
+				808AEA7A1BF96AA00021968B /* ShowExtendViewVC.m */,
+				808AEA7B1BF96AA00021968B /* ShowExtendViewVC.xib */,
+				783079E81D772159009689F3 /* ShowDropDownViewController.h */,
+				783079E91D772159009689F3 /* ShowDropDownViewController.m */,
+				783079EA1D772159009689F3 /* ShowDropDownViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,21 +189,13 @@
 		8064A1DE1B386099001D88F4 /* CJPopupView */ = {
 			isa = PBXGroup;
 			children = (
+				805A17C41BF44ACD00424769 /* CJPopupView.h */,
 				7843494A1D7D4C1900697002 /* UIView+CJPopupInView.h */,
 				7843494B1D7D4C1900697002 /* UIView+CJPopupInView.m */,
-				783079E51D7720E4009689F3 /* UIView+CJShowDropView.h */,
-				783079E61D7720E4009689F3 /* UIView+CJShowDropView.m */,
-				805A17C41BF44ACD00424769 /* CJPopupView.h */,
-				8064A1E21B386492001D88F4 /* UIView+PopupInWindow.h */,
-				8064A1E31B386492001D88F4 /* UIView+PopupInWindow.m */,
-				805A17C51BF44CBD00424769 /* UIView+PopupInView.h */,
-				805A17C61BF44CBD00424769 /* UIView+PopupInView.m */,
-				808AEA761BF96A820021968B /* UIView+ShowPopupInView.h */,
-				808AEA771BF96A820021968B /* UIView+ShowPopupInView.m */,
-				808AEA7E1BF973550021968B /* UIView+ShowPopupInViewIndependentCode.h */,
-				808AEA7F1BF973550021968B /* UIView+ShowPopupInViewIndependentCode.m */,
-				808AEA811BF982E20021968B /* UIView+ShowHisDropDownView.h */,
-				808AEA821BF982E20021968B /* UIView+ShowHisDropDownView.m */,
+				783079E51D7720E4009689F3 /* UIView+CJShowExtendView.h */,
+				783079E61D7720E4009689F3 /* UIView+CJShowExtendView.m */,
+				8064A1E21B386492001D88F4 /* UIView+CJPopupInWindow.h */,
+				8064A1E31B386492001D88F4 /* UIView+CJPopupInWindow.m */,
 			);
 			name = CJPopupView;
 			path = ../../CJPopupView;
@@ -309,13 +281,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				808AEA881BF9938A0021968B /* ShowHisDropDownViewVC.xib in Resources */,
 				8064A1C41B38606F001D88F4 /* Main.storyboard in Resources */,
 				805A17CF1BF478F200424769 /* PopupInViewVC.xib in Resources */,
 				805A17BE1BF43ECE00424769 /* WelcomeViewToPop.xib in Resources */,
 				805A17C31BF43EFD00424769 /* PopupInWindowVC.xib in Resources */,
-				808AEA7D1BF96AA00021968B /* ShowPopupInViewVC.xib in Resources */,
-				783079EC1D772159009689F3 /* CJShowDropViewController.xib in Resources */,
+				808AEA7D1BF96AA00021968B /* ShowExtendViewVC.xib in Resources */,
+				783079EC1D772159009689F3 /* ShowDropDownViewController.xib in Resources */,
 				8064A1C91B38606F001D88F4 /* LaunchScreen.xib in Resources */,
 				8064A1C61B38606F001D88F4 /* Images.xcassets in Resources */,
 			);
@@ -335,22 +306,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				808AEA7C1BF96AA00021968B /* ShowPopupInViewVC.m in Sources */,
+				808AEA7C1BF96AA00021968B /* ShowExtendViewVC.m in Sources */,
 				8064A1C11B38606F001D88F4 /* ViewController.m in Sources */,
-				8064A1E41B386492001D88F4 /* UIView+PopupInWindow.m in Sources */,
+				8064A1E41B386492001D88F4 /* UIView+CJPopupInWindow.m in Sources */,
 				805A17CE1BF478F200424769 /* PopupInViewVC.m in Sources */,
-				805A17C71BF44CBD00424769 /* UIView+PopupInView.m in Sources */,
-				808AEA781BF96A820021968B /* UIView+ShowPopupInView.m in Sources */,
 				8064A1BE1B38606F001D88F4 /* AppDelegate.m in Sources */,
 				805A17BD1BF43ECE00424769 /* WelcomeViewToPop.m in Sources */,
 				7843494C1D7D4C1900697002 /* UIView+CJPopupInView.m in Sources */,
-				808AEA831BF982E20021968B /* UIView+ShowHisDropDownView.m in Sources */,
-				783079EB1D772159009689F3 /* CJShowDropViewController.m in Sources */,
-				808AEA801BF973550021968B /* UIView+ShowPopupInViewIndependentCode.m in Sources */,
+				783079EB1D772159009689F3 /* ShowDropDownViewController.m in Sources */,
 				805A17C21BF43EFD00424769 /* PopupInWindowVC.m in Sources */,
 				8064A1BB1B38606F001D88F4 /* main.m in Sources */,
-				783079E71D7720E4009689F3 /* UIView+CJShowDropView.m in Sources */,
-				808AEA871BF9938A0021968B /* ShowHisDropDownViewVC.m in Sources */,
+				783079E71D7720E4009689F3 /* UIView+CJShowExtendView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  UIView+PopupInWindow.h
+//  UIView+CJPopupInWindow.h
 //  CJPopupViewDemo
 //
 //  Created by lichq on 6/22/15.
@@ -7,31 +7,31 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <objc/runtime.h>
 
-typedef enum{
+typedef NS_ENUM(NSUInteger, PopupInWindowLocation) {
     PopupInWindowLocationBottom = 0,
     PopupInWindowLocationCenter
-}PopupInWindowLocation;
+};
 
-typedef enum {
-//    MJPopupViewAnimationFade = 0,
-//    MJPopupViewAnimationSlideBottomTop = 1,
-//    MJPopupViewAnimationSlideBottomBottom,
-//    MJPopupViewAnimationSlideTopTop,
-//    MJPopupViewAnimationSlideTopBottom,
-//    MJPopupViewAnimationSlideLeftLeft,
-//    MJPopupViewAnimationSlideLeftRight,
-//    MJPopupViewAnimationSlideRightLeft,
-//    MJPopupViewAnimationSlideRightRight,
+typedef NS_ENUM(NSUInteger, CJPopupViewAnimation) {
+    //    MJPopupViewAnimationFade = 0,
+    //    MJPopupViewAnimationSlideBottomTop = 1,
+    //    MJPopupViewAnimationSlideBottomBottom,
+    //    MJPopupViewAnimationSlideTopTop,
+    //    MJPopupViewAnimationSlideTopBottom,
+    //    MJPopupViewAnimationSlideLeftLeft,
+    //    MJPopupViewAnimationSlideLeftRight,
+    //    MJPopupViewAnimationSlideRightLeft,
+    //    MJPopupViewAnimationSlideRightRight,
     CJPopupViewAnimationNone = 0,   //Directly
     CJPopupViewAnimationNormal,
     CJPopupViewAnimationCATransform3D
-    
-} CJPopupViewAnimation;
+};
 
 
 
-@interface UIView (PopupInWindow){
+@interface UIView (CJPopupInWindow){
     
 }
 //@property(nonatomic, strong) id customView;

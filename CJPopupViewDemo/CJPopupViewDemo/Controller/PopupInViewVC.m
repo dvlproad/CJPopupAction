@@ -41,7 +41,7 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
         
-        [popupView cj_popupInView:popupSuperview atLocationPoint:pointLocation withSize:size_popupView showComplete:^{
+        [popupView cj_popupInView:popupSuperview atLocation:pointLocation withSize:size_popupView showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");
@@ -74,19 +74,16 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
         
-        [popupView popupInView:popupSuperview atLocationPoint:pointLocation withSize:size_popupView showComplete:^{
+        [popupView cj_popupInView:popupSuperview atLocation:pointLocation withSize:size_popupView showComplete:^{
             NSLog(@"显示完成");
-            
-        } tapBGComplete:^{
+        } tapBlankComplete:^() {
             NSLog(@"点击背景完成");
             sender.selected = !sender.selected;
-            
-        } hideComplete:^{
+        } hideComplete:^() {
             NSLog(@"隐藏完成");
-            
         }];
     }else{
-        [popupView popupInView_dismissFromSuperViewAnimated:YES];
+        [popupView cj_hidePopupViewAnimated:YES];
     }
 }
 
@@ -109,19 +106,16 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
         
-        [popupView popupInView:popupSuperview atLocationPoint:pointLocation withSize:size_popupView showComplete:^{
+        [popupView cj_popupInView:popupSuperview atLocation:pointLocation withSize:size_popupView showComplete:^{
             NSLog(@"显示完成");
-            
-        } tapBGComplete:^{
+        } tapBlankComplete:^() {
             NSLog(@"点击背景完成");
             sender.selected = !sender.selected;
-            
-        } hideComplete:^{
+        } hideComplete:^() {
             NSLog(@"隐藏完成");
-            
         }];
     }else{
-        [popupView popupInView_dismissFromSuperViewAnimated:YES];
+        [popupView cj_hidePopupViewAnimated:YES];
     }
 }
 

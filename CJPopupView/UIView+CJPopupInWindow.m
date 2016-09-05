@@ -1,18 +1,36 @@
 //
-//  UIView+PopupInWindow.m
+//  UIView+CJPopupInWindow.m
 //  CJPopupViewDemo
 //
 //  Created by lichq on 6/22/15.
 //  Copyright (c) 2015 ciyouzen. All rights reserved.
 //
 
-#import "UIView+PopupInWindow.h"
+#import "UIView+CJPopupInWindow.h"
 #define kPopupViewAnimationDuration 0.3f
 #define kCJPopupViewTag     23942
 #define kCJOverlayViewTag   23945
 
+static NSString *cjPopupAnimationTypeKey = @"cjPopupAnimationTypeKey";
 
-@implementation UIView (PopupInWindow)
+@interface UIView ()
+
+@property (nonatomic, assign) CJPopupViewAnimation cjPopupAnimationType;
+
+@end
+
+
+
+@implementation UIView (CJPopupInWindow)
+
+//cjPopupAnimationType
+- (CJPopupViewAnimation)cjPopupAnimationType {
+    return [objc_getAssociatedObject(self, &cjPopupAnimationTypeKey) integerValue];
+}
+
+- (void)setCjPopupAnimationType:(CJPopupViewAnimation)cjPopupAnimationType {
+    return objc_setAssociatedObject(self, &cjPopupAnimationTypeKey, @(cjPopupAnimationType), OBJC_ASSOCIATION_ASSIGN);
+}
 
 
 //- (BOOL)canDismissAutomatic{
@@ -31,6 +49,8 @@
 
 - (void)popupInWindowLocationType:(PopupInWindowLocation)locationType animationType:(CJPopupViewAnimation)animationType
 {
+    
+    self.cjPopupAnimationType = animationType;
 //    self.locationType = locationType;
     
     //首先明确self是弹出来看到的那个区域。只不过它是keywindow中一部分而已。获取keyWindow,整个区域添加overlay（且overlay的整个部分添加dismissControl来让用户点击非self部分时候dismiss），添加完后再在keyWindow的下面区域添加self覆盖在overlay上（用于显示self）。
@@ -103,7 +123,7 @@
 }
 
 - (void)dismissControlAction{
-    [self dismissPopupViewInWindowWithAnimationType:CJPopupViewAnimationNormal];
+    [self dismissPopupViewInWindowWithAnimationType:self.cjPopupAnimationType];
 }
 
 - (void)dismissPopupViewInWindowWithAnimationType:(CJPopupViewAnimation)animationType
