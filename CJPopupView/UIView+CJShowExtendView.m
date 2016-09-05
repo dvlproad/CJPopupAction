@@ -50,7 +50,11 @@ static NSString *cjExtendViewKey = @"cjExtendView";
 
 /** 完整的描述请参见文件头部 */
 - (void)cj_hideExtendViewAnimated:(BOOL)animated {
-    [self.cjExtendView cj_hidePopupViewAnimated:animated];
+    if (animated) {
+        [self.cjExtendView cj_hidePopupViewWithAnimationType:CJAnimationTypeNormal];
+    } else {
+        [self.cjExtendView cj_hidePopupViewWithAnimationType:CJAnimationTypeNone];
+    }
 }
 
 

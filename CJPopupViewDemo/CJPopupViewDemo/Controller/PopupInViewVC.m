@@ -7,7 +7,7 @@
 //
 
 #import "PopupInViewVC.h"
-#import "CJPopupView.h"
+#import "UIView+CJPopupInView.h"
 
 @interface PopupInViewVC ()
 
@@ -50,7 +50,7 @@
             NSLog(@"隐藏完成");
         }];
     }else{
-        [popupView cj_hidePopupViewAnimated:YES];
+        [popupView cj_hidePopupViewWithAnimationType:CJAnimationTypeNormal];
     }
 }
 
@@ -83,7 +83,7 @@
             NSLog(@"隐藏完成");
         }];
     }else{
-        [popupView cj_hidePopupViewAnimated:YES];
+        [popupView cj_hidePopupViewWithAnimationType:CJAnimationTypeNormal];
     }
 }
 
@@ -115,7 +115,7 @@
             NSLog(@"隐藏完成");
         }];
     }else{
-        [popupView cj_hidePopupViewAnimated:YES];
+        [popupView cj_hidePopupViewWithAnimationType:CJAnimationTypeNormal];
     }
 }
 

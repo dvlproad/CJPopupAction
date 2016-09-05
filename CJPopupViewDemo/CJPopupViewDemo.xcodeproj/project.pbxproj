@@ -24,7 +24,6 @@
 		8064A1C61B38606F001D88F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8064A1C51B38606F001D88F4 /* Images.xcassets */; };
 		8064A1C91B38606F001D88F4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8064A1C71B38606F001D88F4 /* LaunchScreen.xib */; };
 		8064A1D51B38606F001D88F4 /* CJPopupViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8064A1D41B38606F001D88F4 /* CJPopupViewDemoTests.m */; };
-		8064A1E41B386492001D88F4 /* UIView+CJPopupInWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8064A1E31B386492001D88F4 /* UIView+CJPopupInWindow.m */; };
 		808AEA7C1BF96AA00021968B /* ShowExtendViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 808AEA7A1BF96AA00021968B /* ShowExtendViewVC.m */; };
 		808AEA7D1BF96AA00021968B /* ShowExtendViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 808AEA7B1BF96AA00021968B /* ShowExtendViewVC.xib */; };
 /* End PBXBuildFile section */
@@ -53,7 +52,6 @@
 		805A17BF1BF43EFD00424769 /* PopupInWindowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupInWindowVC.h; sourceTree = "<group>"; };
 		805A17C01BF43EFD00424769 /* PopupInWindowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupInWindowVC.m; sourceTree = "<group>"; };
 		805A17C11BF43EFD00424769 /* PopupInWindowVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupInWindowVC.xib; sourceTree = "<group>"; };
-		805A17C41BF44ACD00424769 /* CJPopupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJPopupView.h; sourceTree = "<group>"; };
 		805A17CB1BF478F200424769 /* PopupInViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupInViewVC.h; sourceTree = "<group>"; };
 		805A17CC1BF478F200424769 /* PopupInViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupInViewVC.m; sourceTree = "<group>"; };
 		805A17CD1BF478F200424769 /* PopupInViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupInViewVC.xib; sourceTree = "<group>"; };
@@ -70,8 +68,6 @@
 		8064A1CE1B38606F001D88F4 /* CJPopupViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJPopupViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8064A1D31B38606F001D88F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8064A1D41B38606F001D88F4 /* CJPopupViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJPopupViewDemoTests.m; sourceTree = "<group>"; };
-		8064A1E21B386492001D88F4 /* UIView+CJPopupInWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJPopupInWindow.h"; sourceTree = "<group>"; };
-		8064A1E31B386492001D88F4 /* UIView+CJPopupInWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJPopupInWindow.m"; sourceTree = "<group>"; };
 		808AEA791BF96AA00021968B /* ShowExtendViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowExtendViewVC.h; sourceTree = "<group>"; };
 		808AEA7A1BF96AA00021968B /* ShowExtendViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowExtendViewVC.m; sourceTree = "<group>"; };
 		808AEA7B1BF96AA00021968B /* ShowExtendViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowExtendViewVC.xib; sourceTree = "<group>"; };
@@ -189,13 +185,10 @@
 		8064A1DE1B386099001D88F4 /* CJPopupView */ = {
 			isa = PBXGroup;
 			children = (
-				805A17C41BF44ACD00424769 /* CJPopupView.h */,
 				7843494A1D7D4C1900697002 /* UIView+CJPopupInView.h */,
 				7843494B1D7D4C1900697002 /* UIView+CJPopupInView.m */,
 				783079E51D7720E4009689F3 /* UIView+CJShowExtendView.h */,
 				783079E61D7720E4009689F3 /* UIView+CJShowExtendView.m */,
-				8064A1E21B386492001D88F4 /* UIView+CJPopupInWindow.h */,
-				8064A1E31B386492001D88F4 /* UIView+CJPopupInWindow.m */,
 			);
 			name = CJPopupView;
 			path = ../../CJPopupView;
@@ -308,7 +301,6 @@
 			files = (
 				808AEA7C1BF96AA00021968B /* ShowExtendViewVC.m in Sources */,
 				8064A1C11B38606F001D88F4 /* ViewController.m in Sources */,
-				8064A1E41B386492001D88F4 /* UIView+CJPopupInWindow.m in Sources */,
 				805A17CE1BF478F200424769 /* PopupInViewVC.m in Sources */,
 				8064A1BE1B38606F001D88F4 /* AppDelegate.m in Sources */,
 				805A17BD1BF43ECE00424769 /* WelcomeViewToPop.m in Sources */,
