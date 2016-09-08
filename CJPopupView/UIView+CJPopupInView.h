@@ -38,6 +38,7 @@ typedef NS_ENUM(NSUInteger, CJAnimationType) {
     
 }
 @property (nonatomic, assign, getter=isCJPopupViewShowing) BOOL cjPopupViewShowing;   /**< 判断当前是否有弹出视图显示 */
+@property (nonatomic, assign, getter=isCJMustHideFromPopupView) BOOL cjMustHideFromPopupView;   /**< 只能通过点击当前popupView弹出视图来隐藏(即不能通过点击背景来隐藏) */   //popupInWindow时常有用
 
 /**
  *  将本View以size大小弹出到showInView视图中location位置

@@ -22,6 +22,8 @@ static NSString *cjHidePopupViewCompleteBlockKey = @"cjHidePopupViewCompleteBloc
 static NSString *cjTapBlankViewCompleteBlockKey = @"cjTapBlankViewCompleteBlock";
 
 static NSString *cjPopupViewShowingKey = @"cjPopupViewShowing";
+static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
+
 
 @interface UIView ()
 
@@ -124,6 +126,14 @@ static NSString *cjPopupViewShowingKey = @"cjPopupViewShowing";
     return objc_setAssociatedObject(self, &cjPopupViewShowingKey, @(cjPopupViewShowing), OBJC_ASSOCIATION_ASSIGN);
 }
 
+//cjMustHideFromPopupView
+- (BOOL)isCJMustHideFromPopupView {
+    return [objc_getAssociatedObject(self, &cjMustHideFromPopupViewKey) boolValue];
+}
+
+- (void)setCjMustHideFromPopupView:(BOOL)cjMustHideFromPopupView {
+    return objc_setAssociatedObject(self, &cjMustHideFromPopupViewKey, @(cjMustHideFromPopupView), OBJC_ASSOCIATION_ASSIGN);
+}
 
 #pragma mark - 底层接口
 /** 完整的描述请参见文件头部 */
@@ -365,6 +375,11 @@ static NSString *cjPopupViewShowingKey = @"cjPopupViewShowing";
 
 /** 点击空白区域的事件 */
 - (void)cj_TapBlankViewAction:(UITapGestureRecognizer *)tap {
+    if (self.isCJMustHideFromPopupView) {
+        NSLog(@"必须通过点击当前popupView来隐藏");
+        return;
+    }
+    
     if (self.cjTapBlankViewCompleteBlock) {
         self.cjTapBlankViewCompleteBlock();
     } else {

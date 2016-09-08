@@ -8,8 +8,8 @@ UIView的Category，用于弹出自定义的UIView
 ```
 
 ######目前引用到此库的有
-1、RadioButtons的使用
-2、CJPickerToolBarView库中
+1、RadioButtons的使用中
+2、CJPickerToolBarView的使用中
 
 
 

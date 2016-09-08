@@ -26,6 +26,7 @@
     WelcomeViewToPop *popupView = (WelcomeViewToPop *)[[[NSBundle mainBundle] loadNibNamed:@"WelcomeViewToPop" owner:nil options:nil] lastObject];
     popupView.delegate = self;
 //    [view popupInWindowLocationType:PopupInWindowLocationCenter animationType:CJPopupViewAnimationCATransform3D];
+    popupView.cjMustHideFromPopupView = YES;
     [popupView cj_popupInWindowAtPosition:CJWindowPositionCenter animationType:CJAnimationTypeCATransform3D showComplete:^{
         NSLog(@"显示完成");
         
