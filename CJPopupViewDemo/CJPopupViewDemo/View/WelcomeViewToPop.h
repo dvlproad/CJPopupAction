@@ -7,17 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
-@protocol WelcomeViewToPopDelegate<NSObject>
-@optional
-- (void)dismissPopupView:(UIView*)view;
-@end
-
-
+#import "CJPopupViewDelegate.h"
 
 @interface WelcomeViewToPop : UIView
 
-@property (assign, nonatomic) id <WelcomeViewToPopDelegate>delegate;
+@property (assign, nonatomic) id <CJPopupViewDelegate> delegate;
 
 @end

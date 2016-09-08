@@ -10,7 +10,7 @@
 #import "WelcomeViewToPop.h"
 #import "UIView+CJPopupInView.h"
 
-@interface PopupInWindowVC ()<WelcomeViewToPopDelegate>
+@interface PopupInWindowVC ()<CJPopupViewDelegate>
 
 @end
 
@@ -55,7 +55,8 @@
     }];
 }
 
-- (void)dismissPopupView:(UIView *)popupView{
+#pragma mark - CJPopupViewDelegate
+- (void)cjPopupView_Confirm:(UIView *)popupView {
     [popupView cj_hidePopupView];
     
     NSString *message = @"[alert show]应该放在dismiss...之后，否则会造成dismiss...所对应的keywindow不对应";
