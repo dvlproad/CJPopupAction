@@ -375,19 +375,19 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
 
 /** 点击空白区域的事件 */
 - (void)cj_TapBlankViewAction:(UITapGestureRecognizer *)tap {
-    if (self.isCJMustHideFromPopupView) {
-        NSLog(@"必须通过点击当前popupView来隐藏");
-        return;
-    }
-    
     if (self.cjTapBlankViewCompleteBlock) {
         self.cjTapBlankViewCompleteBlock();
     } else {
         NSLog(@"未设置cjTapViewTappedAction");
     }
     
-    CJAnimationType animationType = self.cjPopupAnimationType;
-    [self cj_hidePopupViewWithAnimationType:animationType];
+    if (self.isCJMustHideFromPopupView) {
+        NSLog(@"必须通过点击当前popupView来隐藏");
+        
+    } else {
+        CJAnimationType animationType = self.cjPopupAnimationType;
+        [self cj_hidePopupViewWithAnimationType:animationType];
+    }
 }
 
 
