@@ -7,7 +7,10 @@
 //
 
 #import "PopupInWindowVC.h"
+
 #import "WelcomeViewToPop.h"
+#import "WelcomePopupView.h"
+
 #import "UIView+CJPopupInView.h"
 
 @interface PopupInWindowVC ()<CJPopupViewDelegate>
@@ -24,9 +27,11 @@
 
 - (IBAction)popupInWindow_center:(id)sender{
     WelcomeViewToPop *popupView = (WelcomeViewToPop *)[[[NSBundle mainBundle] loadNibNamed:@"WelcomeViewToPop" owner:nil options:nil] lastObject];
-    popupView.delegate = self;
-//    [view popupInWindowLocationType:PopupInWindowLocationCenter animationType:CJPopupViewAnimationCATransform3D];
-    popupView.cjMustHideFromPopupView = YES;
+//    WelcomePopupView *popupView = (WelcomePopupView *)[[[NSBundle mainBundle] loadNibNamed:@"WelcomePopupView" owner:nil options:nil] lastObject];
+    
+    popupView.popupViewDelegate = self;
+    popupView.cjMustHideFromPopupView = NO;
+    popupView.outestView = self.view;
     [popupView cj_popupInWindowAtPosition:CJWindowPositionCenter animationType:CJAnimationTypeCATransform3D showComplete:^{
         NSLog(@"显示完成");
         
@@ -42,7 +47,7 @@
 
 - (IBAction)popupInWindow_bottom:(id)sender{
     WelcomeViewToPop *popupView = (WelcomeViewToPop *)[[[NSBundle mainBundle] loadNibNamed:@"WelcomeViewToPop" owner:nil options:nil] lastObject];
-    popupView.delegate = self;
+    popupView.popupViewDelegate = self;
     [popupView cj_popupInWindowAtPosition:CJWindowPositionBottom animationType:CJAnimationTypeNormal showComplete:^{
         NSLog(@"显示完成");
         
@@ -58,9 +63,6 @@
 #pragma mark - CJPopupViewDelegate
 - (void)cjPopupView_Confirm:(UIView *)popupView {
     [popupView cj_hidePopupView];
-    
-    NSString *message = @"[alert show]应该放在dismiss...之后，否则会造成dismiss...所对应的keywindow不对应";
-    [[[UIAlertView alloc]initWithTitle:@"注意" message:message delegate:nil cancelButtonTitle:@"好的，一定注意" otherButtonTitles:nil] show];
 }
 
 

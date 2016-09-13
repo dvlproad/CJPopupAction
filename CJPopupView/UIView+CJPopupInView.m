@@ -400,6 +400,7 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
 /** 完整的描述请参见文件头部 */
 - (void)cj_hidePopupViewWithAnimationType:(CJAnimationType)animationType {
     self.cjPopupViewShowing = NO;  //设置成NO表示当前未显示任何弹出视图
+    [self endEditing:YES];
     
     UIView *popupView = self;
     UIView *tapView = self.cjTapView;

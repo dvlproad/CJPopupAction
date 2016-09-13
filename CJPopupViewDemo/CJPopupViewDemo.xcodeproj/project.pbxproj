@@ -11,6 +11,10 @@
 		783079EB1D772159009689F3 /* ShowDropDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783079E91D772159009689F3 /* ShowDropDownViewController.m */; };
 		783079EC1D772159009689F3 /* ShowDropDownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783079EA1D772159009689F3 /* ShowDropDownViewController.xib */; };
 		7843494C1D7D4C1900697002 /* UIView+CJPopupInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7843494B1D7D4C1900697002 /* UIView+CJPopupInView.m */; };
+		78FAB5611D86E2FE005C3627 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FAB55E1D86E2FE005C3627 /* TPKeyboardAvoidingScrollView.m */; };
+		78FAB5621D86E2FE005C3627 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FAB5601D86E2FE005C3627 /* TPKeyboardAvoidingTableView.m */; };
+		78FAB5641D86E33F005C3627 /* WelcomePopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78FAB5631D86E33F005C3627 /* WelcomePopupView.xib */; };
+		78FAB5671D86E6CE005C3627 /* WelcomePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FAB5661D86E6CE005C3627 /* WelcomePopupView.m */; };
 		805A17BD1BF43ECE00424769 /* WelcomeViewToPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17BB1BF43ECE00424769 /* WelcomeViewToPop.m */; };
 		805A17BE1BF43ECE00424769 /* WelcomeViewToPop.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805A17BC1BF43ECE00424769 /* WelcomeViewToPop.xib */; };
 		805A17C21BF43EFD00424769 /* PopupInWindowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17C01BF43EFD00424769 /* PopupInWindowVC.m */; };
@@ -47,6 +51,13 @@
 		783079EA1D772159009689F3 /* ShowDropDownViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDropDownViewController.xib; sourceTree = "<group>"; };
 		7843494A1D7D4C1900697002 /* UIView+CJPopupInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJPopupInView.h"; sourceTree = "<group>"; };
 		7843494B1D7D4C1900697002 /* UIView+CJPopupInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJPopupInView.m"; sourceTree = "<group>"; };
+		78FAB55D1D86E2FE005C3627 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		78FAB55E1D86E2FE005C3627 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		78FAB55F1D86E2FE005C3627 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		78FAB5601D86E2FE005C3627 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		78FAB5631D86E33F005C3627 /* WelcomePopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomePopupView.xib; sourceTree = "<group>"; };
+		78FAB5651D86E6CE005C3627 /* WelcomePopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomePopupView.h; sourceTree = "<group>"; };
+		78FAB5661D86E6CE005C3627 /* WelcomePopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomePopupView.m; sourceTree = "<group>"; };
 		805A17BA1BF43ECE00424769 /* WelcomeViewToPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewToPop.h; sourceTree = "<group>"; };
 		805A17BB1BF43ECE00424769 /* WelcomeViewToPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewToPop.m; sourceTree = "<group>"; };
 		805A17BC1BF43ECE00424769 /* WelcomeViewToPop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewToPop.xib; sourceTree = "<group>"; };
@@ -92,6 +103,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78FAB55C1D86E2FE005C3627 /* QAvoidingKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				78FAB55D1D86E2FE005C3627 /* TPKeyboardAvoidingScrollView.h */,
+				78FAB55E1D86E2FE005C3627 /* TPKeyboardAvoidingScrollView.m */,
+				78FAB55F1D86E2FE005C3627 /* TPKeyboardAvoidingTableView.h */,
+				78FAB5601D86E2FE005C3627 /* TPKeyboardAvoidingTableView.m */,
+			);
+			name = QAvoidingKeyboard;
+			path = ../../QAvoidingKeyboard;
+			sourceTree = "<group>";
+		};
 		805A17B81BF43ECE00424769 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +140,9 @@
 				805A17BA1BF43ECE00424769 /* WelcomeViewToPop.h */,
 				805A17BB1BF43ECE00424769 /* WelcomeViewToPop.m */,
 				805A17BC1BF43ECE00424769 /* WelcomeViewToPop.xib */,
+				78FAB5651D86E6CE005C3627 /* WelcomePopupView.h */,
+				78FAB5661D86E6CE005C3627 /* WelcomePopupView.m */,
+				78FAB5631D86E33F005C3627 /* WelcomePopupView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,6 +172,7 @@
 				8064A1BD1B38606F001D88F4 /* AppDelegate.m */,
 				8064A1BF1B38606F001D88F4 /* ViewController.h */,
 				8064A1C01B38606F001D88F4 /* ViewController.m */,
+				78FAB55C1D86E2FE005C3627 /* QAvoidingKeyboard */,
 				805A17B81BF43ECE00424769 /* Controller */,
 				805A17B91BF43ECE00424769 /* View */,
 				8064A1C21B38606F001D88F4 /* Main.storyboard */,
@@ -283,6 +310,7 @@
 				808AEA7D1BF96AA00021968B /* ShowExtendViewVC.xib in Resources */,
 				783079EC1D772159009689F3 /* ShowDropDownViewController.xib in Resources */,
 				8064A1C91B38606F001D88F4 /* LaunchScreen.xib in Resources */,
+				78FAB5641D86E33F005C3627 /* WelcomePopupView.xib in Resources */,
 				8064A1C61B38606F001D88F4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,11 +334,14 @@
 				805A17CE1BF478F200424769 /* PopupInViewVC.m in Sources */,
 				8064A1BE1B38606F001D88F4 /* AppDelegate.m in Sources */,
 				805A17BD1BF43ECE00424769 /* WelcomeViewToPop.m in Sources */,
+				78FAB5611D86E2FE005C3627 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				7843494C1D7D4C1900697002 /* UIView+CJPopupInView.m in Sources */,
 				783079EB1D772159009689F3 /* ShowDropDownViewController.m in Sources */,
 				805A17C21BF43EFD00424769 /* PopupInWindowVC.m in Sources */,
+				78FAB5621D86E2FE005C3627 /* TPKeyboardAvoidingTableView.m in Sources */,
 				8064A1BB1B38606F001D88F4 /* main.m in Sources */,
 				783079E71D7720E4009689F3 /* UIView+CJShowExtendView.m in Sources */,
+				78FAB5671D86E6CE005C3627 /* WelcomePopupView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
