@@ -1,4 +1,4 @@
-# CJPopupView
+# CJPopupAction
 UIView的Category，用于弹出自定义的UIView
  (Using this class to popup your custom view)
 
