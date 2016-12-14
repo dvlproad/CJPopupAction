@@ -32,8 +32,14 @@ static CGFloat kKeyboardHeightPadding = 20; //键盘离输入框最小的自定�
     [self registerNotification];
 }
 
+- (void)dealloc {
+    [self unregisterNotification];
+}
+
 - (void)unregisterNotification {
-    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 
 - (void)registerNotification {
