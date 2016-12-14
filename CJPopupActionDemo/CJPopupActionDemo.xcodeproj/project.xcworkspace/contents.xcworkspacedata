@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CJPopupViewDemo.xcodeproj">
+      location = "self:CJPopupActionDemo.xcodeproj">
    </FileRef>
 </Workspace>

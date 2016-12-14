@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7817F9621E00E94B00889DD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9611E00E94B00889DD5 /* main.m */; };
+		7817F9651E00E94B00889DD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9641E00E94B00889DD5 /* AppDelegate.m */; };
+		7817F9681E00E94B00889DD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9671E00E94B00889DD5 /* ViewController.m */; };
+		7817F96B1E00E94B00889DD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7817F9691E00E94B00889DD5 /* Main.storyboard */; };
+		7817F96D1E00E94B00889DD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7817F96C1E00E94B00889DD5 /* Assets.xcassets */; };
+		7817F9701E00E94B00889DD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7817F96E1E00E94B00889DD5 /* LaunchScreen.storyboard */; };
+		7817F97B1E00E94B00889DD5 /* CJPopupActionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F97A1E00E94B00889DD5 /* CJPopupActionDemoTests.m */; };
+		7817F9861E00E94B00889DD5 /* CJPopupActionDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9851E00E94B00889DD5 /* CJPopupActionDemoUITests.m */; };
+		7817F9A71E00E99C00889DD5 /* PopupInViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9951E00E99C00889DD5 /* PopupInViewVC.m */; };
+		7817F9A81E00E99C00889DD5 /* PopupInViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7817F9961E00E99C00889DD5 /* PopupInViewVC.xib */; };
+		7817F9A91E00E99C00889DD5 /* PopupInWindowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9981E00E99C00889DD5 /* PopupInWindowVC.m */; };
+		7817F9AA1E00E99C00889DD5 /* PopupInWindowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7817F9991E00E99C00889DD5 /* PopupInWindowVC.xib */; };
+		7817F9AB1E00E99C00889DD5 /* ShowDropDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F99B1E00E99C00889DD5 /* ShowDropDownViewController.m */; };
+		7817F9AC1E00E99C00889DD5 /* ShowDropDownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7817F99C1E00E99C00889DD5 /* ShowDropDownViewController.xib */; };
+		7817F9AD1E00E99C00889DD5 /* ShowExtendViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F99E1E00E99C00889DD5 /* ShowExtendViewVC.m */; };
+		7817F9AE1E00E99C00889DD5 /* ShowExtendViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7817F99F1E00E99C00889DD5 /* ShowExtendViewVC.xib */; };
+		7817F9AF1E00E99C00889DD5 /* WelcomePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9A21E00E99C00889DD5 /* WelcomePopupView.m */; };
+		7817F9B01E00E99C00889DD5 /* WelcomePopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7817F9A31E00E99C00889DD5 /* WelcomePopupView.xib */; };
+		7817F9B11E00E99C00889DD5 /* WelcomeViewToPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9A51E00E99C00889DD5 /* WelcomeViewToPop.m */; };
+		7817F9B21E00E99C00889DD5 /* WelcomeViewToPop.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7817F9A61E00E99C00889DD5 /* WelcomeViewToPop.xib */; };
+		7817F9BE1E00E9B000889DD5 /* UIView+CJPopupInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9B61E00E9B000889DD5 /* UIView+CJPopupInView.m */; };
+		7817F9BF1E00E9B000889DD5 /* UIView+CJShowExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9B81E00E9B000889DD5 /* UIView+CJShowExtendView.m */; };
+		7817F9C01E00E9B000889DD5 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9BB1E00E9B000889DD5 /* TPKeyboardAvoidingScrollView.m */; };
+		7817F9C11E00E9B000889DD5 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9BD1E00E9B000889DD5 /* TPKeyboardAvoidingTableView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7817F9771E00E94B00889DD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7817F9551E00E94B00889DD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7817F95C1E00E94B00889DD5;
+			remoteInfo = CJPopupActionDemo;
+		};
+		7817F9821E00E94B00889DD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7817F9551E00E94B00889DD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7817F95C1E00E94B00889DD5;
+			remoteInfo = CJPopupActionDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7817F95D1E00E94B00889DD5 /* CJPopupActionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJPopupActionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7817F9611E00E94B00889DD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7817F9631E00E94B00889DD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7817F9641E00E94B00889DD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7817F9661E00E94B00889DD5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7817F9671E00E94B00889DD5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7817F96A1E00E94B00889DD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7817F96C1E00E94B00889DD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7817F96F1E00E94B00889DD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7817F9711E00E94B00889DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7817F9761E00E94B00889DD5 /* CJPopupActionDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJPopupActionDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7817F97A1E00E94B00889DD5 /* CJPopupActionDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJPopupActionDemoTests.m; sourceTree = "<group>"; };
+		7817F97C1E00E94B00889DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7817F9811E00E94B00889DD5 /* CJPopupActionDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJPopupActionDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7817F9851E00E94B00889DD5 /* CJPopupActionDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJPopupActionDemoUITests.m; sourceTree = "<group>"; };
+		7817F9871E00E94B00889DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7817F9941E00E99C00889DD5 /* PopupInViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupInViewVC.h; sourceTree = "<group>"; };
+		7817F9951E00E99C00889DD5 /* PopupInViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupInViewVC.m; sourceTree = "<group>"; };
+		7817F9961E00E99C00889DD5 /* PopupInViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupInViewVC.xib; sourceTree = "<group>"; };
+		7817F9971E00E99C00889DD5 /* PopupInWindowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupInWindowVC.h; sourceTree = "<group>"; };
+		7817F9981E00E99C00889DD5 /* PopupInWindowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupInWindowVC.m; sourceTree = "<group>"; };
+		7817F9991E00E99C00889DD5 /* PopupInWindowVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupInWindowVC.xib; sourceTree = "<group>"; };
+		7817F99A1E00E99C00889DD5 /* ShowDropDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDropDownViewController.h; sourceTree = "<group>"; };
+		7817F99B1E00E99C00889DD5 /* ShowDropDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDropDownViewController.m; sourceTree = "<group>"; };
+		7817F99C1E00E99C00889DD5 /* ShowDropDownViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDropDownViewController.xib; sourceTree = "<group>"; };
+		7817F99D1E00E99C00889DD5 /* ShowExtendViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowExtendViewVC.h; sourceTree = "<group>"; };
+		7817F99E1E00E99C00889DD5 /* ShowExtendViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowExtendViewVC.m; sourceTree = "<group>"; };
+		7817F99F1E00E99C00889DD5 /* ShowExtendViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowExtendViewVC.xib; sourceTree = "<group>"; };
+		7817F9A11E00E99C00889DD5 /* WelcomePopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomePopupView.h; sourceTree = "<group>"; };
+		7817F9A21E00E99C00889DD5 /* WelcomePopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomePopupView.m; sourceTree = "<group>"; };
+		7817F9A31E00E99C00889DD5 /* WelcomePopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomePopupView.xib; sourceTree = "<group>"; };
+		7817F9A41E00E99C00889DD5 /* WelcomeViewToPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewToPop.h; sourceTree = "<group>"; };
+		7817F9A51E00E99C00889DD5 /* WelcomeViewToPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewToPop.m; sourceTree = "<group>"; };
+		7817F9A61E00E99C00889DD5 /* WelcomeViewToPop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewToPop.xib; sourceTree = "<group>"; };
+		7817F9B41E00E9B000889DD5 /* CJPopupViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPopupViewDelegate.h; sourceTree = "<group>"; };
+		7817F9B51E00E9B000889DD5 /* UIView+CJPopupInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJPopupInView.h"; sourceTree = "<group>"; };
+		7817F9B61E00E9B000889DD5 /* UIView+CJPopupInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJPopupInView.m"; sourceTree = "<group>"; };
+		7817F9B71E00E9B000889DD5 /* UIView+CJShowExtendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJShowExtendView.h"; sourceTree = "<group>"; };
+		7817F9B81E00E9B000889DD5 /* UIView+CJShowExtendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJShowExtendView.m"; sourceTree = "<group>"; };
+		7817F9BA1E00E9B000889DD5 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		7817F9BB1E00E9B000889DD5 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		7817F9BC1E00E9B000889DD5 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		7817F9BD1E00E9B000889DD5 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7817F95A1E00E94B00889DD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7817F9731E00E94B00889DD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7817F97E1E00E94B00889DD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7817F9541E00E94B00889DD5 = {
+			isa = PBXGroup;
+			children = (
+				7817F95F1E00E94B00889DD5 /* CJPopupActionDemo */,
+				7817F9791E00E94B00889DD5 /* CJPopupActionDemoTests */,
+				7817F9841E00E94B00889DD5 /* CJPopupActionDemoUITests */,
+				7817F95E1E00E94B00889DD5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7817F95E1E00E94B00889DD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7817F95D1E00E94B00889DD5 /* CJPopupActionDemo.app */,
+				7817F9761E00E94B00889DD5 /* CJPopupActionDemoTests.xctest */,
+				7817F9811E00E94B00889DD5 /* CJPopupActionDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7817F95F1E00E94B00889DD5 /* CJPopupActionDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7817F9631E00E94B00889DD5 /* AppDelegate.h */,
+				7817F9641E00E94B00889DD5 /* AppDelegate.m */,
+				7817F9661E00E94B00889DD5 /* ViewController.h */,
+				7817F9671E00E94B00889DD5 /* ViewController.m */,
+				7817F9B31E00E9B000889DD5 /* CJPopupAction */,
+				7817F9B91E00E9B000889DD5 /* QAvoidingKeyboard */,
+				7817F9931E00E99C00889DD5 /* Controller */,
+				7817F9A01E00E99C00889DD5 /* View */,
+				7817F9691E00E94B00889DD5 /* Main.storyboard */,
+				7817F96C1E00E94B00889DD5 /* Assets.xcassets */,
+				7817F96E1E00E94B00889DD5 /* LaunchScreen.storyboard */,
+				7817F9711E00E94B00889DD5 /* Info.plist */,
+				7817F9601E00E94B00889DD5 /* Supporting Files */,
+			);
+			path = CJPopupActionDemo;
+			sourceTree = "<group>";
+		};
+		7817F9601E00E94B00889DD5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7817F9611E00E94B00889DD5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7817F9791E00E94B00889DD5 /* CJPopupActionDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				7817F97A1E00E94B00889DD5 /* CJPopupActionDemoTests.m */,
+				7817F97C1E00E94B00889DD5 /* Info.plist */,
+			);
+			path = CJPopupActionDemoTests;
+			sourceTree = "<group>";
+		};
+		7817F9841E00E94B00889DD5 /* CJPopupActionDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7817F9851E00E94B00889DD5 /* CJPopupActionDemoUITests.m */,
+				7817F9871E00E94B00889DD5 /* Info.plist */,
+			);
+			path = CJPopupActionDemoUITests;
+			sourceTree = "<group>";
+		};
+		7817F9931E00E99C00889DD5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7817F9941E00E99C00889DD5 /* PopupInViewVC.h */,
+				7817F9951E00E99C00889DD5 /* PopupInViewVC.m */,
+				7817F9961E00E99C00889DD5 /* PopupInViewVC.xib */,
+				7817F9971E00E99C00889DD5 /* PopupInWindowVC.h */,
+				7817F9981E00E99C00889DD5 /* PopupInWindowVC.m */,
+				7817F9991E00E99C00889DD5 /* PopupInWindowVC.xib */,
+				7817F99A1E00E99C00889DD5 /* ShowDropDownViewController.h */,
+				7817F99B1E00E99C00889DD5 /* ShowDropDownViewController.m */,
+				7817F99C1E00E99C00889DD5 /* ShowDropDownViewController.xib */,
+				7817F99D1E00E99C00889DD5 /* ShowExtendViewVC.h */,
+				7817F99E1E00E99C00889DD5 /* ShowExtendViewVC.m */,
+				7817F99F1E00E99C00889DD5 /* ShowExtendViewVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7817F9A01E00E99C00889DD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7817F9A11E00E99C00889DD5 /* WelcomePopupView.h */,
+				7817F9A21E00E99C00889DD5 /* WelcomePopupView.m */,
+				7817F9A31E00E99C00889DD5 /* WelcomePopupView.xib */,
+				7817F9A41E00E99C00889DD5 /* WelcomeViewToPop.h */,
+				7817F9A51E00E99C00889DD5 /* WelcomeViewToPop.m */,
+				7817F9A61E00E99C00889DD5 /* WelcomeViewToPop.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7817F9B31E00E9B000889DD5 /* CJPopupAction */ = {
+			isa = PBXGroup;
+			children = (
+				7817F9B41E00E9B000889DD5 /* CJPopupViewDelegate.h */,
+				7817F9B51E00E9B000889DD5 /* UIView+CJPopupInView.h */,
+				7817F9B61E00E9B000889DD5 /* UIView+CJPopupInView.m */,
+				7817F9B71E00E9B000889DD5 /* UIView+CJShowExtendView.h */,
+				7817F9B81E00E9B000889DD5 /* UIView+CJShowExtendView.m */,
+			);
+			name = CJPopupAction;
+			path = ../../CJPopupAction;
+			sourceTree = "<group>";
+		};
+		7817F9B91E00E9B000889DD5 /* QAvoidingKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7817F9BA1E00E9B000889DD5 /* TPKeyboardAvoidingScrollView.h */,
+				7817F9BB1E00E9B000889DD5 /* TPKeyboardAvoidingScrollView.m */,
+				7817F9BC1E00E9B000889DD5 /* TPKeyboardAvoidingTableView.h */,
+				7817F9BD1E00E9B000889DD5 /* TPKeyboardAvoidingTableView.m */,
+			);
+			name = QAvoidingKeyboard;
+			path = ../../QAvoidingKeyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7817F95C1E00E94B00889DD5 /* CJPopupActionDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7817F98A1E00E94B00889DD5 /* Build configuration list for PBXNativeTarget "CJPopupActionDemo" */;
+			buildPhases = (
+				7817F9591E00E94B00889DD5 /* Sources */,
+				7817F95A1E00E94B00889DD5 /* Frameworks */,
+				7817F95B1E00E94B00889DD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CJPopupActionDemo;
+			productName = CJPopupActionDemo;
+			productReference = 7817F95D1E00E94B00889DD5 /* CJPopupActionDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7817F9751E00E94B00889DD5 /* CJPopupActionDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7817F98D1E00E94B00889DD5 /* Build configuration list for PBXNativeTarget "CJPopupActionDemoTests" */;
+			buildPhases = (
+				7817F9721E00E94B00889DD5 /* Sources */,
+				7817F9731E00E94B00889DD5 /* Frameworks */,
+				7817F9741E00E94B00889DD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7817F9781E00E94B00889DD5 /* PBXTargetDependency */,
+			);
+			name = CJPopupActionDemoTests;
+			productName = CJPopupActionDemoTests;
+			productReference = 7817F9761E00E94B00889DD5 /* CJPopupActionDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7817F9801E00E94B00889DD5 /* CJPopupActionDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7817F9901E00E94B00889DD5 /* Build configuration list for PBXNativeTarget "CJPopupActionDemoUITests" */;
+			buildPhases = (
+				7817F97D1E00E94B00889DD5 /* Sources */,
+				7817F97E1E00E94B00889DD5 /* Frameworks */,
+				7817F97F1E00E94B00889DD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7817F9831E00E94B00889DD5 /* PBXTargetDependency */,
+			);
+			name = CJPopupActionDemoUITests;
+			productName = CJPopupActionDemoUITests;
+			productReference = 7817F9811E00E94B00889DD5 /* CJPopupActionDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7817F9551E00E94B00889DD5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = dvlproad;
+				TargetAttributes = {
+					7817F95C1E00E94B00889DD5 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					7817F9751E00E94B00889DD5 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7817F95C1E00E94B00889DD5;
+					};
+					7817F9801E00E94B00889DD5 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7817F95C1E00E94B00889DD5;
+					};
+				};
+			};
+			buildConfigurationList = 7817F9581E00E94B00889DD5 /* Build configuration list for PBXProject "CJPopupActionDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7817F9541E00E94B00889DD5;
+			productRefGroup = 7817F95E1E00E94B00889DD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7817F95C1E00E94B00889DD5 /* CJPopupActionDemo */,
+				7817F9751E00E94B00889DD5 /* CJPopupActionDemoTests */,
+				7817F9801E00E94B00889DD5 /* CJPopupActionDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7817F95B1E00E94B00889DD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7817F9B01E00E99C00889DD5 /* WelcomePopupView.xib in Resources */,
+				7817F9701E00E94B00889DD5 /* LaunchScreen.storyboard in Resources */,
+				7817F9A81E00E99C00889DD5 /* PopupInViewVC.xib in Resources */,
+				7817F9B21E00E99C00889DD5 /* WelcomeViewToPop.xib in Resources */,
+				7817F9AC1E00E99C00889DD5 /* ShowDropDownViewController.xib in Resources */,
+				7817F9AA1E00E99C00889DD5 /* PopupInWindowVC.xib in Resources */,
+				7817F96D1E00E94B00889DD5 /* Assets.xcassets in Resources */,
+				7817F9AE1E00E99C00889DD5 /* ShowExtendViewVC.xib in Resources */,
+				7817F96B1E00E94B00889DD5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7817F9741E00E94B00889DD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7817F97F1E00E94B00889DD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7817F9591E00E94B00889DD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7817F9AF1E00E99C00889DD5 /* WelcomePopupView.m in Sources */,
+				7817F9681E00E94B00889DD5 /* ViewController.m in Sources */,
+				7817F9BE1E00E9B000889DD5 /* UIView+CJPopupInView.m in Sources */,
+				7817F9BF1E00E9B000889DD5 /* UIView+CJShowExtendView.m in Sources */,
+				7817F9A91E00E99C00889DD5 /* PopupInWindowVC.m in Sources */,
+				7817F9C11E00E9B000889DD5 /* TPKeyboardAvoidingTableView.m in Sources */,
+				7817F9AB1E00E99C00889DD5 /* ShowDropDownViewController.m in Sources */,
+				7817F9AD1E00E99C00889DD5 /* ShowExtendViewVC.m in Sources */,
+				7817F9A71E00E99C00889DD5 /* PopupInViewVC.m in Sources */,
+				7817F9651E00E94B00889DD5 /* AppDelegate.m in Sources */,
+				7817F9C01E00E9B000889DD5 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				7817F9B11E00E99C00889DD5 /* WelcomeViewToPop.m in Sources */,
+				7817F9621E00E94B00889DD5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7817F9721E00E94B00889DD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7817F97B1E00E94B00889DD5 /* CJPopupActionDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7817F97D1E00E94B00889DD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7817F9861E00E94B00889DD5 /* CJPopupActionDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7817F9781E00E94B00889DD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7817F95C1E00E94B00889DD5 /* CJPopupActionDemo */;
+			targetProxy = 7817F9771E00E94B00889DD5 /* PBXContainerItemProxy */;
+		};
+		7817F9831E00E94B00889DD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7817F95C1E00E94B00889DD5 /* CJPopupActionDemo */;
+			targetProxy = 7817F9821E00E94B00889DD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7817F9691E00E94B00889DD5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7817F96A1E00E94B00889DD5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7817F96E1E00E94B00889DD5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7817F96F1E00E94B00889DD5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7817F9881E00E94B00889DD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7817F9891E00E94B00889DD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7817F98B1E00E94B00889DD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CJPopupActionDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJPopupActionDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7817F98C1E00E94B00889DD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CJPopupActionDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJPopupActionDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7817F98E1E00E94B00889DD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CJPopupActionDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJPopupActionDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJPopupActionDemo.app/CJPopupActionDemo";
+			};
+			name = Debug;
+		};
+		7817F98F1E00E94B00889DD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CJPopupActionDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJPopupActionDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJPopupActionDemo.app/CJPopupActionDemo";
+			};
+			name = Release;
+		};
+		7817F9911E00E94B00889DD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CJPopupActionDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJPopupActionDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CJPopupActionDemo;
+			};
+			name = Debug;
+		};
+		7817F9921E00E94B00889DD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CJPopupActionDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJPopupActionDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CJPopupActionDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7817F9581E00E94B00889DD5 /* Build configuration list for PBXProject "CJPopupActionDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7817F9881E00E94B00889DD5 /* Debug */,
+				7817F9891E00E94B00889DD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7817F98A1E00E94B00889DD5 /* Build configuration list for PBXNativeTarget "CJPopupActionDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7817F98B1E00E94B00889DD5 /* Debug */,
+				7817F98C1E00E94B00889DD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7817F98D1E00E94B00889DD5 /* Build configuration list for PBXNativeTarget "CJPopupActionDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7817F98E1E00E94B00889DD5 /* Debug */,
+				7817F98F1E00E94B00889DD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7817F9901E00E94B00889DD5 /* Build configuration list for PBXNativeTarget "CJPopupActionDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7817F9911E00E94B00889DD5 /* Debug */,
+				7817F9921E00E94B00889DD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7817F9551E00E94B00889DD5 /* Project object */;
+}

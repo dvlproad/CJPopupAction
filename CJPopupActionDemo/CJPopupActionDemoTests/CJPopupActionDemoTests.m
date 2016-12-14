@@ -1,19 +1,18 @@
 //
-//  CJPopupViewDemoTests.m
-//  CJPopupViewDemoTests
+//  CJPopupActionDemoTests.m
+//  CJPopupActionDemoTests
 //
-//  Created by lichq on 6/22/15.
-//  Copyright (c) 2015 ciyouzen. All rights reserved.
+//  Created by 李超前 on 2016/12/14.
+//  Copyright © 2016年 dvlproad. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface CJPopupViewDemoTests : XCTestCase
+@interface CJPopupActionDemoTests : XCTestCase
 
 @end
 
-@implementation CJPopupViewDemoTests
+@implementation CJPopupActionDemoTests
 
 - (void)setUp {
     [super setUp];
@@ -27,7 +26,7 @@
 
 - (void)testExample {
     // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
 - (void)testPerformanceExample {

@@ -15,12 +15,12 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "CJPopupView"
-  s.version      = "1.3.0"
+  s.name         = "CJPopupAction"
+  s.version      = "1.3.1"
   s.summary      = "UIView的类别，用来实现UIView弹出popupView的一个Uiew的类别"
 
   s.description  = <<-DESC
-                   A longer description of CJPopupView in Markdown format.
+                   A longer description of CJPopupAction in Markdown format.
 
                    * Think: Why did you write this? What is the focus? What does it do?
                    * CocoaPods will be using this to generate tags, and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
-  s.homepage     = "https://github.com/dvlproad/CJPopupView"
+  s.homepage     = "https://github.com/dvlproad/CJPopupAction"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "1.3.0" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "1.3.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
