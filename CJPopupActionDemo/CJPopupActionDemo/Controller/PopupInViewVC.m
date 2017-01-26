@@ -44,10 +44,10 @@
         [popupView cj_popupInView:popupSuperview atLocation:pointLocation withSize:size_popupView showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
-            NSLog(@"点击背景完成");
+            NSLog(@"点击背景隐藏完成");
             sender.selected = !sender.selected;
-        } hideComplete:^() {
-            NSLog(@"隐藏完成");
+            
+            [popupView cj_hidePopupView];
         }];
     }else{
         [popupView cj_hidePopupViewWithAnimationType:CJAnimationTypeNormal];
@@ -79,8 +79,8 @@
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");
             sender.selected = !sender.selected;
-        } hideComplete:^() {
-            NSLog(@"隐藏完成");
+            
+            [popupView cj_hidePopupView];
         }];
     }else{
         [popupView cj_hidePopupViewWithAnimationType:CJAnimationTypeNormal];
@@ -111,8 +111,8 @@
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");
             sender.selected = !sender.selected;
-        } hideComplete:^() {
-            NSLog(@"隐藏完成");
+            
+            [popupView cj_hidePopupView];
         }];
     }else{
         [popupView cj_hidePopupViewWithAnimationType:CJAnimationTypeNormal];

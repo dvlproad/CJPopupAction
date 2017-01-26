@@ -43,8 +43,7 @@
             NSLog(@"点击背景完成");
             sender.selected = !sender.selected;
             
-        } hideComplete:^{
-            NSLog(@"隐藏完成");
+            [popupView cj_hidePopupView];
         }];
         
     }else{
@@ -76,8 +75,7 @@
             NSLog(@"点击背景完成");
             sender.selected = !sender.selected;
             
-        } hideComplete:^{
-            NSLog(@"隐藏完成");
+            [popupView cj_hidePopupView];
         }];
         
     }else{
@@ -107,8 +105,7 @@
             NSLog(@"点击背景完成");
             sender.selected = !sender.selected;
             
-        } hideComplete:^{
-            NSLog(@"隐藏完成");
+            [sender cj_hideExtendViewAnimated:YES];
         }];
         
     }else{

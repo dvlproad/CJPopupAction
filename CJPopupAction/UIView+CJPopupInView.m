@@ -18,7 +18,6 @@ static NSString *cjShowInViewKey = @"cjShowInView";
 static NSString *cjTapViewKey = @"cjTapView";
 
 static NSString *cjShowPopupViewCompleteBlockKey = @"cjShowPopupViewCompleteBlock";
-static NSString *cjHidePopupViewCompleteBlockKey = @"cjHidePopupViewCompleteBlock";
 static NSString *cjTapBlankViewCompleteBlockKey = @"cjTapBlankViewCompleteBlock";
 
 static NSString *cjPopupViewShowingKey = @"cjPopupViewShowing";
@@ -36,7 +35,6 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
 
 @property (nonatomic, copy) CJTapBlankViewCompleteBlock cjTapBlankViewCompleteBlock;    /**< 点击空白区域执行的操作 */
 @property (nonatomic, copy) CJShowPopupViewCompleteBlock cjShowPopupViewCompleteBlock;    /**< 显示弹出视图后的操作 */
-@property (nonatomic, copy) CJHidePopupViewCompleteBlock cjHidePopupViewCompleteBlock;    /**< 隐藏弹出视图后的操作 */
 
 @end
 
@@ -107,15 +105,6 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
     return objc_setAssociatedObject(self, &cjShowPopupViewCompleteBlockKey, cjShowPopupViewCompleteBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-//cjHidePopupViewCompleteBlock
-- (CJHidePopupViewCompleteBlock)cjHidePopupViewCompleteBlock {
-    return objc_getAssociatedObject(self, &cjHidePopupViewCompleteBlockKey);
-}
-
-- (void)setCjHidePopupViewCompleteBlock:(CJHidePopupViewCompleteBlock)cjHidePopupViewCompleteBlock {
-    return objc_setAssociatedObject(self, &cjHidePopupViewCompleteBlockKey, cjHidePopupViewCompleteBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
 
 //cjPopupViewShowing
 - (BOOL)isCJPopupViewShowing {
@@ -126,15 +115,6 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
     return objc_setAssociatedObject(self, &cjPopupViewShowingKey, @(cjPopupViewShowing), OBJC_ASSOCIATION_ASSIGN);
 }
 
-//cjMustHideFromPopupView
-- (BOOL)isCJMustHideFromPopupView {
-    return [objc_getAssociatedObject(self, &cjMustHideFromPopupViewKey) boolValue];
-}
-
-- (void)setCjMustHideFromPopupView:(BOOL)cjMustHideFromPopupView {
-    return objc_setAssociatedObject(self, &cjMustHideFromPopupViewKey, @(cjMustHideFromPopupView), OBJC_ASSOCIATION_ASSIGN);
-}
-
 #pragma mark - 底层接口
 /** 完整的描述请参见文件头部 */
 - (void)cj_popupInView:(UIView *)popupSuperView
@@ -142,7 +122,7 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
               withSize:(CGSize)size
           showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
       tapBlankComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock
-          hideComplete:(CJHidePopupViewCompleteBlock)hidePopupViewCompleteBlock {
+{
     
     self.cjPopupAnimationType = CJAnimationTypeNormal;
     
@@ -167,7 +147,6 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
     self.cjTapView = blankView;
     self.cjPopupViewShowing = YES;
     self.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;
-    self.cjHidePopupViewCompleteBlock = hidePopupViewCompleteBlock;
     self.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
     
     
@@ -221,7 +200,7 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
                      animationType:(CJAnimationType)animationType
           showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
       tapBlankComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock
-          hideComplete:(CJHidePopupViewCompleteBlock)hidePopupViewCompleteBlock {
+{
     
     self.cjPopupAnimationType = animationType;
     
@@ -253,7 +232,6 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
     self.cjTapView = blankView;
     self.cjPopupViewShowing = YES;
     self.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;
-    self.cjHidePopupViewCompleteBlock = hidePopupViewCompleteBlock;
     self.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
     
     /* popupView的一些设置 */
@@ -377,16 +355,6 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
 - (void)cj_TapBlankViewAction:(UITapGestureRecognizer *)tap {
     if (self.cjTapBlankViewCompleteBlock) {
         self.cjTapBlankViewCompleteBlock();
-    } else {
-        NSLog(@"未设置cjTapViewTappedAction");
-    }
-    
-    if (self.isCJMustHideFromPopupView) {
-        NSLog(@"必须通过点击当前popupView来隐藏");
-        
-    } else {
-        CJAnimationType animationType = self.cjPopupAnimationType;
-        [self cj_hidePopupViewWithAnimationType:animationType];
     }
 }
 
@@ -444,11 +412,6 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
             }];
             break;
         }
-    }
-    
-    
-    if (self.cjHidePopupViewCompleteBlock) {
-        self.cjHidePopupViewCompleteBlock();
     }
 }
 

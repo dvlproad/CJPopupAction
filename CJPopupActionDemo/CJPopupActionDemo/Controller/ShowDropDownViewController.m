@@ -31,7 +31,7 @@
         
         CGFloat popupViewX = CGRectGetMinX(button.frame);
         
-        UIView *popupView = [[UIView alloc]initWithFrame:CGRectMake(popupViewX, 0, width, height)];
+        UIView *popupView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, height)];
         popupView.clipsToBounds = YES;
         popupView.backgroundColor = [UIColor greenColor];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -41,14 +41,13 @@
         [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
         [popupView addSubview:btn];
         
-        [button cj_showDropDownView:popupView inView:self.view showComplete:^{
+        [button cj_showExtendView:popupView inView:self.view locationAccordingView:button relativePosition:CJPopupViewPositionUnder showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");
             button.selected = !button.selected;
             
-        } hideComplete:^() {
-            NSLog(@"隐藏完成");
+            [button cj_hideExtendViewAnimated:YES];
         }];
         
     } else {

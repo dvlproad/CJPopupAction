@@ -30,17 +30,13 @@
 //    WelcomePopupView *popupView = (WelcomePopupView *)[[[NSBundle mainBundle] loadNibNamed:@"WelcomePopupView" owner:nil options:nil] lastObject];
     
     popupView.popupViewDelegate = self;
-    popupView.cjMustHideFromPopupView = NO;
     popupView.outestView = self.view;
     [popupView cj_popupInWindowAtPosition:CJWindowPositionCenter animationType:CJAnimationTypeCATransform3D showComplete:^{
         NSLog(@"显示完成");
         
     } tapBlankComplete:^{
         NSLog(@"点击背景完成");
-        
-    } hideComplete:^{
-        NSLog(@"隐藏完成");
-        
+        [popupView cj_hidePopupView];
     }];
 }
 
@@ -53,10 +49,7 @@
         
     } tapBlankComplete:^{
         NSLog(@"点击背景完成");
-        
-    } hideComplete:^{
-        NSLog(@"隐藏完成");
-        
+        [popupView cj_hidePopupView];
     }];
 }
 

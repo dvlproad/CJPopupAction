@@ -37,16 +37,52 @@ static NSString *cjExtendViewKey = @"cjExtendView";
                  withSize:(CGSize)popupViewSize
              showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
          tapBlankComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock
-             hideComplete:(CJHidePopupViewCompleteBlock)hidePopupViewCompleteBlock {
+{
     self.cjExtendView = popupView;
     
     [popupView cj_popupInView:popupSuperView
                    atLocation:popupViewLocation
                      withSize:popupViewSize
                  showComplete:showPopupViewCompleteBlock
-             tapBlankComplete:tapBlankViewCompleteBlock
-                 hideComplete:hidePopupViewCompleteBlock];
+             tapBlankComplete:tapBlankViewCompleteBlock];
 }
+
+/** 完整的描述请参见文件头部 */
+- (void)cj_showExtendView:(UIView *)popupView
+                   inView:(UIView *)popupSuperView
+    locationAccordingView:(UIView *)accordingView
+         relativePosition:(CJPopupViewPosition)popupViewPosition
+             showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
+         tapBlankComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock
+{
+    NSAssert(accordingView != nil, @"accordingView不能为空,如果为空，请选择 -cj_showExtendView:inView:atLocation:withSize:showComplete:tapBlankComplete:hideComplete:方法");
+    
+    self.cjExtendView = popupView;
+    
+    //accordingView在popupView的superView中对应的y、rect值为：
+    CGRect accordingViewFrameInHisSuperView = [accordingView.superview convertRect:accordingView.frame toView:popupSuperView];
+    //NSLog(@"accordingViewFrameInHisSuperView = %@", NSStringFromCGRect(accordingViewFrameInHisSuperView));
+    CGPoint popupViewLocation = CGPointZero;
+    CGSize popupViewSize = CGSizeZero;
+    if (popupViewPosition == CJPopupViewPositionUnder) {
+        CGFloat popupViewX = CGRectGetMinX(accordingView.frame);
+        CGFloat popupViewY = CGRectGetMinY(accordingViewFrameInHisSuperView) + CGRectGetHeight(accordingView.frame);
+        popupViewLocation = CGPointMake(popupViewX, popupViewY);
+        
+        CGFloat popupViewWidth = CGRectGetWidth(accordingView.frame);
+        CGFloat popupViewHeight = CGRectGetHeight(popupView.frame);
+        NSAssert(popupViewHeight != 0, @"弹出视图的高度不能为0");
+        
+        popupViewSize = CGSizeMake(popupViewWidth, popupViewHeight);
+    }
+    
+    [popupView cj_popupInView:popupSuperView
+                   atLocation:popupViewLocation
+                     withSize:popupViewSize
+                 showComplete:showPopupViewCompleteBlock
+             tapBlankComplete:tapBlankViewCompleteBlock];
+}
+
 
 /** 完整的描述请参见文件头部 */
 - (void)cj_hideExtendViewAnimated:(BOOL)animated {
@@ -56,73 +92,5 @@ static NSString *cjExtendViewKey = @"cjExtendView";
         [self.cjExtendView cj_hidePopupViewWithAnimationType:CJAnimationTypeNone];
     }
 }
-
-
-
-/**
- *  在popupSuperView中根据popupView与accordingView的位置关系popupViewPosition来弹出视图
- *
- *  @param popupView                  弹出视图popupView
- *  @param popupSuperView             弹出视图popupView的superView
- *  @param accordingView              根据accordingView来取得弹出视图的应该的位置和大小
- *  @param popupViewPosition          弹出视图popupView相对accordingView的位置
- *  @param showPopupViewCompleteBlock 显示弹出视图后的操作
- *  @param tapBlankViewCompleteBlock  点击空白区域后的操作
- *  @param hidePopupViewCompleteBlock 隐藏弹出视图后的操作
- */
-- (void)cj_popupView:(UIView *)popupView
-              inView:(UIView *)popupSuperView
-       accordingView:(UIView *)accordingView
-    relativePosition:(CJPopupViewPosition)popupViewPosition
-        showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
-    tapBlankComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock
-        hideComplete:(CJHidePopupViewCompleteBlock)hidePopupViewCompleteBlock {
-    
-    self.cjExtendView = popupView;
-    
-    //accordingView在popupView的superView中对应的y、rect值为：
-    CGRect accordingViewFrameInHisSuperView = [accordingView.superview convertRect:accordingView.frame toView:popupSuperView];
-    //NSLog(@"accordingViewFrameInHisSuperView = %@", NSStringFromCGRect(accordingViewFrameInHisSuperView));
-    CGPoint popupViewLocation = CGPointZero;
-    if (popupViewPosition == CJPopupViewPositionUnder) {
-        CGFloat popupViewX = CGRectGetMinX(accordingView.frame);
-        CGFloat popupViewY = CGRectGetMinY(accordingViewFrameInHisSuperView) + CGRectGetHeight(accordingView.frame);
-        popupViewLocation = CGPointMake(popupViewX, popupViewY);
-    }
-    
-    
-    CGFloat popupViewWidth = CGRectGetWidth(popupView.frame);
-    CGFloat popupViewHeight = CGRectGetHeight(popupView.frame);
-    CGSize popupViewSize = CGSizeMake(popupViewWidth, popupViewHeight);
-    
-    [popupView cj_popupInView:popupSuperView
-                   atLocation:popupViewLocation
-                     withSize:popupViewSize
-                 showComplete:showPopupViewCompleteBlock
-             tapBlankComplete:tapBlankViewCompleteBlock
-                 hideComplete:hidePopupViewCompleteBlock];
-}
-
-
-#pragma mark - 外部接口
-/** 完整的描述请参见文件头部 */
-- (void)cj_showDropDownView:(UIView *)popupView
-                     inView:(UIView *)showInView
-               showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
-           tapBlankComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock
-               hideComplete:(CJHidePopupViewCompleteBlock)hidePopupViewCompleteBlock {
-    
-    UIView *accordingView = self;
-    [self cj_popupView:popupView
-                  inView:showInView
-           accordingView:accordingView
-        relativePosition:CJPopupViewPositionUnder
-            showComplete:showPopupViewCompleteBlock
-        tapBlankComplete:tapBlankViewCompleteBlock
-            hideComplete:hidePopupViewCompleteBlock];
-}
-
-
-
 
 @end
