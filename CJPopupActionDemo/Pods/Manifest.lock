@@ -1,0 +1,12 @@
+PODS:
+  - CJBaseUIKit/CJScrollView (0.0.5)
+
+DEPENDENCIES:
+  - CJBaseUIKit/CJScrollView (~> 0.0.5)
+
+SPEC CHECKSUMS:
+  CJBaseUIKit: 55686c0aaafb1d3b3e3b990d300c5f9906b5d747
+
+PODFILE CHECKSUM: 7cc4811a17ad36c05fba654baf83b3339ce3cfd6
+
+COCOAPODS: 1.1.0.rc.2

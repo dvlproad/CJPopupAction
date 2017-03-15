@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26BD5ACD9639D82FC8689E46BF6935E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		28D49EE02699B85B056BE864C1623748 /* UIScrollView+CJKeyboardAvoiding.h in Headers */ = {isa = PBXBuildFile; fileRef = E91F0E96EF9C3FE7F5CDC5371CAC6442 /* UIScrollView+CJKeyboardAvoiding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49C89AA92618679D7C770C887E7CA30C /* CJKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9221A039A78FC0310296A4D9CAE5EF4 /* CJKeyboardAvoidingTableView.m */; };
+		4B12978D0884889C6C398F258B779D75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		4CBE14CB1A61D70F639495698EFAEF01 /* CJKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9D86BE5BC6614E03B331636C28A91 /* CJKeyboardAvoidingScrollView.m */; };
+		711293AB3F59D06FC76F7035FE0C4DB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
+		8542D3C25779B8884D2ED39D0EFE5701 /* CJKeyboardAvoidingScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 777D03ACDFF2843568F982ADDCEFE38A /* CJKeyboardAvoidingScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A772ED3937C77B1D0A34EDA45C837F5 /* CJBaseUIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE8F62E6807AC907B01F113B2C2A56D /* CJBaseUIKit-dummy.m */; };
+		9F5E8AE6A321126008015797D4D026E2 /* CJKeyboardAvoidingTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0077D4CC1ECFC4AABAAE8872F03568D4 /* CJKeyboardAvoidingTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A10C3060611A97D279F8501BB3FCA18F /* Pods-CJPopupActionDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FCEB25B8D68E03FFCAF3E235BDF54 /* Pods-CJPopupActionDemo-dummy.m */; };
+		A405013B82FD583AB9FA378AA10EF666 /* UIScrollView+CJKeyboardAvoiding.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB7B46754739A414A3EB773B1E55589 /* UIScrollView+CJKeyboardAvoiding.m */; };
+		DF1715BE6692CC0E869DACD0D808649E /* Pods-CJPopupActionDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2C6E523CD25AA033BB4747AE8BC343 /* Pods-CJPopupActionDemoTests-dummy.m */; };
+		F73CF33C2F1A5FA5F59858FE180FD780 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83B51A0F3CA2C699AD533A2ABF4B900F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B045645E9F846FE9D962C108A6B690D5;
+			remoteInfo = CJBaseUIKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0077D4CC1ECFC4AABAAE8872F03568D4 /* CJKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJKeyboardAvoidingTableView.h; path = CJUIKit/CJScrollView/CJKeyboardAvoiding/CJKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		04744FA3503B8A63A9D3DD3EE7D9E318 /* Pods-CJPopupActionDemoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CJPopupActionDemoTests-resources.sh"; sourceTree = "<group>"; };
+		0EB7B46754739A414A3EB773B1E55589 /* UIScrollView+CJKeyboardAvoiding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+CJKeyboardAvoiding.m"; path = "CJUIKit/CJScrollView/CJKeyboardAvoiding/UIScrollView+CJKeyboardAvoiding.m"; sourceTree = "<group>"; };
+		1AC7A1846B6242144867D4CC5E96AC82 /* CJBaseUIKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CJBaseUIKit.xcconfig; sourceTree = "<group>"; };
+		44B8A2004FE5AE6C2E938593AD0B3627 /* Pods-CJPopupActionDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CJPopupActionDemo-frameworks.sh"; sourceTree = "<group>"; };
+		4B29E85BB20DF8CC0EDE157A15E03030 /* libCJBaseUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCJBaseUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		74996ABAC9BE9ADFDC7E28E48F0C1573 /* Pods-CJPopupActionDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CJPopupActionDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		777D03ACDFF2843568F982ADDCEFE38A /* CJKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJKeyboardAvoidingScrollView.h; path = CJUIKit/CJScrollView/CJKeyboardAvoiding/CJKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		7AF9D86BE5BC6614E03B331636C28A91 /* CJKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJKeyboardAvoidingScrollView.m; path = CJUIKit/CJScrollView/CJKeyboardAvoiding/CJKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		7D160E4630223CB2595AAFE3EA324681 /* libPods-CJPopupActionDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPopupActionDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9238FC248FC99DA5E9052A618035D42C /* Pods-CJPopupActionDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CJPopupActionDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A2C158B30449E9274C3F1752488D0B00 /* Pods-CJPopupActionDemoTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CJPopupActionDemoTests-frameworks.sh"; sourceTree = "<group>"; };
+		BE3B403ADFC074C7FFA4EDB163965DA7 /* Pods-CJPopupActionDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CJPopupActionDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CF2C6E523CD25AA033BB4747AE8BC343 /* Pods-CJPopupActionDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CJPopupActionDemoTests-dummy.m"; sourceTree = "<group>"; };
+		D4C20C116E47F48AFBAAAAF5183FAEF1 /* Pods-CJPopupActionDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CJPopupActionDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D9221A039A78FC0310296A4D9CAE5EF4 /* CJKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJKeyboardAvoidingTableView.m; path = CJUIKit/CJScrollView/CJKeyboardAvoiding/CJKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		DC2470C31D950746822F9AC74468BAB4 /* Pods-CJPopupActionDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CJPopupActionDemo-resources.sh"; sourceTree = "<group>"; };
+		DFE8F62E6807AC907B01F113B2C2A56D /* CJBaseUIKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CJBaseUIKit-dummy.m"; sourceTree = "<group>"; };
+		E2FEFE269FD4D17CB694F78E8367A3F2 /* Pods-CJPopupActionDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CJPopupActionDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E91F0E96EF9C3FE7F5CDC5371CAC6442 /* UIScrollView+CJKeyboardAvoiding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+CJKeyboardAvoiding.h"; path = "CJUIKit/CJScrollView/CJKeyboardAvoiding/UIScrollView+CJKeyboardAvoiding.h"; sourceTree = "<group>"; };
+		EA1C655B1B0D9F128E9C32EE92EE2CA5 /* libPods-CJPopupActionDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPopupActionDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE2534D0F221B83675DED06D2BA91875 /* Pods-CJPopupActionDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CJPopupActionDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F2D944EB0505E77659244D357110FB4B /* Pods-CJPopupActionDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CJPopupActionDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F546E3087352DFECDB22769480CAE924 /* CJBaseUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CJBaseUIKit-prefix.pch"; sourceTree = "<group>"; };
+		FA9FCEB25B8D68E03FFCAF3E235BDF54 /* Pods-CJPopupActionDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CJPopupActionDemo-dummy.m"; sourceTree = "<group>"; };
+		FED074A2B3555170997AA61FDE081DA0 /* Pods-CJPopupActionDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CJPopupActionDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B3E8DD65AAE9ACF5639A56EA3A50EBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26BD5ACD9639D82FC8689E46BF6935E7 /* Foundation.framework in Frameworks */,
+				711293AB3F59D06FC76F7035FE0C4DB7 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CD687522EAFCB291765BD1E5D979DF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B12978D0884889C6C398F258B779D75 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D445FFC84C2539C2E7D458D25E1A6B85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F73CF33C2F1A5FA5F59858FE180FD780 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		248ABE9AC4B011A911AECDCE8137C867 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4FDFD89D2053FC1E1DF9BD5ECBC79C5A /* Pods-CJPopupActionDemo */,
+				36E6CA3953331AE93D291DB878735FD4 /* Pods-CJPopupActionDemoTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		36E6CA3953331AE93D291DB878735FD4 /* Pods-CJPopupActionDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				9238FC248FC99DA5E9052A618035D42C /* Pods-CJPopupActionDemoTests-acknowledgements.markdown */,
+				D4C20C116E47F48AFBAAAAF5183FAEF1 /* Pods-CJPopupActionDemoTests-acknowledgements.plist */,
+				CF2C6E523CD25AA033BB4747AE8BC343 /* Pods-CJPopupActionDemoTests-dummy.m */,
+				A2C158B30449E9274C3F1752488D0B00 /* Pods-CJPopupActionDemoTests-frameworks.sh */,
+				04744FA3503B8A63A9D3DD3EE7D9E318 /* Pods-CJPopupActionDemoTests-resources.sh */,
+				F2D944EB0505E77659244D357110FB4B /* Pods-CJPopupActionDemoTests.debug.xcconfig */,
+				FED074A2B3555170997AA61FDE081DA0 /* Pods-CJPopupActionDemoTests.release.xcconfig */,
+			);
+			name = "Pods-CJPopupActionDemoTests";
+			path = "Target Support Files/Pods-CJPopupActionDemoTests";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FDFD89D2053FC1E1DF9BD5ECBC79C5A /* Pods-CJPopupActionDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BE3B403ADFC074C7FFA4EDB163965DA7 /* Pods-CJPopupActionDemo-acknowledgements.markdown */,
+				74996ABAC9BE9ADFDC7E28E48F0C1573 /* Pods-CJPopupActionDemo-acknowledgements.plist */,
+				FA9FCEB25B8D68E03FFCAF3E235BDF54 /* Pods-CJPopupActionDemo-dummy.m */,
+				44B8A2004FE5AE6C2E938593AD0B3627 /* Pods-CJPopupActionDemo-frameworks.sh */,
+				DC2470C31D950746822F9AC74468BAB4 /* Pods-CJPopupActionDemo-resources.sh */,
+				E2FEFE269FD4D17CB694F78E8367A3F2 /* Pods-CJPopupActionDemo.debug.xcconfig */,
+				EE2534D0F221B83675DED06D2BA91875 /* Pods-CJPopupActionDemo.release.xcconfig */,
+			);
+			name = "Pods-CJPopupActionDemo";
+			path = "Target Support Files/Pods-CJPopupActionDemo";
+			sourceTree = "<group>";
+		};
+		5D4892881BF570C3DB137FF49F038467 /* CJScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				777D03ACDFF2843568F982ADDCEFE38A /* CJKeyboardAvoidingScrollView.h */,
+				7AF9D86BE5BC6614E03B331636C28A91 /* CJKeyboardAvoidingScrollView.m */,
+				0077D4CC1ECFC4AABAAE8872F03568D4 /* CJKeyboardAvoidingTableView.h */,
+				D9221A039A78FC0310296A4D9CAE5EF4 /* CJKeyboardAvoidingTableView.m */,
+				E91F0E96EF9C3FE7F5CDC5371CAC6442 /* UIScrollView+CJKeyboardAvoiding.h */,
+				0EB7B46754739A414A3EB773B1E55589 /* UIScrollView+CJKeyboardAvoiding.m */,
+			);
+			name = CJScrollView;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				AB4E338570479640276A1B9D16BA7E16 /* Pods */,
+				B6B3988471EB8725320077D733A96A25 /* Products */,
+				248ABE9AC4B011A911AECDCE8137C867 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8521E8F8133F4F728F5D2A3FBB14899F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AC7A1846B6242144867D4CC5E96AC82 /* CJBaseUIKit.xcconfig */,
+				DFE8F62E6807AC907B01F113B2C2A56D /* CJBaseUIKit-dummy.m */,
+				F546E3087352DFECDB22769480CAE924 /* CJBaseUIKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CJBaseUIKit";
+			sourceTree = "<group>";
+		};
+		991932A2340BE7D96662B8BFB9858495 /* CJBaseUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				5D4892881BF570C3DB137FF49F038467 /* CJScrollView */,
+				8521E8F8133F4F728F5D2A3FBB14899F /* Support Files */,
+			);
+			path = CJBaseUIKit;
+			sourceTree = "<group>";
+		};
+		AB4E338570479640276A1B9D16BA7E16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				991932A2340BE7D96662B8BFB9858495 /* CJBaseUIKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B6B3988471EB8725320077D733A96A25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B29E85BB20DF8CC0EDE157A15E03030 /* libCJBaseUIKit.a */,
+				7D160E4630223CB2595AAFE3EA324681 /* libPods-CJPopupActionDemo.a */,
+				EA1C655B1B0D9F128E9C32EE92EE2CA5 /* libPods-CJPopupActionDemoTests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */,
+				E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F981BCFA43404FD15DF7F553E1FF8AFA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8542D3C25779B8884D2ED39D0EFE5701 /* CJKeyboardAvoidingScrollView.h in Headers */,
+				9F5E8AE6A321126008015797D4D026E2 /* CJKeyboardAvoidingTableView.h in Headers */,
+				28D49EE02699B85B056BE864C1623748 /* UIScrollView+CJKeyboardAvoiding.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		44085B0DA98A22308BC56E9825C8519F /* Pods-CJPopupActionDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0940A7798DC49CD3EE2B5EBABCC1209 /* Build configuration list for PBXNativeTarget "Pods-CJPopupActionDemo" */;
+			buildPhases = (
+				56ABAA04CC67D442AD729A134F52065C /* Sources */,
+				D445FFC84C2539C2E7D458D25E1A6B85 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EBB34EA1EA4C57A23FE899F1CBBE869 /* PBXTargetDependency */,
+			);
+			name = "Pods-CJPopupActionDemo";
+			productName = "Pods-CJPopupActionDemo";
+			productReference = 7D160E4630223CB2595AAFE3EA324681 /* libPods-CJPopupActionDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9CEC69BF48A3BB52E8ACBEA6468BCFDB /* Pods-CJPopupActionDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BD613BEC1EF19E9532D44963B770230 /* Build configuration list for PBXNativeTarget "Pods-CJPopupActionDemoTests" */;
+			buildPhases = (
+				A6B21AD799CEF37EABAA6558BBE036BB /* Sources */,
+				8CD687522EAFCB291765BD1E5D979DF6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-CJPopupActionDemoTests";
+			productName = "Pods-CJPopupActionDemoTests";
+			productReference = EA1C655B1B0D9F128E9C32EE92EE2CA5 /* libPods-CJPopupActionDemoTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B045645E9F846FE9D962C108A6B690D5 /* CJBaseUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EF559C12B38D85A1A6C3ECF545379D9 /* Build configuration list for PBXNativeTarget "CJBaseUIKit" */;
+			buildPhases = (
+				61CBACF744B743924499C204B8245D11 /* Sources */,
+				1B3E8DD65AAE9ACF5639A56EA3A50EBA /* Frameworks */,
+				F981BCFA43404FD15DF7F553E1FF8AFA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CJBaseUIKit;
+			productName = CJBaseUIKit;
+			productReference = 4B29E85BB20DF8CC0EDE157A15E03030 /* libCJBaseUIKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B6B3988471EB8725320077D733A96A25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B045645E9F846FE9D962C108A6B690D5 /* CJBaseUIKit */,
+				44085B0DA98A22308BC56E9825C8519F /* Pods-CJPopupActionDemo */,
+				9CEC69BF48A3BB52E8ACBEA6468BCFDB /* Pods-CJPopupActionDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56ABAA04CC67D442AD729A134F52065C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10C3060611A97D279F8501BB3FCA18F /* Pods-CJPopupActionDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61CBACF744B743924499C204B8245D11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A772ED3937C77B1D0A34EDA45C837F5 /* CJBaseUIKit-dummy.m in Sources */,
+				4CBE14CB1A61D70F639495698EFAEF01 /* CJKeyboardAvoidingScrollView.m in Sources */,
+				49C89AA92618679D7C770C887E7CA30C /* CJKeyboardAvoidingTableView.m in Sources */,
+				A405013B82FD583AB9FA378AA10EF666 /* UIScrollView+CJKeyboardAvoiding.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6B21AD799CEF37EABAA6558BBE036BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF1715BE6692CC0E869DACD0D808649E /* Pods-CJPopupActionDemoTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EBB34EA1EA4C57A23FE899F1CBBE869 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CJBaseUIKit;
+			target = B045645E9F846FE9D962C108A6B690D5 /* CJBaseUIKit */;
+			targetProxy = 83B51A0F3CA2C699AD533A2ABF4B900F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		39577293C9E386C5D95ADC7CD31B9823 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE2534D0F221B83675DED06D2BA91875 /* Pods-CJPopupActionDemo.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5C6656BD7EC5E83BB994B64079BBFBA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AC7A1846B6242144867D4CC5E96AC82 /* CJBaseUIKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CJBaseUIKit/CJBaseUIKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		79B0C2E66EFA9917ED6EDDB8FC6A7684 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F76CF4779C7F3025DC3BEAC4CA4EB38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AC7A1846B6242144867D4CC5E96AC82 /* CJBaseUIKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CJBaseUIKit/CJBaseUIKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9A63F6F159B0A4D681A61F9D8CD7F4AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2D944EB0505E77659244D357110FB4B /* Pods-CJPopupActionDemoTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A0966BA66953C8CB45D7B24375A092B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FED074A2B3555170997AA61FDE081DA0 /* Pods-CJPopupActionDemoTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CF7953F66E785E8876EB4D370D777D50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FA22FF71520F2BEA3294CD4FE5152EE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2FEFE269FD4D17CB694F78E8367A3F2 /* Pods-CJPopupActionDemo.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EF559C12B38D85A1A6C3ECF545379D9 /* Build configuration list for PBXNativeTarget "CJBaseUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C6656BD7EC5E83BB994B64079BBFBA0 /* Debug */,
+				8F76CF4779C7F3025DC3BEAC4CA4EB38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF7953F66E785E8876EB4D370D777D50 /* Debug */,
+				79B0C2E66EFA9917ED6EDDB8FC6A7684 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BD613BEC1EF19E9532D44963B770230 /* Build configuration list for PBXNativeTarget "Pods-CJPopupActionDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A63F6F159B0A4D681A61F9D8CD7F4AF /* Debug */,
+				A0966BA66953C8CB45D7B24375A092B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0940A7798DC49CD3EE2B5EBABCC1209 /* Build configuration list for PBXNativeTarget "Pods-CJPopupActionDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA22FF71520F2BEA3294CD4FE5152EE4 /* Debug */,
+				39577293C9E386C5D95ADC7CD31B9823 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

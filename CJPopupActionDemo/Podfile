@@ -1,0 +1,10 @@
+platform :ios, '7.0'
+#use_frameworks!
+
+target 'CJPopupActionDemo' do
+    pod 'CJBaseUIKit/CJScrollView', '~> 0.0.5'
+end
+
+target 'CJPopupActionDemoTests' do
+    
+end

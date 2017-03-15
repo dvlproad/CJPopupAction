@@ -29,8 +29,8 @@
 		7817F9B21E00E99C00889DD5 /* WelcomeViewToPop.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7817F9A61E00E99C00889DD5 /* WelcomeViewToPop.xib */; };
 		7817F9BE1E00E9B000889DD5 /* UIView+CJPopupInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9B61E00E9B000889DD5 /* UIView+CJPopupInView.m */; };
 		7817F9BF1E00E9B000889DD5 /* UIView+CJShowExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9B81E00E9B000889DD5 /* UIView+CJShowExtendView.m */; };
-		7817F9C01E00E9B000889DD5 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9BB1E00E9B000889DD5 /* TPKeyboardAvoidingScrollView.m */; };
-		7817F9C11E00E9B000889DD5 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9BD1E00E9B000889DD5 /* TPKeyboardAvoidingTableView.m */; };
+		91D5BD028224ADA2AE9BEA6B /* libPods-CJPopupActionDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E66150768475F110069D2B /* libPods-CJPopupActionDemoTests.a */; };
+		B84521BA562E2DBAD702C53E /* libPods-CJPopupActionDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6976AD94306740552C38F659 /* libPods-CJPopupActionDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A33A907E60E53438FA939ED /* Pods-CJPopupActionDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPopupActionDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJPopupActionDemoTests/Pods-CJPopupActionDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6976AD94306740552C38F659 /* libPods-CJPopupActionDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPopupActionDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7817F95D1E00E94B00889DD5 /* CJPopupActionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJPopupActionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7817F9611E00E94B00889DD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7817F9631E00E94B00889DD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,10 +92,10 @@
 		7817F9B61E00E9B000889DD5 /* UIView+CJPopupInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJPopupInView.m"; sourceTree = "<group>"; };
 		7817F9B71E00E9B000889DD5 /* UIView+CJShowExtendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJShowExtendView.h"; sourceTree = "<group>"; };
 		7817F9B81E00E9B000889DD5 /* UIView+CJShowExtendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJShowExtendView.m"; sourceTree = "<group>"; };
-		7817F9BA1E00E9B000889DD5 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
-		7817F9BB1E00E9B000889DD5 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
-		7817F9BC1E00E9B000889DD5 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
-		7817F9BD1E00E9B000889DD5 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		B05346EB05B05D7BA26F991C /* Pods-CJPopupActionDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPopupActionDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPopupActionDemoTests/Pods-CJPopupActionDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		CCFD8AC2FBDF978011E199D8 /* Pods-CJPopupActionDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPopupActionDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPopupActionDemo/Pods-CJPopupActionDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E4E66150768475F110069D2B /* libPods-CJPopupActionDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPopupActionDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5F80D4EEEAB0DCD79FD5810 /* Pods-CJPopupActionDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPopupActionDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJPopupActionDemo/Pods-CJPopupActionDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84521BA562E2DBAD702C53E /* libPods-CJPopupActionDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91D5BD028224ADA2AE9BEA6B /* libPods-CJPopupActionDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +132,8 @@
 				7817F9791E00E94B00889DD5 /* CJPopupActionDemoTests */,
 				7817F9841E00E94B00889DD5 /* CJPopupActionDemoUITests */,
 				7817F95E1E00E94B00889DD5 /* Products */,
+				8F5428A15001BFAD6E07D597 /* Pods */,
+				95B300B90DAAB5B8AE89FB58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,7 +155,6 @@
 				7817F9661E00E94B00889DD5 /* ViewController.h */,
 				7817F9671E00E94B00889DD5 /* ViewController.m */,
 				7817F9B31E00E9B000889DD5 /* CJPopupAction */,
-				7817F9B91E00E9B000889DD5 /* QAvoidingKeyboard */,
 				7817F9931E00E99C00889DD5 /* Controller */,
 				7817F9A01E00E99C00889DD5 /* View */,
 				7817F9691E00E94B00889DD5 /* Main.storyboard */,
@@ -232,16 +237,24 @@
 			path = ../../CJPopupAction;
 			sourceTree = "<group>";
 		};
-		7817F9B91E00E9B000889DD5 /* QAvoidingKeyboard */ = {
+		8F5428A15001BFAD6E07D597 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7817F9BA1E00E9B000889DD5 /* TPKeyboardAvoidingScrollView.h */,
-				7817F9BB1E00E9B000889DD5 /* TPKeyboardAvoidingScrollView.m */,
-				7817F9BC1E00E9B000889DD5 /* TPKeyboardAvoidingTableView.h */,
-				7817F9BD1E00E9B000889DD5 /* TPKeyboardAvoidingTableView.m */,
+				E5F80D4EEEAB0DCD79FD5810 /* Pods-CJPopupActionDemo.debug.xcconfig */,
+				CCFD8AC2FBDF978011E199D8 /* Pods-CJPopupActionDemo.release.xcconfig */,
+				1A33A907E60E53438FA939ED /* Pods-CJPopupActionDemoTests.debug.xcconfig */,
+				B05346EB05B05D7BA26F991C /* Pods-CJPopupActionDemoTests.release.xcconfig */,
 			);
-			name = QAvoidingKeyboard;
-			path = ../../QAvoidingKeyboard;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		95B300B90DAAB5B8AE89FB58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6976AD94306740552C38F659 /* libPods-CJPopupActionDemo.a */,
+				E4E66150768475F110069D2B /* libPods-CJPopupActionDemoTests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7817F98A1E00E94B00889DD5 /* Build configuration list for PBXNativeTarget "CJPopupActionDemo" */;
 			buildPhases = (
+				3C8BDC7B3F3795B5361D6654 /* [CP] Check Pods Manifest.lock */,
 				7817F9591E00E94B00889DD5 /* Sources */,
 				7817F95A1E00E94B00889DD5 /* Frameworks */,
 				7817F95B1E00E94B00889DD5 /* Resources */,
+				5C6B264CA5F29FA3CD615EAB /* [CP] Embed Pods Frameworks */,
+				FDDAE5C6E23A60D26951B80B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,9 +284,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7817F98D1E00E94B00889DD5 /* Build configuration list for PBXNativeTarget "CJPopupActionDemoTests" */;
 			buildPhases = (
+				11900FF34880E55C261F84E8 /* [CP] Check Pods Manifest.lock */,
 				7817F9721E00E94B00889DD5 /* Sources */,
 				7817F9731E00E94B00889DD5 /* Frameworks */,
 				7817F9741E00E94B00889DD5 /* Resources */,
+				4ED26AEDDA570DE6DB656E0E /* [CP] Embed Pods Frameworks */,
+				94142EC6127A583B721D70DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -378,6 +397,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11900FF34880E55C261F84E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3C8BDC7B3F3795B5361D6654 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4ED26AEDDA570DE6DB656E0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPopupActionDemoTests/Pods-CJPopupActionDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C6B264CA5F29FA3CD615EAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPopupActionDemo/Pods-CJPopupActionDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94142EC6127A583B721D70DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPopupActionDemoTests/Pods-CJPopupActionDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDDAE5C6E23A60D26951B80B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPopupActionDemo/Pods-CJPopupActionDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7817F9591E00E94B00889DD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -388,12 +500,10 @@
 				7817F9BE1E00E9B000889DD5 /* UIView+CJPopupInView.m in Sources */,
 				7817F9BF1E00E9B000889DD5 /* UIView+CJShowExtendView.m in Sources */,
 				7817F9A91E00E99C00889DD5 /* PopupInWindowVC.m in Sources */,
-				7817F9C11E00E9B000889DD5 /* TPKeyboardAvoidingTableView.m in Sources */,
 				7817F9AB1E00E99C00889DD5 /* ShowDropDownViewController.m in Sources */,
 				7817F9AD1E00E99C00889DD5 /* ShowExtendViewVC.m in Sources */,
 				7817F9A71E00E99C00889DD5 /* PopupInViewVC.m in Sources */,
 				7817F9651E00E94B00889DD5 /* AppDelegate.m in Sources */,
-				7817F9C01E00E9B000889DD5 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				7817F9B11E00E99C00889DD5 /* WelcomeViewToPop.m in Sources */,
 				7817F9621E00E94B00889DD5 /* main.m in Sources */,
 			);
@@ -542,6 +652,7 @@
 		};
 		7817F98B1E00E94B00889DD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5F80D4EEEAB0DCD79FD5810 /* Pods-CJPopupActionDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CJPopupActionDemo/Info.plist;
@@ -553,6 +664,7 @@
 		};
 		7817F98C1E00E94B00889DD5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCFD8AC2FBDF978011E199D8 /* Pods-CJPopupActionDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CJPopupActionDemo/Info.plist;
@@ -564,6 +676,7 @@
 		};
 		7817F98E1E00E94B00889DD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A33A907E60E53438FA939ED /* Pods-CJPopupActionDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CJPopupActionDemoTests/Info.plist;
@@ -576,6 +689,7 @@
 		};
 		7817F98F1E00E94B00889DD5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B05346EB05B05D7BA26F991C /* Pods-CJPopupActionDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CJPopupActionDemoTests/Info.plist;
@@ -627,6 +741,7 @@
 				7817F98C1E00E94B00889DD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7817F98D1E00E94B00889DD5 /* Build configuration list for PBXNativeTarget "CJPopupActionDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -635,6 +750,7 @@
 				7817F98F1E00E94B00889DD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7817F9901E00E94B00889DD5 /* Build configuration list for PBXNativeTarget "CJPopupActionDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -643,6 +759,7 @@
 				7817F9921E00E94B00889DD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

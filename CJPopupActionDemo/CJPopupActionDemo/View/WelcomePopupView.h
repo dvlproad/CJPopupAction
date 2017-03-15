@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CJPopupViewDelegate.h"
-#import "TPKeyboardAvoidingScrollView.h"
+#import <CJBaseUIKit/CJKeyboardAvoidingScrollView.h>
 
-@interface WelcomePopupView : TPKeyboardAvoidingScrollView
+@interface WelcomePopupView : CJKeyboardAvoidingScrollView
 
 @property (nonatomic, assign) id <CJPopupViewDelegate> popupViewDelegate;
 
