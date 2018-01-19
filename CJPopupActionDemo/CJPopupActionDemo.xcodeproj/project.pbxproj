@@ -330,6 +330,7 @@
 				TargetAttributes = {
 					7817F95C1E00E94B00889DD5 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = FZ5YDHE5JZ;
 						ProvisioningStyle = Automatic;
 					};
 					7817F9751E00E94B00889DD5 = {
@@ -655,6 +656,7 @@
 			baseConfigurationReference = E5F80D4EEEAB0DCD79FD5810 /* Pods-CJPopupActionDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FZ5YDHE5JZ;
 				INFOPLIST_FILE = CJPopupActionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJPopupActionDemo;
@@ -667,6 +669,7 @@
 			baseConfigurationReference = CCFD8AC2FBDF978011E199D8 /* Pods-CJPopupActionDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FZ5YDHE5JZ;
 				INFOPLIST_FILE = CJPopupActionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJPopupActionDemo;

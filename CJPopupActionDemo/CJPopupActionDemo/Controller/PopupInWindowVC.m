@@ -2,8 +2,8 @@
 //  PopupInWindowVC.m
 //  CJPopupViewDemo
 //
-//  Created by lichq on 15/11/12.
-//  Copyright (c) 2015年 ciyouzen. All rights reserved.
+//  Created by ciyouzen on 15/11/12.
+//  Copyright (c) 2015年 dvlproad. All rights reserved.
 //
 
 #import "PopupInWindowVC.h"
@@ -32,7 +32,10 @@
     
     popupView.popupViewDelegate = self;
     popupView.outestView = self.view;
-    [popupView cj_popupInWindowAtPosition:CJWindowPositionCenter animationType:CJAnimationTypeCATransform3D showComplete:^{
+    
+    CGSize popupViewSize = popupView.frame.size;
+    //popupViewSize = CGSizeMake(200, 200);
+    [popupView cj_popupInCenterWindow:CJAnimationTypeCATransform3D withSize:popupViewSize showComplete:^{
         NSLog(@"显示完成");
         
     } tapBlankComplete:^{
@@ -45,7 +48,9 @@
 - (IBAction)popupInWindow_bottom:(id)sender{
     WelcomeViewToPop *popupView = (WelcomeViewToPop *)[[[NSBundle mainBundle] loadNibNamed:@"WelcomeViewToPop" owner:nil options:nil] lastObject];
     popupView.popupViewDelegate = self;
-    [popupView cj_popupInWindowAtPosition:CJWindowPositionBottom animationType:CJAnimationTypeNormal showComplete:^{
+    
+    CGFloat popupViewHeight = CGRectGetHeight(popupView.frame);
+    [popupView cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight showComplete:^{
         NSLog(@"显示完成");
         
     } tapBlankComplete:^{

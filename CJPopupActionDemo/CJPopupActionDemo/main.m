@@ -2,8 +2,8 @@
 //  main.m
 //  CJPopupViewDemo
 //
-//  Created by lichq on 6/22/15.
-//  Copyright (c) 2015 ciyouzen. All rights reserved.
+//  Created by ciyouzen on 6/22/15.
+//  Copyright (c) 2015 dvlproad. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -3,7 +3,7 @@
 //  CJPopupViewDemo
 //
 //  Created by 李超前 on 16/8/31.
-//  Copyright © 2016年 ciyouzen. All rights reserved.
+//  Copyright © 2016年 dvlproad. All rights reserved.
 //
 
 #import "ShowDropDownViewController.h"
@@ -41,7 +41,7 @@
         [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
         [popupView addSubview:btn];
         
-        [button cj_showExtendView:popupView inView:self.view locationAccordingView:button relativePosition:CJPopupViewPositionUnder showComplete:^{
+        [button cj_showExtendView:popupView inView:self.view locationAccordingView:button relativePosition:CJPopupViewPositionBelow showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");

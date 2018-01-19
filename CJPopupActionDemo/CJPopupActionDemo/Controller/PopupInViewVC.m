@@ -2,8 +2,8 @@
 //  PopupInViewVC.m
 //  CJPopupViewDemo
 //
-//  Created by lichq on 15/11/12.
-//  Copyright (c) 2015年 ciyouzen. All rights reserved.
+//  Created by ciyouzen on 15/11/12.
+//  Copyright (c) 2015年 dvlproad. All rights reserved.
 //
 
 #import "PopupInViewVC.h"
@@ -41,7 +41,7 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
         
-        [popupView cj_popupInView:popupSuperview atLocation:pointLocation withSize:size_popupView showComplete:^{
+        [popupView cj_popupInView:popupSuperview withOrigin:pointLocation size:size_popupView showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景隐藏完成");
@@ -74,7 +74,7 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
         
-        [popupView cj_popupInView:popupSuperview atLocation:pointLocation withSize:size_popupView showComplete:^{
+        [popupView cj_popupInView:popupSuperview withOrigin:pointLocation   size:size_popupView showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");
@@ -106,7 +106,7 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
         
-        [popupView cj_popupInView:popupSuperview atLocation:pointLocation withSize:size_popupView showComplete:^{
+        [popupView cj_popupInView:popupSuperview withOrigin:pointLocation size:size_popupView showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");
