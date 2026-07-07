@@ -1,6 +1,6 @@
 //
 //  UIView+CJShowExtendView.m
-//  CJPopupViewDemo
+//  CJPopupAction
 //
 //  Created by ciyouzen on 15/11/12.
 //  Copyright (c) 2015年 dvlproad. All rights reserved.
@@ -35,14 +35,16 @@ static NSString *cjExtendViewKey = @"cjExtendView";
                    inView:(UIView *)popupSuperview
                atLocation:(CGPoint)popupViewLocation
                  withSize:(CGSize)popupViewSize
-             showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
-         tapBlankComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock
+             blankBGColor:(UIColor *)blankBGColor
+             showComplete:(void(^)(void))showPopupViewCompleteBlock
+         tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
     self.cjExtendView = popupView;
     
     [popupView cj_popupInView:popupSuperview
                    withOrigin:popupViewLocation
                          size:popupViewSize
+                 blankBGColor:blankBGColor
                  showComplete:showPopupViewCompleteBlock
              tapBlankComplete:tapBlankViewCompleteBlock];
 }
@@ -52,8 +54,9 @@ static NSString *cjExtendViewKey = @"cjExtendView";
                    inView:(UIView *)popupSuperview
     locationAccordingView:(UIView *)accordingView
          relativePosition:(CJPopupViewPosition)popupViewPosition
-             showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
-         tapBlankComplete:(CJTapBlankViewCompleteBlock)tapBlankViewCompleteBlock
+             blankBGColor:(UIColor *)blankBGColor
+             showComplete:(void(^)(void))showPopupViewCompleteBlock
+         tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
     NSAssert(accordingView != nil, @"accordingView不能为空,如果为空，请选择 -cj_showExtendView:inView:atLocation:withSize:showComplete:tapBlankComplete:hideComplete:方法");
     
@@ -79,6 +82,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
     [popupView cj_popupInView:popupSuperview
                    withOrigin:popupViewLocation
                          size:popupViewSize
+                 blankBGColor:blankBGColor
                  showComplete:showPopupViewCompleteBlock
              tapBlankComplete:tapBlankViewCompleteBlock];
 }

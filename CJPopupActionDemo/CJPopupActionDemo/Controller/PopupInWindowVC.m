@@ -35,7 +35,7 @@
     
     CGSize popupViewSize = popupView.frame.size;
     //popupViewSize = CGSizeMake(200, 200);
-    [popupView cj_popupInCenterWindow:CJAnimationTypeCATransform3D withSize:popupViewSize showComplete:^{
+    [popupView cj_popupInCenterWindow:CJAnimationTypeCATransform3D withSize:popupViewSize blankBGColor:nil showComplete:^{
         NSLog(@"显示完成");
         
     } tapBlankComplete:^{
@@ -50,7 +50,7 @@
     popupView.popupViewDelegate = self;
     
     CGFloat popupViewHeight = CGRectGetHeight(popupView.frame);
-    [popupView cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight showComplete:^{
+    [popupView cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight edgeInsets:UIEdgeInsetsMake(0, 10, 10, 10) blankBGColor:nil showComplete:^{
         NSLog(@"显示完成");
         
     } tapBlankComplete:^{

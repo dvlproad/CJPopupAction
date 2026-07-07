@@ -1,3 +1,14 @@
+  #查看本地已同步的pod库：pod repo
+  #清除缓存：pod cache clean CJPopupAction
+  
+#  pod trunk register 邮箱地址 '用户名' --description='描述信息'
+#  pod trunk register dvlproad@163.com 'dvlproad' --description='homeMac'
+#  pod trunk me
+
+  # 上传到github公有库:
+  #验证方法：pod lib lint CJPopupAction.podspec --sources='https://github.com/CocoaPods/Specs.git' --allow-warnings --use-libraries --verbose
+  #提交方法： pod trunk push CJPopupAction.podspec --allow-warnings --verbose
+  
 #
 #  Be sure to run `pod spec lint CJPopupAction.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
@@ -16,16 +27,12 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CJPopupAction"
-  s.version      = "1.4.5"
-  s.summary      = "UIView的类别，用来实现UIView弹出popupView的一个Uiew的类别"
+  s.version      = "1.5.0"
+  s.summary      = "UIView的类别，用来实现UIView弹出popupView的一个UIView的类别"
 
   s.description  = <<-DESC
-                   A longer description of CJPopupAction in Markdown format.
-
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
+                   UIView的类别，用来实现UIView弹出popupView的一个UIView的类别。
+                   支持多种弹出方式：从上方弹出、从下方弹出、从中间弹出等。
                    DESC
 
   s.homepage     = "https://github.com/dvlproad/CJPopupAction"
@@ -66,7 +73,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-   s.platform     = :ios, "7.0"
+   s.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -79,7 +86,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupAction.git", :tag => "1.4.5" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupAction.git", :tag => "CJPopupAction_1.5.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

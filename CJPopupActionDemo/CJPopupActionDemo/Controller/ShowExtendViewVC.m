@@ -36,7 +36,7 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
     
-        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView showComplete:^{
+        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView blankBGColor:nil showComplete:^{
             NSLog(@"显示完成");
             
         } tapBlankComplete:^{
@@ -68,7 +68,7 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
         
-        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView showComplete:^{
+        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView blankBGColor:nil showComplete:^{
             NSLog(@"显示完成");
             
         } tapBlankComplete:^{
@@ -98,7 +98,7 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
         
-        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView showComplete:^{
+        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView blankBGColor:nil showComplete:^{
             NSLog(@"显示完成");
             
         } tapBlankComplete:^{

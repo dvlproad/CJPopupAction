@@ -1,12 +1,23 @@
 PODS:
   - CJBaseUIKit/CJScrollView (0.0.5)
+  - CJPopupAction (1.5.0)
 
 DEPENDENCIES:
   - CJBaseUIKit/CJScrollView (~> 0.0.5)
+  - CJPopupAction (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - CJBaseUIKit
+
+EXTERNAL SOURCES:
+  CJPopupAction:
+    :path: "../"
 
 SPEC CHECKSUMS:
   CJBaseUIKit: 55686c0aaafb1d3b3e3b990d300c5f9906b5d747
+  CJPopupAction: 0e1f7c138653784c6640c8ac8274232002345753
 
-PODFILE CHECKSUM: 7cc4811a17ad36c05fba654baf83b3339ce3cfd6
+PODFILE CHECKSUM: 2ecf744be9b5e805a134bb8cd377e63d64805a7a
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.16.2

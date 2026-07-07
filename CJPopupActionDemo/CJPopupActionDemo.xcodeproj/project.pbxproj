@@ -27,8 +27,6 @@
 		7817F9B01E00E99C00889DD5 /* WelcomePopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7817F9A31E00E99C00889DD5 /* WelcomePopupView.xib */; };
 		7817F9B11E00E99C00889DD5 /* WelcomeViewToPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9A51E00E99C00889DD5 /* WelcomeViewToPop.m */; };
 		7817F9B21E00E99C00889DD5 /* WelcomeViewToPop.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7817F9A61E00E99C00889DD5 /* WelcomeViewToPop.xib */; };
-		7817F9BE1E00E9B000889DD5 /* UIView+CJPopupInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9B61E00E9B000889DD5 /* UIView+CJPopupInView.m */; };
-		7817F9BF1E00E9B000889DD5 /* UIView+CJShowExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9B81E00E9B000889DD5 /* UIView+CJShowExtendView.m */; };
 		91D5BD028224ADA2AE9BEA6B /* libPods-CJPopupActionDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E66150768475F110069D2B /* libPods-CJPopupActionDemoTests.a */; };
 		B84521BA562E2DBAD702C53E /* libPods-CJPopupActionDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6976AD94306740552C38F659 /* libPods-CJPopupActionDemo.a */; };
 /* End PBXBuildFile section */
@@ -87,11 +85,6 @@
 		7817F9A41E00E99C00889DD5 /* WelcomeViewToPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewToPop.h; sourceTree = "<group>"; };
 		7817F9A51E00E99C00889DD5 /* WelcomeViewToPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewToPop.m; sourceTree = "<group>"; };
 		7817F9A61E00E99C00889DD5 /* WelcomeViewToPop.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewToPop.xib; sourceTree = "<group>"; };
-		7817F9B41E00E9B000889DD5 /* CJPopupViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPopupViewDelegate.h; sourceTree = "<group>"; };
-		7817F9B51E00E9B000889DD5 /* UIView+CJPopupInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJPopupInView.h"; sourceTree = "<group>"; };
-		7817F9B61E00E9B000889DD5 /* UIView+CJPopupInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJPopupInView.m"; sourceTree = "<group>"; };
-		7817F9B71E00E9B000889DD5 /* UIView+CJShowExtendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJShowExtendView.h"; sourceTree = "<group>"; };
-		7817F9B81E00E9B000889DD5 /* UIView+CJShowExtendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJShowExtendView.m"; sourceTree = "<group>"; };
 		B05346EB05B05D7BA26F991C /* Pods-CJPopupActionDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPopupActionDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPopupActionDemoTests/Pods-CJPopupActionDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		CCFD8AC2FBDF978011E199D8 /* Pods-CJPopupActionDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPopupActionDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPopupActionDemo/Pods-CJPopupActionDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E4E66150768475F110069D2B /* libPods-CJPopupActionDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPopupActionDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +147,6 @@
 				7817F9641E00E94B00889DD5 /* AppDelegate.m */,
 				7817F9661E00E94B00889DD5 /* ViewController.h */,
 				7817F9671E00E94B00889DD5 /* ViewController.m */,
-				7817F9B31E00E9B000889DD5 /* CJPopupAction */,
 				7817F9931E00E99C00889DD5 /* Controller */,
 				7817F9A01E00E99C00889DD5 /* View */,
 				7817F9691E00E94B00889DD5 /* Main.storyboard */,
@@ -224,19 +216,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		7817F9B31E00E9B000889DD5 /* CJPopupAction */ = {
-			isa = PBXGroup;
-			children = (
-				7817F9B41E00E9B000889DD5 /* CJPopupViewDelegate.h */,
-				7817F9B51E00E9B000889DD5 /* UIView+CJPopupInView.h */,
-				7817F9B61E00E9B000889DD5 /* UIView+CJPopupInView.m */,
-				7817F9B71E00E9B000889DD5 /* UIView+CJShowExtendView.h */,
-				7817F9B81E00E9B000889DD5 /* UIView+CJShowExtendView.m */,
-			);
-			name = CJPopupAction;
-			path = ../../CJPopupAction;
-			sourceTree = "<group>";
-		};
 		8F5428A15001BFAD6E07D597 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,8 +247,6 @@
 				7817F9591E00E94B00889DD5 /* Sources */,
 				7817F95A1E00E94B00889DD5 /* Frameworks */,
 				7817F95B1E00E94B00889DD5 /* Resources */,
-				5C6B264CA5F29FA3CD615EAB /* [CP] Embed Pods Frameworks */,
-				FDDAE5C6E23A60D26951B80B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,8 +265,6 @@
 				7817F9721E00E94B00889DD5 /* Sources */,
 				7817F9731E00E94B00889DD5 /* Frameworks */,
 				7817F9741E00E94B00889DD5 /* Resources */,
-				4ED26AEDDA570DE6DB656E0E /* [CP] Embed Pods Frameworks */,
-				94142EC6127A583B721D70DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -350,6 +325,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -405,13 +381,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CJPopupActionDemoTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3C8BDC7B3F3795B5361D6654 /* [CP] Check Pods Manifest.lock */ = {
@@ -420,73 +399,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CJPopupActionDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		4ED26AEDDA570DE6DB656E0E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPopupActionDemoTests/Pods-CJPopupActionDemoTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5C6B264CA5F29FA3CD615EAB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPopupActionDemo/Pods-CJPopupActionDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		94142EC6127A583B721D70DC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPopupActionDemoTests/Pods-CJPopupActionDemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FDDAE5C6E23A60D26951B80B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPopupActionDemo/Pods-CJPopupActionDemo-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -498,8 +420,6 @@
 			files = (
 				7817F9AF1E00E99C00889DD5 /* WelcomePopupView.m in Sources */,
 				7817F9681E00E94B00889DD5 /* ViewController.m in Sources */,
-				7817F9BE1E00E9B000889DD5 /* UIView+CJPopupInView.m in Sources */,
-				7817F9BF1E00E9B000889DD5 /* UIView+CJShowExtendView.m in Sources */,
 				7817F9A91E00E99C00889DD5 /* PopupInWindowVC.m in Sources */,
 				7817F9AB1E00E99C00889DD5 /* ShowDropDownViewController.m in Sources */,
 				7817F9AD1E00E99C00889DD5 /* ShowExtendViewVC.m in Sources */,

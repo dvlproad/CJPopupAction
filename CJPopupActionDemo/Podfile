@@ -3,6 +3,8 @@ platform :ios, '7.0'
 
 target 'CJPopupActionDemo' do
     pod 'CJBaseUIKit/CJScrollView', '~> 0.0.5'
+    
+    pod 'CJPopupAction',       :path => '../'
 end
 
 target 'CJPopupActionDemoTests' do
