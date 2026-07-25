@@ -36,7 +36,7 @@
                     <rect key="frame" x="10" y="158" width="167.5" height="201"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWc-Av-6Fh">
-                            <rect key="frame" x="20" y="20" width="127.5" height="30"/>
+                            <rect key="frame" x="0.0" y="20" width="87.5" height="30"/>
                             <color key="backgroundColor" red="0.78017430929999998" green="0.86903425099999998" blue="0.62558724349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="xvG-9Z-jJ6"/>
@@ -53,16 +53,16 @@
                     <color key="backgroundColor" red="1" green="0.0" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="201" id="0Ao-85-FIv"/>
-                        <constraint firstItem="pWc-Av-6Fh" firstAttribute="leading" secondItem="elS-oa-PH2" secondAttribute="leading" constant="20" id="A69-5h-pBW"/>
+                        <constraint firstItem="pWc-Av-6Fh" firstAttribute="leading" secondItem="elS-oa-PH2" secondAttribute="leading" id="A69-5h-pBW"/>
                         <constraint firstItem="pWc-Av-6Fh" firstAttribute="top" secondItem="elS-oa-PH2" secondAttribute="top" constant="20" id="f78-Si-EaK"/>
-                        <constraint firstAttribute="trailing" secondItem="pWc-Av-6Fh" secondAttribute="trailing" constant="20" id="gnH-nt-m3r"/>
+                        <constraint firstAttribute="trailing" secondItem="pWc-Av-6Fh" secondAttribute="trailing" constant="80" id="gnH-nt-m3r"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rrx-Or-sn2">
                     <rect key="frame" x="190.5" y="158" width="167.5" height="201"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppU-oT-BTt">
-                            <rect key="frame" x="20" y="20" width="127.5" height="30"/>
+                            <rect key="frame" x="0.0" y="20" width="87.5" height="30"/>
                             <color key="backgroundColor" red="0.78017430929999998" green="0.86903425099999998" blue="0.62558724349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="Oya-Uc-sSu"/>
@@ -78,9 +78,9 @@
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="ppU-oT-BTt" firstAttribute="leading" secondItem="Rrx-Or-sn2" secondAttribute="leading" constant="20" id="SH9-RU-nGB"/>
+                        <constraint firstItem="ppU-oT-BTt" firstAttribute="leading" secondItem="Rrx-Or-sn2" secondAttribute="leading" id="SH9-RU-nGB"/>
                         <constraint firstItem="ppU-oT-BTt" firstAttribute="top" secondItem="Rrx-Or-sn2" secondAttribute="top" constant="20" id="i1S-Ch-atk"/>
-                        <constraint firstAttribute="trailing" secondItem="ppU-oT-BTt" secondAttribute="trailing" constant="20" id="zST-7j-zU7"/>
+                        <constraint firstAttribute="trailing" secondItem="ppU-oT-BTt" secondAttribute="trailing" constant="80" id="zST-7j-zU7"/>
                     </constraints>
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="注：由于采用viewWithTag:，所以当有某个下拉框未收回去，就去弹出另外一个时，容易造成错误" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1VN-rI-luK">

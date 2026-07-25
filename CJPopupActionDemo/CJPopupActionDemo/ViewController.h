@@ -6,10 +6,8 @@
 //  Copyright (c) 2015 dvlproad. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CJUIKitBaseHomeViewController.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : CJUIKitBaseHomeViewController
 
 @end
-

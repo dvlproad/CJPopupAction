@@ -6,7 +6,7 @@
 //
 
 #import "CJPopupBlankModel.h"
-
+/*
 @implementation CJPopupRectModel
 
 #pragma mark - Init
@@ -25,17 +25,23 @@
 ///
 /// @param popupViewY                   下拉视图的起点和高度，一定要设置
 /// @param popupViewHeight        下拉视图的起点和高度，一定要设置
+/// @param superViewWidth           下拉视图及blankBG的高度，一定要设置，不然等下取width的时候是0，会导致显示不出来
 /// @param blankBGColor             blankBG的宽高已固定，最多允许设置的自定义背景色
 ///
 - (void)downPopupWithY:(CGFloat)popupViewY
                 height:(CGFloat)popupViewHeight
+        superViewWidth:(CGFloat)superViewWidth
           blankBGColor:(nullable UIColor *)blankBGColor
 {
+    [self _reset];
+    
     _expandToDirection = CJExpandToDirectionDown;
     
     _y = popupViewY;
     _height = popupViewHeight;
     
+    _x = 0;
+    _width = superViewWidth;
     CJPopupBlankModel *blankBGModel = [CJPopupBlankModel modelWidthColor:blankBGColor];
     _blankBGModel = blankBGModel;
 }
@@ -50,6 +56,8 @@
 - (void)downPopupWithY:(CGFloat)popupViewY
                 height:(CGFloat)popupViewHeight
 {
+    [self _reset];
+    
     _expandToDirection = CJExpandToDirectionDown;
     
     _y = popupViewY;
@@ -60,6 +68,8 @@
 - (void)downPopupWithTopLeft:(CGPoint)popupViewTopLeft
                         size:(CGSize)popupViewSize
 {
+    [self _reset];
+    
     _expandToDirection = CJExpandToDirectionDown;
     
     _x = popupViewTopLeft.x;
@@ -68,9 +78,18 @@
     _height = popupViewSize.height;
 }
 
+// 每次调用上面方法都要调用此方法，避免上面的方法被调用多个时候出现把值设置进去的情况
+- (void)_reset {
+    _x = 0;
+    _y = 0;
+    _width = 0;
+    _height = 0;
+    
+    _blankBGModel = nil;
+}
 
 @end
-
+*/
 
 
 

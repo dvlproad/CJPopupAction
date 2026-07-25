@@ -41,6 +41,17 @@ static NSString *cjExtendViewKey = @"cjExtendView";
 {
     self.cjExtendView = popupView;
     
+    /*
+    CJPopupRectModel *popupRectModel = [[CJPopupRectModel alloc] init];
+    if (blankBGModel != nil) {
+        [popupRectModel downPopupWithY:popupViewLocation.y
+                                height:popupViewSize.height
+                        superViewWidth:CGRectGetWidth(popupSuperview.frame)
+                          blankBGColor:blankBGModel.color]; // 占满宽时
+    } else {
+        [popupRectModel downPopupWithTopLeft:popupViewLocation size:popupViewSize]; // 不占满宽时
+    }
+    */
     [popupView cj_popupInView:popupSuperview
                    withOrigin:popupViewLocation
                          size:popupViewSize

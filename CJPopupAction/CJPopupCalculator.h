@@ -37,16 +37,16 @@ typedef struct {
                                              offset:(CGFloat)offset;
 
 /// 从指定点向下展开：传左上角（如：下拉菜单）
-+ (CJPopupFramePair)expandToDownFromTopLeft:(CGPoint)topLeft size:(CGSize)size;
++ (CJPopupFramePair)expandToDownFromLeftTop:(CGPoint)leftTop size:(CGSize)size;
 
 /// 从指定点向上展开：传左下角（如：按钮上方弹出）
-+ (CJPopupFramePair)expandToUpFromBottomLeft:(CGPoint)bottomLeft size:(CGSize)size;
++ (CJPopupFramePair)expandToUpFromLeftBottom:(CGPoint)leftBottom size:(CGSize)size;
 
 /// 从指定点向右展开：传左上角
-+ (CJPopupFramePair)expandToRightFromTopLeft:(CGPoint)topLeft size:(CGSize)size;
++ (CJPopupFramePair)expandToRightFromLeftTop:(CGPoint)leftTop size:(CGSize)size;
 
 /// 从指定点向左展开：传右上角
-+ (CJPopupFramePair)expandToLeftFromTopRight:(CGPoint)topRight size:(CGSize)size;
++ (CJPopupFramePair)expandToLeftFromRightTop:(CGPoint)rightTop size:(CGSize)size;
 
 /// 从指定点向四周展开：传中心点（如：居中弹窗）
 + (CJPopupFramePair)expandToCenterFromCenter:(CGPoint)center size:(CGSize)size;

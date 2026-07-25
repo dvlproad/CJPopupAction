@@ -9,7 +9,6 @@
 #import "ViewController.h"
 
 #import "PopupInWindowVC.h"
-
 #import "PopupInViewVC.h"
 #import "ShowExtendViewVC.h"
 #import "ShowDropDownViewController.h"
@@ -22,39 +21,59 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.title = NSLocalizedString(@"PopupViewDemo", nil);
+    self.navigationItem.title = NSLocalizedString(@"CJPopupAction Demo", nil);
+
+    NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
+
+    // Popup
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"Popup 功能";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"PopupInWindow (居中/底部弹出到Window)";
+            module.classEntry = [PopupInWindowVC class];
+            module.isCreateByXib = YES;
+            module.xibBundle = [NSBundle mainBundle];
+            [sectionDataModel.values addObject:module];
+        }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
+    // Popup
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"Popup 功能";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"PopupInView (弹出到指定View)";
+            module.classEntry = [PopupInViewVC class];
+            module.isCreateByXib = YES;
+            module.xibBundle = [NSBundle mainBundle];
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"ShowExtendView (展开弹出)";
+            module.classEntry = [ShowExtendViewVC class];
+            module.isCreateByXib = YES;
+            module.xibBundle = [NSBundle mainBundle];
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"ShowDropDown (下拉菜单)";
+            module.classEntry = [ShowDropDownViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+
+    self.sectionDataModels = sectionDataModels;
 }
-
-- (IBAction)goPopupInWindowVC:(id)sender{
-    PopupInWindowVC *vc = [[PopupInWindowVC alloc]initWithNibName:@"PopupInWindowVC" bundle:nil];
-    vc.title = [sender titleForState:UIControlStateNormal];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)goPopupInViewVC:(id)sender{
-    PopupInViewVC *vc = [[PopupInViewVC alloc]initWithNibName:@"PopupInViewVC" bundle:nil];
-    vc.title = [sender titleForState:UIControlStateNormal];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)goShowExtendViewVC:(id)sender{
-    ShowExtendViewVC *vc = [[ShowExtendViewVC alloc]initWithNibName:@"ShowExtendViewVC" bundle:nil];
-    vc.title = [sender titleForState:UIControlStateNormal];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)goShowDropDownViewController:(id)sender{
-    ShowDropDownViewController *vc = [[ShowDropDownViewController alloc] init];
-    vc.title = [sender titleForState:UIControlStateNormal];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

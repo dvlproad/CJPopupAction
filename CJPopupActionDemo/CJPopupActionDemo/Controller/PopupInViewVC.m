@@ -64,6 +64,18 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
         
+        /*
+        CJPopupRectModel *popupRectModel = [[CJPopupRectModel alloc] init];
+        if (self.popupBgModel != nil) {
+            [popupRectModel downPopupWithY:pointLocation.y
+                                    height:size_popupView.height
+                            superViewWidth:CGRectGetWidth(popupSuperview.frame)
+                              blankBGColor:self.popupBgModel.color]; // 占满宽时
+        } else {
+            [popupRectModel downPopupWithTopLeft:pointLocation size:size_popupView]; // 不占满宽时
+        }
+        [popupView cj_popupInView:popupSuperview popupRectModel:popupRectModel showComplete:^{
+        */
         [popupView cj_popupInView:popupSuperview withOrigin:pointLocation size:size_popupView blankBGModel:self.popupBgModel showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {

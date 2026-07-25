@@ -5,12 +5,13 @@
 //  Created by ciyouzen on 2026/7/25.
 //
 //  CJPopupBlankModel: 用来根据其是否为空来决定是否添加 可点击的空白背景
+//  CJPopupRectModel: 弹出视图的位置及是否要有空白区域背景的模型（此类是为了用来用一个模型来控制多个方向的，目前其实没什么用，因为只有固定下拉菜单）
 
 #import <UIKit/UIKit.h>
 #import "CJPopupCalculator.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+/*
 @class CJPopupBlankModel;
 @interface CJPopupRectModel : NSObject {
     
@@ -34,10 +35,12 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// @param popupViewY                   下拉视图的起点和高度，一定要设置
 /// @param popupViewHeight        下拉视图的起点和高度，一定要设置
+/// @param superViewWidth           下拉视图及blankBG的高度，一定要设置，不然等下取width的时候是0，会导致显示不出来
 /// @param blankBGColor             blankBG的宽高已固定，最多允许设置的自定义背景色
 ///
 - (void)downPopupWithY:(CGFloat)popupViewY
                 height:(CGFloat)popupViewHeight
+        superViewWidth:(CGFloat)superViewWidth
           blankBGColor:(nullable UIColor *)blankBGColor;
 
 /// 情况2：下拉视图宽度占据父视图，且没有的blankBG时：popupView的 x和width 都是 popupSuperview.origin.x 和  popupSuperview.width;
@@ -54,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
                         size:(CGSize)popupViewSize;
 
 @end
-
+*/
 
 
 

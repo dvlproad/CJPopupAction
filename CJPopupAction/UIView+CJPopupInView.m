@@ -124,6 +124,7 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
             withOrigin:(CGPoint)popupViewOrigin
                   size:(CGSize)popupViewSize
           blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
+//        popupRectModel:(CJPopupRectModel *)popupRectModel
           showComplete:(void(^)(void))showPopupViewCompleteBlock
       tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
@@ -154,7 +155,7 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
     self.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;
     self.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
     
-    CJPopupFramePair pair = [CJPopupCalculator expandToDownFromTopLeft:popupViewOrigin size:popupViewSize];
+    CJPopupFramePair pair = [CJPopupCalculator expandToDownFromLeftTop:popupViewOrigin size:popupViewSize];
     self.cjPopupViewHideFrameString = NSStringFromCGRect(pair.hideFrame);
     [self cj_showExpandViewWithShowFrame:pair.showFrame hideFrame:pair.hideFrame showComplete:showPopupViewCompleteBlock];
 }
@@ -518,10 +519,10 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
     CJPopupFramePair pair;
     switch (popupViewPosition) {
         case CJPopupViewPositionBelow:
-            pair = [CJPopupCalculator expandToDownFromTopLeft:CGPointMake(x, y + h) size:popupViewSize];
+            pair = [CJPopupCalculator expandToDownFromLeftTop:CGPointMake(x, y + h) size:popupViewSize];
             break;
         case CJPopupViewPositionAbove:
-            pair = [CJPopupCalculator expandToUpFromBottomLeft:CGPointMake(x, y) size:popupViewSize];
+            pair = [CJPopupCalculator expandToUpFromLeftBottom:CGPointMake(x, y) size:popupViewSize];
             break;
         case CJPopupViewPositionCenter:
             pair = [CJPopupCalculator expandToCenterFromCenter:CGPointMake(x + w / 2.0, y + h / 2.0) size:popupViewSize];
