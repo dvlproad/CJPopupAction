@@ -7,6 +7,7 @@
 //
 
 #import "UIView+CJPopupInView.h"
+#import "CJPopupCalculator.h"
 
 #define CJPopupMainThreadAssert() NSAssert([NSThread isMainThread], @"UIView+CJPopupInView needs to be accessed on the main thread.");
 
@@ -134,56 +135,28 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
     if (!canAdd) {
         return;
     }
-    UIView *blankView = self.cjTapView;
-    CGFloat blankViewX = popupViewOrigin.x;
-    CGFloat blankViewY = popupViewOrigin.y;
-    CGFloat blankViewWidth = popupViewSize.width;
-    CGFloat blankViewHeight = CGRectGetHeight(popupSuperview.frame) - popupViewOrigin.y;
-    CGRect blankViewFrame = CGRectMake(blankViewX,
-                                       blankViewY,
-                                       blankViewWidth,
-                                       blankViewHeight);
-    [blankView setFrame:blankViewFrame];
+    
+    if (self.cjTapView != nil) { // 如果之前没创建 blankBG 视图，则不需要设置其frame
+        UIView *blankView = self.cjTapView;
+        CGFloat blankViewX = popupViewOrigin.x;
+        CGFloat blankViewY = popupViewOrigin.y;
+        CGFloat blankViewWidth = popupViewSize.width;
+        CGFloat blankViewHeight = CGRectGetHeight(popupSuperview.frame) - popupViewOrigin.y;
+        CGRect blankViewFrame = CGRectMake(blankViewX,
+                                           blankViewY,
+                                           blankViewWidth,
+                                           blankViewHeight);
+        [blankView setFrame:blankViewFrame];
+    }
     
 
     self.cjPopupAnimationType = CJAnimationTypeNormal;
     self.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;
     self.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
     
-    
-    
-    CGFloat popupViewX = popupViewOrigin.x;
-    CGFloat popupViewY = popupViewOrigin.y;
-    CGFloat popupViewWidth = popupViewSize.width;
-    CGFloat popupViewShowHeight = popupViewSize.height;
-    CGFloat popupViewHideHeight = 0;
-    CGRect popupViewShowFrame = CGRectMake(popupViewX,
-                                           popupViewY,
-                                           popupViewWidth,
-                                           popupViewShowHeight);
-    CGRect popupViewHideFrame = CGRectMake(popupViewX,
-                                           popupViewY,
-                                           popupViewWidth,
-                                           popupViewHideHeight);
-    self.cjPopupViewHideFrameString = NSStringFromCGRect(popupViewHideFrame);
-    
-    
-    
-    
-    //动画设置位置
-    blankView.alpha = 0.2;
-    popupView.alpha = 0.2;
-    popupView.frame = popupViewHideFrame;
-    [UIView animateWithDuration:kCJPopupAnimationDuration
-                     animations:^{
-                         blankView.alpha = 1.0;
-                         popupView.alpha = 1.0;
-                         popupView.frame = popupViewShowFrame;
-                     }];
-    
-    if(showPopupViewCompleteBlock){
-        showPopupViewCompleteBlock();
-    }
+    CJPopupFramePair pair = [CJPopupCalculator expandToDownFromTopLeft:popupViewOrigin size:popupViewSize];
+    self.cjPopupViewHideFrameString = NSStringFromCGRect(pair.hideFrame);
+    [self cj_showExpandViewWithShowFrame:pair.showFrame hideFrame:pair.hideFrame showComplete:showPopupViewCompleteBlock];
 }
 
 /* 完整的描述请参见文件头部 */
@@ -194,6 +167,11 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
               tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
     CJPopupMainThreadAssert();
+    
+    // 弹出在中间的不能没有 blankBG 视图，所以强制设置 blankBGColor 来让其创建视图
+    if (blankBGColor == nil) {
+        blankBGColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
+    }
     
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
     
@@ -216,34 +194,9 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
     self.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;
     self.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
     
-    popupView.center = popupSuperview.center;
-    if (animationType == CJAnimationTypeNone) {
-        
-    } else if (animationType == CJAnimationTypeNormal) {
-        
-    } else if (animationType == CJAnimationTypeCATransform3D) {
-        CATransform3D popupViewShowTransform = CATransform3DIdentity;
-        
-        CATransform3D rotate = CATransform3DMakeRotation(70.0*M_PI/180.0, 0.0, 0.0, 1.0);
-        CATransform3D translate = CATransform3DMakeTranslation(20.0, -500.0, 0.0);
-        CATransform3D popupViewHideTransform = CATransform3DConcat(rotate, translate);
-        
-        self.layer.transform = popupViewHideTransform;
-        [UIView animateWithDuration:kCJPopupAnimationDuration
-                              delay:0.0
-                            options:UIViewAnimationOptionCurveEaseOut
-                         animations:^{
-                             self.layer.transform = popupViewShowTransform;
-                         } completion:^(BOOL finished) {
-                             
-                         }];
-        
-    }
-    
-    if(showPopupViewCompleteBlock){
-        showPopupViewCompleteBlock();
-    }
-    
+    CJPopupFramePair pair = [CJPopupCalculator expandToCenterFromCenter:popupSuperview.center size:popupViewSize];
+    self.cjPopupViewHideFrameString = NSStringFromCGRect(pair.hideFrame);
+    [self cj_showExpandViewWithShowFrame:pair.showFrame hideFrame:pair.hideFrame showComplete:showPopupViewCompleteBlock];
 }
 /** 完整的描述请参见文件头部 */
 - (void)cj_popupInBottomWindow:(CJAnimationType)animationType
@@ -255,6 +208,11 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
 {
     CJPopupMainThreadAssert();
     NSAssert(popupViewHeight != 0, @"弹出视图的高都不能为0");
+    
+    // 弹出在中间的不能没有 blankBG 视图，所以强制设置 blankBGColor 来让其创建视图
+    if (blankBGColor == nil) {
+        blankBGColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
+    }
     
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
     CGFloat popupViewWidth = CGRectGetWidth(keyWindow.frame) - edgeInsets.left - edgeInsets.right;
@@ -291,6 +249,7 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
     
     if (animationType == CJAnimationTypeNone) {
         popupView.frame = popupViewShowFrame;
+        !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
         
     } else if (animationType == CJAnimationTypeNormal) {
         //popupViewHideFrame
@@ -303,12 +262,13 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
         blankView.alpha = 0.2;
         popupView.alpha = 0.2;
         popupView.frame = popupViewHideFrame;
-        [UIView animateWithDuration:kCJPopupAnimationDuration
-                         animations:^{
-                             blankView.alpha = 1.0;
-                             popupView.alpha = 1.0;
-                             popupView.frame = popupViewShowFrame;
-                         }];
+        [UIView animateWithDuration:kCJPopupAnimationDuration animations:^{
+             blankView.alpha = 1.0;
+             popupView.alpha = 1.0;
+             popupView.frame = popupViewShowFrame;
+        } completion:^(BOOL finished) {
+            !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
+        }];
         
     } else if (animationType == CJAnimationTypeCATransform3D) {
         popupView.frame = popupViewShowFrame;
@@ -326,13 +286,8 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
                          animations:^{
                              self.layer.transform = popupViewShowTransform;
                          } completion:^(BOOL finished) {
-                             
+                             !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
                          }];
-        
-    }
-    
-    if(showPopupViewCompleteBlock){
-        showPopupViewCompleteBlock();
     }
 }
 
@@ -386,27 +341,28 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
         return NO;
     }
     
-    /* 添加进空白的点击区域blankView */
-    UIView *blankView = self.cjTapView;
-    if (blankView == nil) {
-        blankView = [[UIView alloc] initWithFrame:CGRectZero];
-        if (!blankBGColor) {
-            blankView.backgroundColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
-        } else {
-            blankView.backgroundColor = blankBGColor;
+    if (blankBGColor != nil) { // 没设置blankBGColor的时候，当作不需要添加 blankBG 视图
+        /* 添加进空白的点击区域blankView */
+        UIView *blankView = self.cjTapView;
+        if (blankView == nil) {
+            blankView = [[UIView alloc] initWithFrame:CGRectZero];
+            if (!blankBGColor) {
+                blankView.backgroundColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
+            } else {
+                blankView.backgroundColor = blankBGColor;
+            }
+            
+            UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cj_TapBlankViewAction:)];
+            [blankView addGestureRecognizer:tapGesture];
+            
+            self.cjTapView = blankView;
         }
         
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cj_TapBlankViewAction:)];
-        [blankView addGestureRecognizer:tapGesture];
-        
-        self.cjTapView = blankView;
+        if (self.cjPopupViewShowing) { //如果存在，先清除
+            [blankView removeFromSuperview];
+        }
+        [popupSuperview addSubview:blankView];
     }
-    
-    if (self.cjPopupViewShowing) { //如果存在，先清除
-        [blankView removeFromSuperview];
-    }
-    [popupSuperview addSubview:blankView];
-    
     
     
     
@@ -436,6 +392,50 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
 - (void)cj_hidePopupView {
     CJAnimationType animationType = self.cjPopupAnimationType;
     [self cj_hidePopupViewWithAnimationType:animationType];
+}
+
+#pragma mark - 底层内部方法
+- (void)cj_showSlideViewFromDirection:(CJSlideFromDirection)direction
+                               offset:(CGFloat)offset
+                            showFrame:(CGRect)popupViewShowFrame
+{
+    UIView *popupView = self;
+    UIView *blankView = self.cjTapView;
+    
+    CGAffineTransform hideTransform = [CJPopupCalculator slideHideTransformWithDirection:direction offset:offset];
+    
+    popupView.frame = popupViewShowFrame;
+    popupView.transform = hideTransform;
+    blankView.alpha = 0.2;
+    popupView.alpha = 0.2;
+    [UIView animateWithDuration:kCJPopupAnimationDuration
+                     animations:^{
+                         blankView.alpha = 1.0;
+                         popupView.alpha = 1.0;
+                         popupView.transform = CGAffineTransformIdentity;
+                     }];
+}
+
+- (void)cj_showExpandViewWithShowFrame:(CGRect)popupViewShowFrame
+                             hideFrame:(CGRect)popupViewHideFrame
+                          showComplete:(void(^)(void))showPopupViewCompleteBlock
+{
+    UIView *blankView = self.cjTapView;
+    if (blankView != nil) {
+        blankView.alpha = 0.2;
+    }
+    UIView *popupView = self;
+    popupView.frame = popupViewHideFrame;
+    popupView.alpha = 0.2;
+    [UIView animateWithDuration:kCJPopupAnimationDuration animations:^{
+        if (blankView != nil) {
+            blankView.alpha = 1.0;
+        }
+        popupView.alpha = 1.0;
+        popupView.frame = popupViewShowFrame;
+    } completion:^(BOOL finished) {
+        !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
+    }];
 }
 
 /** 完整的描述请参见文件头部 */
@@ -493,8 +493,5 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
         }
     }
 }
-
-
-
 
 @end

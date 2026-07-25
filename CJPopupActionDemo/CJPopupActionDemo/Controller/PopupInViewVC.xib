@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zop-zk-Cef">
-                    <rect key="frame" x="10" y="66" width="355" height="30"/>
+                    <rect key="frame" x="10" y="106" width="355" height="30"/>
                     <color key="backgroundColor" red="0.78017430929999998" green="0.86903425099999998" blue="0.62558724349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Lhi-34-RmE"/>
@@ -35,7 +33,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elS-oa-PH2">
-                    <rect key="frame" x="10" y="118" width="167.5" height="201"/>
+                    <rect key="frame" x="10" y="158" width="167.5" height="201"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWc-Av-6Fh">
                             <rect key="frame" x="20" y="20" width="127.5" height="30"/>
@@ -61,7 +59,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rrx-Or-sn2">
-                    <rect key="frame" x="190.5" y="118" width="167.5" height="201"/>
+                    <rect key="frame" x="190.5" y="158" width="167.5" height="201"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppU-oT-BTt">
                             <rect key="frame" x="20" y="20" width="127.5" height="30"/>
@@ -86,7 +84,7 @@
                     </constraints>
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="注：由于采用viewWithTag:，所以当有某个下拉框未收回去，就去弹出另外一个时，容易造成错误" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1VN-rI-luK">
-                    <rect key="frame" x="40" y="338" width="240" height="128"/>
+                    <rect key="frame" x="67" y="391" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -101,12 +99,12 @@
                 <constraint firstAttribute="trailing" secondItem="zop-zk-Cef" secondAttribute="trailing" constant="10" id="Pim-Gk-Vg1"/>
                 <constraint firstItem="elS-oa-PH2" firstAttribute="top" secondItem="zop-zk-Cef" secondAttribute="bottom" constant="22" id="aM2-Me-lFS"/>
                 <constraint firstItem="elS-oa-PH2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="bP7-mf-6a9"/>
-                <constraint firstItem="zop-zk-Cef" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="66" id="byc-H5-e6b"/>
+                <constraint firstItem="zop-zk-Cef" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="106" id="byc-H5-e6b"/>
                 <constraint firstItem="zop-zk-Cef" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="gBf-JZ-hf8"/>
                 <constraint firstItem="Rrx-Or-sn2" firstAttribute="height" secondItem="elS-oa-PH2" secondAttribute="height" id="hrf-kC-ymw"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-            <point key="canvasLocation" x="212" y="175"/>
+            <point key="canvasLocation" x="339.19999999999999" y="157.42128935532236"/>
         </view>
     </objects>
 </document>

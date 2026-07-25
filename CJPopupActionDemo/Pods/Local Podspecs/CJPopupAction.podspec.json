@@ -11,10 +11,31 @@
   },
   "source": {
     "git": "https://github.com/dvlproad/CJPopupAction.git",
-    "tag": "1.5.0"
+    "tag": "CJPopupAction_1.5.0"
   },
-  "source_files": "CJPopupAction/**/*.{h,m}",
-  "exclude_files": "Classes/Exclude",
   "frameworks": "UIKit",
-  "requires_arc": true
+  "requires_arc": true,
+  "subspecs": [
+    {
+      "name": "Base",
+      "source_files": "CJPopupAction/CJPopupCalculator.{h,m}"
+    },
+    {
+      "name": "PopupInView",
+      "source_files": [
+        "CJPopupAction/UIView+CJPopupInView.{h,m}",
+        "CJPopupAction/CJPopupViewDelegate.h"
+      ],
+      "dependencies": {
+        "CJPopupAction/Base": []
+      }
+    },
+    {
+      "name": "ShowExtendView",
+      "source_files": "CJPopupAction/UIView+CJShowExtendView.{h,m}",
+      "dependencies": {
+        "CJPopupAction/PopupInView": []
+      }
+    }
+  ]
 }

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
+#import "CJPopupCalculator.h"
 
 typedef void(^CJTapBlankViewCompleteBlock)(void);
 
@@ -43,7 +44,7 @@ typedef NS_ENUM(NSUInteger, CJAnimationType) {
  *  @param popupSuperview               弹出视图的父视图view
  *  @param popupViewOrigin              弹出视图的左上角origin坐标
  *  @param popupViewSize                弹出视图的size大小
- *  @param blankBGColor                 空白区域的背景颜色
+ *  @param blankBGColor                 空白区域的背景颜色（没设置blankBGColor的时候，当作不需要添加 blankBG 视图）
  *  @param showPopupViewCompleteBlock   显示弹出视图后的操作
  *  @param tapBlankViewCompleteBlock    点击空白区域后的操作(要自己执行cj_hidePopupView...来隐藏，因为有时候点击背景是不执行隐藏的)
  */
@@ -96,5 +97,7 @@ typedef NS_ENUM(NSUInteger, CJAnimationType) {
  *  隐藏弹出视图
  */
 - (void)cj_hidePopupViewWithAnimationType:(CJAnimationType)animationType;
+
+#pragma mark - 值计算(位移/展开)
 
 @end

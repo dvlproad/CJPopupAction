@@ -13,6 +13,7 @@
     
 }
 @property (nonatomic, weak) IBOutlet UIButton *button;
+@property (nonatomic, strong) UIColor *popupBgColor;
 
 @end
 
@@ -21,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.popupBgColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
 }
 
 - (IBAction)buttonClick:(UIButton *)button {
@@ -41,7 +44,7 @@
         [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
         [popupView addSubview:btn];
         
-        [button cj_showExtendView:popupView inView:self.view locationAccordingView:button relativePosition:CJPopupViewPositionBelow blankBGColor:nil showComplete:^{
+        [button cj_showExtendView:popupView inView:self.view locationAccordingView:button relativePosition:CJPopupViewPositionBelow blankBGColor:self.popupBgColor showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");

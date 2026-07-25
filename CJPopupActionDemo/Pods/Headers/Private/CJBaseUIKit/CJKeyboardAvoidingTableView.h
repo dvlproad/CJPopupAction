@@ -1,1 +1,1 @@
-../../../CJBaseUIKit/CJUIKit/CJScrollView/CJKeyboardAvoiding/CJKeyboardAvoidingTableView.h
+../../../CJBaseUIKit/CJBaseUIKit/UIScrollView/CJKeyboardAvoiding/CJKeyboardAvoidingTableView.h

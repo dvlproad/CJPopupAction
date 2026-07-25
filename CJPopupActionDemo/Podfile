@@ -1,10 +1,37 @@
-platform :ios, '7.0'
+platform :ios, '9.0'
 #use_frameworks!
+inhibit_all_warnings!
+# pod的本地索引文件：~/Library/Caches/CocoaPods/search_index.json
+
+
+post_install do |installer|
+    
+    puts 'Determining pod project minimal deployment target'
+    
+    pods_project = installer.pods_project
+    deployment_target_key = 'IPHONEOS_DEPLOYMENT_TARGET'
+    deployment_targets = pods_project.build_configurations.map{ |config| config.build_settings[deployment_target_key] }
+    minimal_deployment_target = deployment_targets.min_by{ |version| Gem::Version.new(version) }
+    # 所得 minimal_deployment_target 为本文件顶部设置的 platform :ios, '9.0' ，下面打印的log可在执行pod install的终端上查看
+
+    puts 'Minimal deployment target is ' + minimal_deployment_target.to_s # 添加了 .to_s，将值转换为字符串
+    puts 'Setting each pod deployment target to ' + minimal_deployment_target.to_s # 添加了 .to_s，将值转换为字符串
+
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            # 修复[File not found: /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/arc/libarclite_iphoneos.a](https://stackoverflow.com/questions/75574268/missing-file-libarclite-iphoneos-a-xcode-14-3)
+            config.build_settings[deployment_target_key] = minimal_deployment_target
+        end
+    end
+end
+
+
 
 target 'CJPopupActionDemo' do
-    pod 'CJBaseUIKit/CJScrollView', '~> 0.0.5'
+  pod 'CQDemoKit',    :subspecs => ['BaseVC']
+  pod 'CJBaseUIKit',        '~> 0.8.1',   :subspecs => ['UIScrollView/CJKeyboardAvoiding']
     
-    pod 'CJPopupAction',       :path => '../'
+  pod 'CJPopupAction',      :path => '../'
 end
 
 target 'CJPopupActionDemoTests' do

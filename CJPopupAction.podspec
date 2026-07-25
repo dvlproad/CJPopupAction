@@ -97,10 +97,20 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "CJPopupAction/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "Classes/**/*.h"
+  s.subspec 'Base' do |base|
+    base.source_files = "CJPopupAction/CJPopupCalculator.{h,m}"
+  end
+
+  s.subspec 'PopupInView' do |popup|
+    popup.source_files = "CJPopupAction/UIView+CJPopupInView.{h,m}", "CJPopupAction/CJPopupViewDelegate.h"
+    popup.dependency "CJPopupAction/Base"
+  end
+
+  s.subspec 'ShowExtendView' do |extend|
+    extend.source_files = "CJPopupAction/UIView+CJShowExtendView.{h,m}"
+    extend.dependency "CJPopupAction/PopupInView"
+  end
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
