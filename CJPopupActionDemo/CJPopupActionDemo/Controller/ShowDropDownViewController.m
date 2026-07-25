@@ -8,12 +8,14 @@
 
 #import "ShowDropDownViewController.h"
 #import "UIView+CJShowExtendView.h"
+#import <Masonry/Masonry.h>
 
 @interface ShowDropDownViewController () {
     
 }
-@property (nonatomic, weak) IBOutlet UIButton *button;
-@property (nonatomic, strong) UIColor *popupBgColor;
+@property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) CJPopupBlankModel *popupBgModel;
+@property (nonatomic, strong) UISegmentedControl *directionSegment;
 
 @end
 
@@ -23,7 +25,33 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.popupBgColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.popupBgModel = [CJPopupBlankModel defaultModel];
+    
+    
+    
+    self.button = [UIButton buttonWithType:UIButtonTypeSystem];
+    self.button.backgroundColor = [UIColor colorWithRed:0.412 green:0.757 blue:0.953 alpha:1.0];
+    [self.button setTitle:@"Button" forState:UIControlStateNormal];
+    [self.button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.button];
+    [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(-100);
+        make.centerX.equalTo(self.view);
+        make.width.mas_equalTo(281);
+        make.height.mas_equalTo(30);
+    }];
+    
+    self.directionSegment = [[UISegmentedControl alloc] initWithItems:@[@"上方", @"下方"]];
+    self.directionSegment.selectedSegmentIndex = 0;
+    self.directionSegment.tintColor = [UIColor darkGrayColor];
+    [self.view addSubview:self.directionSegment];
+    [self.directionSegment mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.button.mas_bottom).offset(220);
+        make.centerX.equalTo(self.view);
+        make.width.mas_equalTo(300);
+        make.height.mas_equalTo(32);
+    }];
 }
 
 - (IBAction)buttonClick:(UIButton *)button {
@@ -31,8 +59,6 @@
     if (button.selected) {
         CGFloat width = CGRectGetWidth(button.frame);
         CGFloat height = 200;
-        
-        CGFloat popupViewX = CGRectGetMinX(button.frame);
         
         UIView *popupView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, height)];
         popupView.clipsToBounds = YES;
@@ -44,7 +70,15 @@
         [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
         [popupView addSubview:btn];
         
-        [button cj_showExtendView:popupView inView:self.view locationAccordingView:button relativePosition:CJPopupViewPositionBelow blankBGColor:self.popupBgColor showComplete:^{
+        
+        CJPopupViewPosition position;
+        switch (self.directionSegment.selectedSegmentIndex) {
+            case 0: position = CJPopupViewPositionAbove; break;
+            case 1: position = CJPopupViewPositionBelow; break;
+            default: position = CJPopupViewPositionAbove; break;
+        }
+        
+        [button cj_showExtendView:popupView inView:self.view locationAccordingView:button relativePosition:CJPopupViewPositionBelow blankBGModel:self.popupBgModel showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");

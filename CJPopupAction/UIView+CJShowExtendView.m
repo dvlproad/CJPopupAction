@@ -35,7 +35,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
                    inView:(UIView *)popupSuperview
                atLocation:(CGPoint)popupViewLocation
                  withSize:(CGSize)popupViewSize
-             blankBGColor:(UIColor *)blankBGColor
+             blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
              showComplete:(void(^)(void))showPopupViewCompleteBlock
          tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
@@ -44,7 +44,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
     [popupView cj_popupInView:popupSuperview
                    withOrigin:popupViewLocation
                          size:popupViewSize
-                 blankBGColor:blankBGColor
+                 blankBGModel:blankBGModel
                  showComplete:showPopupViewCompleteBlock
              tapBlankComplete:tapBlankViewCompleteBlock];
 }
@@ -54,35 +54,17 @@ static NSString *cjExtendViewKey = @"cjExtendView";
                    inView:(UIView *)popupSuperview
     locationAccordingView:(UIView *)accordingView
          relativePosition:(CJPopupViewPosition)popupViewPosition
-             blankBGColor:(UIColor *)blankBGColor
+             blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
              showComplete:(void(^)(void))showPopupViewCompleteBlock
          tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
     NSAssert(accordingView != nil, @"accordingView不能为空,如果为空，请选择 -cj_showExtendView:inView:atLocation:withSize:showComplete:tapBlankComplete:hideComplete:方法");
     
     self.cjExtendView = popupView;
-    
-    //accordingView在popupView的superview中对应的y、rect值为：
-    CGRect accordingViewFrameInHisSuperview = [accordingView.superview convertRect:accordingView.frame toView:popupSuperview];
-    //NSLog(@"accordingViewFrameInHisSuperview = %@", NSStringFromCGRect(accordingViewFrameInHisSuperview));
-    CGPoint popupViewLocation = CGPointZero;
-    CGSize popupViewSize = CGSizeZero;
-    if (popupViewPosition == CJPopupViewPositionBelow) {
-        CGFloat popupViewX = CGRectGetMinX(accordingViewFrameInHisSuperview);
-        CGFloat popupViewY = CGRectGetMinY(accordingViewFrameInHisSuperview) + CGRectGetHeight(accordingView.frame);
-        popupViewLocation = CGPointMake(popupViewX, popupViewY);
-        
-        CGFloat popupViewWidth = CGRectGetWidth(accordingView.frame);
-        CGFloat popupViewHeight = CGRectGetHeight(popupView.frame);
-        NSAssert(popupViewHeight != 0, @"弹出视图的高度不能为0");
-        
-        popupViewSize = CGSizeMake(popupViewWidth, popupViewHeight);
-    }
-    
-    [popupView cj_popupInView:popupSuperview
-                   withOrigin:popupViewLocation
-                         size:popupViewSize
-                 blankBGColor:blankBGColor
+    [popupView cj_expandInView:popupSuperview
+         locationAccordingView:accordingView
+              relativePosition:popupViewPosition
+                 blankBGModel:blankBGModel
                  showComplete:showPopupViewCompleteBlock
              tapBlankComplete:tapBlankViewCompleteBlock];
 }

@@ -99,7 +99,7 @@ Pod::Spec.new do |s|
 
 
   s.subspec 'Base' do |base|
-    base.source_files = "CJPopupAction/CJPopupCalculator.{h,m}"
+    base.source_files = "CJPopupAction/CJPopupCalculator.{h,m}", "CJPopupAction/CJPopupBlankModel.{h,m}"
   end
 
   s.subspec 'PopupInView' do |popup|

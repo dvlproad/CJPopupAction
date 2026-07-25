@@ -20,7 +20,6 @@
 		7817F9A91E00E99C00889DD5 /* PopupInWindowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9981E00E99C00889DD5 /* PopupInWindowVC.m */; };
 		7817F9AA1E00E99C00889DD5 /* PopupInWindowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7817F9991E00E99C00889DD5 /* PopupInWindowVC.xib */; };
 		7817F9AB1E00E99C00889DD5 /* ShowDropDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F99B1E00E99C00889DD5 /* ShowDropDownViewController.m */; };
-		7817F9AC1E00E99C00889DD5 /* ShowDropDownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7817F99C1E00E99C00889DD5 /* ShowDropDownViewController.xib */; };
 		7817F9AD1E00E99C00889DD5 /* ShowExtendViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F99E1E00E99C00889DD5 /* ShowExtendViewVC.m */; };
 		7817F9AE1E00E99C00889DD5 /* ShowExtendViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7817F99F1E00E99C00889DD5 /* ShowExtendViewVC.xib */; };
 		7817F9AF1E00E99C00889DD5 /* WelcomePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9A21E00E99C00889DD5 /* WelcomePopupView.m */; };
@@ -75,7 +74,6 @@
 		7817F9991E00E99C00889DD5 /* PopupInWindowVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupInWindowVC.xib; sourceTree = "<group>"; };
 		7817F99A1E00E99C00889DD5 /* ShowDropDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDropDownViewController.h; sourceTree = "<group>"; };
 		7817F99B1E00E99C00889DD5 /* ShowDropDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDropDownViewController.m; sourceTree = "<group>"; };
-		7817F99C1E00E99C00889DD5 /* ShowDropDownViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDropDownViewController.xib; sourceTree = "<group>"; };
 		7817F99D1E00E99C00889DD5 /* ShowExtendViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowExtendViewVC.h; sourceTree = "<group>"; };
 		7817F99E1E00E99C00889DD5 /* ShowExtendViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowExtendViewVC.m; sourceTree = "<group>"; };
 		7817F99F1E00E99C00889DD5 /* ShowExtendViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowExtendViewVC.xib; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 				7817F9991E00E99C00889DD5 /* PopupInWindowVC.xib */,
 				7817F99A1E00E99C00889DD5 /* ShowDropDownViewController.h */,
 				7817F99B1E00E99C00889DD5 /* ShowDropDownViewController.m */,
-				7817F99C1E00E99C00889DD5 /* ShowDropDownViewController.xib */,
 				7817F99D1E00E99C00889DD5 /* ShowExtendViewVC.h */,
 				7817F99E1E00E99C00889DD5 /* ShowExtendViewVC.m */,
 				7817F99F1E00E99C00889DD5 /* ShowExtendViewVC.xib */,
@@ -350,7 +347,6 @@
 				7817F9701E00E94B00889DD5 /* LaunchScreen.storyboard in Resources */,
 				7817F9A81E00E99C00889DD5 /* PopupInViewVC.xib in Resources */,
 				7817F9B21E00E99C00889DD5 /* WelcomeViewToPop.xib in Resources */,
-				7817F9AC1E00E99C00889DD5 /* ShowDropDownViewController.xib in Resources */,
 				7817F9AA1E00E99C00889DD5 /* PopupInWindowVC.xib in Resources */,
 				7817F96D1E00E94B00889DD5 /* Assets.xcassets in Resources */,
 				7817F9AE1E00E99C00889DD5 /* ShowExtendViewVC.xib in Resources */,

@@ -18,6 +18,13 @@ typedef NS_ENUM(NSUInteger, CJSlideFromDirection) {
     CJSlideFromDirectionRight,         // 从右侧滑入（向左移动）
 };
 
+/// 展开动画的方向（仅支持上下和居中，左右请直接调用 expandToLeft/Right 方法）
+typedef NS_ENUM(NSUInteger, CJExpandToDirection) {
+    CJExpandToDirectionDown = 0,     // 向下展开（上边固定，如：下拉菜单）
+    CJExpandToDirectionUp,           // 向上展开（下边固定，如：按钮上方弹出）
+    CJExpandToDirectionCenter,       // 向四周展开（中心固定，如：居中弹窗）
+};
+
 
 @interface CJPopupCalculator : NSObject
 
@@ -43,5 +50,6 @@ typedef struct {
 
 /// 从指定点向四周展开：传中心点（如：居中弹窗）
 + (CJPopupFramePair)expandToCenterFromCenter:(CGPoint)center size:(CGSize)size;
+
 
 @end

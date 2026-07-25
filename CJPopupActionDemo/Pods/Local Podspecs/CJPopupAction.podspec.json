@@ -18,7 +18,10 @@
   "subspecs": [
     {
       "name": "Base",
-      "source_files": "CJPopupAction/CJPopupCalculator.{h,m}"
+      "source_files": [
+        "CJPopupAction/CJPopupCalculator.{h,m}",
+        "CJPopupAction/CJPopupBlankModel.{h,m}"
+      ]
     },
     {
       "name": "PopupInView",

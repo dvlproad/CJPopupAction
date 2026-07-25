@@ -45,7 +45,7 @@
 }
 
 - (IBAction)goShowDropDownViewController:(id)sender{
-    ShowDropDownViewController *vc = [[ShowDropDownViewController alloc]initWithNibName:@"ShowDropDownViewController" bundle:nil];
+    ShowDropDownViewController *vc = [[ShowDropDownViewController alloc] init];
     vc.title = [sender titleForState:UIControlStateNormal];
     [self.navigationController pushViewController:vc animated:YES];
 }

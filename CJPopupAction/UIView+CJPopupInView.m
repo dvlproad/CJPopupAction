@@ -123,7 +123,7 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
 - (void)cj_popupInView:(UIView *)popupSuperview
             withOrigin:(CGPoint)popupViewOrigin
                   size:(CGSize)popupViewSize
-          blankBGColor:(UIColor *)blankBGColor
+          blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
           showComplete:(void(^)(void))showPopupViewCompleteBlock
       tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
@@ -131,17 +131,17 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
     
     UIView *popupView = self;
     
-    BOOL canAdd = [self letPopupSuperview:popupSuperview addPopupView:popupView withBlankBGColor:blankBGColor];
+    BOOL canAdd = [self letPopupSuperview:popupSuperview addPopupView:popupView withBlankBGModel:blankBGModel];
     if (!canAdd) {
         return;
     }
     
     if (self.cjTapView != nil) { // 如果之前没创建 blankBG 视图，则不需要设置其frame
         UIView *blankView = self.cjTapView;
-        CGFloat blankViewX = popupViewOrigin.x;
         CGFloat blankViewY = popupViewOrigin.y;
-        CGFloat blankViewWidth = popupViewSize.width;
         CGFloat blankViewHeight = CGRectGetHeight(popupSuperview.frame) - popupViewOrigin.y;
+        CGFloat blankViewX = blankBGModel.x > 0 ? blankBGModel.x : 0;
+        CGFloat blankViewWidth = blankBGModel.width > 0 ? blankBGModel.width : CGRectGetWidth(popupSuperview.frame);
         CGRect blankViewFrame = CGRectMake(blankViewX,
                                            blankViewY,
                                            blankViewWidth,
@@ -162,16 +162,16 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
 /* 完整的描述请参见文件头部 */
 - (void)cj_popupInCenterWindow:(CJAnimationType)animationType
                       withSize:(CGSize)popupViewSize
-                  blankBGColor:(UIColor *)blankBGColor
+                  blankBGColor:(nullable UIColor *)blankBGColor
                   showComplete:(void(^)(void))showPopupViewCompleteBlock
               tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
     CJPopupMainThreadAssert();
     
-    // 弹出在中间的不能没有 blankBG 视图，所以强制设置 blankBGColor 来让其创建视图
-    if (blankBGColor == nil) {
-        blankBGColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
-    }
+    // 弹出在window的中间或底部的不能没有 blankBG 视图，所以强制创建 blankBGModel 来让保证后续能创建出 blankBG 视图
+    CJPopupBlankModel *blankBGModel = blankBGColor != nil ? [CJPopupBlankModel modelWidthColor:blankBGColor] : [CJPopupBlankModel defaultModel];
+    NSAssert(blankBGModel != nil, @"弹出到window时候，blankBGModel 不能为 nil");
+    
     
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
     
@@ -184,7 +184,7 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
     frame.size.height = popupViewSize.height;
     popupView.frame = frame;
     
-    BOOL canAdd = [self letkeyWindowAddPopupView:popupView withBlankBGColor:blankBGColor];
+    BOOL canAdd = [self letkeyWindowAddPopupView:popupView withBlankBGModel:blankBGModel];
     if (!canAdd) {
         return;
     }
@@ -202,17 +202,16 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
 - (void)cj_popupInBottomWindow:(CJAnimationType)animationType
                     withHeight:(CGFloat)popupViewHeight
                     edgeInsets:(UIEdgeInsets)edgeInsets
-                  blankBGColor:(UIColor *)blankBGColor
+                  blankBGColor:(nullable UIColor *)blankBGColor
                   showComplete:(void(^)(void))showPopupViewCompleteBlock
               tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
     CJPopupMainThreadAssert();
     NSAssert(popupViewHeight != 0, @"弹出视图的高都不能为0");
     
-    // 弹出在中间的不能没有 blankBG 视图，所以强制设置 blankBGColor 来让其创建视图
-    if (blankBGColor == nil) {
-        blankBGColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
-    }
+    // 弹出在window的中间或底部的不能没有 blankBG 视图，所以强制创建 blankBGModel 来让保证后续能创建出 blankBG 视图
+    CJPopupBlankModel *blankBGModel = blankBGColor != nil ? [CJPopupBlankModel modelWidthColor:blankBGColor] : [CJPopupBlankModel defaultModel];
+    NSAssert(blankBGModel != nil, @"弹出到window时候，blankBGModel 不能为 nil");
     
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
     CGFloat popupViewWidth = CGRectGetWidth(keyWindow.frame) - edgeInsets.left - edgeInsets.right;
@@ -226,7 +225,7 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
     
     UIView *popupView = self;
     
-    BOOL canAdd = [self letkeyWindowAddPopupView:popupView withBlankBGColor:blankBGColor];
+    BOOL canAdd = [self letkeyWindowAddPopupView:popupView withBlankBGModel:blankBGModel];
     if (!canAdd) {
         return;
     }
@@ -296,15 +295,15 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
  *  将popupView添加进keyWindow中(会默认添加进blankView及对popupView做一些默认设置)
  *
  *  @param popupView                要被添加的视图
- *  @param blankBGColor             空白区域的背景颜色
+ *  @param blankBGModel             空白遮罩模型
  *
  *  @return 是否可以被添加成功
  */
-- (BOOL)letkeyWindowAddPopupView:(UIView *)popupView withBlankBGColor:(UIColor *)blankBGColor
+- (BOOL)letkeyWindowAddPopupView:(UIView *)popupView withBlankBGModel:(nullable CJPopupBlankModel *)blankBGModel
 {
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
     
-    BOOL canAdd = [self letPopupSuperview:keyWindow addPopupView:popupView withBlankBGColor:blankBGColor];
+    BOOL canAdd = [self letPopupSuperview:keyWindow addPopupView:popupView withBlankBGModel:blankBGModel];
     if (!canAdd) {
         return NO;
     }
@@ -329,27 +328,27 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
  *
  *  @param popupSuperview           被添加到的地方
  *  @param popupView                要被添加的视图
- *  @param blankBGColor             空白区域的背景颜色
+ *  @param blankBGModel             空白遮罩模型（nil则不添加遮罩）
  *
  *  @return 是否可以被添加成功
  */
 - (BOOL)letPopupSuperview:(UIView *)popupSuperview
              addPopupView:(UIView *)popupView
-         withBlankBGColor:(UIColor *)blankBGColor
+         withBlankBGModel:(CJPopupBlankModel *)blankBGModel
 {
     if ([popupSuperview.subviews containsObject:popupView]) {
         return NO;
     }
     
-    if (blankBGColor != nil) { // 没设置blankBGColor的时候，当作不需要添加 blankBG 视图
+    if (blankBGModel != nil) { // 没设置blankBGModel的时候，当作不需要添加 blankBG 视图
         /* 添加进空白的点击区域blankView */
         UIView *blankView = self.cjTapView;
         if (blankView == nil) {
             blankView = [[UIView alloc] initWithFrame:CGRectZero];
-            if (!blankBGColor) {
+            if (blankBGModel.color == nil) {
                 blankView.backgroundColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
             } else {
-                blankView.backgroundColor = blankBGColor;
+                blankView.backgroundColor = blankBGModel.color;
             }
             
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cj_TapBlankViewAction:)];
@@ -493,5 +492,55 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
         }
     }
 }
+
+#pragma mark - ExtendView
+/** 完整的描述请参见文件头部 */
+- (void)cj_expandInView:(UIView *)popupSuperview
+  locationAccordingView:(UIView *)accordingView
+       relativePosition:(CJPopupViewPosition)popupViewPosition
+           blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
+           showComplete:(void(^)(void))showPopupViewCompleteBlock
+       tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
+{
+    NSAssert(accordingView != nil, @"accordingView不能为空");
+    
+    UIView *popupView = self;
+    
+    CGSize popupViewSize = CGSizeMake(CGRectGetWidth(accordingView.frame), CGRectGetHeight(popupView.frame));
+    NSAssert(popupViewSize.height != 0, @"弹出视图的高度不能为0");
+    
+    CGRect accordingFrame = [accordingView.superview convertRect:accordingView.frame toView:popupSuperview];
+    CGFloat x = CGRectGetMinX(accordingFrame);
+    CGFloat y = CGRectGetMinY(accordingFrame);
+    CGFloat w = CGRectGetWidth(accordingFrame);
+    CGFloat h = CGRectGetHeight(accordingFrame);
+    
+    CJPopupFramePair pair;
+    switch (popupViewPosition) {
+        case CJPopupViewPositionBelow:
+            pair = [CJPopupCalculator expandToDownFromTopLeft:CGPointMake(x, y + h) size:popupViewSize];
+            break;
+        case CJPopupViewPositionAbove:
+            pair = [CJPopupCalculator expandToUpFromBottomLeft:CGPointMake(x, y) size:popupViewSize];
+            break;
+        case CJPopupViewPositionCenter:
+            pair = [CJPopupCalculator expandToCenterFromCenter:CGPointMake(x + w / 2.0, y + h / 2.0) size:popupViewSize];
+            break;
+    }
+    
+    CJPopupMainThreadAssert();
+    
+    BOOL canAdd = [popupView letPopupSuperview:popupSuperview addPopupView:popupView withBlankBGModel:blankBGModel];
+    if (!canAdd) {
+        return;
+    }
+    
+    popupView.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;
+    popupView.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
+    
+    popupView.cjPopupViewHideFrameString = NSStringFromCGRect(pair.hideFrame);
+    [popupView cj_showExpandViewWithShowFrame:pair.showFrame hideFrame:pair.hideFrame showComplete:showPopupViewCompleteBlock];
+}
+
 
 @end

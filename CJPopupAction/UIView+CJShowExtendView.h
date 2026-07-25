@@ -5,16 +5,8 @@
 //  Created by ciyouzen on 15/11/12.
 //  Copyright (c) 2015年 dvlproad. All rights reserved.
 //
-//  UIView+CJPopupInView.h 的二次封装
 
-#import <UIKit/UIKit.h>
 #import "UIView+CJPopupInView.h"
-
-
-typedef NS_ENUM(NSUInteger, CJPopupViewPosition) {
-    CJPopupViewPositionBelow = 0,
-    CJPopupViewPositionAbove,
-};
 
 @interface UIView (CJShowExtendView)
 
@@ -35,7 +27,7 @@ typedef NS_ENUM(NSUInteger, CJPopupViewPosition) {
                    inView:(UIView *)popupSuperview
                atLocation:(CGPoint)popupViewLocation
                  withSize:(CGSize)popupViewSize
-             blankBGColor:(UIColor *)blankBGColor
+             blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
              showComplete:(void(^)(void))showPopupViewCompleteBlock
          tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
 
@@ -55,7 +47,7 @@ typedef NS_ENUM(NSUInteger, CJPopupViewPosition) {
                    inView:(UIView *)popupSuperview
     locationAccordingView:(UIView *)accordingView
          relativePosition:(CJPopupViewPosition)popupViewPosition
-             blankBGColor:(UIColor *)blankBGColor
+             blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
              showComplete:(void(^)(void))showPopupViewCompleteBlock
          tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
 
