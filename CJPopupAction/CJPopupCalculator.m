@@ -38,7 +38,7 @@
     CGRect hideFrame = CGRectMake(leftBottom.x, leftBottom.y, size.width, 0);
     return (CJPopupFramePair){ showFrame, hideFrame };
 }
-
+/*
 + (CJPopupFramePair)expandToRightFromLeftTop:(CGPoint)leftTop size:(CGSize)size
 {
     CGRect showFrame = CGRectMake(leftTop.x, leftTop.y, size.width, size.height);
@@ -52,7 +52,7 @@
     CGRect hideFrame = CGRectMake(rightTop.x, rightTop.y, 0, size.height);
     return (CJPopupFramePair){ showFrame, hideFrame };
 }
-
+*/
 + (CJPopupFramePair)expandToCenterFromCenter:(CGPoint)center size:(CGSize)size
 {
     CGRect showFrame = CGRectMake(center.x - size.width / 2.0,

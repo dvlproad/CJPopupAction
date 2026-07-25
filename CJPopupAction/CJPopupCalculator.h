@@ -41,13 +41,13 @@ typedef struct {
 
 /// 从指定点向上展开：传左下角（如：按钮上方弹出）
 + (CJPopupFramePair)expandToUpFromLeftBottom:(CGPoint)leftBottom size:(CGSize)size;
-
+/*
 /// 从指定点向右展开：传左上角
 + (CJPopupFramePair)expandToRightFromLeftTop:(CGPoint)leftTop size:(CGSize)size;
 
 /// 从指定点向左展开：传右上角
 + (CJPopupFramePair)expandToLeftFromRightTop:(CGPoint)rightTop size:(CGSize)size;
-
+*/
 /// 从指定点向四周展开：传中心点（如：居中弹窗）
 + (CJPopupFramePair)expandToCenterFromCenter:(CGPoint)center size:(CGSize)size;
 
