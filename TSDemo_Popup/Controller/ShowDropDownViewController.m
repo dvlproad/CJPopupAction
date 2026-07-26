@@ -42,9 +42,10 @@
         make.height.mas_equalTo(30);
     }];
     
-    self.directionSegment = [[UISegmentedControl alloc] initWithItems:@[@"上方", @"下方"]];
+    self.directionSegment = [[UISegmentedControl alloc] initWithItems:@[@"上方", @"下方", @"居中"]];
     self.directionSegment.selectedSegmentIndex = 0;
     self.directionSegment.tintColor = [UIColor darkGrayColor];
+    [self.directionSegment addTarget:self action:@selector(segmentValueChanged:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.directionSegment];
     [self.directionSegment mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.button.mas_bottom).offset(220);
@@ -75,10 +76,11 @@
         switch (self.directionSegment.selectedSegmentIndex) {
             case 0: position = CJExpandForViewPositionAbove; break;
             case 1: position = CJExpandForViewPositionBelow; break;
+            case 2: position = CJExpandForViewPositionCenter; break;
             default: position = CJExpandForViewPositionAbove; break;
         }
         
-        [button cj_showExtendView:popupView inView:self.view locationAccordingView:button relativePosition:CJExpandForViewPositionBelow blankBGModel:self.popupBgModel showComplete:^{
+        [button cj_showExtendView:popupView inView:self.view locationAccordingView:button relativePosition:position blankBGModel:self.popupBgModel showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");
@@ -99,6 +101,14 @@
     
     self.button.selected = !self.button.selected;
     [self.button cj_hideExtendViewAnimated:YES];
+}
+
+- (void)segmentValueChanged:(UISegmentedControl *)segment {
+    if (self.button.selected) {
+        [self.button cj_hideExtendViewAnimated:NO];
+        self.button.selected = NO;
+        [self buttonClick:self.button];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
