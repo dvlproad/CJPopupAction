@@ -1,5 +1,5 @@
 platform :ios, '9.0'
-#use_frameworks!
+use_frameworks!
 inhibit_all_warnings!
 # pod的本地索引文件：~/Library/Caches/CocoaPods/search_index.json
 
@@ -33,6 +33,8 @@ target 'CJPopupActionDemo' do
 #  pod 'CJPopupAnimation', :path => '../../../Gitee/UIKit-PopupAnimation-iOS'
     
   pod 'CJPopupAction',      :path => '../'
+  pod 'TSDemo_Popup',       :path => '../'
+  pod 'TSDemo_Popup-Swift', :path => '../'
 end
 
 target 'CJPopupActionDemoTests' do

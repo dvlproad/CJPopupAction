@@ -1,0 +1,27 @@
+{
+  "name": "TSDemo_Popup",
+  "version": "0.0.1",
+  "summary": "CJPopupAction 演示示例",
+  "homepage": "https://github.com/dvlproad/CJPopupAction",
+  "license": "MIT",
+  "authors": {
+    "dvlproad": ""
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/dvlproad/CJPopupAction.git",
+    "tag": "TSDemo_Popup_0.0.1"
+  },
+  "frameworks": "UIKit",
+  "requires_arc": true,
+  "source_files": "TSDemo_Popup/**/*.{h,m}",
+  "resources": "TSDemo_Popup/**/*.{xib,xcassets,png,jpg}",
+  "dependencies": {
+    "CJPopupAction": [],
+    "Masonry": [],
+    "CQDemoKit/BaseVC": [],
+    "CJBaseUIKit/UIScrollView/CJKeyboardAvoiding": []
+  }
+}

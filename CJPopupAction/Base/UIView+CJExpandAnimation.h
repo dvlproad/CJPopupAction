@@ -8,7 +8,6 @@
 //  展开动画：不一定需要blankView
 
 #import <UIKit/UIKit.h>
-#import "CJExpandCalculator.h"
 
 static CGFloat kCJPopupAnimationDuration = 0.3;
 

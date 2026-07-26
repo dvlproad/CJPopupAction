@@ -1,0 +1,27 @@
+{
+  "name": "TSDemo_Popup-Swift",
+  "version": "0.0.1",
+  "summary": "TSDemo_Popup Swift 版 - 补充使用 Swift 语言实现的 Popup 演示界面",
+  "homepage": "https://github.com/dvlproad/CJPopupAction",
+  "license": "MIT",
+  "authors": {
+    "dvlproad": ""
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/dvlproad/CJPopupAction.git",
+    "tag": "TSDemo_Popup-Swift_0.0.1"
+  },
+  "swift_versions": "5.0",
+  "frameworks": "UIKit",
+  "requires_arc": true,
+  "source_files": "TSDemo_Popup-Swift/**/*.{swift}",
+  "dependencies": {
+    "TSDemo_Popup": [],
+    "CQDemoKit/BaseVC": [],
+    "CQDemoResource/Images": []
+  },
+  "swift_version": "5.0"
+}

@@ -41,30 +41,74 @@ PODS:
     - CQDemoKit/Helper
   - CQDemoKit/BaseVC/TableView (0.9.13):
     - CQDemoKit/BaseVC/Base
+  - CQDemoKit/Demo_Resource (0.9.13):
+    - CQDemoKit/Demo_Resource/GitUtil (= 0.9.13)
+    - CQDemoKit/Demo_Resource/ImageModel (= 0.9.13)
+    - CQDemoKit/Demo_Resource/InFramework (= 0.9.13)
+    - CQDemoKit/Demo_Resource/RandomUtil (= 0.9.13)
+    - CQDemoKit/Demo_Resource/ResourceInfoUtil (= 0.9.13)
+    - CQDemoKit/Demo_Resource/SandboxFileUtil (= 0.9.13)
+    - CQDemoKit/Demo_Resource/SandboxPathUtil (= 0.9.13)
+    - CQDemoKit/Demo_Resource/SandboxPhotoUtil (= 0.9.13)
+  - CQDemoKit/Demo_Resource/GitUtil (0.9.13)
+  - CQDemoKit/Demo_Resource/ImageModel (0.9.13)
+  - CQDemoKit/Demo_Resource/InFramework (0.9.13)
+  - CQDemoKit/Demo_Resource/RandomUtil (0.9.13)
+  - CQDemoKit/Demo_Resource/ResourceInfoUtil (0.9.13)
+  - CQDemoKit/Demo_Resource/SandboxFileUtil (0.9.13):
+    - CQDemoKit/Demo_Resource/SandboxPathUtil
+    - CQDemoKit/Helper
+  - CQDemoKit/Demo_Resource/SandboxPathUtil (0.9.13):
+    - CQDemoKit/Demo_Resource/ResourceInfoUtil
+  - CQDemoKit/Demo_Resource/SandboxPhotoUtil (0.9.13):
+    - CQDemoKit/Demo_Resource/ResourceInfoUtil
   - CQDemoKit/Helper (0.9.13)
+  - CQDemoResource/Core (0.3.2):
+    - CQDemoKit/Demo_Resource
+  - CQDemoResource/Images (0.3.2):
+    - CQDemoResource/Core
   - Masonry (1.1.0)
+  - TSDemo_Popup (0.0.1):
+    - CJBaseUIKit/UIScrollView/CJKeyboardAvoiding
+    - CJPopupAction
+    - CQDemoKit/BaseVC
+    - Masonry
+  - TSDemo_Popup-Swift (0.0.1):
+    - CQDemoKit/BaseVC
+    - CQDemoResource/Images
+    - TSDemo_Popup
 
 DEPENDENCIES:
   - CJBaseUIKit/UIScrollView/CJKeyboardAvoiding (~> 0.8.1)
   - CJPopupAction (from `../`)
   - CQDemoKit/BaseVC
+  - TSDemo_Popup (from `../`)
+  - TSDemo_Popup-Swift (from `../`)
 
 SPEC REPOS:
   trunk:
     - CJBaseUIKit
     - CQDemoKit
+    - CQDemoResource
     - Masonry
 
 EXTERNAL SOURCES:
   CJPopupAction:
+    :path: "../"
+  TSDemo_Popup:
+    :path: "../"
+  TSDemo_Popup-Swift:
     :path: "../"
 
 SPEC CHECKSUMS:
   CJBaseUIKit: 1445f55a4c9f942351fcd1964694f32196472837
   CJPopupAction: 56955b745143554b20c0bccccd43a4056646653a
   CQDemoKit: 0d6351e9a948e3c214aa1727c4421dc288208630
+  CQDemoResource: efdf1a0231767f665f5e6e0df59ed8a5042680f7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  TSDemo_Popup: 485647e3c5c453c33082f0bd7fc4d08b81e30065
+  TSDemo_Popup-Swift: 5f5e532e84c945a0b42954a25642456c0ae69923
 
-PODFILE CHECKSUM: 0841e919bebfc52d56ac81dc09daa1a277f793e5
+PODFILE CHECKSUM: 997903f951d9c601cc25221d426c3830957e01bb
 
 COCOAPODS: 1.16.2

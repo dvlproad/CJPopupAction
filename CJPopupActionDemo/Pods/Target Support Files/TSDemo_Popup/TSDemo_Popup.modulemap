@@ -1,0 +1,6 @@
+framework module TSDemo_Popup {
+  umbrella header "TSDemo_Popup-umbrella.h"
+
+  export *
+  module * { export * }
+}

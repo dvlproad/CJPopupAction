@@ -116,7 +116,7 @@ Pod::Spec.new do |s|
   # 不关心隐藏的基础动画，常用于视图show带动画，也是关心隐藏的动画需要调用的底层方法（位移动画 UIView+CJSlideAnimation； 展开动画: UIView+CJExpandAnimation）
   s.subspec 'Base' do |popup|
     popup.source_files = "CJPopupAction/Base/**/*.{h,m}"
-    popup.dependency "CJPopupAction/Core"
+    popup.dependency "CJPopupAction/Core" # UIView+CJSlideAnimation.h 需要 CJSlideCalculator.h 的 CJSlideFromDirection
   end
 
   # 关心隐藏的动画：内部有封装以简化hide的动画（UIView+CJBottomInWindow \ UIView+CJCenterInWindow \ UIView+CJExpandByPoint \ UIView+CJExpandForView)

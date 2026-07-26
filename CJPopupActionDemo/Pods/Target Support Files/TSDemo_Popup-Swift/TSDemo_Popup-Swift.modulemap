@@ -1,0 +1,6 @@
+framework module TSDemo_Popup_Swift {
+  umbrella header "TSDemo_Popup-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

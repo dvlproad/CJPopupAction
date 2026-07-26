@@ -1,0 +1,6 @@
+framework module Pods_CJPopupActionDemo {
+  umbrella header "Pods-CJPopupActionDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
