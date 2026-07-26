@@ -41,20 +41,20 @@ typedef NS_ENUM(NSUInteger, CJCenterWindowAnimationType) {
  *  @param popupViewSize                弹出视图的大小
  *  @param blankBGColor                 空白区域的自定义背景颜色
  *  @param showPopupViewCompleteBlock   显示弹出视图后的操作
- *  @param tapBlankViewCompleteBlock    点击空白区域后的操作(要自己执行cj_hidePopupView...来隐藏，因为有时候点击背景是不执行隐藏的)
+ *  @param tapBlankViewCompleteBlock    点击空白区域后的操作(要自己执行cj_hideFromCenterWindow...来隐藏，因为有时候点击背景是不执行隐藏的)
  */
-- (void)cj_popupInCenterWindow:(CJCenterWindowAnimationType)animationType
-                      withSize:(CGSize)popupViewSize
-                  blankBGColor:(nullable UIColor *)blankBGColor
-                  showComplete:(void(^)(void))showPopupViewCompleteBlock
-              tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
+- (void)cj_showInCenterWindow:(CJCenterWindowAnimationType)animationType
+                     withSize:(CGSize)popupViewSize
+                 blankBGColor:(nullable UIColor *)blankBGColor
+                 showComplete:(void(^)(void))showPopupViewCompleteBlock
+             tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
 
 #pragma mark - 隐藏
 
 /**
  *  隐藏弹出视图
  */
-- (void)cj_centerHidePopupView:(BOOL)animated;
+- (void)cj_hideFromCenterWindow:(BOOL)animated;
 
 @end
 

@@ -28,7 +28,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-@interface UIView (CJPopupInAnyView) {
+@interface UIView (CJExpandByPoint) {
     
 }
 /**
@@ -39,21 +39,21 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param edgeInsets                   弹窗与window的(左右下)边距
  *  @param blankBGColor                 空白区域的自定义背景颜色
  *  @param showPopupViewCompleteBlock   显示弹出视图后的操作
- *  @param tapBlankViewCompleteBlock    点击空白区域后的操作(要自己执行cj_hidePopupView...来隐藏，因为有时候点击背景是不执行隐藏的)
+ *  @param tapBlankViewCompleteBlock    点击空白区域后的操作(要自己执行cj_hideFromBottomWindow...来隐藏，因为有时候点击背景是不执行隐藏的)
  */
-- (void)cj_popupInBottomWindow:(BOOL)animated
-                    withHeight:(CGFloat)popupViewHeight
-                    edgeInsets:(UIEdgeInsets)edgeInsets
-                  blankBGColor:(nullable UIColor *)blankBGColor
-                  showComplete:(void(^)(void))showPopupViewCompleteBlock
-              tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
+- (void)cj_showInBottomWindow:(BOOL)animated
+                   withHeight:(CGFloat)popupViewHeight
+                   edgeInsets:(UIEdgeInsets)edgeInsets
+                 blankBGColor:(nullable UIColor *)blankBGColor
+                 showComplete:(void(^)(void))showPopupViewCompleteBlock
+             tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
 
 #pragma mark - 隐藏
 
 /**
  *  隐藏弹出视图
  */
-- (void)cj_bottomHidePopupView:(BOOL)animated;
+- (void)cj_hideFromBottomWindow:(BOOL)animated;
 
 @end
 

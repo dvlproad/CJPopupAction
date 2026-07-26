@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 dvlproad. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <CQDemoKit/CJUIKitBaseViewController.h>
 
-@interface PopupInWindowVC : UIViewController
+@interface PopupInWindowVC : CJUIKitBaseViewController
 
 @end

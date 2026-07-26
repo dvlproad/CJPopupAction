@@ -33,8 +33,7 @@
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"PopupInWindow (居中/底部弹出到Window)";
             module.classEntry = [PopupInWindowVC class];
-            module.isCreateByXib = YES;
-            module.xibBundle = [NSBundle mainBundle];
+            module.isCreateByXib = NO;
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];

@@ -5,6 +5,7 @@
 //  Created by ciyouzen on 15/11/12.
 //  Copyright (c) 2015年 dvlproad. All rights reserved.
 //
+//  位移动画（普通平移、3D平移）可以直接用此方法。（位移动画在有 blankBGView 时，其alpha也不适合做动画变化，而是初始就显示好）
 
 #import <UIKit/UIKit.h>
 #import "CJSlideCalculator.h"

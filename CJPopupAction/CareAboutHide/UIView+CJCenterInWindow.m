@@ -32,11 +32,11 @@
 #pragma mark - 底层接口
 
 /* 完整的描述请参见文件头部 */
-- (void)cj_popupInCenterWindow:(CJCenterWindowAnimationType)animationType
-                      withSize:(CGSize)popupViewSize
-                  blankBGColor:(nullable UIColor *)blankBGColor
-                  showComplete:(void(^)(void))showPopupViewCompleteBlock
-              tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
+- (void)cj_showInCenterWindow:(CJCenterWindowAnimationType)animationType
+                     withSize:(CGSize)popupViewSize
+                 blankBGColor:(nullable UIColor *)blankBGColor
+                 showComplete:(void(^)(void))showPopupViewCompleteBlock
+             tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
     CJPopupMainThreadAssert();
     
@@ -66,7 +66,7 @@
     self.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;
     self.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
 
-    CJPopupFramePair pair = [CJExpandCalculator expandToCenterFromCenter:popupSuperview.center size:popupViewSize];
+    CJExpandFramePair pair = [CJExpandCalculator expandToCenterFromCenter:popupSuperview.center size:popupViewSize];
     self.cjPopupViewHideFrameString = NSStringFromCGRect(pair.hideFrame);
 
     if (animationType == CJCenterWindowAnimationTypeNone) {
@@ -100,13 +100,17 @@
         }
 
     } else if (animationType == CJCenterWindowAnimationTypeExpandToCenter) {
-        [self cj_showExpandViewWithShowFrame:pair.showFrame hideFrame:pair.hideFrame showComplete:showPopupViewCompleteBlock];
+        [self cj_expandAnimateForShow:YES
+                        withShowFrame:pair.showFrame
+                            hideFrame:pair.hideFrame
+                            blankView:self.cjTapView
+                           completion:showPopupViewCompleteBlock];
     }
 }
 
 
 /** 完整的描述请参见文件头部 */
-- (void)cj_centerHidePopupView:(BOOL)animated {
+- (void)cj_hideFromCenterWindow:(BOOL)animated {
     CJPopupMainThreadAssert();
     
     CJCenterWindowAnimationType animationType = animated ? self.cjPopupCenterAnimationType : CJCenterWindowAnimationTypeNone;

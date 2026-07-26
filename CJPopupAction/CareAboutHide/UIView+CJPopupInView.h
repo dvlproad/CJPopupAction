@@ -66,11 +66,6 @@ typedef void(^CJTapBlankViewCompleteBlock)(void);
              addPopupView:(UIView *)popupView
          withBlankBGModel:(nullable CJPopupBlankModel *)blankBGModel;
 
-
-- (void)cj_showExpandViewWithShowFrame:(CGRect)popupViewShowFrame
-                             hideFrame:(CGRect)popupViewHideFrame
-                          showComplete:(void(^)(void))showPopupViewCompleteBlock;
-
 @end
 
 

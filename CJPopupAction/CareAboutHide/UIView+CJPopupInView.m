@@ -185,19 +185,4 @@ static NSString *cjPopupViewHideFrameStringKey = @"cjPopupViewHideFrameString";
 
 
 
-
-- (void)cj_showExpandViewWithShowFrame:(CGRect)popupViewShowFrame
-                             hideFrame:(CGRect)popupViewHideFrame
-                          showComplete:(void(^)(void))showPopupViewCompleteBlock
-{
-    UIView *blankView = self.cjTapView;
-    
-    [self cj_expandAnimateForShow:YES
-                    withShowFrame:popupViewShowFrame
-                        hideFrame:popupViewHideFrame
-                        blankView:blankView
-                       completion:showPopupViewCompleteBlock];
-}
-
-
 @end

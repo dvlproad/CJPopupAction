@@ -6,7 +6,8 @@
 //  Copyright (c) 2015年 dvlproad. All rights reserved.
 //
 
-#import "UIView+CJPopupInAnyView.h"
+#import "UIView+CJExpandByPoint.h"
+#import "UIView+CJExpandForView.h"
 
 @interface UIView (CJShowExtendView)
 
@@ -46,7 +47,7 @@
 - (void)cj_showExtendView:(UIView *)popupView
                    inView:(UIView *)popupSuperview
     locationAccordingView:(UIView *)accordingView
-         relativePosition:(CJPopupViewPosition)popupViewPosition
+         relativePosition:(CJExpandForViewPosition)popupViewPosition
              blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
              showComplete:(void(^)(void))showPopupViewCompleteBlock
          tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;

@@ -64,7 +64,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
 - (void)cj_showExtendView:(UIView *)popupView
                    inView:(UIView *)popupSuperview
     locationAccordingView:(UIView *)accordingView
-         relativePosition:(CJPopupViewPosition)popupViewPosition
+         relativePosition:(CJExpandForViewPosition)popupViewPosition
              blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
              showComplete:(void(^)(void))showPopupViewCompleteBlock
          tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
@@ -83,11 +83,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
 
 /** 完整的描述请参见文件头部 */
 - (void)cj_hideExtendViewAnimated:(BOOL)animated {
-    if (animated) {
-        [self.cjExtendView cj_hidePopupViewWithAnimationType:CJAnimationTypeNormal];
-    } else {
-        [self.cjExtendView cj_hidePopupViewWithAnimationType:CJAnimationTypeNone];
-    }
+    [self.cjExtendView cj_popupHideForView:animated];
 }
 
 @end

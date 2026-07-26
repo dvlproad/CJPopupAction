@@ -18,17 +18,17 @@
 @end
 
 
-@implementation UIView (CJPopupInAnyView)
+@implementation UIView (CJExpandByPoint)
 
 
 #pragma mark - 底层接口
 /** 完整的描述请参见文件头部 */
-- (void)cj_popupInBottomWindow:(BOOL)animated
-                    withHeight:(CGFloat)popupViewHeight
-                    edgeInsets:(UIEdgeInsets)edgeInsets
-                  blankBGColor:(nullable UIColor *)blankBGColor
-                  showComplete:(void(^)(void))showPopupViewCompleteBlock
-              tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
+- (void)cj_showInBottomWindow:(BOOL)animated
+                   withHeight:(CGFloat)popupViewHeight
+                   edgeInsets:(UIEdgeInsets)edgeInsets
+                 blankBGColor:(nullable UIColor *)blankBGColor
+                 showComplete:(void(^)(void))showPopupViewCompleteBlock
+             tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
     CJPopupMainThreadAssert();
     NSAssert(popupViewHeight != 0, @"弹出视图的高都不能为0");
@@ -96,7 +96,7 @@
 }
 
 /** 完整的描述请参见文件头部 */
-- (void)cj_bottomHidePopupView:(BOOL)animated {
+- (void)cj_hideFromBottomWindow:(BOOL)animated {
     CJPopupMainThreadAssert();
     
     self.cjPopupViewShowing = NO;  //设置成NO表示当前未显示任何弹出视图

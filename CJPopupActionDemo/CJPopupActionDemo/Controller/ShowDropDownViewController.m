@@ -71,14 +71,14 @@
         [popupView addSubview:btn];
         
         
-        CJPopupViewPosition position;
+        CJExpandForViewPosition position;
         switch (self.directionSegment.selectedSegmentIndex) {
-            case 0: position = CJPopupViewPositionAbove; break;
-            case 1: position = CJPopupViewPositionBelow; break;
-            default: position = CJPopupViewPositionAbove; break;
+            case 0: position = CJExpandForViewPositionAbove; break;
+            case 1: position = CJExpandForViewPositionBelow; break;
+            default: position = CJExpandForViewPositionAbove; break;
         }
         
-        [button cj_showExtendView:popupView inView:self.view locationAccordingView:button relativePosition:CJPopupViewPositionBelow blankBGModel:self.popupBgModel showComplete:^{
+        [button cj_showExtendView:popupView inView:self.view locationAccordingView:button relativePosition:CJExpandForViewPositionBelow blankBGModel:self.popupBgModel showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");

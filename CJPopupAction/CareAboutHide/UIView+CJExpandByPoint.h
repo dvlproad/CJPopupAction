@@ -1,5 +1,5 @@
 //
-//  UIView+CJPopupInAnyView.h
+//  UIView+CJExpandByPoint.h
 //  CJPopupAction
 //
 //  Created by ciyouzen on 15/11/12.
@@ -27,9 +27,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^CJTapBlankViewCompleteBlock)(void);
-
-
 typedef NS_ENUM(NSUInteger, CJWindowPosition) {
     CJWindowPositionBottom = 0,
     CJWindowPositionCenter
@@ -51,7 +48,7 @@ typedef NS_ENUM(NSUInteger, CJAnimationType) {
 };
 
 
-@interface UIView (CJPopupInAnyView) {
+@interface UIView (CJExpandByPoint) {
     
 }
 /**
@@ -63,7 +60,7 @@ typedef NS_ENUM(NSUInteger, CJAnimationType) {
  *  @param blankBGModel                 空白遮罩模型（不传则不添加遮罩）
  *  @param popupRectModel              弹出视图的位置及是否要有空白区域背景的模型
  *  @param showPopupViewCompleteBlock   显示弹出视图后的操作
- *  @param tapBlankViewCompleteBlock    点击空白区域后的操作(要自己执行cj_hidePopupView...来隐藏，因为有时候点击背景是不执行隐藏的)
+ *  @param tapBlankViewCompleteBlock    点击空白区域后的操作(要自己执行cj_popupHideForView:...来隐藏，因为有时候点击背景是不执行隐藏的)
  */
 - (void)cj_popupInView:(UIView *)popupSuperview
             withOrigin:(CGPoint)popupViewOrigin
@@ -74,39 +71,14 @@ typedef NS_ENUM(NSUInteger, CJAnimationType) {
       tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
 
 
-#pragma mark - ExtendView（基于cj_popupInView的封装）
-
-/// 弹窗相对于参照视图的位置（左右请直接调用 expandToLeft/Right 方法）
-typedef NS_ENUM(NSUInteger, CJPopupViewPosition) {
-    CJPopupViewPositionBelow = 0,   // 在参照视图下方（向下展开）
-    CJPopupViewPositionAbove,       // 在参照视图上方（向上展开）
-    CJPopupViewPositionCenter,      // 居中于参照视图（向四周展开）
-};
-/**
- *  在popupSuperview中展开自己，位置根据与参照视图accordingView的关系确定
- *  要隐藏时，对弹出视图调用 cj_hidePopupView
- */
-- (void)cj_expandInView:(UIView *)popupSuperview
-  locationAccordingView:(UIView *)accordingView
-       relativePosition:(CJPopupViewPosition)popupViewPosition
-           blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
-           showComplete:(void(^)(void))showPopupViewCompleteBlock
-       tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
-
-
-
-
-
 #pragma mark - 隐藏
 
 /**
  *  隐藏弹出视图
+ *
+ *  @param animated    是否需要动画
  */
-- (void)cj_hidePopupView;
-/**
- *  隐藏弹出视图
- */
-- (void)cj_hidePopupViewWithAnimationType:(CJAnimationType)animationType;
+- (void)cj_popupHideForView:(BOOL)animated;
 
 @end
 

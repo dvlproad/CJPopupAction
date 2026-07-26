@@ -9,7 +9,7 @@
 #import "PopupInViewVC.h"
 #import <Masonry/Masonry.h>
 #import <CQDemoKit/CQTSButtonFactory.h>
-#import "UIView+CJPopupInAnyView.h"
+#import "UIView+CJExpandByPoint.h"
 
 @interface PopupInViewVC () {
     
@@ -82,10 +82,10 @@
             NSLog(@"点击背景隐藏完成");
             sender.selected = !sender.selected;
             
-            [popupView cj_hidePopupView];
+            [popupView cj_popupHideForView:YES];
         }];
     }else{
-        [popupView cj_hidePopupViewWithAnimationType:CJAnimationTypeNormal];
+        [popupView cj_popupHideForView:YES];
     }
 }
 
@@ -115,10 +115,10 @@
             NSLog(@"点击背景完成");
             sender.selected = !sender.selected;
             
-            [popupView cj_hidePopupView];
+            [popupView cj_popupHideForView:YES];
         }];
     }else{
-        [popupView cj_hidePopupViewWithAnimationType:CJAnimationTypeNormal];
+        [popupView cj_popupHideForView:YES];
     }
 }
 
@@ -147,10 +147,10 @@
             NSLog(@"点击背景完成");
             sender.selected = !sender.selected;
             
-            [popupView cj_hidePopupView];
+            [popupView cj_popupHideForView:YES];
         }];
     }else{
-        [popupView cj_hidePopupViewWithAnimationType:CJAnimationTypeNormal];
+        [popupView cj_popupHideForView:YES];
     }
 }
 

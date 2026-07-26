@@ -66,7 +66,7 @@
             NSLog(@"点击背景完成");
             sender.selected = !sender.selected;
             
-            [popupView cj_hidePopupView];
+            [popupView cj_popupHideForView:YES];
         }];
         
     }else{
@@ -98,7 +98,7 @@
             NSLog(@"点击背景完成");
             sender.selected = !sender.selected;
             
-            [popupView cj_hidePopupView];
+            [popupView cj_popupHideForView:YES];
         }];
         
     }else{

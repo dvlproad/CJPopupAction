@@ -25,22 +25,22 @@ typedef NS_ENUM(NSUInteger, CJExpandToDirection) {
 typedef struct {
     CGRect showFrame;
     CGRect hideFrame;
-} CJPopupFramePair;
+} CJExpandFramePair;
 
 /// 从指定点向下展开：传左上角（如：下拉菜单）
-+ (CJPopupFramePair)expandToDownFromLeftTop:(CGPoint)leftTop size:(CGSize)size;
++ (CJExpandFramePair)expandToDownFromLeftTop:(CGPoint)leftTop size:(CGSize)size;
 
 /// 从指定点向上展开：传左下角（如：按钮上方弹出）
-+ (CJPopupFramePair)expandToUpFromLeftBottom:(CGPoint)leftBottom size:(CGSize)size;
++ (CJExpandFramePair)expandToUpFromLeftBottom:(CGPoint)leftBottom size:(CGSize)size;
 /*
 /// 从指定点向右展开：传左上角
-+ (CJPopupFramePair)expandToRightFromLeftTop:(CGPoint)leftTop size:(CGSize)size;
++ (CJExpandFramePair)expandToRightFromLeftTop:(CGPoint)leftTop size:(CGSize)size;
 
 /// 从指定点向左展开：传右上角
-+ (CJPopupFramePair)expandToLeftFromRightTop:(CGPoint)rightTop size:(CGSize)size;
++ (CJExpandFramePair)expandToLeftFromRightTop:(CGPoint)rightTop size:(CGSize)size;
 */
 /// 从指定点向四周展开：传中心点（如：居中弹窗）
-+ (CJPopupFramePair)expandToCenterFromCenter:(CGPoint)center size:(CGSize)size;
++ (CJExpandFramePair)expandToCenterFromCenter:(CGPoint)center size:(CGSize)size;
 
 
 @end

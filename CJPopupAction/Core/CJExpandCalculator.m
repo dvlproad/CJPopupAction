@@ -9,42 +9,42 @@
 
 @implementation CJExpandCalculator
 
-+ (CJPopupFramePair)expandToDownFromLeftTop:(CGPoint)leftTop size:(CGSize)size
++ (CJExpandFramePair)expandToDownFromLeftTop:(CGPoint)leftTop size:(CGSize)size
 {
     CGRect showFrame = CGRectMake(leftTop.x, leftTop.y, size.width, size.height);
     CGRect hideFrame = CGRectMake(leftTop.x, leftTop.y, size.width, 0);
-    return (CJPopupFramePair){ showFrame, hideFrame };
+    return (CJExpandFramePair){ showFrame, hideFrame };
 }
 
-+ (CJPopupFramePair)expandToUpFromLeftBottom:(CGPoint)leftBottom size:(CGSize)size
++ (CJExpandFramePair)expandToUpFromLeftBottom:(CGPoint)leftBottom size:(CGSize)size
 {
     CGRect showFrame = CGRectMake(leftBottom.x, leftBottom.y - size.height, size.width, size.height);
     CGRect hideFrame = CGRectMake(leftBottom.x, leftBottom.y, size.width, 0);
-    return (CJPopupFramePair){ showFrame, hideFrame };
+    return (CJExpandFramePair){ showFrame, hideFrame };
 }
 /*
-+ (CJPopupFramePair)expandToRightFromLeftTop:(CGPoint)leftTop size:(CGSize)size
++ (CJExpandFramePair)expandToRightFromLeftTop:(CGPoint)leftTop size:(CGSize)size
 {
     CGRect showFrame = CGRectMake(leftTop.x, leftTop.y, size.width, size.height);
     CGRect hideFrame = CGRectMake(leftTop.x, leftTop.y, 0, size.height);
-    return (CJPopupFramePair){ showFrame, hideFrame };
+    return (CJExpandFramePair){ showFrame, hideFrame };
 }
 
-+ (CJPopupFramePair)expandToLeftFromRightTop:(CGPoint)rightTop size:(CGSize)size
++ (CJExpandFramePair)expandToLeftFromRightTop:(CGPoint)rightTop size:(CGSize)size
 {
     CGRect showFrame = CGRectMake(rightTop.x - size.width, rightTop.y, size.width, size.height);
     CGRect hideFrame = CGRectMake(rightTop.x, rightTop.y, 0, size.height);
-    return (CJPopupFramePair){ showFrame, hideFrame };
+    return (CJExpandFramePair){ showFrame, hideFrame };
 }
 */
-+ (CJPopupFramePair)expandToCenterFromCenter:(CGPoint)center size:(CGSize)size
++ (CJExpandFramePair)expandToCenterFromCenter:(CGPoint)center size:(CGSize)size
 {
     CGRect showFrame = CGRectMake(center.x - size.width / 2.0,
                                   center.y - size.height / 2.0,
                                   size.width,
                                   size.height);
     CGRect hideFrame = CGRectMake(center.x, center.y, 0, 0);
-    return (CJPopupFramePair){ showFrame, hideFrame };
+    return (CJExpandFramePair){ showFrame, hideFrame };
 }
 
 @end
