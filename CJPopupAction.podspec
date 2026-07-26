@@ -98,17 +98,32 @@ Pod::Spec.new do |s|
   #
 
 
-  s.subspec 'Base' do |base|
-    base.source_files = "CJPopupAction/CJPopupCalculator.{h,m}", "CJPopupAction/CJPopupBlankModel.{h,m}"
+  s.subspec 'Core' do |ss|
+    ss.source_files = "CJPopupAction/Core/**/*.{h,m}"
+  end
+  
+  # s.subspec 'Base' do |base|
+  #   base.source_files = "CJPopupAction/CJExpandCalculator.{h,m}", "CJPopupAction/CJPopupBlankModel.{h,m}"
+  #   popup.dependency "CJPopupAction/Core"
+  # end
+
+  s.subspec 'ExpandAnimation' do |popup|
+    popup.source_files = "CJPopupAction/ExpandAnimation/**/*.{h,m}"
+    popup.dependency "CJPopupAction/Core"
+  end
+  
+  s.subspec 'SlideAnimation' do |popup|
+    popup.source_files = "CJPopupAction/SlideAnimation/**/*.{h,m}"
+    popup.dependency "CJPopupAction/Core"
   end
 
   s.subspec 'PopupInView' do |popup|
-    popup.source_files = "CJPopupAction/UIView+CJPopupInView.{h,m}", "CJPopupAction/CJPopupViewDelegate.h"
-    popup.dependency "CJPopupAction/Base"
+    popup.source_files = "CJPopupAction/Product/**/*.{h,m}"
+    popup.dependency 'CJPopupAction/SlideAnimation'
   end
 
   s.subspec 'ShowExtendView' do |extend|
-    extend.source_files = "CJPopupAction/UIView+CJShowExtendView.{h,m}"
+    extend.source_files = "CJPopupAction/ShowExtendView/**/*.{h,m}"
     extend.dependency "CJPopupAction/PopupInView"
   end
 

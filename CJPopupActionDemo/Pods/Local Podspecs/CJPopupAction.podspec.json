@@ -17,25 +17,33 @@
   "requires_arc": true,
   "subspecs": [
     {
-      "name": "Base",
-      "source_files": [
-        "CJPopupAction/CJPopupCalculator.{h,m}",
-        "CJPopupAction/CJPopupBlankModel.{h,m}"
-      ]
+      "name": "Core",
+      "source_files": "CJPopupAction/Core/**/*.{h,m}"
+    },
+    {
+      "name": "ExpandAnimation",
+      "source_files": "CJPopupAction/ExpandAnimation/**/*.{h,m}",
+      "dependencies": {
+        "CJPopupAction/Core": []
+      }
+    },
+    {
+      "name": "SlideAnimation",
+      "source_files": "CJPopupAction/SlideAnimation/**/*.{h,m}",
+      "dependencies": {
+        "CJPopupAction/Core": []
+      }
     },
     {
       "name": "PopupInView",
-      "source_files": [
-        "CJPopupAction/UIView+CJPopupInView.{h,m}",
-        "CJPopupAction/CJPopupViewDelegate.h"
-      ],
+      "source_files": "CJPopupAction/Product/**/*.{h,m}",
       "dependencies": {
-        "CJPopupAction/Base": []
+        "CJPopupAction/SlideAnimation": []
       }
     },
     {
       "name": "ShowExtendView",
-      "source_files": "CJPopupAction/UIView+CJShowExtendView.{h,m}",
+      "source_files": "CJPopupAction/ShowExtendView/**/*.{h,m}",
       "dependencies": {
         "CJPopupAction/PopupInView": []
       }

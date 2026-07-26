@@ -9,7 +9,7 @@
 #import "PopupInViewVC.h"
 #import <Masonry/Masonry.h>
 #import <CQDemoKit/CQTSButtonFactory.h>
-#import "UIView+CJPopupInView.h"
+#import "UIView+CJPopupInAnyView.h"
 
 @interface PopupInViewVC () {
     

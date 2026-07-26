@@ -11,7 +11,9 @@
 #import "WelcomeViewToPop.h"
 #import "WelcomePopupView.h"
 
-#import "UIView+CJPopupInView.h"
+#import "UIView+CJCenterInWindow.h"
+#import "UIView+CJBottomInWindow.h"
+#import "UIView+CJPopupInAnyView.h"
 
 @interface PopupInWindowVC ()<CJPopupViewDelegate>
 
@@ -35,12 +37,12 @@
     
     CGSize popupViewSize = popupView.frame.size;
     //popupViewSize = CGSizeMake(200, 200);
-    [popupView cj_popupInCenterWindow:CJAnimationTypeCATransform3D withSize:popupViewSize blankBGColor:nil showComplete:^{
+    [popupView cj_popupInCenterWindow:CJCenterWindowAnimationType3DSlideToCenter withSize:popupViewSize blankBGColor:nil showComplete:^{
         NSLog(@"显示完成");
         
     } tapBlankComplete:^{
         NSLog(@"点击背景完成");
-        [popupView cj_hidePopupView];
+        [popupView cj_centerHidePopupView:YES];
     }];
 }
 

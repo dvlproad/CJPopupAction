@@ -1,5 +1,5 @@
 //
-//  UIView+CJPopupInView.h
+//  UIView+CJPopupInAnyView.h
 //  CJPopupAction
 //
 //  Created by ciyouzen on 15/11/12.
@@ -10,14 +10,19 @@
 //
 //  1. 位移动画（Slide）：通过 CGAffineTransform 实现，视图大小不变，位置从某处平移到目标位置
 //     从下向上：Action Sheet、底部工具栏、分享面板
+//     从上向下：通知横幅、下拉提示条
+//     从左向右：侧边栏菜单
+//     从右向左：右侧抽屉、聊天消息气泡进入
 //
 //  2. 展开动画（Expand）：通过 frame 变化实现，视图从某个锚点展开到目标大小
 //     向下展开：下拉菜单、筛选列表（从触发位置向下"拉"出）
+//     向上展开：按钮上方弹出菜单、日期选择器（从触发位置向上"推"出）
 //     向四周展开：居中弹窗、确认对话框（从中心点向四周"长"出）
 
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
-#import "CJPopupCalculator.h"
+#import "UIView+CJExpandAnimation.h"
+#import "UIView+CJSlideAnimation.h"
 #import "CJPopupBlankModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -45,11 +50,10 @@ typedef NS_ENUM(NSUInteger, CJAnimationType) {
     CJAnimationTypeCATransform3D
 };
 
-@interface UIView (CJPopupInView) {
+
+@interface UIView (CJPopupInAnyView) {
     
 }
-@property (nonatomic, assign, readonly, getter=isCJPopupViewShowing) BOOL cjPopupViewShowing;   /**< 判断当前是否有弹出视图显示 */
-
 /**
  *  将本View以size大小弹出到showInView视图中location位置（固定向下展开）
  *
@@ -68,44 +72,6 @@ typedef NS_ENUM(NSUInteger, CJAnimationType) {
 //        popupRectModel:(CJPopupRectModel *)popupRectModel
           showComplete:(void(^)(void))showPopupViewCompleteBlock
       tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
-
-
-/**
- *  将当前视图弹出到window中央
- *
- *  @param animationType                弹出时候的动画采用的类型
- *  @param popupViewSize                弹出视图的大小
- *  @param blankBGColor                 空白区域的自定义背景颜色
- *  @param showPopupViewCompleteBlock   显示弹出视图后的操作
- *  @param tapBlankViewCompleteBlock    点击空白区域后的操作(要自己执行cj_hidePopupView...来隐藏，因为有时候点击背景是不执行隐藏的)
- */
-- (void)cj_popupInCenterWindow:(CJAnimationType)animationType
-                      withSize:(CGSize)popupViewSize
-                  blankBGColor:(nullable UIColor *)blankBGColor
-                  showComplete:(void(^)(void))showPopupViewCompleteBlock
-              tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
-
-
-/**
- *  将当前视图弹出到window底部
- *
- *  @param animationType                弹出时候的动画采用的类型
- *  @param popupViewHeight              弹出视图的高度
- *  @param edgeInsets                   弹窗与window的(左右下)边距
- *  @param blankBGColor                 空白区域的自定义背景颜色
- *  @param showPopupViewCompleteBlock   显示弹出视图后的操作
- *  @param tapBlankViewCompleteBlock    点击空白区域后的操作(要自己执行cj_hidePopupView...来隐藏，因为有时候点击背景是不执行隐藏的)
- */
-- (void)cj_popupInBottomWindow:(CJAnimationType)animationType
-                    withHeight:(CGFloat)popupViewHeight
-                    edgeInsets:(UIEdgeInsets)edgeInsets
-                  blankBGColor:(nullable UIColor *)blankBGColor
-                  showComplete:(void(^)(void))showPopupViewCompleteBlock
-              tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
-
-
-
-
 
 
 #pragma mark - ExtendView（基于cj_popupInView的封装）

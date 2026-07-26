@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 dvlproad. All rights reserved.
 //
 
-#import "UIView+CJPopupInView.h"
+#import "UIView+CJPopupInAnyView.h"
 
 @interface UIView (CJShowExtendView)
 

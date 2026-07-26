@@ -30,6 +30,7 @@ end
 target 'CJPopupActionDemo' do
   pod 'CQDemoKit',    :subspecs => ['BaseVC']
   pod 'CJBaseUIKit',        '~> 0.8.1',   :subspecs => ['UIScrollView/CJKeyboardAvoiding']
+#  pod 'CJPopupAnimation', :path => '../../../Gitee/UIKit-PopupAnimation-iOS'
     
   pod 'CJPopupAction',      :path => '../'
 end

@@ -1,1 +1,1 @@
-../../../../../CJPopupAction/CJPopupBlankModel.h
+../../../../../CJPopupAction/Core/CJPopupBlankModel.h

@@ -1,14 +1,20 @@
 PODS:
   - CJBaseUIKit/UIScrollView/CJKeyboardAvoiding (0.8.1)
   - CJPopupAction (1.5.0):
-    - CJPopupAction/Base (= 1.5.0)
+    - CJPopupAction/Core (= 1.5.0)
+    - CJPopupAction/ExpandAnimation (= 1.5.0)
     - CJPopupAction/PopupInView (= 1.5.0)
     - CJPopupAction/ShowExtendView (= 1.5.0)
-  - CJPopupAction/Base (1.5.0)
+    - CJPopupAction/SlideAnimation (= 1.5.0)
+  - CJPopupAction/Core (1.5.0)
+  - CJPopupAction/ExpandAnimation (1.5.0):
+    - CJPopupAction/Core
   - CJPopupAction/PopupInView (1.5.0):
-    - CJPopupAction/Base
+    - CJPopupAction/SlideAnimation
   - CJPopupAction/ShowExtendView (1.5.0):
     - CJPopupAction/PopupInView
+  - CJPopupAction/SlideAnimation (1.5.0):
+    - CJPopupAction/Core
   - CQDemoKit/BaseUIKit (0.9.13):
     - CQDemoKit/BaseUIKit/Button (= 0.9.13)
     - CQDemoKit/BaseUIKit/Container (= 0.9.13)
@@ -58,10 +64,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseUIKit: 1445f55a4c9f942351fcd1964694f32196472837
-  CJPopupAction: 0a41502e19b6451ad1b98463fd06549e54ed036a
+  CJPopupAction: 5bcaaad2a87a11feba096b00415f9e473b6f01b5
   CQDemoKit: 0d6351e9a948e3c214aa1727c4421dc288208630
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 366f7deb46501c5cb0e03b3d987341f2585c88f4
+PODFILE CHECKSUM: 0841e919bebfc52d56ac81dc09daa1a277f793e5
 
 COCOAPODS: 1.16.2

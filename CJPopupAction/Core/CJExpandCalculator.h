@@ -1,5 +1,5 @@
 //
-//  CJPopupCalculator.h
+//  CJExpandCalculator.h
 //  CJPopupAction
 //
 //  Created by ciyouzen on 2026/7/25.
@@ -10,14 +10,6 @@
 
 #import <UIKit/UIKit.h>
 
-/// 位移方向：视图从哪个方向滑入
-typedef NS_ENUM(NSUInteger, CJSlideFromDirection) {
-    CJSlideFromDirectionTop = 0,       // 从上方滑入（向下移动）
-    CJSlideFromDirectionBottom,        // 从下方滑入（向上移动）
-    CJSlideFromDirectionLeft,          // 从左侧滑入（向右移动）
-    CJSlideFromDirectionRight,         // 从右侧滑入（向左移动）
-};
-
 /// 展开动画的方向（仅支持上下和居中，左右请直接调用 expandToLeft/Right 方法）
 typedef NS_ENUM(NSUInteger, CJExpandToDirection) {
     CJExpandToDirectionDown = 0,     // 向下展开（上边固定，如：下拉菜单）
@@ -26,15 +18,14 @@ typedef NS_ENUM(NSUInteger, CJExpandToDirection) {
 };
 
 
-@interface CJPopupCalculator : NSObject
+@interface CJExpandCalculator : NSObject {
+    
+}
 
 typedef struct {
     CGRect showFrame;
     CGRect hideFrame;
 } CJPopupFramePair;
-
-+ (CGAffineTransform)slideHideTransformWithDirection:(CJSlideFromDirection)direction
-                                             offset:(CGFloat)offset;
 
 /// 从指定点向下展开：传左上角（如：下拉菜单）
 + (CJPopupFramePair)expandToDownFromLeftTop:(CGPoint)leftTop size:(CGSize)size;
