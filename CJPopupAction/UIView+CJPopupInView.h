@@ -5,6 +5,15 @@
 //  Created by ciyouzen on 15/11/12.
 //  Copyright (c) 2015年 dvlproad. All rights reserved.
 //
+//  动画类型说明：
+//  本库提供两类动画，核心区别：位移 = 大小不变，位置变了（"推过来"）；展开 = 位置锚定，大小变了（"长出来"）
+//
+//  1. 位移动画（Slide）：通过 CGAffineTransform 实现，视图大小不变，位置从某处平移到目标位置
+//     从下向上：Action Sheet、底部工具栏、分享面板
+//
+//  2. 展开动画（Expand）：通过 frame 变化实现，视图从某个锚点展开到目标大小
+//     向下展开：下拉菜单、筛选列表（从触发位置向下"拉"出）
+//     向四周展开：居中弹窗、确认对话框（从中心点向四周"长"出）
 
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>

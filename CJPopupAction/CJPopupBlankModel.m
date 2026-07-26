@@ -126,12 +126,13 @@
     return model;
 }
 
-
+/*
 #pragma mark - Config
-/// 遮罩的起点和宽度，未设置则取 popupSuperview.origin.x 和 popupSuperview.width。他们是成对一起配置的，不能单独配置
+/// 遮罩的起点和宽度，未设置则取 popupSuperview.origin.x 和 popupSuperview.width。他们是成对一起配置的，不能单独配置。
+/// 目前不开放此接口：(下拉菜单，不必支持非popupSuperview满宽的情况，视觉体验不好)
 - (void)setupX:(CGFloat)x width:(CGFloat)width {
     _x = x;
     _width = width;
 }
-
+*/
 @end

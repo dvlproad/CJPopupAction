@@ -137,12 +137,13 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
         return;
     }
     
-    if (self.cjTapView != nil) { // 如果之前没创建 blankBG 视图，则不需要设置其frame
+    if (self.cjTapView != nil) { // 如果之前没创建 blankBG 视图，则不需要设置其frame。
+        // 此处有设置，则blankBG的宽为popupSuperview满宽(下拉菜单，不必支持非popupSuperview满宽的情况，视觉体验不好)
         UIView *blankView = self.cjTapView;
         CGFloat blankViewY = popupViewOrigin.y;
-        CGFloat blankViewHeight = CGRectGetHeight(popupSuperview.frame) - popupViewOrigin.y;
-        CGFloat blankViewX = blankBGModel.x > 0 ? blankBGModel.x : 0;
-        CGFloat blankViewWidth = blankBGModel.width > 0 ? blankBGModel.width : CGRectGetWidth(popupSuperview.frame);
+        CGFloat blankViewHeight = CGRectGetHeight(popupSuperview.frame) - blankViewY;
+        CGFloat blankViewX = 0;
+        CGFloat blankViewWidth = CGRectGetWidth(popupSuperview.frame);
         CGRect blankViewFrame = CGRectMake(blankViewX,
                                            blankViewY,
                                            blankViewWidth,
@@ -335,7 +336,7 @@ static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
  */
 - (BOOL)letPopupSuperview:(UIView *)popupSuperview
              addPopupView:(UIView *)popupView
-         withBlankBGModel:(CJPopupBlankModel *)blankBGModel
+         withBlankBGModel:(nullable CJPopupBlankModel *)blankBGModel
 {
     if ([popupSuperview.subviews containsObject:popupView]) {
         return NO;
