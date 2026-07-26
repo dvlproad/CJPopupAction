@@ -11,7 +11,7 @@
   },
   "source": {
     "git": "https://github.com/dvlproad/CJPopupAction.git",
-    "tag": "CJPopupAction_1.6.0"
+    "tag": "CJPopupAction_1.6.0_1"
   },
   "frameworks": "UIKit",
   "requires_arc": true,
