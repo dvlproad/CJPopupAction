@@ -20,7 +20,7 @@
  *  @param popupSuperview               弹出视图popupView的superview
  *  @param popupViewLocation            弹出视图popupView的位置location
  *  @param popupViewSize                弹出视图popupView的大小size
- *  @param blankBGColor                 空白区域的背景颜色
+ *  @param blankView                    空白遮罩视图（nil则不添加遮罩，frame由内部自动设置）
  *  @param showPopupViewCompleteBlock   显示弹出视图后的操作
  *  @param tapBlankViewCompleteBlock    点击空白区域后的操作
  */
@@ -28,7 +28,7 @@
                    inView:(UIView *)popupSuperview
                atLocation:(CGPoint)popupViewLocation
                  withSize:(CGSize)popupViewSize
-             blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
+                blankView:(nullable UIView *)blankView
              showComplete:(void(^)(void))showPopupViewCompleteBlock
          tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
 
@@ -40,7 +40,7 @@
  *  @param popupSuperview               弹出视图popupView的superview
  *  @param accordingView                根据accordingView来取得弹出视图的应该的位置
  *  @param popupViewPosition            弹出视图popupView相对accordingView的位置
- *  @param blankBGColor                 空白区域的背景颜色
+ *  @param blankView                    空白遮罩视图（nil则不添加遮罩，frame由内部自动设置）
  *  @param showPopupViewCompleteBlock   显示弹出视图后的操作
  *  @param tapBlankViewCompleteBlock    点击空白区域后的操作
  */
@@ -48,7 +48,7 @@
                    inView:(UIView *)popupSuperview
     locationAccordingView:(UIView *)accordingView
          relativePosition:(CJExpandForViewPosition)popupViewPosition
-             blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
+                blankView:(nullable UIView *)blankView
              showComplete:(void(^)(void))showPopupViewCompleteBlock
          tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
 

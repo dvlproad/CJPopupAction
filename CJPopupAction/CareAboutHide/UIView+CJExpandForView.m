@@ -24,7 +24,7 @@
 - (void)cj_expandInView:(UIView *)popupSuperview
   locationAccordingView:(UIView *)accordingView
        relativePosition:(CJExpandForViewPosition)popupViewPosition
-           blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
+              blankView:(nullable UIView *)blankView
            showComplete:(void(^)(void))showPopupViewCompleteBlock
        tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
@@ -56,9 +56,13 @@
     
     CJPopupMainThreadAssert();
     
-    BOOL canAdd = [popupView letPopupSuperview:popupSuperview addPopupView:popupView withBlankBGModel:blankBGModel];
+    BOOL canAdd = [popupView letPopupSuperview:popupSuperview addPopupView:popupView blankView:blankView];
     if (!canAdd) {
         return;
+    }
+    
+    if (popupView.cjTapView != nil) {
+        popupView.cjTapView.frame = popupSuperview.bounds;
     }
     
     popupView.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;

@@ -23,14 +23,12 @@
 #import <objc/runtime.h>
 #import "UIView+CJExpandAnimation.h"
 #import "UIView+CJSlideAnimation.h"
-#import "CJPopupBlankModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 #define CJPopupMainThreadAssert() NSAssert([NSThread isMainThread], @"UIView+CJPopupInView needs to be accessed on the main thread.");
 
 typedef void(^CJTapBlankViewCompleteBlock)(void);
-
 
 @interface UIView (CJPopupInView) {
     
@@ -47,24 +45,25 @@ typedef void(^CJTapBlankViewCompleteBlock)(void);
  *  将popupView添加进keyWindow中(会默认添加进blankView及对popupView做一些默认设置)
  *
  *  @param popupView                要被添加的视图
- *  @param blankBGModel             空白遮罩模型
+ *  @param blankView                空白遮罩视图（nil则不添加遮罩，frame由内部自动设置）
  *
  *  @return 是否可以被添加成功
  */
-- (BOOL)letkeyWindowAddPopupView:(UIView *)popupView withBlankBGModel:(nullable CJPopupBlankModel *)blankBGModel;
+- (BOOL)letkeyWindowAddPopupView:(UIView *)popupView
+                       blankView:(nullable UIView *)blankView;
 
 /**
  *  将popupView添加进popupSuperview中(会默认添加进blankView及对popupView做一些默认设置)
  *
  *  @param popupSuperview           被添加到的地方
  *  @param popupView                要被添加的视图
- *  @param blankBGModel             空白遮罩模型（nil则不添加遮罩）
+ *  @param blankView                空白遮罩视图（nil则不添加遮罩，frame由内部自动设置为popupSuperview.bounds）
  *
  *  @return 是否可以被添加成功
  */
 - (BOOL)letPopupSuperview:(UIView *)popupSuperview
              addPopupView:(UIView *)popupView
-         withBlankBGModel:(nullable CJPopupBlankModel *)blankBGModel;
+                blankView:(nullable UIView *)blankView;
 
 @end
 

@@ -9,12 +9,13 @@
 #import "PopupInViewVC.h"
 #import <Masonry/Masonry.h>
 #import <CQDemoKit/CQTSButtonFactory.h>
-#import "UIView+CJExpandByPoint.h"
+#import <CJPopupAction/UIView+CJExpandByPoint.h>
+#import <CJPopupAction/UIView+CJBlankView.h>
 
 @interface PopupInViewVC () {
     
 }
-@property (nonatomic, strong) CJPopupBlankModel *popupBgModel;
+@property (nonatomic, strong) UIView *popupBlankView;
 
 @end
 
@@ -24,15 +25,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.popupBgModel = [CJPopupBlankModel defaultModel];
+    self.popupBlankView = [UIView cj_defaultBlankView];
     
     __weak typeof(self) weakSelf = self;
     UIButton *popupBGColorButton = [CQTSButtonFactory submitButtonWithSubmitTitle:@"当前无blankBG" editTitle:@"当前有blankBG" showEditTitle:YES clickSubmitTitleHandle:^(UIButton * _Nonnull button) {
         button.selected = !button.selected;
-        weakSelf.popupBgModel =[CJPopupBlankModel defaultModel];
+        weakSelf.popupBlankView = [UIView cj_defaultBlankView];
     } clickEditTitleHandle:^(UIButton * _Nonnull button) {
         button.selected = !button.selected;
-        weakSelf.popupBgModel = nil;
+        weakSelf.popupBlankView = nil;
     }];
     [self.view addSubview:popupBGColorButton];
     [popupBGColorButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -76,7 +77,7 @@
         }
         [popupView cj_popupInView:popupSuperview popupRectModel:popupRectModel showComplete:^{
         */
-        [popupView cj_popupInView:popupSuperview withOrigin:pointLocation size:size_popupView blankBGModel:self.popupBgModel showComplete:^{
+        [popupView cj_popupInView:popupSuperview withOrigin:pointLocation size:size_popupView blankView:self.popupBlankView showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景隐藏完成");
@@ -109,7 +110,7 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
         
-        [popupView cj_popupInView:popupSuperview withOrigin:pointLocation size:size_popupView blankBGModel:self.popupBgModel showComplete:^{
+        [popupView cj_popupInView:popupSuperview withOrigin:pointLocation size:size_popupView blankView:self.popupBlankView showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");
@@ -141,7 +142,7 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
         
-        [popupView cj_popupInView:popupSuperview withOrigin:pointLocation size:size_popupView blankBGModel:self.popupBgModel showComplete:^{
+        [popupView cj_popupInView:popupSuperview withOrigin:pointLocation size:size_popupView blankView:self.popupBlankView showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");

@@ -1,16 +1,16 @@
 PODS:
   - CJBaseUIKit/UIScrollView/CJKeyboardAvoiding (0.8.1)
-  - CJPopupAction (1.6.0):
-    - CJPopupAction/Base (= 1.6.0)
-    - CJPopupAction/CareAboutHide (= 1.6.0)
-    - CJPopupAction/Core (= 1.6.0)
-    - CJPopupAction/ShowExtendView (= 1.6.0)
-  - CJPopupAction/Base (1.6.0):
+  - CJPopupAction (1.6.1):
+    - CJPopupAction/Base (= 1.6.1)
+    - CJPopupAction/CareAboutHide (= 1.6.1)
+    - CJPopupAction/Core (= 1.6.1)
+    - CJPopupAction/ShowExtendView (= 1.6.1)
+  - CJPopupAction/Base (1.6.1):
     - CJPopupAction/Core
-  - CJPopupAction/CareAboutHide (1.6.0):
+  - CJPopupAction/CareAboutHide (1.6.1):
     - CJPopupAction/Base
-  - CJPopupAction/Core (1.6.0)
-  - CJPopupAction/ShowExtendView (1.6.0):
+  - CJPopupAction/Core (1.6.1)
+  - CJPopupAction/ShowExtendView (1.6.1):
     - CJPopupAction/CareAboutHide
   - CQDemoKit/BaseUIKit (0.9.13):
     - CQDemoKit/BaseUIKit/Button (= 0.9.13)
@@ -102,7 +102,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseUIKit: 1445f55a4c9f942351fcd1964694f32196472837
-  CJPopupAction: 56955b745143554b20c0bccccd43a4056646653a
+  CJPopupAction: d62b472c661fc2bf3fdec6c713a6cc6cfc37174d
   CQDemoKit: 0d6351e9a948e3c214aa1727c4421dc288208630
   CQDemoResource: efdf1a0231767f665f5e6e0df59ed8a5042680f7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201

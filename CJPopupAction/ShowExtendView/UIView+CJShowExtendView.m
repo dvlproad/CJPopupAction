@@ -35,7 +35,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
                    inView:(UIView *)popupSuperview
                atLocation:(CGPoint)popupViewLocation
                  withSize:(CGSize)popupViewSize
-             blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
+                blankView:(nullable UIView *)blankView
              showComplete:(void(^)(void))showPopupViewCompleteBlock
          tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
@@ -55,7 +55,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
     [popupView cj_popupInView:popupSuperview
                    withOrigin:popupViewLocation
                          size:popupViewSize
-                 blankBGModel:blankBGModel
+                    blankView:blankView
                  showComplete:showPopupViewCompleteBlock
              tapBlankComplete:tapBlankViewCompleteBlock];
 }
@@ -65,7 +65,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
                    inView:(UIView *)popupSuperview
     locationAccordingView:(UIView *)accordingView
          relativePosition:(CJExpandForViewPosition)popupViewPosition
-             blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
+                blankView:(nullable UIView *)blankView
              showComplete:(void(^)(void))showPopupViewCompleteBlock
          tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
@@ -75,7 +75,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
     [popupView cj_expandInView:popupSuperview
          locationAccordingView:accordingView
               relativePosition:popupViewPosition
-                 blankBGModel:blankBGModel
+                    blankView:blankView
                  showComplete:showPopupViewCompleteBlock
              tapBlankComplete:tapBlankViewCompleteBlock];
 }

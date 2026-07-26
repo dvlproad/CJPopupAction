@@ -9,12 +9,13 @@
 #import "ShowExtendViewVC.h"
 #import <Masonry/Masonry.h>
 #import <CQDemoKit/CQTSButtonFactory.h>
-#import "UIView+CJShowExtendView.h"
+#import <CJPopupAction/UIView+CJShowExtendView.h>
+#import <CJPopupAction/UIView+CJBlankView.h>
 
 @interface ShowExtendViewVC () {
     
 }
-@property (nonatomic, strong) CJPopupBlankModel *popupBgModel;
+@property (nonatomic, strong) UIView *popupBlankView;
 
 @end
 
@@ -24,15 +25,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.popupBgModel = [CJPopupBlankModel defaultModel];
+    self.popupBlankView = [UIView cj_defaultBlankView];
     
     __weak typeof(self) weakSelf = self;
     UIButton *popupBGColorButton = [CQTSButtonFactory submitButtonWithSubmitTitle:@"当前无blankBG" editTitle:@"当前有blankBG" showEditTitle:YES clickSubmitTitleHandle:^(UIButton * _Nonnull button) {
         button.selected = !button.selected;
-        weakSelf.popupBgModel = [CJPopupBlankModel defaultModel];
+        weakSelf.popupBlankView = [UIView cj_defaultBlankView];
     } clickEditTitleHandle:^(UIButton * _Nonnull button) {
         button.selected = !button.selected;
-        weakSelf.popupBgModel = nil;
+        weakSelf.popupBlankView = nil;
     }];
     [self.view addSubview:popupBGColorButton];
     [popupBGColorButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -59,7 +60,7 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
     
-        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView blankBGModel:self.popupBgModel showComplete:^{
+        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView blankView:self.popupBlankView showComplete:^{
             NSLog(@"显示完成");
             
         } tapBlankComplete:^{
@@ -91,7 +92,7 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
         
-        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView blankBGModel:self.popupBgModel showComplete:^{
+        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView blankView:self.popupBlankView showComplete:^{
             NSLog(@"显示完成");
             
         } tapBlankComplete:^{
@@ -121,7 +122,7 @@
         CGPoint pointLocation = CGPointMake(pointBtnConvert.x, pointBtnConvert.y + CGRectGetHeight(sender.frame));
         CGSize size_popupView = CGSizeMake(CGRectGetWidth(sender.frame), h_popupView);
         
-        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView blankBGModel:self.popupBgModel showComplete:^{
+        [sender cj_showExtendView:popupView inView:popupSuperview atLocation:pointLocation withSize:size_popupView blankView:self.popupBlankView showComplete:^{
             NSLog(@"显示完成");
             
         } tapBlankComplete:^{

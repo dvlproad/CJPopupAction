@@ -7,6 +7,7 @@
 //
 
 #import "UIView+CJBottomInWindow.h"
+#import "UIView+CJBlankView.h"
 #import "UIView+CJPopupInView.h"
 #import "UIView+CJSlideAnimation.h"
 #import "CJExpandCalculator.h"
@@ -26,16 +27,18 @@
 - (void)cj_showInBottomWindow:(BOOL)animated
                    withHeight:(CGFloat)popupViewHeight
                    edgeInsets:(UIEdgeInsets)edgeInsets
-                 blankBGColor:(nullable UIColor *)blankBGColor
+                    blankView:(nullable UIView *)blankView
                  showComplete:(void(^)(void))showPopupViewCompleteBlock
              tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
     CJPopupMainThreadAssert();
     NSAssert(popupViewHeight != 0, @"弹出视图的高都不能为0");
     
-    // 弹出在window的中间或底部的不能没有 blankBG 视图，所以强制创建 blankBGModel 来让保证后续能创建出 blankBG 视图
-    CJPopupBlankModel *blankBGModel = blankBGColor != nil ? [CJPopupBlankModel modelWidthColor:blankBGColor] : [CJPopupBlankModel defaultModel];
-    NSAssert(blankBGModel != nil, @"弹出到window时候，blankBGModel 不能为 nil");
+    // 弹出在window的中间或底部的不能没有 blankBG 视图，所以强制创建默认遮罩来保证后续能创建出 blankBG 视图
+    if (blankView == nil) {
+        blankView = [UIView cj_defaultBlankView];
+    }
+    NSAssert(blankView != nil, @"弹出到window时候，blankView 不能为 nil");
     
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
     CGFloat popupViewWidth = CGRectGetWidth(keyWindow.frame) - edgeInsets.left - edgeInsets.right;
@@ -49,7 +52,7 @@
     
     UIView *popupView = self;
     
-    BOOL canAdd = [self letkeyWindowAddPopupView:popupView withBlankBGModel:blankBGModel];
+    BOOL canAdd = [self letkeyWindowAddPopupView:popupView blankView:blankView];
     if (!canAdd) {
         return;
     }

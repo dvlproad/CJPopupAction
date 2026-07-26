@@ -23,7 +23,6 @@
 #import <objc/runtime.h>
 #import "UIView+CJExpandAnimation.h"
 #import "UIView+CJSlideAnimation.h"
-#import "CJPopupBlankModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -57,16 +56,15 @@ typedef NS_ENUM(NSUInteger, CJAnimationType) {
  *  @param popupSuperview               弹出视图的父视图view
  *  @param popupViewOrigin              弹出视图的左上角origin坐标
  *  @param popupViewSize                弹出视图的size大小
- *  @param blankBGModel                 空白遮罩模型（不传则不添加遮罩）
- *  @param popupRectModel              弹出视图的位置及是否要有空白区域背景的模型
+ *  @param blankView                    空白遮罩视图（nil则不添加遮罩，frame由内部自动设置为从popupViewOrigin.y向下占满宽度）
  *  @param showPopupViewCompleteBlock   显示弹出视图后的操作
  *  @param tapBlankViewCompleteBlock    点击空白区域后的操作(要自己执行cj_popupHideForView:...来隐藏，因为有时候点击背景是不执行隐藏的)
  */
 - (void)cj_popupInView:(UIView *)popupSuperview
             withOrigin:(CGPoint)popupViewOrigin
                   size:(CGSize)popupViewSize
-           blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
 //        popupRectModel:(CJPopupRectModel *)popupRectModel
+             blankView:(nullable UIView *)blankView
           showComplete:(void(^)(void))showPopupViewCompleteBlock
       tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
 

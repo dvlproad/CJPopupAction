@@ -23,7 +23,6 @@
 #import <objc/runtime.h>
 #import "UIView+CJExpandAnimation.h"
 #import "UIView+CJSlideAnimation.h"
-#import "CJPopupBlankModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -38,14 +37,21 @@ typedef NS_ENUM(NSUInteger, CJExpandForViewPosition) {
     
 }
 #pragma mark - ExtendView（基于cj_popupInView的封装）
-/**
+/*
  *  在popupSuperview中展开自己，位置根据与参照视图accordingView的关系确定
  *  要隐藏时，对弹出视图调用 cj_popupHideForView:
+ *
+ *  @param popupSuperview               弹出视图的父视图
+ *  @param accordingView                参照视图，用于确定弹出位置
+ *  @param popupViewPosition            弹出视图相对于参照视图的位置
+ *  @param blankView                    空白遮罩视图（nil则不添加遮罩，frame由内部自动设置）
+ *  @param showPopupViewCompleteBlock   显示弹出视图后的操作
+ *  @param tapBlankViewCompleteBlock    点击空白区域后的操作
  */
 - (void)cj_expandInView:(UIView *)popupSuperview
   locationAccordingView:(UIView *)accordingView
        relativePosition:(CJExpandForViewPosition)popupViewPosition
-           blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
+              blankView:(nullable UIView *)blankView
            showComplete:(void(^)(void))showPopupViewCompleteBlock
        tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
 

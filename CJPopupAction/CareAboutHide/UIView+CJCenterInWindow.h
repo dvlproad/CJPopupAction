@@ -39,13 +39,13 @@ typedef NS_ENUM(NSUInteger, CJCenterWindowAnimationType) {
  *
  *  @param animationType                弹出时候的动画采用的类型
  *  @param popupViewSize                弹出视图的大小
- *  @param blankBGColor                 空白区域的自定义背景颜色
+ *  @param blankView                    空白遮罩视图（nil则使用默认遮罩，frame由内部自动设置为window大小）
  *  @param showPopupViewCompleteBlock   显示弹出视图后的操作
  *  @param tapBlankViewCompleteBlock    点击空白区域后的操作(要自己执行cj_hideFromCenterWindow...来隐藏，因为有时候点击背景是不执行隐藏的)
  */
 - (void)cj_showInCenterWindow:(CJCenterWindowAnimationType)animationType
                      withSize:(CGSize)popupViewSize
-                 blankBGColor:(nullable UIColor *)blankBGColor
+                    blankView:(nullable UIView *)blankView
                  showComplete:(void(^)(void))showPopupViewCompleteBlock
              tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
 

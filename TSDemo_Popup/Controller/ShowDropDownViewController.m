@@ -7,14 +7,15 @@
 //
 
 #import "ShowDropDownViewController.h"
-#import "UIView+CJShowExtendView.h"
 #import <Masonry/Masonry.h>
+#import <CJPopupAction/UIView+CJShowExtendView.h>
+#import <CJPopupAction/UIView+CJBlankView.h>
 
 @interface ShowDropDownViewController () {
     
 }
 @property (nonatomic, strong) UIButton *button;
-@property (nonatomic, strong) CJPopupBlankModel *popupBgModel;
+@property (nonatomic, strong) UIView *popupBlankView;
 @property (nonatomic, strong) UISegmentedControl *directionSegment;
 
 @end
@@ -26,7 +27,7 @@
     // Do any additional setup after loading the view from its nib.
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.popupBgModel = [CJPopupBlankModel defaultModel];
+    self.popupBlankView = [UIView cj_defaultBlankView];
     
     
     
@@ -80,7 +81,7 @@
             default: position = CJExpandForViewPositionAbove; break;
         }
         
-        [button cj_showExtendView:popupView inView:self.view locationAccordingView:button relativePosition:position blankBGModel:self.popupBgModel showComplete:^{
+        [button cj_showExtendView:popupView inView:self.view locationAccordingView:button relativePosition:position blankView:self.popupBlankView showComplete:^{
             NSLog(@"显示完成");
         } tapBlankComplete:^() {
             NSLog(@"点击背景完成");

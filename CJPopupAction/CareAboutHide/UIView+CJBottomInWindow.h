@@ -23,7 +23,6 @@
 #import <objc/runtime.h>
 #import "UIView+CJExpandAnimation.h"
 #import "UIView+CJSlideAnimation.h"
-#import "CJPopupBlankModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -34,17 +33,17 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  将当前视图弹出到window底部
  *
- *  @param animated                弹出时候的时候是否需要动画
- *  @param popupViewHeight              弹出视图的高度
- *  @param edgeInsets                   弹窗与window的(左右下)边距
- *  @param blankBGColor                 空白区域的自定义背景颜色
- *  @param showPopupViewCompleteBlock   显示弹出视图后的操作
- *  @param tapBlankViewCompleteBlock    点击空白区域后的操作(要自己执行cj_hideFromBottomWindow...来隐藏，因为有时候点击背景是不执行隐藏的)
+ *  @param animated                    弹出时候的时候是否需要动画
+ *  @param popupViewHeight             弹出视图的高度
+ *  @param edgeInsets                  弹窗与window的(左右下)边距
+ *  @param blankView                   空白遮罩视图（nil则使用默认遮罩，frame由内部自动设置为window大小）
+ *  @param showPopupViewCompleteBlock  显示弹出视图后的操作
+ *  @param tapBlankViewCompleteBlock   点击空白区域后的操作(要自己执行cj_hideFromBottomWindow...来隐藏，因为有时候点击背景是不执行隐藏的)
  */
 - (void)cj_showInBottomWindow:(BOOL)animated
                    withHeight:(CGFloat)popupViewHeight
                    edgeInsets:(UIEdgeInsets)edgeInsets
-                 blankBGColor:(nullable UIColor *)blankBGColor
+                    blankView:(nullable UIView *)blankView
                  showComplete:(void(^)(void))showPopupViewCompleteBlock
              tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock;
 

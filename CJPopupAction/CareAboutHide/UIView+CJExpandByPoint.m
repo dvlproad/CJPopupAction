@@ -51,8 +51,8 @@ static NSString *cjPopupViewHideTransformKey = @"cjPopupViewHideTransform";
 - (void)cj_popupInView:(UIView *)popupSuperview
             withOrigin:(CGPoint)popupViewOrigin
                   size:(CGSize)popupViewSize
-          blankBGModel:(nullable CJPopupBlankModel *)blankBGModel
 //        popupRectModel:(CJPopupRectModel *)popupRectModel
+             blankView:(nullable UIView *)blankView
           showComplete:(void(^)(void))showPopupViewCompleteBlock
       tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
@@ -60,7 +60,7 @@ static NSString *cjPopupViewHideTransformKey = @"cjPopupViewHideTransform";
     
     UIView *popupView = self;
     
-    BOOL canAdd = [self letPopupSuperview:popupSuperview addPopupView:popupView withBlankBGModel:blankBGModel];
+    BOOL canAdd = [self letPopupSuperview:popupSuperview addPopupView:popupView blankView:blankView];
     if (!canAdd) {
         return;
     }

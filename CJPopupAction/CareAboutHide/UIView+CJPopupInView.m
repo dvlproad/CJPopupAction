@@ -92,21 +92,21 @@ static NSString *cjPopupViewHideFrameStringKey = @"cjPopupViewHideFrameString";
  *  将popupView添加进keyWindow中(会默认添加进blankView及对popupView做一些默认设置)
  *
  *  @param popupView                要被添加的视图
- *  @param blankBGModel             空白遮罩模型
+ *  @param blankView                空白遮罩视图（nil则不添加遮罩）
  *
  *  @return 是否可以被添加成功
  */
-- (BOOL)letkeyWindowAddPopupView:(UIView *)popupView withBlankBGModel:(nullable CJPopupBlankModel *)blankBGModel
+- (BOOL)letkeyWindowAddPopupView:(UIView *)popupView
+                       blankView:(nullable UIView *)blankView
 {
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
     
-    BOOL canAdd = [self letPopupSuperview:keyWindow addPopupView:popupView withBlankBGModel:blankBGModel];
+    BOOL canAdd = [self letPopupSuperview:keyWindow addPopupView:popupView blankView:blankView];
     if (!canAdd) {
         return NO;
     }
     
     /* 设置blankView的位置 */
-    UIView *blankView = self.cjTapView;
     CGFloat blankViewX = 0;
     CGFloat blankViewY = 0;
     CGFloat blankViewWidth = CGRectGetWidth(keyWindow.frame);
@@ -125,39 +125,31 @@ static NSString *cjPopupViewHideFrameStringKey = @"cjPopupViewHideFrameString";
  *
  *  @param popupSuperview           被添加到的地方
  *  @param popupView                要被添加的视图
- *  @param blankBGModel             空白遮罩模型（nil则不添加遮罩）
+ *  @param blankView                空白遮罩视图（nil则不添加遮罩）
  *
  *  @return 是否可以被添加成功
  */
 - (BOOL)letPopupSuperview:(UIView *)popupSuperview
              addPopupView:(UIView *)popupView
-         withBlankBGModel:(nullable CJPopupBlankModel *)blankBGModel
+                blankView:(nullable UIView *)blankView
 {
     if ([popupSuperview.subviews containsObject:popupView]) {
         return NO;
     }
     
-    if (blankBGModel != nil) { // 没设置blankBGModel的时候，当作不需要添加 blankBG 视图
-        /* 添加进空白的点击区域blankView */
-        UIView *blankView = self.cjTapView;
-        if (blankView == nil) {
-            blankView = [[UIView alloc] initWithFrame:CGRectZero];
-            if (blankBGModel.color == nil) {
-                blankView.backgroundColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
-            } else {
-                blankView.backgroundColor = blankBGModel.color;
-            }
-            
-            UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cj_TapBlankViewAction:)];
-            [blankView addGestureRecognizer:tapGesture];
-            
-            self.cjTapView = blankView;
-        }
-        
+    if (blankView != nil) { // blankView为nil的时候，当作不需要添加遮罩视图
+        // 添加创建的空白点击区域blankView
         if (self.cjPopupViewShowing) { //如果存在，先清除
             [blankView removeFromSuperview];
         }
         [popupSuperview addSubview:blankView];
+        
+        /* 添加点击手势 */
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cj_TapBlankViewAction:)];
+        [blankView addGestureRecognizer:tapGesture];
+        
+        /* 存储blankView */
+        self.cjTapView = blankView;
     }
     
     
