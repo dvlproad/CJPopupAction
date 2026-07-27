@@ -9,7 +9,7 @@
 #import "UIView+CJExpandFrameAnimation.h"
 #import <objc/runtime.h>
 
-static NSMutableArray<CJExpandInterceptor> *_expandInterceptors = nil;
+static NSMutableArray<CJExpandInterceptor> *_globalExpandInterceptors = nil;
 
 @implementation UIView (CJExpandFrameAnimation)
 
@@ -20,7 +20,19 @@ static NSMutableArray<CJExpandInterceptor> *_expandInterceptors = nil;
                     blankView:(nullable UIView *)blankView
                    completion:(void(^)(void))completion
 {
-    if (_expandInterceptors.count == 0) {
+    NSArray<CJExpandInterceptor> *instanceInterceptors = animatedView.expandInterceptors;
+    NSArray<CJExpandInterceptor> *globalInterceptors = _globalExpandInterceptors ?: @[];
+    
+    // 合并：实例拦截器在前，全局拦截器在后
+    NSMutableArray<CJExpandInterceptor> *allInterceptors = [NSMutableArray array];
+    if (instanceInterceptors.count > 0) {
+        [allInterceptors addObjectsFromArray:instanceInterceptors];
+    }
+    if (globalInterceptors.count > 0) {
+        [allInterceptors addObjectsFromArray:globalInterceptors];
+    }
+    
+    if (allInterceptors.count == 0) {
         // 无拦截器，直接执行默认
         [self cj_expandAnimateView_default:animatedView
                                    forShow:forShow
@@ -35,7 +47,7 @@ static NSMutableArray<CJExpandInterceptor> *_expandInterceptors = nil;
     void(^chain)(NSInteger index) = nil;
     
     chain = ^(NSInteger index) {
-        if (index >= _expandInterceptors.count) {
+        if (index >= allInterceptors.count) {
             // 链结束，执行默认
             [self cj_expandAnimateView_default:animatedView
                                        forShow:forShow
@@ -46,7 +58,7 @@ static NSMutableArray<CJExpandInterceptor> *_expandInterceptors = nil;
             return;
         }
         
-        CJExpandInterceptor interceptor = _expandInterceptors[index];
+        CJExpandInterceptor interceptor = allInterceptors[index];
         interceptor(animatedView, forShow, popupViewShowFrame, popupViewHideFrame, blankView, ^{
             chain(index + 1);
         });
@@ -80,22 +92,51 @@ static NSMutableArray<CJExpandInterceptor> *_expandInterceptors = nil;
 
 @end
 
-#pragma mark - 拦截器
-@implementation UIView (CJExpandFrameInterceptor)
+#pragma mark - 全局拦截器
+@implementation UIView (CJExpandFrameGlobalInterceptor)
 
 + (void)addExpandInterceptor:(CJExpandInterceptor)interceptor {
-    if (!_expandInterceptors) {
-        _expandInterceptors = [NSMutableArray array];
+    if (!_globalExpandInterceptors) {
+        _globalExpandInterceptors = [NSMutableArray array];
     }
-    [_expandInterceptors addObject:[interceptor copy]];
+    [_globalExpandInterceptors addObject:[interceptor copy]];
 }
 
 + (void)removeExpandInterceptor:(CJExpandInterceptor)interceptor {
-    [_expandInterceptors removeObject:interceptor];
+    [_globalExpandInterceptors removeObject:interceptor];
 }
 
 + (void)removeAllExpandInterceptors {
-    [_expandInterceptors removeAllObjects];
+    [_globalExpandInterceptors removeAllObjects];
+}
+
+@end
+
+#pragma mark - 实例拦截器
+@implementation UIView (CJExpandFrameInstanceInterceptor)
+
+- (NSArray<CJExpandInterceptor> *)expandInterceptors {
+    return objc_getAssociatedObject(self, @selector(expandInterceptors));
+}
+
+- (void)setExpandInterceptors:(NSArray<CJExpandInterceptor> *)expandInterceptors {
+    objc_setAssociatedObject(self, @selector(expandInterceptors), expandInterceptors, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void)addInstanceExpandInterceptor:(CJExpandInterceptor)interceptor {
+    NSMutableArray *interceptors = [NSMutableArray arrayWithArray:self.expandInterceptors ?: @[]];
+    [interceptors addObject:[interceptor copy]];
+    self.expandInterceptors = interceptors;
+}
+
+- (void)removeInstanceExpandInterceptor:(CJExpandInterceptor)interceptor {
+    NSMutableArray *interceptors = [NSMutableArray arrayWithArray:self.expandInterceptors ?: @[]];
+    [interceptors removeObject:interceptor];
+    self.expandInterceptors = interceptors;
+}
+
+- (void)removeAllInstanceExpandInterceptors {
+    self.expandInterceptors = @[];
 }
 
 @end

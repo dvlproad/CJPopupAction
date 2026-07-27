@@ -35,12 +35,23 @@ typedef void(^CJExpandInterceptor)(UIView *animatedView, BOOL forShow,
 
 @end
 
-#pragma mark - 拦截器
-@interface UIView (CJExpandFrameInterceptor)
+#pragma mark - 全局拦截器（类级别）
+@interface UIView (CJExpandFrameGlobalInterceptor)
 
 + (void)addExpandInterceptor:(CJExpandInterceptor)interceptor;
 + (void)removeExpandInterceptor:(CJExpandInterceptor)interceptor;
 + (void)removeAllExpandInterceptors;
+
+@end
+
+#pragma mark - 实例拦截器（per-view）
+@interface UIView (CJExpandFrameInstanceInterceptor)
+
+@property (nonatomic, copy, nullable) NSArray<CJExpandInterceptor> *expandInterceptors;
+
+- (void)addInstanceExpandInterceptor:(CJExpandInterceptor)interceptor;
+- (void)removeInstanceExpandInterceptor:(CJExpandInterceptor)interceptor;
+- (void)removeAllInstanceExpandInterceptors;
 
 @end
 

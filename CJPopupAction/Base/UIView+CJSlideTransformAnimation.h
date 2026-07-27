@@ -60,8 +60,8 @@ typedef void(^CJSlide3DInterceptor)(UIView *animatedView, BOOL forShow,
 
 @end
 
-#pragma mark - 拦截器
-@interface UIView (CJSlideTransformInterceptor)
+#pragma mark - 全局拦截器（类级别）
+@interface UIView (CJSlideTransformGlobalInterceptor)
 
 + (void)addSlideInterceptor:(CJSlideInterceptor)interceptor;
 + (void)removeSlideInterceptor:(CJSlideInterceptor)interceptor;
@@ -70,6 +70,22 @@ typedef void(^CJSlide3DInterceptor)(UIView *animatedView, BOOL forShow,
 + (void)addSlide3DInterceptor:(CJSlide3DInterceptor)interceptor;
 + (void)removeSlide3DInterceptor:(CJSlide3DInterceptor)interceptor;
 + (void)removeAllSlide3DInterceptors;
+
+@end
+
+#pragma mark - 实例拦截器（per-view）
+@interface UIView (CJSlideTransformInstanceInterceptor)
+
+@property (nonatomic, copy, nullable) NSArray<CJSlideInterceptor> *slideInterceptors;
+@property (nonatomic, copy, nullable) NSArray<CJSlide3DInterceptor> *slide3DInterceptors;
+
+- (void)addInstanceSlideInterceptor:(CJSlideInterceptor)interceptor;
+- (void)removeInstanceSlideInterceptor:(CJSlideInterceptor)interceptor;
+- (void)removeAllInstanceSlideInterceptors;
+
+- (void)addInstanceSlide3DInterceptor:(CJSlide3DInterceptor)interceptor;
+- (void)removeInstanceSlide3DInterceptor:(CJSlide3DInterceptor)interceptor;
+- (void)removeAllInstanceSlide3DInterceptors;
 
 @end
 
