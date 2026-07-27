@@ -7,8 +7,9 @@
 //
 
 #import "UIView+CJExpandByPoint.h"
+#import <objc/runtime.h>
 #import "UIView+CJPopupInView.h"
-#import "UIView+CJExpandFrameAnimation.h"
+#import "UIView+CJExpandFrameAnimationBind.h"
 #import "UIView+CJSlideTransformAnimation.h"
 #import "CJExpandCalculator.h"
 
@@ -85,13 +86,11 @@ static NSString *cjPopupViewHideTransformKey = @"cjPopupViewHideTransform";
     self.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
     
     CJExpandFramePair pair = [CJExpandCalculator expandToDownFromLeftTop:popupViewOrigin size:popupViewSize];
-    self.cjPopupViewHideFrameString = NSStringFromCGRect(pair.hideFrame);
-    [UIView cj_expandAnimateView:self
-                          forShow:YES
-                    withShowFrame:pair.showFrame
-                        hideFrame:pair.hideFrame
-                        blankView:self.cjTapView
-                       completion:showPopupViewCompleteBlock];
+    [UIView cj_showExpandAnimateBindView:self
+                          withShowFrame:pair.showFrame
+                              hideFrame:pair.hideFrame
+                              blankView:self.cjTapView
+                             completion:showPopupViewCompleteBlock];
 }
 
 /** 完整的描述请参见文件头部 */
@@ -110,17 +109,8 @@ static NSString *cjPopupViewHideTransformKey = @"cjPopupViewHideTransform";
         return;
     }
     
-    CGRect popupViewHideFrame = CGRectFromString(self.cjPopupViewHideFrameString);
-    if (CGRectEqualToRect(popupViewHideFrame, CGRectZero)) {
-        popupViewHideFrame = self.frame;
-    }
-    
-    [UIView cj_expandAnimateView:popupView
-                          forShow:NO
-                    withShowFrame:popupView.frame
-                        hideFrame:popupViewHideFrame
-                        blankView:tapView
-                       completion:^{
+    [UIView cj_hideExpandAnimateBindView:self
+                              completion:^{
         [popupView removeFromSuperview];
         [tapView removeFromSuperview];
     }];

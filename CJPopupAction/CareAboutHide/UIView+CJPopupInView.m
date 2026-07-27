@@ -7,6 +7,7 @@
 //
 
 #import "UIView+CJPopupInView.h"
+#import <objc/runtime.h>
 
 static NSString *cjShowInViewKey = @"cjShowInView";
 static NSString *cjTapViewKey = @"cjTapView";
@@ -15,10 +16,6 @@ static NSString *cjShowPopupViewCompleteBlockKey = @"cjShowPopupViewCompleteBloc
 static NSString *cjTapBlankViewCompleteBlockKey = @"cjTapBlankViewCompleteBlock";
 
 static NSString *cjPopupViewShowingKey = @"cjPopupViewShowing";
-static NSString *cjMustHideFromPopupViewKey = @"cjMustHideFromPopupView";
-
-// expand 的时候需要
-static NSString *cjPopupViewHideFrameStringKey = @"cjPopupViewHideFrameString";
 
 @interface UIView () {
     
@@ -77,15 +74,6 @@ static NSString *cjPopupViewHideFrameStringKey = @"cjPopupViewHideFrameString";
 }
 
 
-
-//cjPopupViewHideFrameString
-- (NSString *)cjPopupViewHideFrameString {
-    return objc_getAssociatedObject(self, &cjPopupViewHideFrameStringKey);
-}
-
-- (void)setCjPopupViewHideFrameString:(NSString *)cjPopupViewHideFrameString {
-    return objc_setAssociatedObject(self, &cjPopupViewHideFrameStringKey, cjPopupViewHideFrameString, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
 
 #pragma mark - Public Method
 /**

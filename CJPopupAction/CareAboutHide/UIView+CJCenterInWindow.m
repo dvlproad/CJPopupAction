@@ -7,9 +7,11 @@
 //
 
 #import "UIView+CJCenterInWindow.h"
+#import <objc/runtime.h>
 #import "UIView+CJBlankView.h"
 #import "UIView+CJPopupInView.h"
-#import "UIView+CJSlideTransformAnimation.h"
+#import "UIView+CJSlideTransformAnimationBind.h"
+#import "UIView+CJExpandFrameAnimationBind.h"
 #import "CJExpandCalculator.h"
 
 @interface UIView ()
@@ -69,7 +71,6 @@
     self.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
 
     CJExpandFramePair pair = [CJExpandCalculator expandToCenterFromCenter:popupSuperview.center size:popupViewSize];
-    self.cjPopupViewHideFrameString = NSStringFromCGRect(pair.hideFrame);
 
     if (animationType == CJCenterWindowAnimationTypeNone) {
         popupView.frame = pair.showFrame;
@@ -85,31 +86,28 @@
         
         popupView.alpha = 0.0;
         if (animationType == CJCenterWindowAnimationTypeSlideToCenter) {
-            [UIView cj_slideAnimateView:self
-                                forShow:YES
-                       withShowDirection:CJSlideFromDirectionBottom
-                           animateOffset:CGRectGetHeight(keyWindow.frame) / 2.0
-                              completion:^(BOOL finished) {
+            [UIView cj_showSlideAnimateBindView:self
+                               withShowDirection:CJSlideFromDirectionBottom
+                                   animateOffset:CGRectGetHeight(keyWindow.frame) / 2.0
+                                      completion:^(BOOL finished) {
                 !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
             }];
         } else {
-            [UIView cj_slide3DAnimateView:self
-                                  forShow:YES
-                         withShowDirection:CJSlideFromDirectionBottom
-                             animateOffset:500
-                               rotateAngle:70.0 * M_PI / 180.0
-                                completion:^(BOOL finished) {
+            [UIView cj_show3DSlideAnimateBindView:self
+                               withShowDirection:CJSlideFromDirectionBottom
+                                   animateOffset:500
+                                     rotateAngle:70.0 * M_PI / 180.0
+                                      completion:^(BOOL finished) {
                 !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
             }];
         }
 
     } else if (animationType == CJCenterWindowAnimationTypeExpandToCenter) {
-        [UIView cj_expandAnimateView:self
-                              forShow:YES
-                        withShowFrame:pair.showFrame
-                            hideFrame:pair.hideFrame
-                            blankView:self.cjTapView
-                           completion:showPopupViewCompleteBlock];
+        [UIView cj_showExpandAnimateBindView:self
+                              withShowFrame:pair.showFrame
+                                  hideFrame:pair.hideFrame
+                                  blankView:self.cjTapView
+                                 completion:showPopupViewCompleteBlock];
     }
 }
 
@@ -159,17 +157,8 @@
         }
         case CJCenterWindowAnimationTypeExpandToCenter:
         {
-            CGRect popupViewHideFrame = CGRectFromString(self.cjPopupViewHideFrameString);
-            if (CGRectEqualToRect(popupViewHideFrame, CGRectZero)) {
-                popupViewHideFrame = self.frame;
-            }
-            
-            [UIView cj_expandAnimateView:self
-                                  forShow:NO
-                            withShowFrame:self.frame
-                                hideFrame:popupViewHideFrame
-                                blankView:tapView
-                               completion:^{
+            [UIView cj_hideExpandAnimateBindView:self
+                                      completion:^{
                 [popupView removeFromSuperview];
                 [tapView removeFromSuperview];
             }];

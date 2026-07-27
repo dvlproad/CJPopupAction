@@ -7,6 +7,7 @@
 //
 
 #import "UIView+CJShowExtendView.h"
+#import <objc/runtime.h>
 
 static NSString *cjExtendViewKey = @"cjExtendView";
 

@@ -9,7 +9,7 @@
 #import "UIView+CJBottomInWindow.h"
 #import "UIView+CJBlankView.h"
 #import "UIView+CJPopupInView.h"
-#import "UIView+CJSlideTransformAnimation.h"
+#import "UIView+CJSlideTransformAnimationBind.h"
 #import "CJExpandCalculator.h"
 
 
@@ -76,10 +76,6 @@
         
     } else {
         CGFloat slideOffset = CGRectGetHeight(keyWindow.frame) - popupViewShowY;
-        self.cjPopupViewHideFrameString = NSStringFromCGRect(CGRectMake(popupViewX,
-                                                                        CGRectGetMaxY(keyWindow.frame),
-                                                                        popupViewWidth,
-                                                                        popupViewHeight));
 
         
         // 平移的情况下，初始就得设置好可能存在的 blankView 的显示1.0，及popupView的showFrame
@@ -89,11 +85,10 @@
         popupView.frame = popupViewShowFrame;
         
         popupView.alpha = 0.2;
-        [UIView cj_slideAnimateView:self
-                            forShow:YES
-                   withShowDirection:CJSlideFromDirectionBottom
-                       animateOffset:slideOffset
-                          completion:^(BOOL finished) {
+        [UIView cj_showSlideAnimateBindView:self
+                           withShowDirection:CJSlideFromDirectionBottom
+                               animateOffset:slideOffset
+                                  completion:^(BOOL finished) {
             !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
         }];
     }
@@ -115,12 +110,8 @@
         return;
     }
     
-    CGFloat slideOffset = CGRectGetHeight(popupView.window.frame) - self.frame.origin.y;
-    [UIView cj_slideAnimateView:self
-                        forShow:NO
-               withShowDirection:CJSlideFromDirectionBottom
-                   animateOffset:slideOffset
-                      completion:^(BOOL finished) {
+    [UIView cj_hideSlideAnimateBindView:self
+                             completion:^(BOOL finished) {
         [popupView removeFromSuperview];
         [tapView removeFromSuperview];
     }];

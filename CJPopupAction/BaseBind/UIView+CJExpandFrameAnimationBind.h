@@ -14,14 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - 展开动画（进阶）
 @interface UIView (CJExpandFrameAnimationBind)
 
-+ (void)cj_expandBindView:(UIView *)view
-                   forShow:(BOOL)forShow
-           withShowFrame:(CGRect)showFrame
-               hideFrame:(CGRect)hideFrame
-               blankView:(nullable UIView *)blankView
-              completion:(void(^)(void))completion;
-+ (void)cj_expandBindViewHide:(UIView *)view
-                   completion:(void(^)(void))completion;
++ (void)cj_showExpandAnimateBindView:(UIView *)view
+                        withShowFrame:(CGRect)showFrame
+                            hideFrame:(CGRect)hideFrame
+                            blankView:(nullable UIView *)blankView
+                           completion:(void(^)(void))completion;
++ (void)cj_hideExpandAnimateBindView:(UIView *)view
+                           completion:(void(^)(void))completion;
 
 @end
 

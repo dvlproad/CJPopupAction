@@ -20,7 +20,6 @@
 //     向四周展开：居中弹窗、确认对话框（从中心点向四周"长"出）
 
 #import <UIKit/UIKit.h>
-#import <objc/runtime.h>
 #import "UIView+CJExpandFrameAnimation.h"
 #import "UIView+CJSlideTransformAnimation.h"
 
@@ -36,7 +35,6 @@ typedef void(^CJTapBlankViewCompleteBlock)(void);
 @property (nonatomic, strong) UIView *cjShowInView; /**< 弹出视图被add到的view */
 @property (nonatomic, assign, getter=isCJPopupViewShowing) BOOL cjPopupViewShowing;   /**< 判断当前是否有弹出视图显示 */
 @property (nonatomic, strong) UIView *cjTapView;    /**< 空白区域（指radioButtons组合下的点击区域（不包括radioButtons区域），用来点击之后隐藏列表） */
-@property (nonatomic, copy) NSString *cjPopupViewHideFrameString;   /**< 弹出视图隐藏时候的frame */
 
 @property (nonatomic, copy) void(^cjTapBlankViewCompleteBlock)(void);   /**< 点击空白区域执行的操作 */
 @property (nonatomic, copy) void(^cjShowPopupViewCompleteBlock)(void);  /**< 显示弹出视图后的操作 */

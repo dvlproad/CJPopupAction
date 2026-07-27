@@ -8,7 +8,7 @@
 
 #import "UIView+CJExpandForView.h"
 #import "UIView+CJPopupInView.h"
-#import "UIView+CJExpandFrameAnimation.h"
+#import "UIView+CJExpandFrameAnimationBind.h"
 #import "CJExpandCalculator.h"
 
 @interface UIView ()
@@ -68,13 +68,11 @@
     popupView.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;
     popupView.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
     
-    popupView.cjPopupViewHideFrameString = NSStringFromCGRect(pair.hideFrame);
-    [UIView cj_expandAnimateView:popupView
-                          forShow:YES
-                    withShowFrame:pair.showFrame
-                        hideFrame:pair.hideFrame
-                        blankView:popupView.cjTapView
-                       completion:showPopupViewCompleteBlock];
+    [UIView cj_showExpandAnimateBindView:popupView
+                          withShowFrame:pair.showFrame
+                              hideFrame:pair.hideFrame
+                              blankView:popupView.cjTapView
+                             completion:showPopupViewCompleteBlock];
 }
 
 
@@ -89,17 +87,8 @@
     UIView *popupView = self;
     UIView *tapView = self.cjTapView;
     
-    CGRect popupViewHideFrame = CGRectFromString(self.cjPopupViewHideFrameString);
-    if (CGRectEqualToRect(popupViewHideFrame, CGRectZero)) {
-        popupViewHideFrame = self.frame;
-    }
-    
-    [UIView cj_expandAnimateView:self
-                          forShow:NO
-                    withShowFrame:self.frame
-                        hideFrame:popupViewHideFrame
-                        blankView:tapView
-                       completion:^{
+    [UIView cj_hideExpandAnimateBindView:self
+                              completion:^{
         [popupView removeFromSuperview];
         [tapView removeFromSuperview];
     }];

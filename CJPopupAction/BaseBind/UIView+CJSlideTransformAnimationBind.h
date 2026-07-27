@@ -14,23 +14,21 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIView (CJSlideTransformAnimationBind)
 
 #pragma mark - 普通平移（进阶）
-+ (void)cj_slideBindView:(UIView *)view
-                 forShow:(BOOL)forShow
-       withShowDirection:(CJSlideFromDirection)showFromDirection
-           animateOffset:(CGFloat)animateOffset
-              completion:(void (^ __nullable)(BOOL finished))completion;
-+ (void)cj_slideBindViewHide:(UIView *)view
-                  completion:(void (^ __nullable)(BOOL finished))completion;
++ (void)cj_showSlideAnimateBindView:(UIView *)view
+                    withShowDirection:(CJSlideFromDirection)showFromDirection
+                        animateOffset:(CGFloat)animateOffset
+                           completion:(void (^ __nullable)(BOOL finished))completion;
++ (void)cj_hideSlideAnimateBindView:(UIView *)view
+                          completion:(void (^ __nullable)(BOOL finished))completion;
 
 #pragma mark - 3D平移（进阶）
-+ (void)cj_3DSlideBindView:(UIView *)view
-                   forShow:(BOOL)forShow
-         withShowDirection:(CJSlideFromDirection)showFromDirection
-             animateOffset:(CGFloat)animateOffset
-               rotateAngle:(CGFloat)rotateAngle
-                completion:(void (^ __nullable)(BOOL finished))completion;
-+ (void)cj_3DSlideBindViewHide:(UIView *)view
-                    completion:(void (^ __nullable)(BOOL finished))completion;
++ (void)cj_show3DSlideAnimateBindView:(UIView *)view
+                    withShowDirection:(CJSlideFromDirection)showFromDirection
+                        animateOffset:(CGFloat)animateOffset
+                          rotateAngle:(CGFloat)rotateAngle
+                           completion:(void (^ __nullable)(BOOL finished))completion;
++ (void)cj_hide3DSlideAnimateBindView:(UIView *)view
+                           completion:(void (^ __nullable)(BOOL finished))completion;
 
 @end
 

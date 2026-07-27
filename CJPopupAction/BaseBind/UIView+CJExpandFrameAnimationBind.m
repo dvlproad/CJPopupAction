@@ -12,25 +12,24 @@
 @implementation UIView (CJExpandFrameAnimationBind)
 
 #pragma mark - 展开动画（进阶）
-+ (void)cj_expandBindView:(UIView *)view
-                   forShow:(BOOL)forShow
-           withShowFrame:(CGRect)showFrame
-               hideFrame:(CGRect)hideFrame
-               blankView:(nullable UIView *)blankView
-              completion:(void(^)(void))completion {
++ (void)cj_showExpandAnimateBindView:(UIView *)view
+                        withShowFrame:(CGRect)showFrame
+                            hideFrame:(CGRect)hideFrame
+                            blankView:(nullable UIView *)blankView
+                           completion:(void(^)(void))completion {
     view.cjExpandShowFrame = showFrame;
     view.cjExpandHideFrame = hideFrame;
     view.cjExpandBlankView = blankView;
     [UIView cj_expandAnimateView:view
-                          forShow:forShow
+                          forShow:YES
                     withShowFrame:showFrame
                         hideFrame:hideFrame
                         blankView:blankView
                        completion:completion];
 }
 
-+ (void)cj_expandBindViewHide:(UIView *)view
-                   completion:(void(^)(void))completion {
++ (void)cj_hideExpandAnimateBindView:(UIView *)view
+                           completion:(void(^)(void))completion {
     [UIView cj_expandAnimateView:view
                           forShow:NO
                     withShowFrame:view.cjExpandShowFrame
