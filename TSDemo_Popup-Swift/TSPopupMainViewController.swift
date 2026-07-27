@@ -20,17 +20,17 @@ import TSDemo_Popup
 
         do {
             let model = CQDMTabBarModel()
-            model.title = NSLocalizedString("Popup ObjC", comment: "")
+            model.title = NSLocalizedString("Base", comment: "")
             model.normalImage = UIImage.cqresource_imageNamed("icons8-menu")
-            model.classEntry = NSClassFromString("ViewController")
+            model.classEntry = NSClassFromString("TSBaseAnimationHomeViewController")
             tabBarModels.append(model)
         }
 
         do {
             let model = CQDMTabBarModel()
-            model.title = NSLocalizedString("Popup Swift", comment: "")
+            model.title = NSLocalizedString("Toast", comment: "")
             model.normalImage = UIImage.cqresource_imageNamed("icons8-folder")
-            model.classEntry = NSClassFromString("ViewController")
+            model.classEntry = NSClassFromString("TSToastHomeViewController")
             tabBarModels.append(model)
         }
 

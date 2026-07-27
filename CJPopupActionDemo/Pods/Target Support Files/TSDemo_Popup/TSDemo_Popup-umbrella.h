@@ -14,9 +14,10 @@
 #import "PopupInWindowVC.h"
 #import "ShowDropDownViewController.h"
 #import "ShowExtendViewVC.h"
+#import "TSToastHomeViewController.h"
+#import "TSBaseAnimationHomeViewController.h"
 #import "WelcomePopupView.h"
 #import "WelcomeViewToPop.h"
-#import "ViewController.h"
 
 FOUNDATION_EXPORT double TSDemo_PopupVersionNumber;
 FOUNDATION_EXPORT const unsigned char TSDemo_PopupVersionString[];

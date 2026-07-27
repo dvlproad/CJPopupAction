@@ -1,23 +1,24 @@
 //
-//  ViewController.m
+//  TSBaseAnimationHomeViewController.m
 //  CJPopupViewDemo
 //
 //  Created by ciyouzen on 6/22/15.
 //  Copyright (c) 2015 dvlproad. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TSBaseAnimationHomeViewController.h"
 
 #import "PopupInWindowVC.h"
 #import "PopupInViewVC.h"
 #import "ShowExtendViewVC.h"
 #import "ShowDropDownViewController.h"
+#import "TSToastHomeViewController.h"
 
-@interface ViewController ()
+@interface TSBaseAnimationHomeViewController ()
 
 @end
 
-@implementation ViewController
+@implementation TSBaseAnimationHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -63,6 +64,20 @@
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"ShowDropDown (下拉菜单)";
             module.classEntry = [ShowDropDownViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
+    // Toast
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"Toast 功能";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Toast (简单居中显示+延迟隐藏，无遮罩)";
+            module.classEntry = [TSToastHomeViewController class];
+            module.isCreateByXib = NO;
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];

@@ -25,6 +25,7 @@
 #import "CJExpandCalculator.h"
 #import "CJSlideCalculator.h"
 #import "UIView+CJShowExtendView.h"
+#import "UIView+CJToastAnimation.h"
 
 FOUNDATION_EXPORT double CJPopupActionVersionNumber;
 FOUNDATION_EXPORT const unsigned char CJPopupActionVersionString[];
