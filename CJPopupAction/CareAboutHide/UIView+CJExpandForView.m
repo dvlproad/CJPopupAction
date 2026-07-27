@@ -22,6 +22,7 @@
 #pragma mark - ExtendView
 /** 完整的描述请参见文件头部 */
 - (void)cj_expandInView:(UIView *)popupSuperview
+               animated:(BOOL)animated
   locationAccordingView:(UIView *)accordingView
        relativePosition:(CJExpandForViewPosition)popupViewPosition
               blankView:(nullable UIView *)blankView
@@ -68,6 +69,12 @@
     popupView.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;
     popupView.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
     
+    if (animated == NO) {
+        popupView.frame = pair.showFrame;
+        !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
+        return;
+    }
+    
     [UIView cj_showExpandAnimateBindView:popupView
                           withShowFrame:pair.showFrame
                               hideFrame:pair.hideFrame
@@ -78,7 +85,7 @@
 
 
 /** 完整的描述请参见文件头部 */
-- (void)cj_expandHideForView {
+- (void)cj_expandHideForView:(BOOL)animated {
     CJPopupMainThreadAssert();
     
     self.cjPopupViewShowing = NO;  //设置成NO表示当前未显示任何弹出视图
@@ -86,6 +93,12 @@
     
     UIView *popupView = self;
     UIView *tapView = self.cjTapView;
+    
+    if (animated == NO) {
+        [popupView removeFromSuperview];
+        [tapView removeFromSuperview];
+        return;
+    }
     
     [UIView cj_hideExpandAnimateBindView:self
                               completion:^{

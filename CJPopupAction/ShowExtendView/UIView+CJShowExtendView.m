@@ -54,6 +54,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
     }
     */
     [popupView cj_popupInView:popupSuperview
+                     animated:YES
                    withOrigin:popupViewLocation
                          size:popupViewSize
                     blankView:blankView
@@ -74,11 +75,12 @@ static NSString *cjExtendViewKey = @"cjExtendView";
     
     self.cjExtendView = popupView;
     [popupView cj_expandInView:popupSuperview
+                      animated:YES
          locationAccordingView:accordingView
               relativePosition:popupViewPosition
-                    blankView:blankView
-                 showComplete:showPopupViewCompleteBlock
-             tapBlankComplete:tapBlankViewCompleteBlock];
+                     blankView:blankView
+                  showComplete:showPopupViewCompleteBlock
+              tapBlankComplete:tapBlankViewCompleteBlock];
 }
 
 

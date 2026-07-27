@@ -9,13 +9,13 @@
 #import "UIView+CJPopupInView.h"
 #import <objc/runtime.h>
 
+static NSString *cjPopupViewShowingKey = @"cjPopupViewShowing";
+
 static NSString *cjShowInViewKey = @"cjShowInView";
 static NSString *cjTapViewKey = @"cjTapView";
 
 static NSString *cjShowPopupViewCompleteBlockKey = @"cjShowPopupViewCompleteBlock";
 static NSString *cjTapBlankViewCompleteBlockKey = @"cjTapBlankViewCompleteBlock";
-
-static NSString *cjPopupViewShowingKey = @"cjPopupViewShowing";
 
 @interface UIView () {
     
@@ -27,6 +27,16 @@ static NSString *cjPopupViewShowingKey = @"cjPopupViewShowing";
 @implementation UIView (CJPopupInView)
 
 #pragma mark - runtime
+//cjPopupViewShowing
+- (BOOL)isCJPopupViewShowing {
+    return [objc_getAssociatedObject(self, &cjPopupViewShowingKey) boolValue];
+}
+
+- (void)setCjPopupViewShowing:(BOOL)cjPopupViewShowing {
+    return objc_setAssociatedObject(self, &cjPopupViewShowingKey, @(cjPopupViewShowing), OBJC_ASSOCIATION_ASSIGN);
+}
+
+
 //cjShowInView
 - (UIView *)cjShowInView {
     return objc_getAssociatedObject(self, &cjShowInViewKey);
@@ -62,17 +72,6 @@ static NSString *cjPopupViewShowingKey = @"cjPopupViewShowing";
 - (void)setCjShowPopupViewCompleteBlock:(void(^)(void))cjShowPopupViewCompleteBlock {
     return objc_setAssociatedObject(self, &cjShowPopupViewCompleteBlockKey, cjShowPopupViewCompleteBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
-
-
-//cjPopupViewShowing
-- (BOOL)isCJPopupViewShowing {
-    return [objc_getAssociatedObject(self, &cjPopupViewShowingKey) boolValue];
-}
-
-- (void)setCjPopupViewShowing:(BOOL)cjPopupViewShowing {
-    return objc_setAssociatedObject(self, &cjPopupViewShowingKey, @(cjPopupViewShowing), OBJC_ASSOCIATION_ASSIGN);
-}
-
 
 
 #pragma mark - Public Method

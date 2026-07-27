@@ -38,9 +38,10 @@ typedef NS_ENUM(NSUInteger, CJExpandForViewPosition) {
 #pragma mark - ExtendView（基于cj_popupInView的封装）
 /*
  *  在popupSuperview中展开自己，位置根据与参照视图accordingView的关系确定
- *  要隐藏时，对弹出视图调用 cj_popupHideForView:
+ *  要隐藏时，对弹出视图调用 cj_expandHideForView:
  *
  *  @param popupSuperview               弹出视图的父视图
+ *  @param animated                    弹出时候是否需要动画
  *  @param accordingView                参照视图，用于确定弹出位置
  *  @param popupViewPosition            弹出视图相对于参照视图的位置
  *  @param blankView                    空白遮罩视图（nil则不添加遮罩，frame由内部自动设置）
@@ -48,6 +49,7 @@ typedef NS_ENUM(NSUInteger, CJExpandForViewPosition) {
  *  @param tapBlankViewCompleteBlock    点击空白区域后的操作
  */
 - (void)cj_expandInView:(UIView *)popupSuperview
+               animated:(BOOL)animated
   locationAccordingView:(UIView *)accordingView
        relativePosition:(CJExpandForViewPosition)popupViewPosition
               blankView:(nullable UIView *)blankView
@@ -59,8 +61,10 @@ typedef NS_ENUM(NSUInteger, CJExpandForViewPosition) {
 
 /**
  *  隐藏弹出视图
+ *
+ *  @param animated    是否需要动画
  */
-- (void)cj_expandHideForView;
+- (void)cj_expandHideForView:(BOOL)animated;
 
 @end
 

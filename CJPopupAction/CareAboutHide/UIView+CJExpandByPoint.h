@@ -30,21 +30,6 @@ typedef NS_ENUM(NSUInteger, CJWindowPosition) {
     CJWindowPositionCenter
 };
 
-typedef NS_ENUM(NSUInteger, CJAnimationType) {
-    //    MJPopupViewAnimationFade = 0,
-    //    MJPopupViewAnimationSlideBottomTop = 1,
-    //    MJPopupViewAnimationSlideBottomBottom,
-    //    MJPopupViewAnimationSlideTopTop,
-    //    MJPopupViewAnimationSlideTopBottom,
-    //    MJPopupViewAnimationSlideLeftLeft,
-    //    MJPopupViewAnimationSlideLeftRight,
-    //    MJPopupViewAnimationSlideRightLeft,
-    //    MJPopupViewAnimationSlideRightRight,
-    CJAnimationTypeNone = 0,   //Directly
-    CJAnimationTypeNormal,     //通过设置frame来实现
-    CJAnimationTypeCATransform3D
-};
-
 
 @interface UIView (CJExpandByPoint) {
     
@@ -53,6 +38,7 @@ typedef NS_ENUM(NSUInteger, CJAnimationType) {
  *  将本View以size大小弹出到showInView视图中location位置（固定向下展开）
  *
  *  @param popupSuperview               弹出视图的父视图view
+ *  @param animated                    弹出时候是否需要动画
  *  @param popupViewOrigin              弹出视图的左上角origin坐标
  *  @param popupViewSize                弹出视图的size大小
  *  @param blankView                    空白遮罩视图（nil则不添加遮罩，frame由内部自动设置为从popupViewOrigin.y向下占满宽度）
@@ -60,6 +46,7 @@ typedef NS_ENUM(NSUInteger, CJAnimationType) {
  *  @param tapBlankViewCompleteBlock    点击空白区域后的操作(要自己执行cj_popupHideForView:...来隐藏，因为有时候点击背景是不执行隐藏的)
  */
 - (void)cj_popupInView:(UIView *)popupSuperview
+              animated:(BOOL)animated
             withOrigin:(CGPoint)popupViewOrigin
                   size:(CGSize)popupViewSize
 //        popupRectModel:(CJPopupRectModel *)popupRectModel

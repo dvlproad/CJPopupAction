@@ -7,49 +7,18 @@
 //
 
 #import "UIView+CJExpandByPoint.h"
-#import <objc/runtime.h>
 #import "UIView+CJPopupInView.h"
 #import "UIView+CJExpandFrameAnimationBind.h"
 #import "UIView+CJSlideTransformAnimation.h"
 #import "CJExpandCalculator.h"
 
-static NSString *cjPopupAnimationTypeKey = @"cjPopupAnimationType";
-
-static NSString *cjPopupViewHideTransformKey = @"cjPopupViewHideTransform";
-
-@interface UIView ()
-
-@property (nonatomic, assign) CJAnimationType cjPopupAnimationType; /**< 弹出视图的动画方式 */
-
-//@property (nonatomic, assign) CATransform3D cjPopupViewHideTransform;/**< 弹出视图隐藏时候的transform */
-
-@end
-
 
 @implementation UIView (CJExpandByPoint)
-
-#pragma mark - runtime
-//cjPopupAnimationType
-- (CJAnimationType)cjPopupAnimationType {
-    return [objc_getAssociatedObject(self, &cjPopupAnimationTypeKey) integerValue];
-}
-
-- (void)setCjPopupAnimationType:(CJAnimationType)cjPopupAnimationType {
-    return objc_setAssociatedObject(self, &cjPopupAnimationTypeKey, @(cjPopupAnimationType), OBJC_ASSOCIATION_ASSIGN);
-}
-
-////cjPopupViewHideTransform
-//- (CATransform3D)cjPopupViewHideTransform {
-//    return objc_getAssociatedObject(self, &cjPopupViewHideTransformKey);
-//}
-//
-//- (void)setCjPopupViewHideTransform:(CATransform3D)cjPopupViewHideTransform {
-//    return objc_setAssociatedObject(self, &cjPopupViewHideTransformKey, cjPopupViewHideTransform, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-//}
 
 #pragma mark - 底层接口
 /** 完整的描述请参见文件头部 */
 - (void)cj_popupInView:(UIView *)popupSuperview
+              animated:(BOOL)animated
             withOrigin:(CGPoint)popupViewOrigin
                   size:(CGSize)popupViewSize
 //        popupRectModel:(CJPopupRectModel *)popupRectModel
@@ -80,12 +49,17 @@ static NSString *cjPopupViewHideTransformKey = @"cjPopupViewHideTransform";
         [blankView setFrame:blankViewFrame];
     }
     
-
-    self.cjPopupAnimationType = CJAnimationTypeNormal;
     self.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;
     self.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
     
     CJExpandFramePair pair = [CJExpandCalculator expandToDownFromLeftTop:popupViewOrigin size:popupViewSize];
+    
+    if (animated == NO) {
+        popupView.frame = pair.showFrame;
+        !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
+        return;
+    }
+    
     [UIView cj_showExpandAnimateBindView:self
                           withShowFrame:pair.showFrame
                               hideFrame:pair.hideFrame

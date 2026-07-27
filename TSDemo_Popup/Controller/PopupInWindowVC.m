@@ -79,7 +79,7 @@
     popupView.popupViewDelegate = self;
     
     CGFloat popupViewHeight = CGRectGetHeight(popupView.frame);
-    [popupView cj_showInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight edgeInsets:UIEdgeInsetsMake(0, 10, 10, 10) blankView:nil showComplete:^{
+    [popupView cj_showInBottomWindow:YES withHeight:popupViewHeight edgeInsets:UIEdgeInsetsMake(0, 10, 10, 10) blankView:nil showComplete:^{
         NSLog(@"显示完成");
         
     } tapBlankComplete:^{
