@@ -14,8 +14,10 @@
 #import "PopupInWindowVC.h"
 #import "ShowDropDownViewController.h"
 #import "ShowExtendViewVC.h"
+#import "TSCareAboutHideHomeViewController.h"
 #import "TSToastHomeViewController.h"
 #import "TSBaseAnimationHomeViewController.h"
+#import "TSWindowAnimationHomeViewController.h"
 #import "WelcomePopupView.h"
 #import "WelcomeViewToPop.h"
 

@@ -8,11 +8,8 @@
 
 #import "TSBaseAnimationHomeViewController.h"
 
-#import "PopupInWindowVC.h"
-#import "PopupInViewVC.h"
-#import "ShowExtendViewVC.h"
-#import "ShowDropDownViewController.h"
-#import "TSToastHomeViewController.h"
+#import <CJPopupAction/UIView+CJExpandFrameAnimation.h>
+#import <CJPopupAction/UIView+CJSlideTransformAnimation.h>
 
 @interface TSBaseAnimationHomeViewController ()
 
@@ -22,62 +19,144 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = NSLocalizedString(@"CJPopupAction Demo", nil);
+    self.navigationItem.title = NSLocalizedString(@"Base Animation Demo", nil);
 
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
 
-    // Popup
+    // Expand Animation
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"Popup 功能";
+        sectionDataModel.theme = @"Expand Animation";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"PopupInWindow (居中/底部弹出到Window)";
-            module.classEntry = [PopupInWindowVC class];
-            module.isCreateByXib = NO;
+            module.title = @"Expand Animation Show";
+            module.actionBlock = ^{
+                __weak typeof(self) weakSelf = self;
+                UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
+                testView.backgroundColor = [UIColor redColor];
+                [weakSelf.view addSubview:testView];
+                
+                [UIView cj_expandAnimateView:testView
+                                     forShow:YES
+                               withShowFrame:CGRectMake(50, 100, 200, 200)
+                                   hideFrame:CGRectMake(100, 200, 100, 100)
+                                   blankView:nil
+                                  completion:^{
+                                      NSLog(@"Expand show completed");
+                                  }];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Expand Animation Hide";
+            module.actionBlock = ^{
+                __weak typeof(self) weakSelf = self;
+                UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(50, 100, 200, 200)];
+                testView.backgroundColor = [UIColor redColor];
+                [weakSelf.view addSubview:testView];
+                
+                [UIView cj_expandAnimateView:testView
+                                     forShow:NO
+                               withShowFrame:CGRectMake(50, 100, 200, 200)
+                                   hideFrame:CGRectMake(100, 200, 100, 100)
+                                   blankView:nil
+                                  completion:^{
+                                      NSLog(@"Expand hide completed");
+                                  }];
+            };
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];
     }
-    
-    // Popup
+
+    // Slide Animation
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"Popup 功能";
+        sectionDataModel.theme = @"Slide Animation";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"PopupInView (弹出到指定View)";
-            module.classEntry = [PopupInViewVC class];
-            module.isCreateByXib = YES;
-            module.xibBundle = [NSBundle bundleForClass:[self class]];
+            module.title = @"Slide Animation Show";
+            module.actionBlock = ^{
+                __weak typeof(self) weakSelf = self;
+                UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
+                testView.backgroundColor = [UIColor blueColor];
+                [weakSelf.view addSubview:testView];
+                
+                [UIView cj_slideAnimateView:testView
+                                    forShow:YES
+                           withShowDirection:CJSlideFromDirectionBottom
+                               animateOffset:100
+                                  completion:^(BOOL finished) {
+                                      NSLog(@"Slide show completed");
+                                  }];
+            };
             [sectionDataModel.values addObject:module];
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"ShowExtendView (展开弹出)";
-            module.classEntry = [ShowExtendViewVC class];
-            module.isCreateByXib = YES;
-            module.xibBundle = [NSBundle bundleForClass:[self class]];
-            [sectionDataModel.values addObject:module];
-        }
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"ShowDropDown (下拉菜单)";
-            module.classEntry = [ShowDropDownViewController class];
+            module.title = @"Slide Animation Hide";
+            module.actionBlock = ^{
+                __weak typeof(self) weakSelf = self;
+                UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
+                testView.backgroundColor = [UIColor blueColor];
+                [weakSelf.view addSubview:testView];
+                
+                [UIView cj_slideAnimateView:testView
+                                    forShow:NO
+                           withShowDirection:CJSlideFromDirectionBottom
+                               animateOffset:100
+                                  completion:^(BOOL finished) {
+                                      NSLog(@"Slide hide completed");
+                                  }];
+            };
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];
     }
-    
-    // Toast
+
+    // Slide 3D Animation
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"Toast 功能";
+        sectionDataModel.theme = @"Slide 3D Animation";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Toast (简单居中显示+延迟隐藏，无遮罩)";
-            module.classEntry = [TSToastHomeViewController class];
-            module.isCreateByXib = NO;
+            module.title = @"Slide 3D Animation Show";
+            module.actionBlock = ^{
+                __weak typeof(self) weakSelf = self;
+                UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
+                testView.backgroundColor = [UIColor greenColor];
+                [weakSelf.view addSubview:testView];
+                
+                [UIView cj_slide3DAnimateView:testView
+                                      forShow:YES
+                             withShowDirection:CJSlideFromDirectionBottom
+                                 animateOffset:100
+                                   rotateAngle:M_PI_4
+                                    completion:^(BOOL finished) {
+                                        NSLog(@"Slide 3D show completed");
+                                    }];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Slide 3D Animation Hide";
+            module.actionBlock = ^{
+                __weak typeof(self) weakSelf = self;
+                UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
+                testView.backgroundColor = [UIColor greenColor];
+                [weakSelf.view addSubview:testView];
+                
+                [UIView cj_slide3DAnimateView:testView
+                                      forShow:NO
+                             withShowDirection:CJSlideFromDirectionBottom
+                                 animateOffset:100
+                                   rotateAngle:M_PI_4
+                                    completion:^(BOOL finished) {
+                                        NSLog(@"Slide 3D hide completed");
+                                    }];
+            };
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];
