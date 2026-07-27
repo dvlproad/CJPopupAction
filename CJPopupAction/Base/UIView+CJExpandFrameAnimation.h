@@ -13,9 +13,13 @@ static CGFloat kCJPopupAnimationDuration = 0.3;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIView (CJExpandFrameAnimation) {
-    
-}
+typedef void(^CJExpandAnimateBlock)(UIView *animatedView, BOOL forShow,
+                                    CGRect showFrame, CGRect hideFrame,
+                                    UIView * _Nullable blankView,
+                                    void(^ _Nullable completion)(void));
+
+#pragma mark - 类方法
+@interface UIView (CJExpandFrameAnimation)
 
 + (void)cj_expandAnimateView:(UIView *)animatedView
                       forShow:(BOOL)forShow
@@ -23,6 +27,13 @@ NS_ASSUME_NONNULL_BEGIN
                     hideFrame:(CGRect)popupViewHideFrame
                     blankView:(nullable UIView *)blankView
                    completion:(void(^)(void))completion;
+
+@end
+
+#pragma mark - 属性
+@interface UIView (CJExpandFrameAnimationProperty)
+
+@property (nonatomic, copy, nullable) CJExpandAnimateBlock expandAnimateBlock;
 
 @end
 

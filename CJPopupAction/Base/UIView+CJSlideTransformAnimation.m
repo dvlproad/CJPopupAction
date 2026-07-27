@@ -7,6 +7,7 @@
 //
 
 #import "UIView+CJSlideTransformAnimation.h"
+#import <objc/runtime.h>
 
 @implementation UIView (CJSlideTransformAnimation)
 
@@ -17,6 +18,11 @@
                animateOffset:(CGFloat)animateOffset
                   completion:(void (^ __nullable)(BOOL finished))completion
 {
+    if (animatedView.slideAnimateBlock) {
+        animatedView.slideAnimateBlock(animatedView, forShow, showFromDirection, animateOffset, completion);
+        return;
+    }
+    
     [animatedView.superview layoutIfNeeded];
     
     if (forShow) {
@@ -47,6 +53,11 @@
                    rotateAngle:(CGFloat)rotateAngle
                     completion:(void (^ __nullable)(BOOL finished))completion
 {
+    if (animatedView.slide3DAnimateBlock) {
+        animatedView.slide3DAnimateBlock(animatedView, forShow, showFromDirection, animateOffset, rotateAngle, completion);
+        return;
+    }
+    
     [animatedView.superview layoutIfNeeded];
 
     CGFloat zAxis = (showFromDirection == CJSlideFromDirectionLeft ||
@@ -74,6 +85,22 @@
     }
 }
 
+#pragma mark - Runtime
+- (CJSlideAnimateBlock)slideAnimateBlock {
+    return objc_getAssociatedObject(self, @selector(slideAnimateBlock));
+}
+
+- (void)setSlideAnimateBlock:(CJSlideAnimateBlock)slideAnimateBlock {
+    objc_setAssociatedObject(self, @selector(slideAnimateBlock), slideAnimateBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (CJSlide3DAnimateBlock)slide3DAnimateBlock {
+    return objc_getAssociatedObject(self, @selector(slide3DAnimateBlock));
+}
+
+- (void)setSlide3DAnimateBlock:(CJSlide3DAnimateBlock)slide3DAnimateBlock {
+    objc_setAssociatedObject(self, @selector(slide3DAnimateBlock), slide3DAnimateBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
 
 #pragma mark - Private Method
 + (void)__updateTransformFromDirection:(CJSlideFromDirection)direction

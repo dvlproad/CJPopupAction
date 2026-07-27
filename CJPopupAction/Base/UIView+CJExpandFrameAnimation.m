@@ -7,9 +7,9 @@
 //
 
 #import "UIView+CJExpandFrameAnimation.h"
+#import <objc/runtime.h>
 
 @implementation UIView (CJExpandFrameAnimation)
-
 
 + (void)cj_expandAnimateView:(UIView *)animatedView
                       forShow:(BOOL)forShow
@@ -18,6 +18,11 @@
                     blankView:(nullable UIView *)blankView
                    completion:(void(^)(void))completion
 {
+    if (animatedView.expandAnimateBlock) {
+        animatedView.expandAnimateBlock(animatedView, forShow, popupViewShowFrame, popupViewHideFrame, blankView, completion);
+        return;
+    }
+    
     if (blankView != nil) {
         blankView.alpha = forShow ? 0.2 : 1.0;
     }
@@ -32,6 +37,15 @@
     } completion:^(BOOL finished) {
         !completion ?: completion();
     }];
+}
+
+#pragma mark - Runtime
+- (CJExpandAnimateBlock)expandAnimateBlock {
+    return objc_getAssociatedObject(self, @selector(expandAnimateBlock));
+}
+
+- (void)setExpandAnimateBlock:(CJExpandAnimateBlock)expandAnimateBlock {
+    objc_setAssociatedObject(self, @selector(expandAnimateBlock), expandAnimateBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 @end

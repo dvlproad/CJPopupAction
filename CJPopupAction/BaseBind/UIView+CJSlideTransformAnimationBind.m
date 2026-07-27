@@ -12,38 +12,38 @@
 @implementation UIView (CJSlideTransformAnimationBind)
 
 #pragma mark - 普通平移（进阶）
-+ (void)cj_showSlideAnimateBindView:(UIView *)view
++ (void)cj_showSlideAnimateBindView:(UIView *)animatedView
                     withShowDirection:(CJSlideFromDirection)showFromDirection
                         animateOffset:(CGFloat)animateOffset
                            completion:(void (^ __nullable)(BOOL finished))completion {
-    view.cjShowFromDirection = showFromDirection;
-    view.cjAnimateOffset = animateOffset;
-    [UIView cj_slideAnimateView:view
+    animatedView.cjShowFromDirection = showFromDirection;
+    animatedView.cjAnimateOffset = animateOffset;
+    [UIView cj_slideAnimateView:animatedView
                         forShow:YES
                withShowDirection:showFromDirection
                    animateOffset:animateOffset
                       completion:completion];
 }
 
-+ (void)cj_hideSlideAnimateBindView:(UIView *)view
++ (void)cj_hideSlideAnimateBindView:(UIView *)animatedView
                           completion:(void (^ __nullable)(BOOL finished))completion {
-    [UIView cj_slideAnimateView:view
+    [UIView cj_slideAnimateView:animatedView
                         forShow:NO
-               withShowDirection:view.cjShowFromDirection
-                   animateOffset:view.cjAnimateOffset
+               withShowDirection:animatedView.cjShowFromDirection
+                   animateOffset:animatedView.cjAnimateOffset
                       completion:completion];
 }
 
 #pragma mark - 3D平移（进阶）
-+ (void)cj_show3DSlideAnimateBindView:(UIView *)view
++ (void)cj_show3DSlideAnimateBindView:(UIView *)animatedView
                     withShowDirection:(CJSlideFromDirection)showFromDirection
                         animateOffset:(CGFloat)animateOffset
                           rotateAngle:(CGFloat)rotateAngle
                            completion:(void (^ __nullable)(BOOL finished))completion {
-    view.cjShowFromDirection = showFromDirection;
-    view.cjAnimateOffset = animateOffset;
-    view.cjRotateAngle = rotateAngle;
-    [UIView cj_slide3DAnimateView:view
+    animatedView.cjShowFromDirection = showFromDirection;
+    animatedView.cjAnimateOffset = animateOffset;
+    animatedView.cjRotateAngle = rotateAngle;
+    [UIView cj_slide3DAnimateView:animatedView
                           forShow:YES
                  withShowDirection:showFromDirection
                      animateOffset:animateOffset
@@ -51,13 +51,13 @@
                         completion:completion];
 }
 
-+ (void)cj_hide3DSlideAnimateBindView:(UIView *)view
++ (void)cj_hide3DSlideAnimateBindView:(UIView *)animatedView
                            completion:(void (^ __nullable)(BOOL finished))completion {
-    [UIView cj_slide3DAnimateView:view
+    [UIView cj_slide3DAnimateView:animatedView
                           forShow:NO
-                 withShowDirection:view.cjShowFromDirection
-                     animateOffset:view.cjAnimateOffset
-                       rotateAngle:view.cjRotateAngle
+                 withShowDirection:animatedView.cjShowFromDirection
+                     animateOffset:animatedView.cjAnimateOffset
+                       rotateAngle:animatedView.cjRotateAngle
                         completion:completion];
 }
 

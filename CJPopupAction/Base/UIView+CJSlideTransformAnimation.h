@@ -18,9 +18,19 @@ typedef NS_ENUM(NSUInteger, CJSlideAnimationType) {
     CJSlideAnimationType3D,         // 3D 平移
 };
 
-@interface UIView (CJSlideTransformAnimation) {
-    
-}
+typedef void(^CJSlideAnimateBlock)(UIView *animatedView, BOOL forShow,
+                                   CJSlideFromDirection showFromDirection,
+                                   CGFloat animateOffset,
+                                   void(^ _Nullable completion)(BOOL finished));
+
+typedef void(^CJSlide3DAnimateBlock)(UIView *animatedView, BOOL forShow,
+                                     CJSlideFromDirection showFromDirection,
+                                     CGFloat animateOffset,
+                                     CGFloat rotateAngle,
+                                     void(^ _Nullable completion)(BOOL finished));
+
+#pragma mark - 类方法
+@interface UIView (CJSlideTransformAnimation)
 
 #pragma mark - 普通平移（类方法）
 + (void)cj_slideAnimateView:(UIView *)animatedView
@@ -36,6 +46,14 @@ typedef NS_ENUM(NSUInteger, CJSlideAnimationType) {
                  animateOffset:(CGFloat)animateOffset
                    rotateAngle:(CGFloat)rotateAngle
                     completion:(void (^ __nullable)(BOOL finished))completion;
+
+@end
+
+#pragma mark - 属性
+@interface UIView (CJSlideTransformAnimationProperty)
+
+@property (nonatomic, copy, nullable) CJSlideAnimateBlock slideAnimateBlock;
+@property (nonatomic, copy, nullable) CJSlide3DAnimateBlock slide3DAnimateBlock;
 
 @end
 

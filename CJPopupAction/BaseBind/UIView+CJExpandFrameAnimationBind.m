@@ -12,30 +12,30 @@
 @implementation UIView (CJExpandFrameAnimationBind)
 
 #pragma mark - 展开动画（进阶）
-+ (void)cj_showExpandAnimateBindView:(UIView *)view
++ (void)cj_showExpandAnimateBindView:(UIView *)animatedView
                         withShowFrame:(CGRect)showFrame
                             hideFrame:(CGRect)hideFrame
                             blankView:(nullable UIView *)blankView
                            completion:(void(^)(void))completion {
-    view.cjExpandShowFrame = showFrame;
-    view.cjExpandHideFrame = hideFrame;
-    view.cjExpandBlankView = blankView;
-    [UIView cj_expandAnimateView:view
-                          forShow:YES
-                    withShowFrame:showFrame
-                        hideFrame:hideFrame
-                        blankView:blankView
-                       completion:completion];
+    animatedView.cjExpandShowFrame = showFrame;
+    animatedView.cjExpandHideFrame = hideFrame;
+    animatedView.cjExpandBlankView = blankView;
+    [UIView cj_expandAnimateView:animatedView
+                         forShow:YES
+                   withShowFrame:showFrame
+                       hideFrame:hideFrame
+                       blankView:blankView
+                      completion:completion];
 }
 
-+ (void)cj_hideExpandAnimateBindView:(UIView *)view
++ (void)cj_hideExpandAnimateBindView:(UIView *)animatedView
                            completion:(void(^)(void))completion {
-    [UIView cj_expandAnimateView:view
-                          forShow:NO
-                    withShowFrame:view.cjExpandShowFrame
-                        hideFrame:view.cjExpandHideFrame
-                        blankView:view.cjExpandBlankView
-                       completion:completion];
+    [UIView cj_expandAnimateView:animatedView
+                         forShow:NO
+                   withShowFrame:animatedView.cjExpandShowFrame
+                       hideFrame:animatedView.cjExpandHideFrame
+                       blankView:animatedView.cjExpandBlankView
+                      completion:completion];
 }
 
 @end
