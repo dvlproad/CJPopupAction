@@ -8,8 +8,8 @@
 
 #import "UIView+CJExpandByPoint.h"
 #import "UIView+CJPopupInView.h"
-#import "UIView+CJExpandAnimation.h"
-#import "UIView+CJSlideAnimation.h"
+#import "UIView+CJExpandFrameAnimation.h"
+#import "UIView+CJSlideTransformAnimation.h"
 #import "CJExpandCalculator.h"
 
 static NSString *cjPopupAnimationTypeKey = @"cjPopupAnimationType";
@@ -86,7 +86,8 @@ static NSString *cjPopupViewHideTransformKey = @"cjPopupViewHideTransform";
     
     CJExpandFramePair pair = [CJExpandCalculator expandToDownFromLeftTop:popupViewOrigin size:popupViewSize];
     self.cjPopupViewHideFrameString = NSStringFromCGRect(pair.hideFrame);
-    [self cj_expandAnimateForShow:YES
+    [UIView cj_expandAnimateView:self
+                          forShow:YES
                     withShowFrame:pair.showFrame
                         hideFrame:pair.hideFrame
                         blankView:self.cjTapView
@@ -114,11 +115,12 @@ static NSString *cjPopupViewHideTransformKey = @"cjPopupViewHideTransform";
         popupViewHideFrame = self.frame;
     }
     
-    [popupView cj_expandAnimateForShow:NO
-                         withShowFrame:popupView.frame
-                             hideFrame:popupViewHideFrame
-                             blankView:tapView
-                            completion:^{
+    [UIView cj_expandAnimateView:popupView
+                          forShow:NO
+                    withShowFrame:popupView.frame
+                        hideFrame:popupViewHideFrame
+                        blankView:tapView
+                       completion:^{
         [popupView removeFromSuperview];
         [tapView removeFromSuperview];
     }];

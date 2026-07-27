@@ -31,7 +31,7 @@
       "name": "CareAboutHide",
       "source_files": "CJPopupAction/CareAboutHide/**/*.{h,m}",
       "dependencies": {
-        "CJPopupAction/Base": []
+        "CJPopupAction/BaseBind": []
       }
     },
     {
@@ -39,6 +39,13 @@
       "source_files": "CJPopupAction/ShowExtendView/**/*.{h,m}",
       "dependencies": {
         "CJPopupAction/CareAboutHide": []
+      }
+    },
+    {
+      "name": "BaseBind",
+      "source_files": "CJPopupAction/BaseBind/**/*.{h,m}",
+      "dependencies": {
+        "CJPopupAction/Base": []
       }
     }
   ]

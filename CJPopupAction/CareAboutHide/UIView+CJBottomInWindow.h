@@ -21,13 +21,13 @@
 
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
-#import "UIView+CJExpandAnimation.h"
-#import "UIView+CJSlideAnimation.h"
+#import "UIView+CJExpandFrameAnimation.h"
+#import "UIView+CJSlideTransformAnimation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 
-@interface UIView (CJExpandByPoint) {
+@interface UIView (CJBottomInWindow) {
     
 }
 /**

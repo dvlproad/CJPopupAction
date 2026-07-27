@@ -9,7 +9,7 @@
 #import "UIView+CJBottomInWindow.h"
 #import "UIView+CJBlankView.h"
 #import "UIView+CJPopupInView.h"
-#import "UIView+CJSlideAnimation.h"
+#import "UIView+CJSlideTransformAnimation.h"
 #import "CJExpandCalculator.h"
 
 
@@ -19,7 +19,7 @@
 @end
 
 
-@implementation UIView (CJExpandByPoint)
+@implementation UIView (CJBottomInWindow)
 
 
 #pragma mark - 底层接口
@@ -89,7 +89,8 @@
         popupView.frame = popupViewShowFrame;
         
         popupView.alpha = 0.2;
-        [self cj_slideAnimateForShow:YES
+        [UIView cj_slideAnimateView:self
+                            forShow:YES
                    withShowDirection:CJSlideFromDirectionBottom
                        animateOffset:slideOffset
                           completion:^(BOOL finished) {
@@ -115,7 +116,8 @@
     }
     
     CGFloat slideOffset = CGRectGetHeight(popupView.window.frame) - self.frame.origin.y;
-    [self cj_slideAnimateForShow:NO
+    [UIView cj_slideAnimateView:self
+                        forShow:NO
                withShowDirection:CJSlideFromDirectionBottom
                    animateOffset:slideOffset
                       completion:^(BOOL finished) {

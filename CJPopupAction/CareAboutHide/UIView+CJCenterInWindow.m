@@ -9,7 +9,7 @@
 #import "UIView+CJCenterInWindow.h"
 #import "UIView+CJBlankView.h"
 #import "UIView+CJPopupInView.h"
-#import "UIView+CJSlideAnimation.h"
+#import "UIView+CJSlideTransformAnimation.h"
 #import "CJExpandCalculator.h"
 
 @interface UIView ()
@@ -85,14 +85,16 @@
         
         popupView.alpha = 0.0;
         if (animationType == CJCenterWindowAnimationTypeSlideToCenter) {
-            [self cj_slideAnimateForShow:YES
+            [UIView cj_slideAnimateView:self
+                                forShow:YES
                        withShowDirection:CJSlideFromDirectionBottom
                            animateOffset:CGRectGetHeight(keyWindow.frame) / 2.0
                               completion:^(BOOL finished) {
                 !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
             }];
         } else {
-            [self cj_3DSlideAnimateForShow:YES
+            [UIView cj_slide3DAnimateView:self
+                                  forShow:YES
                          withShowDirection:CJSlideFromDirectionBottom
                              animateOffset:500
                                rotateAngle:70.0 * M_PI / 180.0
@@ -102,7 +104,8 @@
         }
 
     } else if (animationType == CJCenterWindowAnimationTypeExpandToCenter) {
-        [self cj_expandAnimateForShow:YES
+        [UIView cj_expandAnimateView:self
+                              forShow:YES
                         withShowFrame:pair.showFrame
                             hideFrame:pair.hideFrame
                             blankView:self.cjTapView
@@ -131,7 +134,8 @@
         }
         case CJCenterWindowAnimationTypeSlideToCenter:
         {
-            [self cj_slideAnimateForShow:NO
+            [UIView cj_slideAnimateView:self
+                                forShow:NO
                        withShowDirection:CJSlideFromDirectionBottom
                            animateOffset:CGRectGetHeight(popupView.window.frame) / 2.0
                               completion:^(BOOL finished) {
@@ -142,7 +146,8 @@
         }
         case CJCenterWindowAnimationType3DSlideToCenter:
         {
-            [self cj_3DSlideAnimateForShow:NO
+            [UIView cj_slide3DAnimateView:self
+                                  forShow:NO
                          withShowDirection:CJSlideFromDirectionBottom
                              animateOffset:500
                                rotateAngle:70.0 * M_PI / 180.0
@@ -159,7 +164,8 @@
                 popupViewHideFrame = self.frame;
             }
             
-            [self cj_expandAnimateForShow:NO
+            [UIView cj_expandAnimateView:self
+                                  forShow:NO
                             withShowFrame:self.frame
                                 hideFrame:popupViewHideFrame
                                 blankView:tapView
