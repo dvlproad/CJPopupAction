@@ -3,18 +3,18 @@ PODS:
   - CJPopupAction (1.6.1):
     - CJPopupAction/Base (= 1.6.1)
     - CJPopupAction/BaseBind (= 1.6.1)
-    - CJPopupAction/CareAboutHide (= 1.6.1)
+    - CJPopupAction/CareAboutHide_AutoAddToSuperView (= 1.6.1)
     - CJPopupAction/Core (= 1.6.1)
     - CJPopupAction/ShowExtendView (= 1.6.1)
   - CJPopupAction/Base (1.6.1):
     - CJPopupAction/Core
   - CJPopupAction/BaseBind (1.6.1):
     - CJPopupAction/Base
-  - CJPopupAction/CareAboutHide (1.6.1):
+  - CJPopupAction/CareAboutHide_AutoAddToSuperView (1.6.1):
     - CJPopupAction/BaseBind
   - CJPopupAction/Core (1.6.1)
   - CJPopupAction/ShowExtendView (1.6.1):
-    - CJPopupAction/CareAboutHide
+    - CJPopupAction/CareAboutHide_AutoAddToSuperView
   - CQDemoKit/BaseUIKit (0.9.13):
     - CQDemoKit/BaseUIKit/Button (= 0.9.13)
     - CQDemoKit/BaseUIKit/Container (= 0.9.13)
@@ -105,7 +105,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseUIKit: 1445f55a4c9f942351fcd1964694f32196472837
-  CJPopupAction: b6c118b1bff1398257a8f8e69e20433df3753556
+  CJPopupAction: a8831c1346344551c42edb33b7e983d356e0a38c
   CQDemoKit: 0d6351e9a948e3c214aa1727c4421dc288208630
   CQDemoResource: efdf1a0231767f665f5e6e0df59ed8a5042680f7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201

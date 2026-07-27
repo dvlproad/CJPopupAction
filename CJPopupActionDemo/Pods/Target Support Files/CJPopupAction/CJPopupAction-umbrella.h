@@ -10,17 +10,17 @@
 #endif
 #endif
 
-#import "UIView+CJBlankView.h"
 #import "UIView+CJExpandFrameAnimation.h"
 #import "UIView+CJSlideTransformAnimation.h"
 #import "UIView+CJExpandFrameAnimationBind.h"
 #import "UIView+CJSlideTransformAnimationBind.h"
 #import "CJPopupViewDelegate.h"
+#import "UIView+CJBlankView.h"
+#import "UIView+CJPopupInView.h"
 #import "UIView+CJBottomInWindow.h"
 #import "UIView+CJCenterInWindow.h"
 #import "UIView+CJExpandByPoint.h"
 #import "UIView+CJExpandForView.h"
-#import "UIView+CJPopupInView.h"
 #import "CJExpandCalculateResultModel.h"
 #import "CJExpandCalculator.h"
 #import "CJSlideCalculator.h"

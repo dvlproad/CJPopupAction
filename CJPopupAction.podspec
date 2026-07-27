@@ -36,9 +36,9 @@ Pod::Spec.new do |s|
                      • CJPopupAction/Core - 位置计算器(位移位置计算器:CJExpandCalculator; 展开位置计算器:CJSlideCalculator;)
                      
                      • CJPopupAction/Base - 不关心隐藏的基础动画，常用于视图show带动画，也是关心隐藏的动画需要调用的底层方法（位移动画 UIView+CJSlideAnimation； 展开动画: UIView+CJExpandAnimation）
-                     • CJPopupAction/BaseBind - 关心隐藏的基础动画：绑定参数到view，show时记录，hide时复用（展开动画 UIView+CJExpandFrameAnimationBind； 位移动画 UIView+CJSlideTransformAnimationBind）
+                     • CJPopupAction/BaseBind - 关心隐藏但需自己先主动添加进superView的基础动画：绑定参数到view，show时记录，hide时复用（展开动画 UIView+CJExpandFrameAnimationBind； 位移动画 UIView+CJSlideTransformAnimationBind）
                      
-                     • CJPopupAction/CareAboutHide - 关心隐藏的动画：内部有封装以简化hide的动画（UIView+CJBottomInWindow \ UIView+CJCenterInWindow \ UIView+CJExpandByPoint \ UIView+CJExpandForView)
+                     • CJPopupAction/CareAboutHide - 关心隐藏且视图自动添加进superView的动画：内部有封装以简化hide的动画（UIView+CJBottomInWindow \ UIView+CJCenterInWindow \ UIView+CJExpandByPoint \ UIView+CJExpandForView)
                      
                      • CJPopupAction/ShowExtendView - 由视图本身(非弹出视图，如按钮本身)调用直接展开一个弹出视图的方法
                      
@@ -120,22 +120,22 @@ Pod::Spec.new do |s|
     popup.dependency "CJPopupAction/Core" # UIView+CJSlideAnimation.h 需要 CJSlideCalculator.h 的 CJSlideFromDirection
   end
 
-  # 关心隐藏的基础动画：绑定参数到view，show时记录，hide时复用（展开动画 UIView+CJExpandFrameAnimationBind； 位移动画 UIView+CJSlideTransformAnimationBind）
+  # 关心隐藏但需自己先主动添加进superView的基础动画：绑定参数到view，show时记录，hide时复用（展开动画 UIView+CJExpandFrameAnimationBind； 位移动画 UIView+CJSlideTransformAnimationBind）
   s.subspec 'BaseBind' do |bind|
     bind.source_files = "CJPopupAction/BaseBind/**/*.{h,m}"
     bind.dependency 'CJPopupAction/Base'
   end
 
-  # 关心隐藏的动画：内部有封装以简化hide的动画（UIView+CJBottomInWindow \ UIView+CJCenterInWindow \ UIView+CJExpandByPoint \ UIView+CJExpandForView）
-  s.subspec 'CareAboutHide' do |popup|
-    popup.source_files = "CJPopupAction/CareAboutHide/**/*.{h,m}"
+  # 关心隐藏且视图自动添加进superView的动画：内部有封装以简化hide的动画（UIView+CJBottomInWindow \ UIView+CJCenterInWindow \ UIView+CJExpandByPoint \ UIView+CJExpandForView）
+  s.subspec 'CareAboutHide_AutoAddToSuperView' do |popup|
+    popup.source_files = "CJPopupAction/CareAboutHide_AutoAddToSuperView/**/*.{h,m}"
     popup.dependency 'CJPopupAction/BaseBind'
   end
 
   # 由视图本身(非弹出视图，如按钮本身)调用直接展开一个弹出视图的方法
   s.subspec 'ShowExtendView' do |extend|
     extend.source_files = "CJPopupAction/ShowExtendView/**/*.{h,m}"
-    extend.dependency "CJPopupAction/CareAboutHide"
+    extend.dependency "CJPopupAction/CareAboutHide_AutoAddToSuperView"
   end
 
 

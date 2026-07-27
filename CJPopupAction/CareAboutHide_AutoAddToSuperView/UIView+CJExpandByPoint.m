@@ -21,7 +21,6 @@
               animated:(BOOL)animated
             withOrigin:(CGPoint)popupViewOrigin
                   size:(CGSize)popupViewSize
-//        popupRectModel:(CJPopupRectModel *)popupRectModel
              blankView:(nullable UIView *)blankView
           showComplete:(void(^)(void))showPopupViewCompleteBlock
       tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
