@@ -29,6 +29,17 @@ typedef void(^CJSlide3DAnimateBlock)(UIView *animatedView, BOOL forShow,
                                      CGFloat rotateAngle,
                                      void(^ _Nullable completion)(BOOL finished));
 
+typedef void(^CJSlideInterceptor)(UIView *animatedView, BOOL forShow,
+                                   CJSlideFromDirection showFromDirection,
+                                   CGFloat animateOffset,
+                                   void(^next)(void));
+
+typedef void(^CJSlide3DInterceptor)(UIView *animatedView, BOOL forShow,
+                                     CJSlideFromDirection showFromDirection,
+                                     CGFloat animateOffset,
+                                     CGFloat rotateAngle,
+                                     void(^next)(void));
+
 #pragma mark - 类方法
 @interface UIView (CJSlideTransformAnimation)
 
@@ -49,11 +60,16 @@ typedef void(^CJSlide3DAnimateBlock)(UIView *animatedView, BOOL forShow,
 
 @end
 
-#pragma mark - 属性
-@interface UIView (CJSlideTransformAnimationProperty)
+#pragma mark - 拦截器
+@interface UIView (CJSlideTransformInterceptor)
 
-@property (nonatomic, copy, nullable) CJSlideAnimateBlock slideAnimateBlock;
-@property (nonatomic, copy, nullable) CJSlide3DAnimateBlock slide3DAnimateBlock;
++ (void)addSlideInterceptor:(CJSlideInterceptor)interceptor;
++ (void)removeSlideInterceptor:(CJSlideInterceptor)interceptor;
++ (void)removeAllSlideInterceptors;
+
++ (void)addSlide3DInterceptor:(CJSlide3DInterceptor)interceptor;
++ (void)removeSlide3DInterceptor:(CJSlide3DInterceptor)interceptor;
++ (void)removeAllSlide3DInterceptors;
 
 @end
 

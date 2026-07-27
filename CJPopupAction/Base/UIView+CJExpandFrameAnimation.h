@@ -18,6 +18,11 @@ typedef void(^CJExpandAnimateBlock)(UIView *animatedView, BOOL forShow,
                                     UIView * _Nullable blankView,
                                     void(^ _Nullable completion)(void));
 
+typedef void(^CJExpandInterceptor)(UIView *animatedView, BOOL forShow,
+                                    CGRect showFrame, CGRect hideFrame,
+                                    UIView * _Nullable blankView,
+                                    void(^next)(void));
+
 #pragma mark - 类方法
 @interface UIView (CJExpandFrameAnimation)
 
@@ -30,10 +35,12 @@ typedef void(^CJExpandAnimateBlock)(UIView *animatedView, BOOL forShow,
 
 @end
 
-#pragma mark - 属性
-@interface UIView (CJExpandFrameAnimationProperty)
+#pragma mark - 拦截器
+@interface UIView (CJExpandFrameInterceptor)
 
-@property (nonatomic, copy, nullable) CJExpandAnimateBlock expandAnimateBlock;
++ (void)addExpandInterceptor:(CJExpandInterceptor)interceptor;
++ (void)removeExpandInterceptor:(CJExpandInterceptor)interceptor;
++ (void)removeAllExpandInterceptors;
 
 @end
 

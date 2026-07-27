@@ -9,6 +9,9 @@
 #import "UIView+CJSlideTransformAnimation.h"
 #import <objc/runtime.h>
 
+static NSMutableArray<CJSlideInterceptor> *_slideInterceptors = nil;
+static NSMutableArray<CJSlide3DInterceptor> *_slide3DInterceptors = nil;
+
 @implementation UIView (CJSlideTransformAnimation)
 
 #pragma mark - 普通平移（类方法）
@@ -18,11 +21,42 @@
                animateOffset:(CGFloat)animateOffset
                   completion:(void (^ __nullable)(BOOL finished))completion
 {
-    if (animatedView.slideAnimateBlock) {
-        animatedView.slideAnimateBlock(animatedView, forShow, showFromDirection, animateOffset, completion);
+    if (_slideInterceptors.count == 0) {
+        [self cj_slideAnimateView_default:animatedView
+                                  forShow:forShow
+                        withShowDirection:showFromDirection
+                            animateOffset:animateOffset
+                               completion:completion];
         return;
     }
     
+    void(^chain)(NSInteger index) = nil;
+    
+    chain = ^(NSInteger index) {
+        if (index >= _slideInterceptors.count) {
+            [self cj_slideAnimateView_default:animatedView
+                                      forShow:forShow
+                            withShowDirection:showFromDirection
+                                animateOffset:animateOffset
+                                   completion:completion];
+            return;
+        }
+        
+        CJSlideInterceptor interceptor = _slideInterceptors[index];
+        interceptor(animatedView, forShow, showFromDirection, animateOffset, ^{
+            chain(index + 1);
+        });
+    };
+    
+    chain(0);
+}
+
++ (void)cj_slideAnimateView_default:(UIView *)animatedView
+                             forShow:(BOOL)forShow
+                   withShowDirection:(CJSlideFromDirection)showFromDirection
+                       animateOffset:(CGFloat)animateOffset
+                          completion:(void (^ __nullable)(BOOL finished))completion
+{
     [animatedView.superview layoutIfNeeded];
     
     if (forShow) {
@@ -44,7 +78,6 @@
     }
 }
 
-
 #pragma mark - 3D平移（类方法）
 + (void)cj_slide3DAnimateView:(UIView *)animatedView
                       forShow:(BOOL)forShow
@@ -53,11 +86,45 @@
                    rotateAngle:(CGFloat)rotateAngle
                     completion:(void (^ __nullable)(BOOL finished))completion
 {
-    if (animatedView.slide3DAnimateBlock) {
-        animatedView.slide3DAnimateBlock(animatedView, forShow, showFromDirection, animateOffset, rotateAngle, completion);
+    if (_slide3DInterceptors.count == 0) {
+        [self cj_slide3DAnimateView_default:animatedView
+                                    forShow:forShow
+                          withShowDirection:showFromDirection
+                              animateOffset:animateOffset
+                                rotateAngle:rotateAngle
+                                 completion:completion];
         return;
     }
     
+    void(^chain)(NSInteger index) = nil;
+    
+    chain = ^(NSInteger index) {
+        if (index >= _slide3DInterceptors.count) {
+            [self cj_slide3DAnimateView_default:animatedView
+                                        forShow:forShow
+                              withShowDirection:showFromDirection
+                                  animateOffset:animateOffset
+                                    rotateAngle:rotateAngle
+                                     completion:completion];
+            return;
+        }
+        
+        CJSlide3DInterceptor interceptor = _slide3DInterceptors[index];
+        interceptor(animatedView, forShow, showFromDirection, animateOffset, rotateAngle, ^{
+            chain(index + 1);
+        });
+    };
+    
+    chain(0);
+}
+
++ (void)cj_slide3DAnimateView_default:(UIView *)animatedView
+                               forShow:(BOOL)forShow
+                     withShowDirection:(CJSlideFromDirection)showFromDirection
+                         animateOffset:(CGFloat)animateOffset
+                           rotateAngle:(CGFloat)rotateAngle
+                            completion:(void (^ __nullable)(BOOL finished))completion
+{
     [animatedView.superview layoutIfNeeded];
 
     CGFloat zAxis = (showFromDirection == CJSlideFromDirectionLeft ||
@@ -83,23 +150,6 @@
             animatedView.alpha = 0;
         } completion:completion];
     }
-}
-
-#pragma mark - Runtime
-- (CJSlideAnimateBlock)slideAnimateBlock {
-    return objc_getAssociatedObject(self, @selector(slideAnimateBlock));
-}
-
-- (void)setSlideAnimateBlock:(CJSlideAnimateBlock)slideAnimateBlock {
-    objc_setAssociatedObject(self, @selector(slideAnimateBlock), slideAnimateBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (CJSlide3DAnimateBlock)slide3DAnimateBlock {
-    return objc_getAssociatedObject(self, @selector(slide3DAnimateBlock));
-}
-
-- (void)setSlide3DAnimateBlock:(CJSlide3DAnimateBlock)slide3DAnimateBlock {
-    objc_setAssociatedObject(self, @selector(slide3DAnimateBlock), slide3DAnimateBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 #pragma mark - Private Method
@@ -142,6 +192,41 @@
     CATransform3D rotate = CATransform3DMakeRotation(rotateAngle, 0.0, 0.0, zAxis);
 
     return CATransform3DConcat(rotate, translate);
+}
+
+@end
+
+#pragma mark - 拦截器
+@implementation UIView (CJSlideTransformInterceptor)
+
++ (void)addSlideInterceptor:(CJSlideInterceptor)interceptor {
+    if (!_slideInterceptors) {
+        _slideInterceptors = [NSMutableArray array];
+    }
+    [_slideInterceptors addObject:[interceptor copy]];
+}
+
++ (void)removeSlideInterceptor:(CJSlideInterceptor)interceptor {
+    [_slideInterceptors removeObject:interceptor];
+}
+
++ (void)removeAllSlideInterceptors {
+    [_slideInterceptors removeAllObjects];
+}
+
++ (void)addSlide3DInterceptor:(CJSlide3DInterceptor)interceptor {
+    if (!_slide3DInterceptors) {
+        _slide3DInterceptors = [NSMutableArray array];
+    }
+    [_slide3DInterceptors addObject:[interceptor copy]];
+}
+
++ (void)removeSlide3DInterceptor:(CJSlide3DInterceptor)interceptor {
+    [_slide3DInterceptors removeObject:interceptor];
+}
+
++ (void)removeAllSlide3DInterceptors {
+    [_slide3DInterceptors removeAllObjects];
 }
 
 @end
