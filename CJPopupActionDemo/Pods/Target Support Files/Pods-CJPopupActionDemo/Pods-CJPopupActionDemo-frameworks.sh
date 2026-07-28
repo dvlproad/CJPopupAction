@@ -178,20 +178,24 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseUIKit/CJBaseUIKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJPopupAction/CJPopupAction.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CJPopupAnimation/CJPopupAnimation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoResource/CQDemoResource.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TSDemo_Popup/TSDemo_Popup.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TSDemo_Popup-Swift/TSDemo_Popup_Swift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TSDemo_PopupAnimation/TSDemo_PopupAnimation.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseUIKit/CJBaseUIKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJPopupAction/CJPopupAction.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CJPopupAnimation/CJPopupAnimation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoResource/CQDemoResource.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TSDemo_Popup/TSDemo_Popup.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TSDemo_Popup-Swift/TSDemo_Popup_Swift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TSDemo_PopupAnimation/TSDemo_PopupAnimation.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

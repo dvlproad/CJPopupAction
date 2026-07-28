@@ -11,7 +11,7 @@
 #import <CQDemoKit/CQTSButtonFactory.h>
 #import <CQDemoKit/CQTSRadioButtonsView.h>
 
-#import <CJPopupAction/UIView+CJSlideConvenience.h>
+#import <CJPopupAnimation/UIView+CJSlideConvenience.h>
 
 @interface TSSlideAnimateViewController ()
 

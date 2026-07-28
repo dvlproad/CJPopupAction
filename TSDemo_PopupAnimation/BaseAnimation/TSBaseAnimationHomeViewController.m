@@ -8,8 +8,8 @@
 
 #import "TSBaseAnimationHomeViewController.h"
 
-#import <CJPopupAction/UIView+CJExpandFrameAnimation.h>
-#import <CJPopupAction/UIView+CJSlideTransformAnimation.h>
+#import <CJPopupAnimation/UIView+CJExpandFrameAnimation.h>
+#import <CJPopupAnimation/UIView+CJSlideTransformAnimation.h>
 
 #import "TSSlideAnimateViewController.h"
 #import "TSExpandAnimateViewController.h"

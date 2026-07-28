@@ -10,8 +10,8 @@
 		4C229D395D3F4B43C3B1F03E /* Pods_CJPopupActionDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2095F9C449A59F5692D2BC8 /* Pods_CJPopupActionDemo.framework */; };
 		7817F9621E00E94B00889DD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9611E00E94B00889DD5 /* main.m */; };
 		7817F9651E00E94B00889DD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9641E00E94B00889DD5 /* AppDelegate.m */; };
-		7817F96D1E00E94B00889DD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7817F96C1E00E94B00889DD5 /* Assets.xcassets */; };
 		7817F96B1E00E94B00889DD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7817F9691E00E94B00889DD5 /* Main.storyboard */; };
+		7817F96D1E00E94B00889DD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7817F96C1E00E94B00889DD5 /* Assets.xcassets */; };
 		7817F9701E00E94B00889DD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7817F96E1E00E94B00889DD5 /* LaunchScreen.storyboard */; };
 		7817F97B1E00E94B00889DD5 /* CJPopupActionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F97A1E00E94B00889DD5 /* CJPopupActionDemoTests.m */; };
 		7817F9861E00E94B00889DD5 /* CJPopupActionDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817F9851E00E94B00889DD5 /* CJPopupActionDemoUITests.m */; };
@@ -42,8 +42,8 @@
 		7817F9611E00E94B00889DD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7817F9631E00E94B00889DD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7817F9641E00E94B00889DD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7817F96C1E00E94B00889DD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7817F9691E00E94B00889DD5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7817F96C1E00E94B00889DD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7817F96F1E00E94B00889DD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7817F9711E00E94B00889DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7817F9761E00E94B00889DD5 /* CJPopupActionDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJPopupActionDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -351,21 +351,25 @@
 				"${PODS_ROOT}/Target Support Files/Pods-CJPopupActionDemo/Pods-CJPopupActionDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CJBaseUIKit/CJBaseUIKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CJPopupAction/CJPopupAction.framework",
+				"${BUILT_PRODUCTS_DIR}/CJPopupAnimation/CJPopupAnimation.framework",
 				"${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CQDemoResource/CQDemoResource.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/TSDemo_Popup/TSDemo_Popup.framework",
 				"${BUILT_PRODUCTS_DIR}/TSDemo_Popup-Swift/TSDemo_Popup_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/TSDemo_PopupAnimation/TSDemo_PopupAnimation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJBaseUIKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJPopupAction.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJPopupAnimation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoResource.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TSDemo_Popup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TSDemo_Popup_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TSDemo_PopupAnimation.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

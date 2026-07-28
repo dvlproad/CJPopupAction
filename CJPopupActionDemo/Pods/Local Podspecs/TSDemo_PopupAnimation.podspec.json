@@ -1,7 +1,7 @@
 {
-  "name": "TSDemo_Popup",
+  "name": "TSDemo_PopupAnimation",
   "version": "0.0.1",
-  "summary": "CJPopupAction 演示示例",
+  "summary": "CJPopupAnimation 演示示例",
   "homepage": "https://github.com/dvlproad/CJPopupAction",
   "license": "MIT",
   "authors": {
@@ -12,17 +12,14 @@
   },
   "source": {
     "git": "https://github.com/dvlproad/CJPopupAction.git",
-    "tag": "TSDemo_Popup_0.0.1"
+    "tag": "TSDemo_PopupAnimation_0.0.1"
   },
   "frameworks": "UIKit",
   "requires_arc": true,
-  "source_files": "TSDemo_Popup/**/*.{h,m}",
-  "resources": "TSDemo_Popup/**/*.{xib,xcassets,png,jpg}",
+  "source_files": "TSDemo_PopupAnimation/**/*.{h,m}",
   "dependencies": {
     "CQDemoKit/BaseVC": [],
     "CQDemoKit/BaseUtil": [],
-    "CJBaseUIKit/UIScrollView/CJKeyboardAvoiding": [],
-    "CJPopupAction": [],
-    "TSDemo_PopupAnimation": []
+    "CJPopupAction": []
   }
 }

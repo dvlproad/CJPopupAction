@@ -10,16 +10,12 @@
 #endif
 #endif
 
-#import "TSBaseAnimationHomeViewController.h"
-#import "TSExpandAnimateViewController.h"
-#import "TSSlideAnimateViewController.h"
 #import "PopupInViewVC.h"
 #import "TSCareAboutHideHomeViewController.h"
 #import "PopupInWindowVC.h"
 #import "ShowDropDownViewController.h"
 #import "ShowExtendViewVC.h"
 #import "TSExtendHomeViewController.h"
-#import "TSToastHomeViewController.h"
 #import "WelcomePopupView.h"
 #import "WelcomeViewToPop.h"
 #import "TSWindowAnimationHomeViewController.h"

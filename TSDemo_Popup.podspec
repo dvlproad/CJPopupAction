@@ -20,4 +20,6 @@ Pod::Spec.new do |s|
   s.dependency 'CQDemoKit/BaseUtil'
   s.dependency "CJBaseUIKit/UIScrollView/CJKeyboardAvoiding"
   s.dependency "CJPopupAction"
+
+  s.dependency 'TSDemo_PopupAnimation'
 end

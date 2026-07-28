@@ -11,8 +11,8 @@
 #import <CQDemoKit/CQTSButtonFactory.h>
 #import <CQDemoKit/CQTSRadioButtonsView.h>
 
-#import <CJPopupAction/UIView+CJExpandFrameAnimationBind.h>
-#import <CJPopupAction/CJExpandCalculator.h>
+#import <CJPopupAnimation/UIView+CJExpandFrameAnimationBind.h>
+#import <CJPopupAnimation/CJExpandCalculator.h>
 
 @interface TSExpandAnimateViewController ()
 
