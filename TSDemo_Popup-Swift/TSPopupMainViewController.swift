@@ -49,6 +49,14 @@ import TSDemo_Popup
             model.classEntry = NSClassFromString("TSCareAboutHideHomeViewController")
             tabBarModels.append(model)
         }
+        
+        do {
+            let model = CQDMTabBarModel()
+            model.title = NSLocalizedString("Extend", comment: "")
+            model.normalImage = UIImage.cqresource_imageNamed("icons8-folder")
+            model.classEntry = NSClassFromString("TSExtendHomeViewController")
+            tabBarModels.append(model)
+        }
 
         self.tabBarModels = tabBarModels
     }

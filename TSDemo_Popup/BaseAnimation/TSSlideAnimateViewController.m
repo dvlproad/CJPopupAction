@@ -1,35 +1,35 @@
 //
-//  TSShowAnimateViewController.m
+//  TSSlideAnimateViewController.m
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 2017/2/25.
 //  Copyright (c) 2017年 dvlproad. All rights reserved.
 //
 
-#import "TSShowAnimateViewController.h"
+#import "TSSlideAnimateViewController.h"
 #import <Masonry/Masonry.h>
 #import <CQDemoKit/CQTSButtonFactory.h>
 #import <CQDemoKit/CQTSRadioButtonsView.h>
 
 #import <CJPopupAction/UIView+CJSlideConvenience.h>
 
-@interface TSShowAnimateViewController ()
+@interface TSSlideAnimateViewController ()
 
 @property (nonatomic, strong) UIView *placeholderView;  // 参照物（不动）
 @property (nonatomic, strong) UIButton *toggleButton;   // 动画对象
-@property (nonatomic, strong) UISegmentedControl *directionSegment;
+@property (nonatomic, strong) CQTSRadioButtonsView *directionRadioButtons;
 @property (nonatomic, strong) CQTSRadioButtonsView *fromTypeRadioButtons;
 @property (nonatomic, assign) CJSlideFromDirection selectedDirection;
 @property (nonatomic, assign) BOOL isSmallDistance;
 
 @end
 
-@implementation TSShowAnimateViewController
+@implementation TSSlideAnimateViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"测试Show的Animation";
+    self.navigationItem.title = @"测试Slide的Animation";
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.selectedDirection = CJSlideFromDirectionTop;
@@ -39,40 +39,29 @@
 }
 
 - (void)setupUI {
-    // 方向选择
-    UILabel *directionLabel = [[UILabel alloc] init];
-    directionLabel.text = @"方向:";
-    [self.view addSubview:directionLabel];
-    [directionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    // 方向选择（单选按钮，支持重复点击同一选项）
+    __weak typeof(self) weakSelf = self;
+    self.directionRadioButtons = [[CQTSRadioButtonsView alloc] initWithTitles:@[@"上", @"下", @"左", @"右"]
+                                                                  alongAxis:MASAxisTypeHorizontal
+                                                               fixedSpacing:10
+                                                 didSelectItemAtIndexHandle:^(NSInteger index) {
+        switch (index) {
+            case 0: weakSelf.selectedDirection = CJSlideFromDirectionTop; break;
+            case 1: weakSelf.selectedDirection = CJSlideFromDirectionBottom; break;
+            case 2: weakSelf.selectedDirection = CJSlideFromDirectionLeft; break;
+            case 3: weakSelf.selectedDirection = CJSlideFromDirectionRight; break;
+        }
+        [weakSelf showAction];
+    }];
+    [self.view addSubview:self.directionRadioButtons];
+    [self.directionRadioButtons mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.mas_topLayoutGuideBottom).mas_offset(20);
         make.left.mas_equalTo(self.view).mas_offset(20);
-        make.width.mas_equalTo(40);
-        make.height.mas_equalTo(30);
+        make.right.mas_equalTo(self.view).mas_offset(-20);
+        make.height.mas_equalTo(44);
     }];
     
-    self.directionSegment = [[UISegmentedControl alloc] initWithItems:@[@"上", @"下", @"左", @"右"]];
-    self.directionSegment.selectedSegmentIndex = 0;
-    [self.directionSegment addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:self.directionSegment];
-    [self.directionSegment mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.mas_equalTo(directionLabel);
-        make.left.mas_equalTo(directionLabel.mas_right).mas_offset(10);
-        make.width.mas_equalTo(200);
-        make.height.mas_equalTo(30);
-    }];
-    
-    // 从哪里选择
-    UILabel *fromLabel = [[UILabel alloc] init];
-    fromLabel.text = @"从:";
-    [self.view addSubview:fromLabel];
-    [fromLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(directionLabel.mas_bottom).mas_offset(20);
-        make.left.mas_equalTo(self.view).mas_offset(20);
-        make.width.mas_equalTo(40);
-        make.height.mas_equalTo(30);
-    }];
-    
-    __weak typeof(self) weakSelf = self;
+    // 从哪里选择（单选按钮）
     self.fromTypeRadioButtons = [[CQTSRadioButtonsView alloc] initWithTitles:@[@"小位移：从指定距离滑入", @"Window：从窗口边缘滑入"]
                                                                   alongAxis:MASAxisTypeVertical
                                                                fixedSpacing:5
@@ -82,10 +71,10 @@
     }];
     [self.view addSubview:self.fromTypeRadioButtons];
     [self.fromTypeRadioButtons mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(fromLabel);
-        make.left.mas_equalTo(fromLabel.mas_right).mas_offset(10);
-        make.right.mas_equalTo(self.view).mas_offset(-10);
-        make.height.mas_equalTo(88);
+        make.top.mas_equalTo(self.directionRadioButtons.mas_bottom).mas_offset(15);
+        make.left.mas_equalTo(self.view).mas_offset(20);
+        make.right.mas_equalTo(self.view).mas_offset(-20);
+        make.height.mas_equalTo(88); // 2个按钮 × 44
     }];
     
     // 参照物说明
@@ -124,20 +113,6 @@
     [self.toggleButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.placeholderView);
     }];
-}
-
-- (void)segmentChanged:(UISegmentedControl *)sender {
-    if (sender == self.directionSegment) {
-        switch (sender.selectedSegmentIndex) {
-            case 0: self.selectedDirection = CJSlideFromDirectionTop; break;
-            case 1: self.selectedDirection = CJSlideFromDirectionBottom; break;
-            case 2: self.selectedDirection = CJSlideFromDirectionLeft; break;
-            case 3: self.selectedDirection = CJSlideFromDirectionRight; break;
-        }
-    }
-    
-    // 自动执行显示
-    [self showAction];
 }
 
 - (void)showAction {

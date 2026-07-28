@@ -9,8 +9,6 @@
 #import "TSCareAboutHideHomeViewController.h"
 
 #import "PopupInViewVC.h"
-#import "ShowExtendViewVC.h"
-#import "ShowDropDownViewController.h"
 
 @interface TSCareAboutHideHomeViewController ()
 
@@ -36,20 +34,7 @@
             module.xibBundle = [NSBundle bundleForClass:[self class]];
             [sectionDataModel.values addObject:module];
         }
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"ShowExtendView (展开弹出)";
-            module.classEntry = [ShowExtendViewVC class];
-            module.isCreateByXib = YES;
-            module.xibBundle = [NSBundle bundleForClass:[self class]];
-            [sectionDataModel.values addObject:module];
-        }
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"ShowDropDown (下拉菜单)";
-            module.classEntry = [ShowDropDownViewController class];
-            [sectionDataModel.values addObject:module];
-        }
+        
         [sectionDataModels addObject:sectionDataModel];
     }
 

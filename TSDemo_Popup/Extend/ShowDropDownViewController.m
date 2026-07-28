@@ -8,6 +8,7 @@
 
 #import "ShowDropDownViewController.h"
 #import <Masonry/Masonry.h>
+#import <CQDemoKit/CQTSRadioButtonsView.h>
 #import <CJPopupAction/UIView+CJShowExtendView.h>
 #import <CJPopupAction/UIView+CJBlankView.h>
 
@@ -16,7 +17,8 @@
 }
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong) UIView *popupBlankView;
-@property (nonatomic, strong) UISegmentedControl *directionSegment;
+@property (nonatomic, strong) CQTSRadioButtonsView *directionRadioButtons;
+@property (nonatomic, assign) NSInteger selectedDirectionIndex;
 
 @end
 
@@ -28,8 +30,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.popupBlankView = [UIView cj_defaultBlankView];
-    
-    
+    self.selectedDirectionIndex = 0;
     
     self.button = [UIButton buttonWithType:UIButtonTypeSystem];
     self.button.backgroundColor = [UIColor colorWithRed:0.412 green:0.757 blue:0.953 alpha:1.0];
@@ -43,16 +44,26 @@
         make.height.mas_equalTo(30);
     }];
     
-    self.directionSegment = [[UISegmentedControl alloc] initWithItems:@[@"上方", @"下方", @"居中"]];
-    self.directionSegment.selectedSegmentIndex = 0;
-    self.directionSegment.tintColor = [UIColor darkGrayColor];
-    [self.directionSegment addTarget:self action:@selector(segmentValueChanged:) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:self.directionSegment];
-    [self.directionSegment mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.button.mas_bottom).offset(220);
-        make.centerX.equalTo(self.view);
-        make.width.mas_equalTo(300);
-        make.height.mas_equalTo(32);
+    // 方向选择（单选按钮，支持重复点击同一选项）
+    __weak typeof(self) weakSelf = self;
+    self.directionRadioButtons = [[CQTSRadioButtonsView alloc] initWithTitles:@[@"上方", @"下方", @"居中"]
+                                                                  alongAxis:MASAxisTypeHorizontal
+                                                               fixedSpacing:10
+                                                 didSelectItemAtIndexHandle:^(NSInteger index) {
+        weakSelf.selectedDirectionIndex = index;
+        // 如果已展开，切换方向时自动刷新
+        if (weakSelf.button.selected) {
+            [weakSelf.button cj_hideExtendViewAnimated:NO];
+            weakSelf.button.selected = NO;
+            [weakSelf buttonClick:weakSelf.button];
+        }
+    }];
+    [self.view addSubview:self.directionRadioButtons];
+    [self.directionRadioButtons mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.button.mas_bottom).offset(20);
+        make.left.equalTo(self.view).offset(20);
+        make.right.equalTo(self.view).offset(-20);
+        make.height.mas_equalTo(44);
     }];
 }
 
@@ -74,7 +85,7 @@
         
         
         CJExpandForViewPosition position;
-        switch (self.directionSegment.selectedSegmentIndex) {
+        switch (self.selectedDirectionIndex) {
             case 0: position = CJExpandForViewPositionAbove; break;
             case 1: position = CJExpandForViewPositionBelow; break;
             case 2: position = CJExpandForViewPositionCenter; break;
@@ -102,14 +113,6 @@
     
     self.button.selected = !self.button.selected;
     [self.button cj_hideExtendViewAnimated:YES];
-}
-
-- (void)segmentValueChanged:(UISegmentedControl *)segment {
-    if (self.button.selected) {
-        [self.button cj_hideExtendViewAnimated:NO];
-        self.button.selected = NO;
-        [self buttonClick:self.button];
-    }
 }
 
 - (void)didReceiveMemoryWarning {

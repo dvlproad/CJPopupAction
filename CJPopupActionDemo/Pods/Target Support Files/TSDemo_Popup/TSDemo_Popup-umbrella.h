@@ -10,17 +10,19 @@
 #endif
 #endif
 
+#import "TSBaseAnimationHomeViewController.h"
+#import "TSExpandAnimateViewController.h"
+#import "TSSlideAnimateViewController.h"
 #import "PopupInViewVC.h"
+#import "TSCareAboutHideHomeViewController.h"
 #import "PopupInWindowVC.h"
 #import "ShowDropDownViewController.h"
 #import "ShowExtendViewVC.h"
-#import "TSCareAboutHideHomeViewController.h"
-#import "TSShowAnimateViewController.h"
+#import "TSExtendHomeViewController.h"
 #import "TSToastHomeViewController.h"
-#import "TSBaseAnimationHomeViewController.h"
-#import "TSWindowAnimationHomeViewController.h"
 #import "WelcomePopupView.h"
 #import "WelcomeViewToPop.h"
+#import "TSWindowAnimationHomeViewController.h"
 
 FOUNDATION_EXPORT double TSDemo_PopupVersionNumber;
 FOUNDATION_EXPORT const unsigned char TSDemo_PopupVersionString[];
