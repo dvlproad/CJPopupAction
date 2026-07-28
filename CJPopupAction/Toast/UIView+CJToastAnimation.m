@@ -10,6 +10,11 @@
 
 @implementation UIView (CJToastAnimation)
 
+/// 将当前视图Toast到superView中央（自动addSubview）
+/// @param superView 显示到哪个视图中央（nil则使用keyWindow）
+/// @param size toast视图的大小
+/// @param centerOffset toast视图的中心与superView中心的偏移量
+/// @param animated 是否要动画
 - (void)cj_toastCenterInView:(nullable UIView *)superView
                     withSize:(CGSize)size
                 centerOffset:(CGPoint)centerOffset
@@ -23,7 +28,7 @@
     self.translatesAutoresizingMaskIntoConstraints = NO;
     [superView addConstraint:
      [NSLayoutConstraint constraintWithItem:self
-                                  attribute:NSLayoutAttributeCenterX
+                                  attribute:NSLayoutAttributeCenterX   //centerX
                                   relatedBy:NSLayoutRelationEqual
                                      toItem:superView
                                   attribute:NSLayoutAttributeCenterX
@@ -32,7 +37,7 @@
     
     [superView addConstraint:
      [NSLayoutConstraint constraintWithItem:self
-                                  attribute:NSLayoutAttributeCenterY
+                                  attribute:NSLayoutAttributeCenterY  //centerY
                                   relatedBy:NSLayoutRelationEqual
                                      toItem:superView
                                   attribute:NSLayoutAttributeCenterY
@@ -41,7 +46,7 @@
     
     [superView addConstraint:
      [NSLayoutConstraint constraintWithItem:self
-                                  attribute:NSLayoutAttributeWidth
+                                  attribute:NSLayoutAttributeWidth    //width
                                   relatedBy:NSLayoutRelationEqual
                                      toItem:nil
                                   attribute:NSLayoutAttributeNotAnAttribute
@@ -50,7 +55,7 @@
     
     [superView addConstraint:
      [NSLayoutConstraint constraintWithItem:self
-                                  attribute:NSLayoutAttributeHeight
+                                  attribute:NSLayoutAttributeHeight //height
                                   relatedBy:NSLayoutRelationEqual
                                      toItem:nil
                                   attribute:NSLayoutAttributeNotAnAttribute
@@ -60,6 +65,9 @@
     [self __cj_toastUpdateAlpha:1 animated:animated completion:NULL];
 }
 
+/// 隐藏弹出的toast视图
+/// @param animated 是否要动画
+/// @param delay 多少秒后执行隐藏
 - (void)cj_toastHiddenWithAnimated:(BOOL)animated afterDelay:(NSTimeInterval)delay {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self __cj_toastUpdateAlpha:0 animated:animated completion:^(BOOL finished) {

@@ -14,6 +14,7 @@
 #import "UIView+CJSlideTransformAnimation.h"
 #import "UIView+CJExpandFrameAnimationBind.h"
 #import "UIView+CJSlideTransformAnimationBind.h"
+#import "UIView+CJSlideConvenience.h"
 #import "CJPopupViewDelegate.h"
 #import "UIView+CJBlankView.h"
 #import "UIView+CJPopupInView.h"

@@ -11,6 +11,8 @@
 #import <CJPopupAction/UIView+CJExpandFrameAnimation.h>
 #import <CJPopupAction/UIView+CJSlideTransformAnimation.h>
 
+#import "TSShowAnimateViewController.h"
+
 @interface TSBaseAnimationHomeViewController ()
 
 @end
@@ -159,6 +161,20 @@
             };
             [sectionDataModel.values addObject:module];
         }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
+    // Popup
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"Popup 功能";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"TSShowAnimateViewController ()";
+            module.classEntry = [TSShowAnimateViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        
         [sectionDataModels addObject:sectionDataModel];
     }
 

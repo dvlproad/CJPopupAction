@@ -127,6 +127,12 @@ Pod::Spec.new do |s|
     bind.dependency 'CJPopupAction/Base'
   end
 
+  # 便捷方法：自动计算距离、小距离动画（UIView+CJSlideConvenience）
+  s.subspec 'BaseConvenience' do |convenience|
+    convenience.source_files = "CJPopupAction/BaseConvenience/**/*.{h,m}"
+    convenience.dependency 'CJPopupAction/BaseBind'
+  end
+
   # 关心隐藏且视图自动添加进superView，但没有blankView的简单显示动画（UIView+CJToastAnimation），与CareAboutHide_AutoAddToSuperView区别：Toast无遮罩、无blankView，仅做简单居中显示+延迟隐藏
   s.subspec 'Toast' do |toast|
     toast.source_files = "CJPopupAction/Toast/**/*.{h,m}"
@@ -142,6 +148,7 @@ Pod::Spec.new do |s|
   s.subspec 'ShowExtendView' do |extend|
     extend.source_files = "CJPopupAction/ShowExtendView/**/*.{h,m}"
     extend.dependency "CJPopupAction/CareAboutHide_AutoAddToSuperView"
+    extend.dependency "CJPopupAction/BaseConvenience"
   end
 
 

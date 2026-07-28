@@ -15,8 +15,9 @@ Pod::Spec.new do |s|
 
   s.source_files = "TSDemo_Popup/**/*.{h,m}"
   s.resources    = "TSDemo_Popup/**/*.{xib,xcassets,png,jpg}"
-  s.dependency "CJPopupAction"
-  s.dependency "Masonry"
+  
   s.dependency "CQDemoKit/BaseVC"
+  s.dependency 'CQDemoKit/BaseUtil'
   s.dependency "CJBaseUIKit/UIScrollView/CJKeyboardAvoiding"
+  s.dependency "CJPopupAction"
 end

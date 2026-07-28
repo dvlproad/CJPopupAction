@@ -7,6 +7,7 @@
 //
 
 #import "UIView+CJShowExtendView.h"
+#import "UIView+CJSlideConvenience.h"
 #import <objc/runtime.h>
 
 static NSString *cjExtendViewKey = @"cjExtendView";
@@ -87,6 +88,39 @@ static NSString *cjExtendViewKey = @"cjExtendView";
 /** 完整的描述请参见文件头部 */
 - (void)cj_hideExtendViewAnimated:(BOOL)animated {
     [self.cjExtendView cj_popupHideForView:animated];
+}
+
+#pragma mark - Slide动画便捷方法
+- (void)cq_slideForView:(UIView *)toView
+              direction:(CJSlideFromDirection)direction {
+    CGRect convertFrame = [self.superview convertRect:toView.frame toView:self.superview];
+    CGRect selfFrame = self.frame;
+    
+    CGFloat spacing = 0;
+    switch (direction) {
+        case CJSlideFromDirectionTop:
+            // 弹出到toView上方：self底部对齐toView顶部
+            self.frame = CGRectMake(CGRectGetMinX(convertFrame), CGRectGetMinY(convertFrame) - CGRectGetHeight(selfFrame), CGRectGetWidth(selfFrame), CGRectGetHeight(selfFrame));
+            spacing = CGRectGetHeight(selfFrame);
+            break;
+        case CJSlideFromDirectionBottom:
+            // 弹出到toView下方：self顶部对齐toView底部
+            self.frame = CGRectMake(CGRectGetMinX(convertFrame), CGRectGetMaxY(convertFrame), CGRectGetWidth(selfFrame), CGRectGetHeight(selfFrame));
+            spacing = CGRectGetHeight(selfFrame);
+            break;
+        case CJSlideFromDirectionLeft:
+            // 弹出到toView左侧：self右侧对齐toView左侧
+            self.frame = CGRectMake(CGRectGetMinX(convertFrame) - CGRectGetWidth(selfFrame), CGRectGetMinY(convertFrame), CGRectGetWidth(selfFrame), CGRectGetHeight(selfFrame));
+            spacing = CGRectGetWidth(selfFrame);
+            break;
+        case CJSlideFromDirectionRight:
+            // 弹出到toView右侧：self左侧对齐toView右侧
+            self.frame = CGRectMake(CGRectGetMaxX(convertFrame), CGRectGetMinY(convertFrame), CGRectGetWidth(selfFrame), CGRectGetHeight(selfFrame));
+            spacing = CGRectGetWidth(selfFrame);
+            break;
+    }
+    
+    [self cq_slideFromOffset:spacing direction:direction];
 }
 
 @end

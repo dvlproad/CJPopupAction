@@ -8,7 +8,7 @@
 //  1. 位移动画（Slide）：通过 CGAffineTransform 实现，视图从屏幕边缘滑入
 //  2. 展开动画（Expand）：通过 frame 变化实现，视图从某个锚点展开到目标大小
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 /// 位移方向：视图从哪个方向滑入
 typedef NS_ENUM(NSUInteger, CJSlideFromDirection) {

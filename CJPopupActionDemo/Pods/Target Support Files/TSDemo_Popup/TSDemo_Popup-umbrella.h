@@ -15,6 +15,7 @@
 #import "ShowDropDownViewController.h"
 #import "ShowExtendViewVC.h"
 #import "TSCareAboutHideHomeViewController.h"
+#import "TSShowAnimateViewController.h"
 #import "TSToastHomeViewController.h"
 #import "TSBaseAnimationHomeViewController.h"
 #import "TSWindowAnimationHomeViewController.h"

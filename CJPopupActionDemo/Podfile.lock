@@ -3,6 +3,7 @@ PODS:
   - CJPopupAction (1.6.1):
     - CJPopupAction/Base (= 1.6.1)
     - CJPopupAction/BaseBind (= 1.6.1)
+    - CJPopupAction/BaseConvenience (= 1.6.1)
     - CJPopupAction/CareAboutHide_AutoAddToSuperView (= 1.6.1)
     - CJPopupAction/Core (= 1.6.1)
     - CJPopupAction/ShowExtendView (= 1.6.1)
@@ -11,6 +12,8 @@ PODS:
     - CJPopupAction/Core
   - CJPopupAction/BaseBind (1.6.1):
     - CJPopupAction/Base
+  - CJPopupAction/BaseConvenience (1.6.1):
+    - CJPopupAction/BaseBind
   - CJPopupAction/CareAboutHide_AutoAddToSuperView (1.6.1):
     - CJPopupAction/BaseBind
   - CJPopupAction/Core (1.6.1)
@@ -29,6 +32,7 @@ PODS:
   - CQDemoKit/BaseUIKit/ImageLoader (0.9.13)
   - CQDemoKit/BaseUIKit/Switch (0.9.13):
     - Masonry
+  - CQDemoKit/BaseUtil (0.9.13)
   - CQDemoKit/BaseVC (0.9.13):
     - CQDemoKit/BaseVC/Base (= 0.9.13)
     - CQDemoKit/BaseVC/Collection (= 0.9.13)
@@ -76,8 +80,8 @@ PODS:
   - TSDemo_Popup (0.0.1):
     - CJBaseUIKit/UIScrollView/CJKeyboardAvoiding
     - CJPopupAction
+    - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC
-    - Masonry
   - TSDemo_Popup-Swift (0.0.1):
     - CQDemoKit/BaseVC
     - CQDemoResource/Images
@@ -107,11 +111,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseUIKit: 1445f55a4c9f942351fcd1964694f32196472837
-  CJPopupAction: e248973d44a9f684e682411c1bfa6b875e972094
+  CJPopupAction: 344fe5305d1a7d1fd3cffc2aebbd610c4832206d
   CQDemoKit: 0d6351e9a948e3c214aa1727c4421dc288208630
   CQDemoResource: efdf1a0231767f665f5e6e0df59ed8a5042680f7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  TSDemo_Popup: 485647e3c5c453c33082f0bd7fc4d08b81e30065
+  TSDemo_Popup: ebfa6eca02bc4f055501a36761e3a491363fafc9
   TSDemo_Popup-Swift: 5f5e532e84c945a0b42954a25642456c0ae69923
 
 PODFILE CHECKSUM: 997903f951d9c601cc25221d426c3830957e01bb

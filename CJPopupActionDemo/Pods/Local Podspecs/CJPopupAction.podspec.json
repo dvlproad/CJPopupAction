@@ -35,6 +35,13 @@
       }
     },
     {
+      "name": "BaseConvenience",
+      "source_files": "CJPopupAction/BaseConvenience/**/*.{h,m}",
+      "dependencies": {
+        "CJPopupAction/BaseBind": []
+      }
+    },
+    {
       "name": "Toast",
       "source_files": "CJPopupAction/Toast/**/*.{h,m}"
     },

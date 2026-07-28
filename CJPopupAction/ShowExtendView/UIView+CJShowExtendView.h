@@ -8,6 +8,7 @@
 
 #import "UIView+CJExpandByPoint.h"
 #import "UIView+CJExpandForView.h"
+#import "UIView+CJSlideTransformAnimation.h"
 
 @interface UIView (CJShowExtendView)
 
@@ -58,5 +59,13 @@
  *  @param animated 是否动画
  */
 - (void)cj_hideExtendViewAnimated:(BOOL)animated;
+
+
+#pragma mark - Slide动画便捷方法
+/// 弹出到指定View的指定方向（自动计算位置和距离）
+/// @param toView 弹出到哪个View的旁边
+/// @param direction 弹出到该View的哪个方向
+- (void)cq_slideForView:(UIView *)toView
+              direction:(CJSlideFromDirection)direction;
 
 @end

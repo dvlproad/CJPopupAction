@@ -19,6 +19,8 @@
 #import "UIImageView+CQTSBaseUtil.h"
 #import "CQTSSwitchViewFactory.h"
 #import "UISwitch+CQTSMoreProperty.h"
+#import "CJUIKitAlertUtil.h"
+#import "CJUIKitToastUtil.h"
 #import "CQTSSuspendWindow.h"
 #import "CQTSSuspendButtonRootViewController.h"
 #import "CQTSSuspendWindowFactory.h"

@@ -19,9 +19,9 @@
   "source_files": "TSDemo_Popup/**/*.{h,m}",
   "resources": "TSDemo_Popup/**/*.{xib,xcassets,png,jpg}",
   "dependencies": {
-    "CJPopupAction": [],
-    "Masonry": [],
     "CQDemoKit/BaseVC": [],
-    "CJBaseUIKit/UIScrollView/CJKeyboardAvoiding": []
+    "CQDemoKit/BaseUtil": [],
+    "CJBaseUIKit/UIScrollView/CJKeyboardAvoiding": [],
+    "CJPopupAction": []
   }
 }
