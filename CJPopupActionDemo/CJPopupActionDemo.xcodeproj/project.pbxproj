@@ -349,27 +349,25 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CJPopupActionDemo/Pods-CJPopupActionDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CJAnimationKit/CJAnimationKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CJBaseUIKit/CJBaseUIKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CJPopupAction/CJPopupAction.framework",
-				"${BUILT_PRODUCTS_DIR}/CJPopupAnimation/CJPopupAnimation.framework",
 				"${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CQDemoResource/CQDemoResource.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/TSDemo_Popup/TSDemo_Popup.framework",
 				"${BUILT_PRODUCTS_DIR}/TSDemo_Popup-Swift/TSDemo_Popup_Swift.framework",
-				"${BUILT_PRODUCTS_DIR}/TSDemo_PopupAnimation/TSDemo_PopupAnimation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJAnimationKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJBaseUIKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJPopupAction.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJPopupAnimation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoResource.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TSDemo_Popup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TSDemo_Popup_Swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TSDemo_PopupAnimation.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -1,0 +1,6 @@
+framework module CJAnimationKit {
+  umbrella header "CJAnimationKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

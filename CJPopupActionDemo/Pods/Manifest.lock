@@ -1,27 +1,27 @@
 PODS:
+  - CJAnimationKit/PopupAnimation (0.0.4):
+    - CJAnimationKit/PopupAnimation/Base (= 0.0.4)
+    - CJAnimationKit/PopupAnimation/BaseBind (= 0.0.4)
+    - CJAnimationKit/PopupAnimation/BaseConvenience (= 0.0.4)
+    - CJAnimationKit/PopupAnimation/Core (= 0.0.4)
+  - CJAnimationKit/PopupAnimation/Base (0.0.4):
+    - CJAnimationKit/PopupAnimation/Core
+  - CJAnimationKit/PopupAnimation/BaseBind (0.0.4):
+    - CJAnimationKit/PopupAnimation/Base
+  - CJAnimationKit/PopupAnimation/BaseConvenience (0.0.4):
+    - CJAnimationKit/PopupAnimation/BaseBind
+  - CJAnimationKit/PopupAnimation/Core (0.0.4)
   - CJBaseUIKit/UIScrollView/CJKeyboardAvoiding (0.8.1)
   - CJPopupAction (1.6.2):
     - CJPopupAction/CareAboutHide_AutoAddToSuperView (= 1.6.2)
     - CJPopupAction/ShowExtendView (= 1.6.2)
     - CJPopupAction/Toast (= 1.6.2)
   - CJPopupAction/CareAboutHide_AutoAddToSuperView (1.6.2):
-    - CJPopupAnimation/BaseBind
+    - CJAnimationKit/PopupAnimation/BaseBind
   - CJPopupAction/ShowExtendView (1.6.2):
+    - CJAnimationKit/PopupAnimation/BaseConvenience
     - CJPopupAction/CareAboutHide_AutoAddToSuperView
-    - CJPopupAnimation/BaseConvenience
   - CJPopupAction/Toast (1.6.2)
-  - CJPopupAnimation (0.2.0):
-    - CJPopupAnimation/Base (= 0.2.0)
-    - CJPopupAnimation/BaseBind (= 0.2.0)
-    - CJPopupAnimation/BaseConvenience (= 0.2.0)
-    - CJPopupAnimation/Core (= 0.2.0)
-  - CJPopupAnimation/Base (0.2.0):
-    - CJPopupAnimation/Core
-  - CJPopupAnimation/BaseBind (0.2.0):
-    - CJPopupAnimation/Base
-  - CJPopupAnimation/BaseConvenience (0.2.0):
-    - CJPopupAnimation/BaseBind
-  - CJPopupAnimation/Core (0.2.0)
   - CQDemoKit/BaseUIKit (0.9.13):
     - CQDemoKit/BaseUIKit/Button (= 0.9.13)
     - CQDemoKit/BaseUIKit/Container (= 0.9.13)
@@ -84,27 +84,22 @@ PODS:
     - CJPopupAction
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC
-    - TSDemo_PopupAnimation
   - TSDemo_Popup-Swift (0.0.1):
     - CQDemoKit/BaseVC
     - CQDemoResource/Images
     - TSDemo_Popup
-  - TSDemo_PopupAnimation (0.0.1):
-    - CJPopupAction
-    - CQDemoKit/BaseUtil
-    - CQDemoKit/BaseVC
 
 DEPENDENCIES:
+  - CJAnimationKit/PopupAnimation (~> 0.0.4)
   - CJBaseUIKit/UIScrollView/CJKeyboardAvoiding (~> 0.8.1)
   - CJPopupAction (from `../`)
-  - CJPopupAnimation (from `../`)
   - CQDemoKit/BaseVC
   - TSDemo_Popup (from `../`)
   - TSDemo_Popup-Swift (from `../`)
-  - TSDemo_PopupAnimation (from `../`)
 
 SPEC REPOS:
   trunk:
+    - CJAnimationKit
     - CJBaseUIKit
     - CQDemoKit
     - CQDemoResource
@@ -113,26 +108,21 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   CJPopupAction:
     :path: "../"
-  CJPopupAnimation:
-    :path: "../"
   TSDemo_Popup:
     :path: "../"
   TSDemo_Popup-Swift:
     :path: "../"
-  TSDemo_PopupAnimation:
-    :path: "../"
 
 SPEC CHECKSUMS:
+  CJAnimationKit: 88a43ffcd737999fe0b077453ae696a127409b44
   CJBaseUIKit: 1445f55a4c9f942351fcd1964694f32196472837
-  CJPopupAction: 1ae51363746ee26593ef09df4b37a7c3ee38fd25
-  CJPopupAnimation: e8901df992dbb500dcd48eec030a6769906d38ed
+  CJPopupAction: 0fe09289e4eede4a302a7cd1d6dd826d261c0331
   CQDemoKit: 0d6351e9a948e3c214aa1727c4421dc288208630
   CQDemoResource: efdf1a0231767f665f5e6e0df59ed8a5042680f7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  TSDemo_Popup: be6094adc32745032787cedd2f9b05a3e6dba902
+  TSDemo_Popup: ebfa6eca02bc4f055501a36761e3a491363fafc9
   TSDemo_Popup-Swift: 5f5e532e84c945a0b42954a25642456c0ae69923
-  TSDemo_PopupAnimation: c123cc94fccbad6091913a52c43986af672b619e
 
-PODFILE CHECKSUM: b06dc474b665f1b6993f9ebfc141abfc91d817df
+PODFILE CHECKSUM: f24caadcd6d4ba2322a05130708b7bcbb54fba81
 
 COCOAPODS: 1.16.2

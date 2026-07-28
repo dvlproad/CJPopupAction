@@ -112,14 +112,16 @@ Pod::Spec.new do |s|
   # 关心隐藏且视图自动添加进superView的动画：内部有封装以简化hide的动画（UIView+CJBottomInWindow \ UIView+CJCenterInWindow \ UIView+CJExpandByPoint \ UIView+CJExpandForView）
   s.subspec 'CareAboutHide_AutoAddToSuperView' do |popup|
     popup.source_files = "CJPopupAction/CareAboutHide_AutoAddToSuperView/**/*.{h,m}"
-    popup.dependency 'CJPopupAnimation/BaseBind'
+    
+    popup.dependency 'CJAnimationKit/PopupAnimation/BaseBind'
   end
 
   # 由视图本身(非弹出视图，如按钮本身)调用直接展开一个弹出视图的方法
   s.subspec 'ShowExtendView' do |extend|
     extend.source_files = "CJPopupAction/ShowExtendView/**/*.{h,m}"
+    
+    extend.dependency "CJAnimationKit/PopupAnimation/BaseConvenience"
     extend.dependency "CJPopupAction/CareAboutHide_AutoAddToSuperView"
-    extend.dependency "CJPopupAnimation/BaseConvenience"
   end
 
 

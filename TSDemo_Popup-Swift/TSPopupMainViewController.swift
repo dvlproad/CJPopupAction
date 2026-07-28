@@ -20,9 +20,13 @@ import TSDemo_Popup
 
         do {
             let model = CQDMTabBarModel()
-            model.title = NSLocalizedString("Base", comment: "")
+            model.title = NSLocalizedString("CJAnimationKit", comment: "")
             model.normalImage = UIImage.cqresource_imageNamed("icons8-menu")
-            model.classEntry = NSClassFromString("TSBaseAnimationHomeViewController")
+            model.viewControllerGetterHandle = {
+                let viewController = UIViewController.init()
+                viewController.title = "BaseAnimation 见 CJAnimationKit"
+                return viewController
+            }
             tabBarModels.append(model)
         }
 

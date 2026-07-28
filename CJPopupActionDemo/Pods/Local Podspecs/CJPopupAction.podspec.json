@@ -24,15 +24,15 @@
       "name": "CareAboutHide_AutoAddToSuperView",
       "source_files": "CJPopupAction/CareAboutHide_AutoAddToSuperView/**/*.{h,m}",
       "dependencies": {
-        "CJPopupAnimation/BaseBind": []
+        "CJAnimationKit/PopupAnimation/BaseBind": []
       }
     },
     {
       "name": "ShowExtendView",
       "source_files": "CJPopupAction/ShowExtendView/**/*.{h,m}",
       "dependencies": {
-        "CJPopupAction/CareAboutHide_AutoAddToSuperView": [],
-        "CJPopupAnimation/BaseConvenience": []
+        "CJAnimationKit/PopupAnimation/BaseConvenience": [],
+        "CJPopupAction/CareAboutHide_AutoAddToSuperView": []
       }
     }
   ]

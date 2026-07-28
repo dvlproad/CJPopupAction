@@ -22,7 +22,6 @@
     "CQDemoKit/BaseVC": [],
     "CQDemoKit/BaseUtil": [],
     "CJBaseUIKit/UIScrollView/CJKeyboardAvoiding": [],
-    "CJPopupAction": [],
-    "TSDemo_PopupAnimation": []
+    "CJPopupAction": []
   }
 }

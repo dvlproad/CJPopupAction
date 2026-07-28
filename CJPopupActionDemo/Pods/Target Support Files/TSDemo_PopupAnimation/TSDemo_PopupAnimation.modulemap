@@ -1,6 +1,0 @@
-framework module TSDemo_PopupAnimation {
-  umbrella header "TSDemo_PopupAnimation-umbrella.h"
-
-  export *
-  module * { export * }
-}

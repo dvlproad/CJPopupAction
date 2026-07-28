@@ -19,6 +19,6 @@
 #import "CJExpandCalculator.h"
 #import "CJSlideCalculator.h"
 
-FOUNDATION_EXPORT double CJPopupAnimationVersionNumber;
-FOUNDATION_EXPORT const unsigned char CJPopupAnimationVersionString[];
+FOUNDATION_EXPORT double CJAnimationKitVersionNumber;
+FOUNDATION_EXPORT const unsigned char CJAnimationKitVersionString[];
 
