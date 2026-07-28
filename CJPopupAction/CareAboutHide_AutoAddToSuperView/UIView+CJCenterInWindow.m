@@ -70,10 +70,10 @@
     self.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;
     self.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
 
-    CJExpandFramePair pair = [CJExpandCalculator expandToCenterFromCenter:popupSuperview.center size:popupViewSize];
+    CGRect popupShowFrame = [CJExpandCalculator showFrameFromCenter:popupSuperview.center size:popupViewSize];
 
     if (animationType == CJCenterWindowAnimationTypeNone) {
-        popupView.frame = pair.showFrame;
+        popupView.frame = popupShowFrame;
         !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
 
     } else if (animationType == CJCenterWindowAnimationTypeSlideToCenter
@@ -82,7 +82,7 @@
         UIView *blankView = self.cjTapView;
         blankView.alpha = 1.0;
         
-        popupView.frame = pair.showFrame;
+        popupView.frame = popupShowFrame;
         
         popupView.alpha = 0.0;
         if (animationType == CJCenterWindowAnimationTypeSlideToCenter) {
@@ -104,8 +104,8 @@
 
     } else if (animationType == CJCenterWindowAnimationTypeExpandToCenter) {
         [UIView cj_showExpandAnimateBindView:self
-                              withShowFrame:pair.showFrame
-                                  hideFrame:pair.hideFrame
+                              withShowFrame:popupShowFrame
+                                  direction:CJExpandToDirectionCenter
                                   blankView:self.cjTapView
                                  completion:showPopupViewCompleteBlock];
     }

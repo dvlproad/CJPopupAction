@@ -8,18 +8,19 @@
 //  展开动画：不一定需要blankView
 
 #import <UIKit/UIKit.h>
+#import "CJExpandCalculator.h"   // 需要 CJExpandToDirection
 
 static CGFloat kCJPopupAnimationDuration = 0.3;
 
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^CJExpandAnimateBlock)(UIView *animatedView, BOOL forShow,
-                                    CGRect showFrame, CGRect hideFrame,
+                                    CGRect showFrame, CJExpandToDirection direction,
                                     UIView * _Nullable blankView,
                                     void(^ _Nullable completion)(void));
 
 typedef void(^CJExpandInterceptor)(UIView *animatedView, BOOL forShow,
-                                    CGRect showFrame, CGRect hideFrame,
+                                    CGRect showFrame, CJExpandToDirection direction,
                                     UIView * _Nullable blankView,
                                     void(^next)(void));
 
@@ -29,7 +30,7 @@ typedef void(^CJExpandInterceptor)(UIView *animatedView, BOOL forShow,
 + (void)cj_expandAnimateView:(UIView *)animatedView
                       forShow:(BOOL)forShow
                 withShowFrame:(CGRect)popupViewShowFrame
-                    hideFrame:(CGRect)popupViewHideFrame
+                    direction:(CJExpandToDirection)direction
                     blankView:(nullable UIView *)blankView
                    completion:(void(^)(void))completion;
 

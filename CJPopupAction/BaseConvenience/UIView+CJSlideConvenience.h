@@ -8,7 +8,7 @@
 //  位移动画便捷方法：自动计算距离、小距离动画
 
 #import <UIKit/UIKit.h>
-#import "UIView+CJSlideTransformAnimation.h"
+#import "CJSlideCalculator.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

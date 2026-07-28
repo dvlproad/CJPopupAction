@@ -42,16 +42,20 @@
     CGFloat w = CGRectGetWidth(accordingFrame);
     CGFloat h = CGRectGetHeight(accordingFrame);
     
-    CJExpandFramePair pair;
+    CGRect popupShowFrame;
+    CJExpandToDirection direction;
     switch (popupViewPosition) {
         case CJExpandForViewPositionBelow:
-            pair = [CJExpandCalculator expandToDownFromLeftTop:CGPointMake(x, y + h) size:popupViewSize];
+            popupShowFrame = [CJExpandCalculator showFrameFromLeftTop:CGPointMake(x, y + h) size:popupViewSize];
+            direction = CJExpandToDirectionDown;
             break;
         case CJExpandForViewPositionAbove:
-            pair = [CJExpandCalculator expandToUpFromLeftBottom:CGPointMake(x, y) size:popupViewSize];
+            popupShowFrame = [CJExpandCalculator showFrameFromLeftBottom:CGPointMake(x, y) size:popupViewSize];
+            direction = CJExpandToDirectionUp;
             break;
         case CJExpandForViewPositionCenter:
-            pair = [CJExpandCalculator expandToCenterFromCenter:CGPointMake(x + w / 2.0, y + h / 2.0) size:popupViewSize];
+            popupShowFrame = [CJExpandCalculator showFrameFromCenter:CGPointMake(x + w / 2.0, y + h / 2.0) size:popupViewSize];
+            direction = CJExpandToDirectionCenter;
             break;
     }
     
@@ -70,14 +74,14 @@
     popupView.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
     
     if (animated == NO) {
-        popupView.frame = pair.showFrame;
+        popupView.frame = popupShowFrame;
         !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
         return;
     }
     
     [UIView cj_showExpandAnimateBindView:popupView
-                          withShowFrame:pair.showFrame
-                              hideFrame:pair.hideFrame
+                          withShowFrame:popupShowFrame
+                              direction:direction
                               blankView:popupView.cjTapView
                              completion:showPopupViewCompleteBlock];
 }

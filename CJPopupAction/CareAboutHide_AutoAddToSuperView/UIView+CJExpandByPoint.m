@@ -51,17 +51,17 @@
     self.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;
     self.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
     
-    CJExpandFramePair pair = [CJExpandCalculator expandToDownFromLeftTop:popupViewOrigin size:popupViewSize];
+    CGRect popupShowFrame = [CJExpandCalculator showFrameFromLeftTop:popupViewOrigin size:popupViewSize];
     
     if (animated == NO) {
-        popupView.frame = pair.showFrame;
+        popupView.frame = popupShowFrame;
         !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
         return;
     }
     
     [UIView cj_showExpandAnimateBindView:self
-                          withShowFrame:pair.showFrame
-                              hideFrame:pair.hideFrame
+                          withShowFrame:popupShowFrame
+                              direction:CJExpandToDirectionDown
                               blankView:self.cjTapView
                              completion:showPopupViewCompleteBlock];
 }

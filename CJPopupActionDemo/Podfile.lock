@@ -18,6 +18,7 @@ PODS:
     - CJPopupAction/BaseBind
   - CJPopupAction/Core (1.6.1)
   - CJPopupAction/ShowExtendView (1.6.1):
+    - CJPopupAction/BaseConvenience
     - CJPopupAction/CareAboutHide_AutoAddToSuperView
   - CJPopupAction/Toast (1.6.1)
   - CQDemoKit/BaseUIKit (0.9.13):
@@ -111,7 +112,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseUIKit: 1445f55a4c9f942351fcd1964694f32196472837
-  CJPopupAction: 344fe5305d1a7d1fd3cffc2aebbd610c4832206d
+  CJPopupAction: e83fb94784d8e22ed9e29fb8ea2653d7e10f3524
   CQDemoKit: 0d6351e9a948e3c214aa1727c4421dc288208630
   CQDemoResource: efdf1a0231767f665f5e6e0df59ed8a5042680f7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201

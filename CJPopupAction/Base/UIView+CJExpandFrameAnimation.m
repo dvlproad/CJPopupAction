@@ -7,6 +7,7 @@
 //
 
 #import "UIView+CJExpandFrameAnimation.h"
+#import "CJExpandCalculator.h"
 #import <objc/runtime.h>
 
 static NSMutableArray<CJExpandInterceptor> *_globalExpandInterceptors = nil;
@@ -16,10 +17,13 @@ static NSMutableArray<CJExpandInterceptor> *_globalExpandInterceptors = nil;
 + (void)cj_expandAnimateView:(UIView *)animatedView
                       forShow:(BOOL)forShow
                 withShowFrame:(CGRect)popupViewShowFrame
-                    hideFrame:(CGRect)popupViewHideFrame
+                    direction:(CJExpandToDirection)direction
                     blankView:(nullable UIView *)blankView
                    completion:(void(^)(void))completion
 {
+    // 根据 direction 计算 hideFrame
+    CGRect popupViewHideFrame = [CJExpandCalculator hideFrameFromShowFrame:popupViewShowFrame direction:direction];
+    
     NSArray<CJExpandInterceptor> *instanceInterceptors = animatedView.expandInterceptors;
     NSArray<CJExpandInterceptor> *globalInterceptors = _globalExpandInterceptors ?: @[];
     
@@ -59,7 +63,7 @@ static NSMutableArray<CJExpandInterceptor> *_globalExpandInterceptors = nil;
         }
         
         CJExpandInterceptor interceptor = allInterceptors[index];
-        interceptor(animatedView, forShow, popupViewShowFrame, popupViewHideFrame, blankView, ^{
+        interceptor(animatedView, forShow, popupViewShowFrame, direction, blankView, ^{
             chain(index + 1);
         });
     };

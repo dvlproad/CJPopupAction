@@ -41,7 +41,7 @@
                 [UIView cj_expandAnimateView:testView
                                      forShow:YES
                                withShowFrame:CGRectMake(50, 100, 200, 200)
-                                   hideFrame:CGRectMake(100, 200, 100, 100)
+                                   direction:CJExpandToDirectionCenter
                                    blankView:nil
                                   completion:^{
                                       NSLog(@"Expand show completed");
@@ -61,7 +61,7 @@
                 [UIView cj_expandAnimateView:testView
                                      forShow:NO
                                withShowFrame:CGRectMake(50, 100, 200, 200)
-                                   hideFrame:CGRectMake(100, 200, 100, 100)
+                                   direction:CJExpandToDirectionCenter
                                    blankView:nil
                                   completion:^{
                                       NSLog(@"Expand hide completed");

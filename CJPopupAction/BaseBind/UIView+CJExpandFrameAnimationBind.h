@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)cj_showExpandAnimateBindView:(UIView *)animatedView
                         withShowFrame:(CGRect)showFrame
-                            hideFrame:(CGRect)hideFrame
+                            direction:(CJExpandToDirection)direction
                             blankView:(nullable UIView *)blankView
                            completion:(void(^)(void))completion;
 + (void)cj_hideExpandAnimateBindView:(UIView *)animatedView
@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIView (CJExpandFrameAnimationBindProperty)
 
 @property (nonatomic, assign) CGRect cjExpandShowFrame;  /**< show时记录显示frame，hide时复用 */
-@property (nonatomic, assign) CGRect cjExpandHideFrame;  /**< show时记录隐藏frame，hide时复用 */
+@property (nonatomic, assign) CJExpandToDirection cjExpandDirection;  /**< show时记录展开方向，hide时复用 */
 @property (nonatomic, strong, nullable) UIView *cjExpandBlankView;  /**< show时记录blankView，hide时复用 */
 
 @end
