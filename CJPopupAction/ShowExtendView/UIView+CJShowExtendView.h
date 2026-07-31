@@ -8,7 +8,9 @@
 
 #import "UIView+CJExpandByPoint.h"
 #import "UIView+CJExpandForView.h"
-#import "UIView+CJSlideTransformAnimation.h"
+#import <CJAnimationKit/UIView+CJSlideTransformAnimation.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (CJShowExtendView)
 
@@ -69,3 +71,5 @@
               direction:(CJSlideFromDirection)direction;
 
 @end
+
+NS_ASSUME_NONNULL_END

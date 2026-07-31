@@ -93,7 +93,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupAction.git", :tag => "CJPopupAction_1.6.2" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupAction.git", :tag => "CJPopupAction_1.6.2_1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
