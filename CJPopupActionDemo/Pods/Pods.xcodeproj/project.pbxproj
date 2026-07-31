@@ -7,368 +7,370 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04C9D3588DD18C4B505A79FAC58EAE92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DFAF07B8D3C09F2DC367613D981D48 /* Foundation.framework */; };
 		055DFDDAEE6500D664AA901497936993 /* CJUIKitBaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD267AEE61BAA394BFABBFB5E8C8792 /* CJUIKitBaseTabBarViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0613761E118E42F0AD9DD94CF68E99E5 /* cqts_jpg_avatar_07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69CB9BE65F610EA7743EA54855CE9DA /* cqts_jpg_avatar_07.jpg */; };
 		0707BA014244C328BC5BA3874008B54A /* CJUIKitBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6D6C6860A8157745B2F0C842D68A78 /* CJUIKitBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0758DFFB89E49B814A4CDEA233BB22FA /* TSWindowAnimationHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F03C717EFFE78A106BB6B7384850200 /* TSWindowAnimationHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		08120E780CB6CE31795DE89EAFED0E3F /* UIView+CJShowExtendView.h in Headers */ = {isa = PBXBuildFile; fileRef = D6EC088ECB4C16ADC43EC1FF7012BB2F /* UIView+CJShowExtendView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0844315F3681AACAC6972598A63B6598 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FF5CBFDBB86D2F50FA7B1AFDB7ACFD /* UIKit.framework */; };
 		085291A32991B3373D8310C05E9B8BE5 /* CJUIKitCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B92541E2851A39FAB687F5E825647D95 /* CJUIKitCollectionViewCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		09071B3150838334F275913ABAAA35CD /* UIScrollView+CJKeyboardAvoiding.m in Sources */ = {isa = PBXBuildFile; fileRef = F02E79DF8ABBE728253B831B928A493F /* UIScrollView+CJKeyboardAvoiding.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		09327D996E496542006D6140230AA0AA /* cqts_jpg_avatar_08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FF707E6D020D3F712B5D3498E0B44A7 /* cqts_jpg_avatar_08.jpg */; };
-		0A509556F7CD7F8CCD5A6E19F3BA8607 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0839AD625F263C9F189992B5193388 /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0A4E15355155888EAA2E9E28C778D3BC /* cqts_jpg_avatar_07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69CB9BE65F610EA7743EA54855CE9DA /* cqts_jpg_avatar_07.jpg */; };
+		0A89FC2C54668A2D9C687D0C14E26AC9 /* cqts_jpg_bg_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8ACF6654E2C7844B228C18E97461ED61 /* cqts_jpg_bg_01.jpg */; };
+		0B7255D78D5A3D8B7A6865465709451B /* cqts_wp_01.webp in Resources */ = {isa = PBXBuildFile; fileRef = 6D2FAB79C1A5A6BA4D9A48F25E978E02 /* cqts_wp_01.webp */; };
 		0B91FD5FB4C9080DB513FB916DC4FE2A /* CQTSNetImageDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9829A0495CF163BAC3DD46AD0BC1E4FC /* CQTSNetImageDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0BB68D1508D5A18B251B5074946676E2 /* CQTSSandboxPathUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CF1E28C101B3AA4F7E3F161ED94885 /* CQTSSandboxPathUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0BE46D8DDA64930FB08AFD392F529054 /* cqts_jpg_avatar_06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 065CE3F95627BFD50CB116F641624DE9 /* cqts_jpg_avatar_06.jpg */; };
-		0C5A2FB02D189EB00F538CCE07ED1230 /* ShowDropDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726B172124FF082FE11588560C57A566 /* ShowDropDownViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0C8A0FD5F314EACE3FAEEC6B4BA8631B /* UIImageView+CQTSBaseUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E917D93339D8125924449C8D05E629F /* UIImageView+CQTSBaseUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EFA78E1EF1F492070A67EEB4089153C /* Pods-CJPopupActionDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 160D9E57984A941ABF8CB7A566A1B267 /* Pods-CJPopupActionDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11E9A3E2390028783129315A74FBB12F /* CQTSContainerViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 49FFD7D7B2C0EC351063AB709F584CFE /* CQTSContainerViewFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1228975F5FB3498D6BF599DBE493C38B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FF5CBFDBB86D2F50FA7B1AFDB7ACFD /* UIKit.framework */; };
 		1263081220D8B1A0F379B023B3EA4D30 /* CJExpandCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = EE99C3C97927FD6FA2B67CBACC44874A /* CJExpandCalculator.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1281373B9616D987A7CF7122DDD27C15 /* WelcomeViewToPop.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C601D97FF59E6B8A36163BE8F0AA64E /* WelcomeViewToPop.xib */; };
+		12B7D4D34B39161039285F67E4AA3B08 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFBD6B3291B0779D810D88A842B6B3D /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		146411EAD2DADC1B3A254005AA44A289 /* CQTSSuspendButtonRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25887BFD963AA022DE09CC19A9D3FC39 /* CQTSSuspendButtonRootViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1606841BC7F0239C4195F33943ACCF79 /* CJBaseUIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA9BC8ABA867453D0EA3455F6ACB0CC /* CJBaseUIKit-dummy.m */; };
+		164E7FFB751D8841DEB31C7B3AF503EC /* cqts_placeholder_png_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 093DAF20261C16583429A06A5AAD45A8 /* cqts_placeholder_png_01.png */; };
 		179F1CEC4E213A6FC9E6D16C01D06CAF /* CJUIKitCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8521047E5DB5FC2A092BB7477CE8BA02 /* CJUIKitCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		181A1AF6B4CD524AF14E6C47B200D41B /* ShowExtendViewVC.h in Headers */ = {isa = PBXBuildFile; fileRef = E3B82FEF7EB05CA4D87DC3EAA6CA6B8C /* ShowExtendViewVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1889D3D6C0903071F7E4542B861A07F5 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AA985AA0BBD94F734808CB0C302D9F3 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18D8B215DF04DE31A33147D7A4B34F21 /* CJUIKitCollectionViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C7168223DE65DD23994DD240E11C46A6 /* CJUIKitCollectionViewHeader.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		18EE897A6808A12507FF960E7D95764D /* CJBaseUIKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AAED3B1A595A04689A13FB0A28F20EB /* CJBaseUIKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		193A2A991C5FF8DD77D46C199FBA0DB2 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C7E501536F7A21AEE7AD87C3F74440 /* View+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1995DD0F3E8AFB7F0FB11C298021A07C /* UIView+CJSlideConvenience.h in Headers */ = {isa = PBXBuildFile; fileRef = C962BF725AD9B5EAE5A76D516A0BF302 /* UIView+CJSlideConvenience.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A79E7E121B3EBA355D7625CCC370E76 /* cqts_jpg_long_vertical_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F9BDBF55B718F1AE141E6403074FBEE /* cqts_jpg_long_vertical_1.jpg */; };
 		1B49FF087F2973A6FDBC379396E647BF /* CQTSLocImageDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2551DF737FB39CBC1809BDEACFEE0D3C /* CQTSLocImageDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BEDCD689BABFB26E934BC40843C83D6 /* CQDMModuleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CFA50309D3F6E66CA83C89B2E50D35 /* CQDMModuleModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1C01E9DDE98E79A813655EE52068E4F6 /* cqts_jpg_long_vertical_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F9BDBF55B718F1AE141E6403074FBEE /* cqts_jpg_long_vertical_1.jpg */; };
+		1C582DCFEE048BDF0CA42D9E25774DA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DFAF07B8D3C09F2DC367613D981D48 /* Foundation.framework */; };
 		1CCA2D4990B5B76EF850EC35EA6C479E /* CJPopupViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A468CA95F30972FC046E2D7131F4AE0 /* CJPopupViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D389DD76D8F9D5AD3AC6B844C484C21 /* CQDemoAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F660F76C4A0EF2E1D7158CFA2543E768 /* CQDemoAssets.xcassets */; };
+		1DDF7CBA418EE84C116A02CCF9E9C3A0 /* cqts_placeholder_jpg_02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EF05612A345CF46149D62A6A6ED1A4D /* cqts_placeholder_jpg_02.jpeg */; };
+		1F253E154D7C8F6728230C80EFC487B2 /* PopupInViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1984A04B7574A56BD3479E2850DA9684 /* PopupInViewVC.xib */; };
+		1F73824A4FE2F0F3EA5017645E1E5EDC /* cqts_jpg_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BF2FD4D5D6E802ECF217AD43B26CC0B /* cqts_jpg_02.jpg */; };
 		1FA669D518376EBD78AAF1F4ECD1BF68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DFAF07B8D3C09F2DC367613D981D48 /* Foundation.framework */; };
 		200278812E82B6A801066DB51412F55D /* CJPopupAction-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 030616EF77B7AF3A7D28E436E51838F8 /* CJPopupAction-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2244FA5686390E92065C75347CF7EDD7 /* cqts_jpg_avatar_05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5850DD8CCFDCCBE7DF2729F36890AC2F /* cqts_jpg_avatar_05.jpg */; };
 		229CEEEAABC95FC0BDE7D05F3328B183 /* UIImage+CQDemoResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 65220D9360BA67F81778DBF681C4727A /* UIImage+CQDemoResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		229FCB332A4937E90103878D68011869 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF9E6029AF0888A7BCB7F56A49713AA /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		235FE6D4A194013CD41CFA9B60C53EFC /* CQTSAssetSourceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D1108B30246CDF3F4AF55600914705 /* CQTSAssetSourceUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		23B50F938D3AABDC85CDD3C675751BE9 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 635801396311F620154C64321C071DF1 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		248FE1CCD06587EF7FA6A44C66720BCF /* Pods-CJPopupActionDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 911B854880336CBF5C00CF95951E0A7A /* Pods-CJPopupActionDemoTests-dummy.m */; };
+		25597A16F1D024F3F8A0BEDE4FFB803A /* cqts_jpg_bg_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9DAA89FEC30DE52AC7505CBFBC3A64FC /* cqts_jpg_bg_02.jpg */; };
 		257BDBC94FB293D1638369E7C26AF625 /* UISwitch+CQTSMoreProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0091CF2868E083E4505548BC849BC4B7 /* UISwitch+CQTSMoreProperty.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		26568B9F764194225532A50C92A8C52D /* TSExtendHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA77004EF0D3C942FA1351930FB7677 /* TSExtendHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		258464C48D405C2761F52896B8036923 /* ShowDropDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E48A4EF51A74C818302D452A64FCDF /* ShowDropDownViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		26A96C651052183EB2E16249C2B3238F /* CQTSSuspendWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A42370DFD171EA30E67A4EDC2D5A920 /* CQTSSuspendWindow.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		26C043F70C809B0E6BB187CD18251EF1 /* CQDemoResource-CQDemoResource in Resources */ = {isa = PBXBuildFile; fileRef = E8D0D7F2B9FF326830475E10FB918698 /* CQDemoResource-CQDemoResource */; };
+		2934B265EB456F4EAAD8AC41C87764B7 /* cqts_jpg_avatar_08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FF707E6D020D3F712B5D3498E0B44A7 /* cqts_jpg_avatar_08.jpg */; };
 		2A463F76E6C9F2A5AA5064BEF33E4CEF /* CQTSResourceInfoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = D9869EEC6582A3BD92F08D6BEF4D0F47 /* CQTSResourceInfoUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2A5F1428CC2128C70AE2F6E9C6539192 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C7E501536F7A21AEE7AD87C3F74440 /* View+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2A634C38D2F60C6BB75DECB425D05585 /* CJUIKitBaseCollectionHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6A7739A66146946CE63E54F525E9C3 /* CJUIKitBaseCollectionHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2B4C1F7177932C9B2F4849A96F4E4D9D /* cqts_jpg_avatar_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D2C751EBDAD62EF5CE538D0FC9E7974 /* cqts_jpg_avatar_01.jpg */; };
-		2B780A67D78B504CB1C749CC6BAB31C1 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5752496BECD59631EB998218F43799CF /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BDB9E72F09589ABFFC519E498C091CF /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D307B83E7198D1D6F85FADE7D0F6C1 /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2C577C6A58E328327DFC79A40D324719 /* UIView+CJSlideTransformAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E6D10F448549D7C8FAA2A8610DDC31A5 /* UIView+CJSlideTransformAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C89B34941665A673ACF96E1218E7665 /* cqts_bmp_01.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 593434E6BC92AD61417C43AD149D23E4 /* cqts_bmp_01.bmp */; };
-		2FBED51F953A2CC339E667B1EC77A6B9 /* cqts_jpg_avatar_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6AAFC917D29ECA3C91F603E1B544D78A /* cqts_jpg_avatar_04.jpg */; };
-		2FFB5AE73F65A0BF178560F73590DF8D /* WelcomePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 411F160055EB84D6882FD371A112E881 /* WelcomePopupView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		30022521BA28A1D6B79390B3540FA397 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 40E75B9BFAC5B8B74EB82D0386B84269 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2ED3FABB4A5071AFF5689D09F2EB7E93 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC9D51B3DC5935F63D630E2AF32A835 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30772B30D43722070FA63966D105A673 /* TSExtendHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E67846EA35765CED1207F1213DF56301 /* TSExtendHomeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		314B728AF42CE0BA1544B99E9F45A505 /* UIImage+CQTSInFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F3A3796983519F5AA64944130F0ED1 /* UIImage+CQTSInFramework.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		33560E3F4270CA8B35ADBC41CCF11953 /* TSDemo_Popup-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63706D6121157CAC7056D0493C241EB5 /* TSDemo_Popup-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3385E57C54B7211680D84C80BD939928 /* CQTSGitUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A01421BA8850C0C3C95521816AD6B34 /* CQTSGitUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		341355ED83D6C5D060D206E15B71B60F /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E8341CF48D6CC64E9A30D979217C9E9D /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3455A59BAEC265868A964CFBA0610711 /* UIImage+CQDemoResource.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FA1CF7B67F17B7A7EC6FF756EFE8A7 /* UIImage+CQDemoResource.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		34E376A2383E9E6CA68382FA2B8E5B29 /* CJUIKitBaseScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E83FF5E68B5B1FAEF9E73A297F94DD73 /* CJUIKitBaseScrollViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3585E80FFE47C387B8A2A3601F2533FE /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0EAB0AA00EBB27E07D82E3B5F494CF /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34F237FED0A5E91FDE49C5200460A13B /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E78B80918B377FD6F08ED5F4A22FC4 /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3654580CF602C8A15D89D035CC59458D /* cqts_jpg_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7B01F3B2A14D7CE016DC3AE02EB848B /* cqts_jpg_01.jpg */; };
 		38F0B8676E5A456C01BB227CA3820522 /* CQTSNetImageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5916BCE163092E2D1676417978EDF94A /* CQTSNetImageDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		39104CEF97280AF6A02F2D7486654C2B /* UIView+CJShowExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = A096FA4BB6791CDE847D77A9AE64113D /* UIView+CJShowExtendView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		396C9A39C5D6E8C98336D3A548ED8F13 /* UIView+CJBottomInWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EB93FB41D257E57FC4B5E4766E8BD13 /* UIView+CJBottomInWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		39786608BC19D380BBCB7ABCCBD4F59C /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A6114A7F30DD7E3A043437B320DE0F /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3AE42A269CF0F05DCF90505827B64EE9 /* cqts_jpg_bg_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF792E68C02CD8CBA669104ECA1A9A2 /* cqts_jpg_bg_03.jpg */; };
 		3B2DAA31F5D929DA0B8EB57762414F68 /* UIButton+CQTSMoreProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD255177C6151DE605003814ECD6EC /* UIButton+CQTSMoreProperty.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3C9E449AEB3A150C47DBF022FA683BBE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFBD6B3291B0779D810D88A842B6B3D /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3D30EF885C14704A3DE627BF0F082316 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E78B80918B377FD6F08ED5F4A22FC4 /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3DCAE5848B1224FDB779DF3224D07E57 /* CQTSAssetModelGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD0A61B9FBF852C87BD1C51D63BCB00 /* CQTSAssetModelGetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3EB9DD789F8D59E8DD88CC31CA2C8E8F /* WelcomeViewToPop.xib in Resources */ = {isa = PBXBuildFile; fileRef = 729A8CCBE7DC5E0410D7C7A08DEB7584 /* WelcomeViewToPop.xib */; };
 		3F63B8B433C1D50D0866E8FE0C57BBBB /* UIView+CJPopupInView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C6EE6042A9F785036BDED033544FAD /* UIView+CJPopupInView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3F8C19B2AB435E00AD7AAFBDCF285BBB /* TSWindowAnimationHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C9DE2B7DD9C98D17962A9269EC1FB563 /* TSWindowAnimationHomeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4021CFB34391ECAC63D52C6EE5818455 /* cqts_heic_01.HEIC in Resources */ = {isa = PBXBuildFile; fileRef = AFC17B43295A1F4775D1BC5AC2B370DA /* cqts_heic_01.HEIC */; };
+		41516767423BF4EC4956DCA805F86E1E /* TSDemo_Popup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 482552285D61136BE590412E48EC1588 /* TSDemo_Popup-dummy.m */; };
 		41956B3973573EFF61379A974639B9D8 /* UIView+CJExpandByPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 04ABD5AB1E0FF13DB7171C54E6207211 /* UIView+CJExpandByPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		42FB260C0AF48539B17FA932C8FBC4E0 /* cqts_placeholder_jpg_01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8737917C061BC29D3EF1FA2561D17F21 /* cqts_placeholder_jpg_01.jpeg */; };
+		41CFEBE2196E254150B0A0377DF240D5 /* PopupInViewVC.h in Headers */ = {isa = PBXBuildFile; fileRef = E595666462AF07A0356CCC947F6725F4 /* PopupInViewVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4394C8B56EEFDAB3E6258E50134BD274 /* NSError+CQTSErrorString.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E23F04025D376A798A665B8B85151B /* NSError+CQTSErrorString.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4398FB13667A1DD834E320CC0EF78ED0 /* cqts_jpg_avatar_06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 065CE3F95627BFD50CB116F641624DE9 /* cqts_jpg_avatar_06.jpg */; };
 		4433D119819561C16BAE1889E2F65BE5 /* UISwitch+CQTSMoreProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = DFB05FD749F0DA161D7931BACB067BD8 /* UISwitch+CQTSMoreProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		451895726CC8D077B90E191078C8EE03 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E8341CF48D6CC64E9A30D979217C9E9D /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46CCA5E8DDA628CDC86D4EE0FEABE9B5 /* WelcomeViewToPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AD9F8667E2CCCA0F0B53809CE67B4F /* WelcomeViewToPop.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4751B2BB12E1DC50C5930497D7F43D4B /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF9E6029AF0888A7BCB7F56A49713AA /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		475873080B1C5029ECD1D8D57AC63F5E /* UIView+CJSlideTransformAnimationBind.h in Headers */ = {isa = PBXBuildFile; fileRef = 2124B59BD3B5AB1CE02FE1D56C4BC7AB /* UIView+CJSlideTransformAnimationBind.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47D67C5FF9EAAAD55CAD15BB1E8BA28A /* CJUIKitRandomUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 249D8ECDDA1FE655BEDCAA94A2182C52 /* CJUIKitRandomUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4933216249CAF0F70532E30081FED137 /* cqts_png_avatar_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 841FBAEAB48598C2C2D2FBF96A7085A4 /* cqts_png_avatar_01.png */; };
+		4A126464E45E6EC5EE07821CB5DF0F96 /* cqts_bmp_02.bmp in Resources */ = {isa = PBXBuildFile; fileRef = D0F58F646F65ABD27DD472ECE673E0C1 /* cqts_bmp_02.bmp */; };
 		4A9D8B2A584BAC6204CD353FE7A99472 /* CQTSImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CF75727FC3C66264A454D7BAEB0328BB /* CQTSImageLoader.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4AC2F29330677831A1554A8A101B0FF9 /* UIView+CJBlankView.h in Headers */ = {isa = PBXBuildFile; fileRef = 31BE482C5E39458529AED7AF6CCECC90 /* UIView+CJBlankView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4EA91AEC9B7D643FF2729F039709DE15 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BF39634D83ED553E11426C0DDCFDC /* MASConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4AC79880C5DDB66214E05AB48C40E031 /* ShowDropDownViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F7652197BB0D80861F74A88E1F02E147 /* ShowDropDownViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F04D3F2F78407A82EFA009E5BF03F7C /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5C52B8D099820B6844AA532C91B552 /* MASLayoutConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4F8A401DEBA6172A315AD5CE1E0C246E /* CJAnimationKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7F86CAB6D4E3DC101B91EC1EC42541 /* CJAnimationKit-dummy.m */; };
+		4FF9EBB59B64822945741A1403A30A62 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B0EAB0AA00EBB27E07D82E3B5F494CF /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		529DB2CE44A82149A63BEF913E569E88 /* CJAnimationKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F23B8092AEA0FEA134B713D098777D1 /* CJAnimationKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		539AF2903C5EF9D18627832561E1F773 /* cqts_png_01.png in Resources */ = {isa = PBXBuildFile; fileRef = D98ACC0BBC2C9CA09ABB6596B3E7A2FD /* cqts_png_01.png */; };
 		53FAEDC90CA30C8FECB8CA2182F0F68F /* CQDMTabBarModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2690AAA028C14B14B4E6C247D88C4C4B /* CQDMTabBarModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		540D69BF9F2035B3784089A52B965176 /* PopupInWindowHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CF99962ED2DA21619D9DE459F68F8B /* PopupInWindowHomeVC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5453CD2991948900B01824E2CA7F5789 /* UIView+CJPopupInView.h in Headers */ = {isa = PBXBuildFile; fileRef = F0CB1AC0EDD4C8653403D018327F0790 /* UIView+CJPopupInView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		596303C4E5FFA512CCEDEC6120F05BE9 /* CQTSBorderStateButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E3EFB753A3125D4958C45021E68FBC3 /* CQTSBorderStateButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		59CB4D4FA3546DAD2DA63AB0ABF92834 /* CJKeyboardAvoidingTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BFF17363990672BD5DDB3D49F3EC04A /* CJKeyboardAvoidingTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5ADD2D27D6B7199E729313972D89CF9D /* CQTSLocImageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A3B77E4169F69B117AE6CF8C3DBB96 /* CQTSLocImageDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5AF6C24C4D5E39AA0DD7002B7C2D1D54 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B978162E7B07AC1376222A19B75B3089 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B18EF11E3F93B97BC4BB37BDE4E2A48 /* cqts_jpg_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BF2FD4D5D6E802ECF217AD43B26CC0B /* cqts_jpg_02.jpg */; };
-		5DE956A4EA7229C44C181262AAE9D285 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 29FA3E488262891A800C25D4E8731E92 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D50457CEFC85C769DB09B3F3954FAC8 /* TSCareAboutHideHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B42765C65924B58A6A88AD22BFC2BD /* TSCareAboutHideHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5E1391E74AF0D218225E79BB9C69A7E2 /* ShowExtendViewVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 22594CEA7FB417AB3E843629C5BB40A9 /* ShowExtendViewVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E592D2EF2E25846B9B39058F31E54E8 /* CQTSSandboxFileUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 408DFBB8BC39442133E83958AF62686D /* CQTSSandboxFileUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E67AA859C245383C85A243D6216BB8A /* CQTSSuspendWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 553F66F68AF5F76D27C2FB6BBD839AA6 /* CQTSSuspendWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F7C2DD2FB458D1F3622E28830B56DB2 /* TSDemo_Popup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8EE4316D59BB460912CC49B4B5FF77 /* TSDemo_Popup-dummy.m */; };
 		6133815426FB691F826EC34CBB0D3933 /* CQTSSandboxFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD98699236990A7C55C89E30A65500 /* CQTSSandboxFileUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		61BE7277CEF1E415C3AEBC1D734B157C /* cqts_placeholder_png_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 093DAF20261C16583429A06A5AAD45A8 /* cqts_placeholder_png_01.png */; };
 		651401814CB8BAE36EEDF5B17AF4C2FB /* CJUIKitAlertUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = EB664D35B5544B194B53BD06542BDD5B /* CJUIKitAlertUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6518A2542E39E3B85C3124018C870477 /* CJUIKitBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD066D308AE8E7728B3D44E49CFB256 /* CJUIKitBaseViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		676F5A93761B2632C396AA97B06C10C7 /* WelcomePopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = 942DB4C3AEB584F2F306236D2B99D4F2 /* WelcomePopupView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		68114821C74A4E3B0DC47D4F3DDEF9BB /* CJUIKitToastUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A6A66F8F79636965F2A660271B2ADA1 /* CJUIKitToastUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		681EEE52CAE88B0C077AD974D6E83586 /* TSWindowAnimationHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD301FAEA0A91B4FBC1D16077E1B6AE3 /* TSWindowAnimationHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		68A2EFF4A4BAAF1D8732ADFDE6B0B617 /* CQTSBorderStateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 358E4819EA45E0C653343EFF1D76F322 /* CQTSBorderStateButton.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		69680F5B2F287A2291A1D8D407052C0A /* CJUIKitRandomUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 567F69BB3A67212DF50A462781AF5AF0 /* CJUIKitRandomUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6997AF800B856341964775882E48B349 /* UIView+CJExpandFrameAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = D99AFBA698C507F186C2AA7698AEF478 /* UIView+CJExpandFrameAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6AB621206EC32E69F51BEAC44BF0609A /* PopupInViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B831E96BBC39D3E696085B1FECAAE6A /* PopupInViewVC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6A60B3AB349C4DADF8C224D8B1A5CA4F /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF100F85B5771515721197ED437DE8D /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BECF81798F7FBE3B6E436EEA5ECC5DC /* TSPopupMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C184F05E1E76E1DD9051A0B1CB58387 /* TSPopupMainViewController.swift */; };
 		6EA9ACA291FC2A54E837C4F1D4725AB4 /* CQTSButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC68A46470DA71D7783C0885BDF668 /* CQTSButtonFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6F75A40E2D4E043AF4B1032D8256B2AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FF5CBFDBB86D2F50FA7B1AFDB7ACFD /* UIKit.framework */; };
 		7017E1D5CB436B7674323EBBA41783DE /* UIView+CJCenterInWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AAC36870DD7B76E0C4AE2C7018D4B0C /* UIView+CJCenterInWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		712EE342E2101E368F265ED05181C511 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D48EA76F8BAC82B30D4146D7AFD8B84 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		721E736B7FC933F3DA54C360EEA781A3 /* cqts_png_01.png in Resources */ = {isa = PBXBuildFile; fileRef = D98ACC0BBC2C9CA09ABB6596B3E7A2FD /* cqts_png_01.png */; };
+		70DDC337AEEC0EF94BB192CB3ACC8787 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5752496BECD59631EB998218F43799CF /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7337677A7BD06066EF6B5111407120F2 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 635801396311F620154C64321C071DF1 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7463A70C6EED397F32854C839F10607B /* CQDMTabBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF9AB8FE83F21BEEC8E4DEECF4B583A /* CQDMTabBarModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		74BD7214D78D94E5744F46210CD4383B /* cqts_jpg_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7B01F3B2A14D7CE016DC3AE02EB848B /* cqts_jpg_01.jpg */; };
 		750E4D8BE9BDC72BA12598E039341087 /* UIView+CJExpandForView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DECCB141A5A2B491EC0FABEBDBF7425 /* UIView+CJExpandForView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7540328CBDF85DE8FE82B80800E53132 /* ShowExtendViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E973484FCB9AC5C08CD43D6534EC2AAB /* ShowExtendViewVC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		75D7813AC69717FDEE49E682F53AFF47 /* CQTSSuspendButtonRootViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C34A1E5CD2A0945E1DA38325DE148B50 /* CQTSSuspendButtonRootViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		760742DD4EB5B0EBD4BE019EC7C013DB /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B09CC9F58B00E84E45EEF5CB30CC81D /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		765694D71E467E6B101D5962BE299EBD /* ShowExtendViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F519E574BA77AE730C71C7F948A9E74 /* ShowExtendViewVC.xib */; };
 		76A5DED73438AC63B147300C05C1F132 /* CQTSRadioButtonsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 90590325C309063A756BC804DE8CDCA7 /* CQTSRadioButtonsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76C680427385B36503CCF610BD397C8B /* cqts_heic_01.HEIC in Resources */ = {isa = PBXBuildFile; fileRef = AFC17B43295A1F4775D1BC5AC2B370DA /* cqts_heic_01.HEIC */; };
 		78024DDCBD6464B8F3B8A4923FC70A7E /* UIView+CJBlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = D96897CD4062142EE9CE696344424B9A /* UIView+CJBlankView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		784544431E20F891ABF3D9E112D5FF7E /* cqts_jpg_avatar_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93460EB181C1A0F1589DA14ECE47AB34 /* cqts_jpg_avatar_03.jpg */; };
 		7BE88243B0C945EB90977A1DCC070E55 /* CJSlideCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC9AFCB648F208A96B1FEF23B87B171 /* CJSlideCalculator.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7C66675C9DAECE21740C372B12212360 /* CJUIKitCollectionViewHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3338CCC7680DAB590E423A894BF12737 /* CJUIKitCollectionViewHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7F01F447CB35088300A1C39E55D14721 /* cqts_jpg_bg_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8ACF6654E2C7844B228C18E97461ED61 /* cqts_jpg_bg_01.jpg */; };
 		7F42582A2DDB732F55AC8DA2CA2B4B61 /* UIView+CJBottomInWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6FC68B9125165DD3B9D9E4C880B95B /* UIView+CJBottomInWindow.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7FB992BAA42855E8ED6F78A584BF1B64 /* WelcomePopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE1760141E57BFCBB6C98CFCC7F1190 /* WelcomePopupView.xib */; };
+		80123FB1D552561BF89A5C9222ABB821 /* cqts_jpg_bg_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF792E68C02CD8CBA669104ECA1A9A2 /* cqts_jpg_bg_03.jpg */; };
 		8047F558C6A174C88ADBD3C9D3087FDB /* CQTSResourceInfoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0CB04FA086DC07EC0F82BB04955E81 /* CQTSResourceInfoUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		81C399D5A4E000D70476F66A730232F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DFAF07B8D3C09F2DC367613D981D48 /* Foundation.framework */; };
+		81DFD2F8133BFF639334C33F073460DD /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 637BB5201B40767F61534EF3E9C91598 /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82533B7923A2FC4F81669C8A93FAC9C7 /* UIView+CJToastAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA1373E5951A769B112C741E841F3EA /* UIView+CJToastAnimation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		825CA864AECF739DB4B4E094D9178EE4 /* cqts_jpg_bg_05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C6CA2B87E7CCCB97F9210FDB46B99F4E /* cqts_jpg_bg_05.jpg */; };
 		830EFCA5C97E9E8C39238B8E54677E0E /* CQTSSuspendWindowFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A0C48A2CA76BCBFB7E20E9AB1A2BFD /* CQTSSuspendWindowFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		83D86CC7147E4083EA2495111FCBFEBB /* cqts_bmp_01.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 593434E6BC92AD61417C43AD149D23E4 /* cqts_bmp_01.bmp */; };
 		845862E0D3CFE6B59389ECF14201BEE7 /* UIView+CJSlideConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = E64CE7FEC650891C82529747138F9B09 /* UIView+CJSlideConvenience.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		84D118B93987E9F2893B2A799639B0C2 /* TSToastHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA5E66682DF914AC627F3D4F53DBC57 /* TSToastHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		84D147B5F59FD00A47E64FDF33679FAC /* CQDMSectionDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4834E07096FB0E70A919A068F88A3D /* CQDMSectionDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		85FC88161CBBF01306DE74FB3A72E3CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FF5CBFDBB86D2F50FA7B1AFDB7ACFD /* UIKit.framework */; };
 		861376AAD34EF63B0A8404E3F5266C38 /* UIView+CJToastAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E2CF89E224BE4A099E58EE6157EBDC2F /* UIView+CJToastAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8686755DB601FADCD2AA297B57470BF2 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 637BB5201B40767F61534EF3E9C91598 /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87371FF3F684B63419D0F5947FF5281B /* TSDemo_Popup-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D216E48814965B2A0D8B9C037A9E43F /* TSDemo_Popup-Swift-dummy.m */; };
-		87462AE150E6173ABBDC4C1039723A6D /* cqts_png_avatar_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 841FBAEAB48598C2C2D2FBF96A7085A4 /* cqts_png_avatar_01.png */; };
 		875E3D6F674FC24B6C734B8FF46DA5E5 /* CJExpandCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = F0908B19A55A9E85B0B39064FE1BCB76 /* CJExpandCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8790FFCC1238757F4095D6E2F23F05E1 /* UIView+CJSlideTransformAnimationBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C6C8923DEF9481DD3D883857A47A7 /* UIView+CJSlideTransformAnimationBind.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8912363F51988287D02652CE0285BDF5 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 924E6F5197A106219A4B4B969DCBB7A1 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89E868B6BEC7C9EB7D519A02AFE96AAC /* CQDMSectionDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 52F294DCA7A6B5F35FD9BF4E8BABA171 /* CQDMSectionDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8BFCE6B60F3954FBB0F2B4B26EE18EC5 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C2AB1051F2156095C6FCCD373C89BB /* Masonry-dummy.m */; };
 		8C16DD0D31CFF95252AC4B4A1313CCEB /* CQTSAssetSourceUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F68FF654F9595F2882FF44866812D33 /* CQTSAssetSourceUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C823B0804C76D89A8366333547950B8 /* cqts_jpg_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A74962622E1324E93C1D1DD2569B9223 /* cqts_jpg_03.jpg */; };
+		8C925F9E1B3958EF01FFD8F41F99B7FA /* TSDemo_Popup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CBB4B5809989E104D92CCA9AA96897 /* TSDemo_Popup-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CFA84191308E8ED4BF71D4DFBFCAE5E /* CJKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B230C5D5615441F2C24C00B8A7C831D /* CJKeyboardAvoidingTableView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8DC622E3CE169DD44FB682DCE0059052 /* UIView+CJExpandFrameAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C98A34DC8075A0DC2E35E35EF4085E /* UIView+CJExpandFrameAnimation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8E754DA1EDF3FDDD4FFE098520571CE1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0765A6329CAF23E03B36379324C903 /* QuartzCore.framework */; };
 		8FE66EDA177C8F2D46ECE84469F75C96 /* CQTSSandboxPathUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = B79DD9D4ABA875D0FDF4B264CFA02659 /* CQTSSandboxPathUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		904BFA11C14E5641F5F0AE255EA7EF01 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DA5C62CE04CB2450966AB0381A4B8C /* ViewController+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		916932E253F34C67FFA85F988B15215D /* CQDMModuleModel.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B47DCFE16273773669682399C9C70E /* CQDMModuleModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9202916D7AA95099511C8707D15F04FB /* cqts_jpg_avatar_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93460EB181C1A0F1589DA14ECE47AB34 /* cqts_jpg_avatar_03.jpg */; };
+		920DE78D13A75C455B7164BDC2A384F6 /* PopupInWindowHomeVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 4553F3499C597838822081EE4082CEBA /* PopupInWindowHomeVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		928253912906910DC7EBB097856D955E /* CQTSIconDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 162F2984E68D712205E7EEAAFCA0234A /* CQTSIconDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92CB2EF66544A23243E7599367A76E72 /* TSDemo_Popup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D55439FF17FCF177FA9295EE412DD94 /* TSDemo_Popup-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		941111427165F093586CD043B8DACDD8 /* CQDemoResource-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB587B83B3ED86C868F3846EC1170DD9 /* CQDemoResource-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9561BF54AC2C7424BADA642465AF0121 /* UIButton+CQTSMoreProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D8384CB2EB8BC940C007C5D5DEE397 /* UIButton+CQTSMoreProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		958BA4B00E5B4D9E25940286790AF80A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DFAF07B8D3C09F2DC367613D981D48 /* Foundation.framework */; };
 		95DCFEC386C9DCFEF677C1EE8FDCF50A /* CJUIKitBaseTabBarViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EFB121405C9D866820ACAD2C187FF3D /* CJUIKitBaseTabBarViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9607A0E728B332991AA963D1C1966556 /* CQTSButtonFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 89188F4EE2217CF0385D0BF45E066FA4 /* CQTSButtonFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		96FC574205C56511E507434AACEF2B92 /* cqts_wp_01.webp in Resources */ = {isa = PBXBuildFile; fileRef = 6D2FAB79C1A5A6BA4D9A48F25E978E02 /* cqts_wp_01.webp */; };
-		97DAFF43E3D77605E4B16E01979DC61C /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF7E205351CC44460A3CCD81BA550C2 /* MASCompositeConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		978B9B9C89F72CA31C1449AB727F20D3 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D48EA76F8BAC82B30D4146D7AFD8B84 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9854F1BB74308199F2E7C54FB7AD4CE1 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 29FA3E488262891A800C25D4E8731E92 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A4BD3BEB26D76A9A7B8C405438C1446 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FF5CBFDBB86D2F50FA7B1AFDB7ACFD /* UIKit.framework */; };
 		9B6953C9340F54C2568CC0A122D40A94 /* CJKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CE23D37E5A0A7118D14FCF5826D323 /* CJKeyboardAvoidingScrollView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9C1093BE432B55AAA1018FAE1091B852 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF100F85B5771515721197ED437DE8D /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B882EF3A97378552FE86533AD2D2C27 /* cqts_jpg_avatar_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F4929908DC3C8C463572521ADDE144E /* cqts_jpg_avatar_02.jpg */; };
 		9E023EB04C7A0CE2A385453C9AA21A5E /* CJUIKitAlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D618963019D925ADA0B2B0CA6E64E8ED /* CJUIKitAlertUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9E9C2C74A6CB8136DBC5AA5AEF48404C /* cqts_jpg_bg_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9DAA89FEC30DE52AC7505CBFBC3A64FC /* cqts_jpg_bg_02.jpg */; };
-		9EA39CA4EFB13D3D5D79F97CBD96B92F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DFAF07B8D3C09F2DC367613D981D48 /* Foundation.framework */; };
 		9F7B8031165DB7B76200D8871B2C9CC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DFAF07B8D3C09F2DC367613D981D48 /* Foundation.framework */; };
 		A0B4250E3E1AC69A5123CEC9862226BC /* UIImageView+CQTSBaseUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F739BDEDAC18754B1AC4EF69A897F0 /* UIImageView+CQTSBaseUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A13274CC93B7534A9294AD59A8EBA6E8 /* TSWindowAnimationHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 783E52A892C8E76248DF5CBE7D838990 /* TSWindowAnimationHomeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1DF81F66490B07DF91F2C35D463D62C /* UIImage+CQTSInFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FA71C6AF20DCB3EAB80BF520CEF14387 /* UIImage+CQTSInFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A41A1A52CB5F10FB71F6E3709F408D10 /* UIScrollView+CJKeyboardAvoiding.h in Headers */ = {isa = PBXBuildFile; fileRef = F8136B7CBF9592F8685C847FC88BAAFB /* UIScrollView+CJKeyboardAvoiding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A47ED11E9031D8AAD825A580DC5AEA7F /* UIView+CJCenterInWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D39EA2E274367D2AAD3621950071A8B /* UIView+CJCenterInWindow.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A5823BEFF000D26FC6CF0DC588B8CBAF /* ShowExtendViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E54AB3417995832E4F14155154958B /* ShowExtendViewVC.xib */; };
+		A597D2426D9753D2D2645C7317853181 /* WelcomePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEE275A852234C243028510C45B48E /* WelcomePopupView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A620044DBF916F328405972108A694B4 /* CQDemoKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4CBD6B8133FB783856831663458D4E6 /* CQDemoKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7781144B54B624599925302F0CFC896 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DFAF07B8D3C09F2DC367613D981D48 /* Foundation.framework */; };
+		A86EBA1F0DE8293D8F4BF87A206CF83D /* cqts_jpg_bg_05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C6CA2B87E7CCCB97F9210FDB46B99F4E /* cqts_jpg_bg_05.jpg */; };
 		A99C04C6EF09E1BF4A565FCC2B926A05 /* NSError+CQTSErrorString.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C70DBDAB068ED5F2598B6DE799B7BAC /* NSError+CQTSErrorString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9D08494E87E58A276EF47FDB5962050 /* CQTSGitUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 258530D6A75393E896300F8F11FA4B70 /* CQTSGitUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA912784AA6DCB0C61D23F7901AC177A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FF5CBFDBB86D2F50FA7B1AFDB7ACFD /* UIKit.framework */; };
-		AD899A0B2A2231CD684961ABDF6E63B4 /* ShowDropDownViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 639C4F0E745B64F984DE6C68905E977A /* ShowDropDownViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABC96D3AED0F371C095CB888CDD594F3 /* cqts_jpg_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6629C18F223DC889F9C0AEB91A759F1E /* cqts_jpg_04.jpg */; };
 		AEB8BA92167E7786CF84F2C70C556F89 /* CJUIKitBaseHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFEDA9393522F8A1AEE2EEAB5104027 /* CJUIKitBaseHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AFE3BF0A25F42D3108D200A01DC0EBEA /* CQTSContainerViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 265E5BE3E707106AAEF291769AACD132 /* CQTSContainerViewFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B10DBB11D9AD7855B1DEAB13D0561007 /* TSExtendHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B4746B16B3AD8AA7BB2C6AA3C1069B70 /* TSExtendHomeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B11984AB64F8DA523F83D25619426538 /* cqts_jpg_bg_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC248AB0100478CC550F1473D9A43240 /* cqts_jpg_bg_04.jpg */; };
+		AFEED276F0ED79B8689A2E48F1B1AB6C /* TSToastHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408A1BBECE7AF623F352E442ABD31927 /* TSToastHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B16DC8DEE4F2B534A99E3513E4CA487C /* CQTSIconDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E11919D7C10136008A3EB09B6DC972A6 /* CQTSIconDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B59F25B0E7CC919087A553A55CCA2DEE /* PopupInWindowVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC86CD8BF282501C19009D60278413 /* PopupInWindowVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7388B4D1EFC7FB01ACC5618A39F2D38 /* PopupInWindowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F1828D3689AA0D6369A8382881FCAD /* PopupInWindowVC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B22723A51C1856CAF1AF8022273CF2AC /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A6114A7F30DD7E3A043437B320DE0F /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7914B36AAE199ED92C032D0AA4992BC /* CQTSSandboxPhotoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE8A15444ACC79D79F5A5EDD4513FCF /* CQTSSandboxPhotoUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B9E1A17531B401CD25A2B937BF6D59A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FF5CBFDBB86D2F50FA7B1AFDB7ACFD /* UIKit.framework */; };
 		BA1018887157AD1A12491126676FA493 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DFAF07B8D3C09F2DC367613D981D48 /* Foundation.framework */; };
 		BA2218180DE3A3F0CE6A83B23E15715A /* CJExpandCalculateResultModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D29177A01EFF74A262B17D12B84DDFC /* CJExpandCalculateResultModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BFFCED500F835EE706966727A5D70559 /* TSCareAboutHideHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E4C54B1CEC05A0C258B8426B343349 /* TSCareAboutHideHomeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC3F1D6067490D338ADAF369F4D7D2B5 /* TSToastHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 14225F4D8590E2918FE30BFF7733866B /* TSToastHomeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C01B4205604F2E58A9D2BBA2A3E91382 /* Pods-CJPopupActionDemoTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B384BBF899C80C61E380F2962916695A /* Pods-CJPopupActionDemoTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C04C804CEA2473EEDAC5F670AD21D1FC /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F3CB0F1D404E8729257B0DB86197734 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0B67B34BCF0E31345FBDEFE400BD4D4 /* CQTSImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 251A33FF5B08DCFB72C05334BD3CEAC5 /* CQTSImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C189FD0239EE49F42C06061EFB030200 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F3CB0F1D404E8729257B0DB86197734 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2D88EE1E86A0A58E51F9E13C4C34CA9 /* CQTSSwitchViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 530F15D14C805A56C0A0CC6BD297FBD7 /* CQTSSwitchViewFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C45CE53011A733F619695B2F58B64296 /* PopupInViewVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4FA34DA5E1E359E43FF29F745FFF6D /* PopupInViewVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4EF5E5C9E569F540D8E7C3AF9CC9808 /* CJExpandCalculateResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F5F09773C896A1E6640B44729851A3 /* CJExpandCalculateResultModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C8ACAEE581998790BF3497F62BEC26B7 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5C52B8D099820B6844AA532C91B552 /* MASLayoutConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CA4B80816B9276D18AD8B94606792D6F /* cqts_jpg_long_horizontal_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9622974D8779550153E771477FBFD809 /* cqts_jpg_long_horizontal_1.jpg */; };
-		CD24E709F166E1DB3642A7D0CB0558D7 /* TSCareAboutHideHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368DA9687029576DBD76589441E2F42A /* TSCareAboutHideHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C7D3586AFEF1CB3A5FCF162A470CB84A /* ShowExtendViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BD04FF1BDFFDB4270BEEAE4EF26FA71A /* ShowExtendViewVC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C851394EA720933F49DA2B90A3A5FA8F /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B09CC9F58B00E84E45EEF5CB30CC81D /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C87A77C023EF5110EFBEF4FF54502C6D /* WelcomePopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB17E18521E780C8BDE3505B1D10044 /* WelcomePopupView.xib */; };
+		C8A97BB9C660FA5265DEA6BD8535D243 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF7E205351CC44460A3CCD81BA550C2 /* MASCompositeConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C95E806AC448C55166C6A99F09C1BAF5 /* cqts_jpg_bg_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC248AB0100478CC550F1473D9A43240 /* cqts_jpg_bg_04.jpg */; };
+		CC170D5898DE258251915CA06B0B6EB2 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C2AB1051F2156095C6FCCD373C89BB /* Masonry-dummy.m */; };
 		CD9F423235ABCD1BC6E6E05E5202769F /* CQDemoKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F01B3221EE85E511601791DFC9607C /* CQDemoKit-dummy.m */; };
 		CDA47D0DA8BE6C13B08861EDE377343F /* CJUIKitBaseHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF140BEE19255E93A299BD18BE204FD /* CJUIKitBaseHomeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CEC46C05905B17CB89C9B0892EF42CBC /* PopupInViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C9F6ECCBB640BAD02AAF1268D36495 /* PopupInViewVC.xib */; };
+		CF62D893C2503F7170901E54244F7576 /* PopupInViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0F87C66FB6CB8AADBA9B8B647A37E /* PopupInViewVC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D0BE9A23D81291515608AD794B42DDD9 /* CQTSAssetModelGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CE9ACB76F33EFF94ED0D3DA70DC82E /* CQTSAssetModelGetter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D0D40F3B0FE91E572E8681970251A4A4 /* cqts_jpg_avatar_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F4929908DC3C8C463572521ADDE144E /* cqts_jpg_avatar_02.jpg */; };
+		D1C24FBAC9FFACF3E726F939074B0684 /* cqts_jpg_avatar_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D2C751EBDAD62EF5CE538D0FC9E7974 /* cqts_jpg_avatar_01.jpg */; };
 		D239004C60E1A6457BBD8630ED406017 /* CQTSSwitchViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = A7088E6F0AB24B76D99B7844478C78EA /* CQTSSwitchViewFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2B08F0BDD915C85A726AD1F6306BD8A /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D307B83E7198D1D6F85FADE7D0F6C1 /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D6094668744238C484432FD3F40E82DB /* cqts_bmp_02.bmp in Resources */ = {isa = PBXBuildFile; fileRef = D0F58F646F65ABD27DD472ECE673E0C1 /* cqts_bmp_02.bmp */; };
+		D2629AD177CAB3475273C12335983B30 /* PopupInWindowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 383DDE8D73DDC4181F741D8BA4C69DDC /* PopupInWindowVC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D3A8BC6E5EE2B87462353250BA3EB942 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DA5C62CE04CB2450966AB0381A4B8C /* ViewController+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D69335E06533F11D384E7EB7A29F2049 /* CQDemoResource-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3546F0B37BBE62A04054C8C957EEF5 /* CQDemoResource-dummy.m */; };
-		D76630BFD703B7BF8CF4AC5091846B7D /* WelcomeViewToPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 238F7A1F270D8DF1F5C02846A32D8BC7 /* WelcomeViewToPop.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D6DD324E623456DD8786C34B0F98363D /* TSCareAboutHideHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C1C0034299EE71A68A214AEE2E7848 /* TSCareAboutHideHomeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA0836A7F4965F3673116316CF3174CB /* cqts_placeholder_jpg_01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8737917C061BC29D3EF1FA2561D17F21 /* cqts_placeholder_jpg_01.jpeg */; };
+		DA7A4970DDFCB6AC0963FC6C73068338 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BF39634D83ED553E11426C0DDCFDC /* MASConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DB94CC32FA4CBDF7A3B06BC43C82BFFA /* UIView+CJExpandByPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C044A70C87836F4957E596ABC1AD4442 /* UIView+CJExpandByPoint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DBC59E932C6CA042691F60E9A8209F87 /* cqts_jpg_long_horizontal_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9622974D8779550153E771477FBFD809 /* cqts_jpg_long_horizontal_1.jpg */; };
 		DC11ABAC261B41B9EEEA1570A2E749F7 /* CQTSRadioButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02D7C56E1F32B5F4BAA57894F1E14F0 /* CQTSRadioButtonsView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DC24C082328660CBAFE1E13E301CA4C2 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B978162E7B07AC1376222A19B75B3089 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD28351374A6AA3532680A547856AE71 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 40E75B9BFAC5B8B74EB82D0386B84269 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DECFEEEB289A65D377F1E4D83B927D0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FF5CBFDBB86D2F50FA7B1AFDB7ACFD /* UIKit.framework */; };
-		DF35BB5854EFF91B707101EA710AF181 /* cqts_placeholder_jpg_02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EF05612A345CF46149D62A6A6ED1A4D /* cqts_placeholder_jpg_02.jpeg */; };
 		DF74C6873B53FBEA73396E8EA2B9CC5E /* CQTSSuspendWindowFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 1058B82E58EE762B1586C3CEDA4FD3D6 /* CQTSSuspendWindowFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0C1286FFC97C116D6C225AED98DE242 /* TSToastHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 216CC4B47AA30CCEAB76B6BA073BE06D /* TSToastHomeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFA5801E7A98B56D7DC263F65038E71A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FF5CBFDBB86D2F50FA7B1AFDB7ACFD /* UIKit.framework */; };
 		E0F7C5332413261ADE70A70CEE362154 /* CJUIKitBaseScrollViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 15CAE9EC5CB81A5BC25F67EB495E387F /* CJUIKitBaseScrollViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1C9EC4C72A42E23ACC64E01F9D6A096 /* UIView+CJExpandFrameAnimationBind.h in Headers */ = {isa = PBXBuildFile; fileRef = 83424B6949D292B53FDB247E7CE0E182 /* UIView+CJExpandFrameAnimationBind.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E3140003B05614106C1916EA111E9013 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 924E6F5197A106219A4B4B969DCBB7A1 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E33CAA07584F815F0F8002A6BC8AEA9C /* PopupInWindowVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 70CE4753EABC5764F7D206C31E886123 /* PopupInWindowVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E37B759C52167C55FF02E858E79471E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DFAF07B8D3C09F2DC367613D981D48 /* Foundation.framework */; };
-		E4D614C5A32884935A1CCF5C88442972 /* cqts_jpg_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6629C18F223DC889F9C0AEB91A759F1E /* cqts_jpg_04.jpg */; };
-		E59EA10D44D215E8EA4CD124DBFB7143 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC9D51B3DC5935F63D630E2AF32A835 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E64335F24A60ACB5B392C1770AF67427 /* UIView+CJExpandForView.m in Sources */ = {isa = PBXBuildFile; fileRef = 331A4D90A2D0EA6880D2B0F101BC7412 /* UIView+CJExpandForView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E6D32CE6535F22E2E911A642676886F7 /* CJKeyboardAvoidingScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3945E5C3DE0216EE1D64564E6E91FB /* CJKeyboardAvoidingScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6D83F3B15901318EB57402DF2419039 /* CJPopupAction-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B180A998558B45BB49D81F419295928 /* CJPopupAction-dummy.m */; };
 		E779E0D708F8477BB1764361F5650BB7 /* UIView+CJSlideTransformAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2B72153AB8B8C270C8DF93F3E30770 /* UIView+CJSlideTransformAnimation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E82A61639D02866CA5DAB761D5FE05FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FF5CBFDBB86D2F50FA7B1AFDB7ACFD /* UIKit.framework */; };
-		E92E537D0F3E1137DDD84A54A4FB2F2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DFAF07B8D3C09F2DC367613D981D48 /* Foundation.framework */; };
+		EB391629BCC2F8F86062D3CE700E9ACC /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AA985AA0BBD94F734808CB0C302D9F3 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB6664CC7111063DE3110ED03F67E672 /* CQTSSandboxPhotoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 77C8B5502EAF70F194BCC7133AC55163 /* CQTSSandboxPhotoUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED3038A4745A95E264B61A65980E1307 /* cqts_jpg_avatar_05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5850DD8CCFDCCBE7DF2729F36890AC2F /* cqts_jpg_avatar_05.jpg */; };
-		EF2C97023BAA8744E38E93EB76728736 /* WelcomePopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37E5C6CC4CE00917174DD0C93FBBD067 /* WelcomePopupView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC34A0FB5CE5E478F746354B805785AD /* cqts_jpg_avatar_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6AAFC917D29ECA3C91F603E1B544D78A /* cqts_jpg_avatar_04.jpg */; };
+		EF2C5D307867F394646971995110A223 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0839AD625F263C9F189992B5193388 /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F291D534590B63B94F7DED99B8B22B92 /* CJUIKitToastUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A287B4E24F3D37D11AE8F77ACFC4DA85 /* CJUIKitToastUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F409C4A060E79ABF0ABB63ACF948651A /* UIView+CJExpandFrameAnimationBind.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE74507E09869C4E62D2E83D97F1088 /* UIView+CJExpandFrameAnimationBind.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F52228833EA42B05780A8B2611B7DCAD /* TSExtendHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC944080D6806884E068601298A05FF3 /* TSExtendHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F57609642FC7711AF05395BC4CCEDD37 /* Pods-CJPopupActionDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72549D7E7E5AA4ADB10F82FEE917555D /* Pods-CJPopupActionDemo-dummy.m */; };
 		F7507F8E8B9856F3D3090347E88AE901 /* CJUIKitBaseCollectionHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F81E8523885902E8CC02D52948CE223C /* CJUIKitBaseCollectionHomeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F963B3B6E2501EFDAEF9D99D5A95297B /* CJSlideCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B06A4DCAF7FC60B0A93D4BB71D84B73 /* CJSlideCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA17E62A5355C7CD6717FD927024408E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DFAF07B8D3C09F2DC367613D981D48 /* Foundation.framework */; };
-		FADD4190E9A3F298F3AC4B458FD16585 /* WelcomeViewToPop.h in Headers */ = {isa = PBXBuildFile; fileRef = 43FF302A1758E5AF67B45FE8F833806F /* WelcomeViewToPop.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC36A1E5674E016427DE12AA452283D4 /* cqts_jpg_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A74962622E1324E93C1D1DD2569B9223 /* cqts_jpg_03.jpg */; };
-		FF73110922B3263907B045B91729C1AD /* CQDemoAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F660F76C4A0EF2E1D7158CFA2543E768 /* CQDemoAssets.xcassets */; };
+		FC426FEC92465D4F3AA1E0650F10456E /* WelcomeViewToPop.h in Headers */ = {isa = PBXBuildFile; fileRef = 5641967684A926D35A254044FF435A85 /* WelcomeViewToPop.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		05830646846308A85CF6C27C7F11D65F /* PBXContainerItemProxy */ = {
+		04BBDD10753B3E7025BFCCDC28A95BB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3F2F6FD514EDBB9E1809452A8210A5F;
+			remoteInfo = CJPopupAction;
+		};
+		05581B9205A719D0977287E43C97ED92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31936AD642017976266B9ED39110F157;
+			remoteInfo = CJBaseUIKit;
+		};
+		15FBCF89F5267D1C267CF11E2712EACE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B063F09F7E9D21D3305A4A90AE4E7C4A;
+			remoteInfo = "CQDemoResource-CQDemoResource";
+		};
+		179F34D23B951AC3DF651607454D2A25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
+			remoteInfo = Masonry;
+		};
+		2F1E3F610371BBF941E0E2FE1DB0FC4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3F2F6FD514EDBB9E1809452A8210A5F;
+			remoteInfo = CJPopupAction;
+		};
+		3A25B10ED01410C0B1B349E48386A05E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36D4108FBAAC35AC413A4060CA53C6C3;
+			remoteInfo = TSDemo_Popup;
+		};
+		4C2040330E9918968973B7913A61716E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31936AD642017976266B9ED39110F157;
+			remoteInfo = CJBaseUIKit;
+		};
+		5B7D5292E823732D988894390304F72E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 706D946CCC4A336CE0921F51F1EEDBDC;
 			remoteInfo = CJAnimationKit;
 		};
-		0AC8E134BEFED17EC7BCA3E605ADE873 /* PBXContainerItemProxy */ = {
+		630D304E1BFD16327CDF54BA824BEBB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B215DEDD676D9708350AB2139958B6BF;
+			remoteInfo = CQDemoResource;
+		};
+		659F50E7247E4302EC125703FE1F5472 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AC509E0B2457961842D06F82D4E8C691;
 			remoteInfo = CQDemoKit;
 		};
-		1A42110D57A19089158DB6E0C7F1296E /* PBXContainerItemProxy */ = {
+		6C79A95EA6B18DC7C5C7B622AD70A33F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B215DEDD676D9708350AB2139958B6BF;
+			remoteInfo = CQDemoResource;
+		};
+		8A3314BCD60C6A24896DB06EF27D0415 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC509E0B2457961842D06F82D4E8C691;
+			remoteInfo = CQDemoKit;
+		};
+		97CEA23550693B03E3E1590F5AFFC2CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36D4108FBAAC35AC413A4060CA53C6C3;
+			remoteInfo = TSDemo_Popup;
+		};
+		B4F9E483B0D856C43E1369AA51F99943 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
+			remoteInfo = Masonry;
+		};
+		BEA0004CECC4434FB9FAD9C9F7D1C3D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC509E0B2457961842D06F82D4E8C691;
+			remoteInfo = CQDemoKit;
+		};
+		DDD240DF7CD4A1B10F5126FFFBFAFBA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC509E0B2457961842D06F82D4E8C691;
+			remoteInfo = CQDemoKit;
+		};
+		E8058F1EC47E9D56278A3BA18EFB9C2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 72E05446CF4721E9969F6AB7B437E9AB;
 			remoteInfo = "TSDemo_Popup-Swift";
 		};
-		3890832418855CABBA138535E6E9B7BC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B3F2F6FD514EDBB9E1809452A8210A5F;
-			remoteInfo = CJPopupAction;
-		};
-		4846ED60877479AEA41FAF9398BDC800 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 31936AD642017976266B9ED39110F157;
-			remoteInfo = CJBaseUIKit;
-		};
-		4C85B731AB2F60003491F43A2900A45F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AC509E0B2457961842D06F82D4E8C691;
-			remoteInfo = CQDemoKit;
-		};
-		5ED37845B3E41C0708DCBEA9DAD7169E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 31936AD642017976266B9ED39110F157;
-			remoteInfo = CJBaseUIKit;
-		};
-		6F37BAE73979A1FCEAD7D13A1EC6C0D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 36D4108FBAAC35AC413A4060CA53C6C3;
-			remoteInfo = TSDemo_Popup;
-		};
-		80B32ED1632A0DA7D44032DA3AD390EB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AC509E0B2457961842D06F82D4E8C691;
-			remoteInfo = CQDemoKit;
-		};
-		8A069D4E05ECCE6F1441D8854382B7BF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 36D4108FBAAC35AC413A4060CA53C6C3;
-			remoteInfo = TSDemo_Popup;
-		};
-		9086AB15C7B4B2F6EE4794CB4DDED74C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
-			remoteInfo = Masonry;
-		};
-		A6509B673C1E2C307CE259B2E095BF3C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AC509E0B2457961842D06F82D4E8C691;
-			remoteInfo = CQDemoKit;
-		};
-		AA22523C22EEB156F592FE68375B04ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B3F2F6FD514EDBB9E1809452A8210A5F;
-			remoteInfo = CJPopupAction;
-		};
-		C538B046E662AB9CAE9A0685A9A9B483 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B215DEDD676D9708350AB2139958B6BF;
-			remoteInfo = CQDemoResource;
-		};
-		C62C4272D882D315A8F542DD988B5684 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B215DEDD676D9708350AB2139958B6BF;
-			remoteInfo = CQDemoResource;
-		};
-		EF1344B805EA0E15CFC45199DEF9E47B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
-			remoteInfo = Masonry;
-		};
-		F0B1FC0ACB126E74541E77FEE9CF1955 /* PBXContainerItemProxy */ = {
+		FED8A18FCA87BA7D68B315AFAA83D85B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 706D946CCC4A336CE0921F51F1EEDBDC;
 			remoteInfo = CJAnimationKit;
-		};
-		FDE7F82C07ADBDA451A0DABB5A1A84A2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B063F09F7E9D21D3305A4A90AE4E7C4A;
-			remoteInfo = "CQDemoResource-CQDemoResource";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -380,42 +382,44 @@
 		04ABD5AB1E0FF13DB7171C54E6207211 /* UIView+CJExpandByPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CJExpandByPoint.h"; path = "CJPopupAction/CareAboutHide_AutoAddToSuperView/UIView+CJExpandByPoint.h"; sourceTree = "<group>"; };
 		04E23F04025D376A798A665B8B85151B /* NSError+CQTSErrorString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+CQTSErrorString.m"; path = "CQDemoKit/Helper/NSError+CQTSErrorString.m"; sourceTree = "<group>"; };
 		065CE3F95627BFD50CB116F641624DE9 /* cqts_jpg_avatar_06.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_jpg_avatar_06.jpg; path = CQDemoResource/Resources/jpg/cqts_jpg_avatar_06.jpg; sourceTree = "<group>"; };
-		075D054CA5A701CBDBD528FAD1DBBCDF /* TSDemo_Popup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSDemo_Popup-prefix.pch"; sourceTree = "<group>"; };
+		06E54AB3417995832E4F14155154958B /* ShowExtendViewVC.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ShowExtendViewVC.xib; sourceTree = "<group>"; };
+		07CBB4B5809989E104D92CCA9AA96897 /* TSDemo_Popup-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSDemo_Popup-umbrella.h"; sourceTree = "<group>"; };
 		093DAF20261C16583429A06A5AAD45A8 /* cqts_placeholder_png_01.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = cqts_placeholder_png_01.png; path = CQDemoResource/Resources/placeholder/cqts_placeholder_png_01.png; sourceTree = "<group>"; };
 		0AAC36870DD7B76E0C4AE2C7018D4B0C /* UIView+CJCenterInWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CJCenterInWindow.h"; path = "CJPopupAction/CareAboutHide_AutoAddToSuperView/UIView+CJCenterInWindow.h"; sourceTree = "<group>"; };
+		0BE0F87C66FB6CB8AADBA9B8B647A37E /* PopupInViewVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PopupInViewVC.m; sourceTree = "<group>"; };
 		0BF140BEE19255E93A299BD18BE204FD /* CJUIKitBaseHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseHomeViewController.h; path = CQDemoKit/BaseVC/TableView/CJUIKitBaseHomeViewController.h; sourceTree = "<group>"; };
 		0C184F05E1E76E1DD9051A0B1CB58387 /* TSPopupMainViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TSPopupMainViewController.swift; path = "TSDemo_Popup-Swift/TSPopupMainViewController.swift"; sourceTree = "<group>"; };
 		0E0839AD625F263C9F189992B5193388 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
 		0E2E5EE5CC2BA3AD1F7FC756360A1E19 /* CQDemoKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CQDemoKit; path = CQDemoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E917D93339D8125924449C8D05E629F /* UIImageView+CQTSBaseUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+CQTSBaseUtil.h"; path = "CQDemoKit/BaseUIKit/ImageLoader/UIImageView+CQTSBaseUtil.h"; sourceTree = "<group>"; };
 		0EF05612A345CF46149D62A6A6ED1A4D /* cqts_placeholder_jpg_02.jpeg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_placeholder_jpg_02.jpeg; path = CQDemoResource/Resources/placeholder/cqts_placeholder_jpg_02.jpeg; sourceTree = "<group>"; };
-		0F03C717EFFE78A106BB6B7384850200 /* TSWindowAnimationHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSWindowAnimationHomeViewController.m; sourceTree = "<group>"; };
 		0F9BDBF55B718F1AE141E6403074FBEE /* cqts_jpg_long_vertical_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_jpg_long_vertical_1.jpg; path = CQDemoResource/Resources/jpg/cqts_jpg_long_vertical_1.jpg; sourceTree = "<group>"; };
 		1058B82E58EE762B1586C3CEDA4FD3D6 /* CQTSSuspendWindowFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSSuspendWindowFactory.h; path = CQDemoKit/BaseVC/Base/BaseWindow/SuspendWindowFactory/CQTSSuspendWindowFactory.h; sourceTree = "<group>"; };
 		12F739BDEDAC18754B1AC4EF69A897F0 /* UIImageView+CQTSBaseUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+CQTSBaseUtil.m"; path = "CQDemoKit/BaseUIKit/ImageLoader/UIImageView+CQTSBaseUtil.m"; sourceTree = "<group>"; };
+		13CF99962ED2DA21619D9DE459F68F8B /* PopupInWindowHomeVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PopupInWindowHomeVC.m; sourceTree = "<group>"; };
+		14225F4D8590E2918FE30BFF7733866B /* TSToastHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSToastHomeViewController.h; sourceTree = "<group>"; };
 		15CAE9EC5CB81A5BC25F67EB495E387F /* CJUIKitBaseScrollViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseScrollViewController.h; path = CQDemoKit/BaseVC/ScrollView/CJUIKitBaseScrollViewController.h; sourceTree = "<group>"; };
 		15D1108B30246CDF3F4AF55600914705 /* CQTSAssetSourceUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSAssetSourceUtil.m; path = CQDemoResource/DataSource/CQTSAssetSourceUtil.m; sourceTree = "<group>"; };
 		15D8384CB2EB8BC940C007C5D5DEE397 /* UIButton+CQTSMoreProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+CQTSMoreProperty.h"; path = "CQDemoKit/BaseUIKit/Button/UIButton+CQTSMoreProperty.h"; sourceTree = "<group>"; };
 		160D9E57984A941ABF8CB7A566A1B267 /* Pods-CJPopupActionDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CJPopupActionDemo-umbrella.h"; sourceTree = "<group>"; };
 		162F2984E68D712205E7EEAAFCA0234A /* CQTSIconDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSIconDataModel.h; path = CQDemoKit/Demo_Resource/ImageModel/CQTSIconDataModel.h; sourceTree = "<group>"; };
+		16AD9F8667E2CCCA0F0B53809CE67B4F /* WelcomeViewToPop.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewToPop.m; sourceTree = "<group>"; };
 		16BF1C4FA5EC3BAB10255C1DD962608C /* TSDemo_Popup-Swift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "TSDemo_Popup-Swift"; path = TSDemo_Popup_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F01B3221EE85E511601791DFC9607C /* CQDemoKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CQDemoKit-dummy.m"; sourceTree = "<group>"; };
 		17F648BC5A2DA6B3D7EADBA6D9C422B8 /* CQDemoResource.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CQDemoResource.modulemap; sourceTree = "<group>"; };
 		18FC68A46470DA71D7783C0885BDF668 /* CQTSButtonFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSButtonFactory.m; path = CQDemoKit/BaseUIKit/Button/CQTSButtonFactory.m; sourceTree = "<group>"; };
+		1984A04B7574A56BD3479E2850DA9684 /* PopupInViewVC.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PopupInViewVC.xib; sourceTree = "<group>"; };
 		19DA5C62CE04CB2450966AB0381A4B8C /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		1A42370DFD171EA30E67A4EDC2D5A920 /* CQTSSuspendWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSSuspendWindow.m; path = CQDemoKit/BaseVC/Base/BaseWindow/CQTSSuspendWindow.m; sourceTree = "<group>"; };
-		1B831E96BBC39D3E696085B1FECAAE6A /* PopupInViewVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PopupInViewVC.m; sourceTree = "<group>"; };
+		1B0050C75C7EB3C69222987247237C73 /* TSDemo_Popup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TSDemo_Popup.debug.xcconfig; sourceTree = "<group>"; };
 		1D29177A01EFF74A262B17D12B84DDFC /* CJExpandCalculateResultModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJExpandCalculateResultModel.h; path = CJAnimationKit/PopupAnimation/Core/CJExpandCalculateResultModel.h; sourceTree = "<group>"; };
-		1E4FA34DA5E1E359E43FF29F745FFF6D /* PopupInViewVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PopupInViewVC.h; sourceTree = "<group>"; };
-		1F519E574BA77AE730C71C7F948A9E74 /* ShowExtendViewVC.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = ShowExtendViewVC.xib; sourceTree = "<group>"; };
 		1F6A7739A66146946CE63E54F525E9C3 /* CJUIKitBaseCollectionHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseCollectionHomeViewController.m; path = CQDemoKit/BaseVC/Collection/CJUIKitBaseCollectionHomeViewController.m; sourceTree = "<group>"; };
 		1FF707E6D020D3F712B5D3498E0B44A7 /* cqts_jpg_avatar_08.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_jpg_avatar_08.jpg; path = CQDemoResource/Resources/jpg/cqts_jpg_avatar_08.jpg; sourceTree = "<group>"; };
 		1FF9E6029AF0888A7BCB7F56A49713AA /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
 		1FFED36A657123030ABB700256D73F15 /* Masonry */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		206213D174C44569FD0B0DCD7D86A434 /* Pods-CJPopupActionDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CJPopupActionDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2124B59BD3B5AB1CE02FE1D56C4BC7AB /* UIView+CJSlideTransformAnimationBind.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CJSlideTransformAnimationBind.h"; path = "CJAnimationKit/PopupAnimation/BaseBind/UIView+CJSlideTransformAnimationBind.h"; sourceTree = "<group>"; };
-		216CC4B47AA30CCEAB76B6BA073BE06D /* TSToastHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSToastHomeViewController.h; sourceTree = "<group>"; };
-		238F7A1F270D8DF1F5C02846A32D8BC7 /* WelcomeViewToPop.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewToPop.m; sourceTree = "<group>"; };
+		22594CEA7FB417AB3E843629C5BB40A9 /* ShowExtendViewVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ShowExtendViewVC.h; sourceTree = "<group>"; };
 		249D8ECDDA1FE655BEDCAA94A2182C52 /* CJUIKitRandomUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitRandomUtil.m; path = CQDemoKit/Demo_Resource/String/CJUIKitRandomUtil.m; sourceTree = "<group>"; };
 		251A33FF5B08DCFB72C05334BD3CEAC5 /* CQTSImageLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSImageLoader.h; path = CQDemoKit/BaseUIKit/ImageLoader/CQTSImageLoader.h; sourceTree = "<group>"; };
 		2551DF737FB39CBC1809BDEACFEE0D3C /* CQTSLocImageDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSLocImageDataModel.h; path = CQDemoKit/Demo_Resource/ImageModel/CQTSLocImageDataModel.h; sourceTree = "<group>"; };
@@ -440,27 +444,27 @@
 		34EB6F5BF20C40698606CBE8B9673ED6 /* Pods-CJPopupActionDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CJPopupActionDemo.release.xcconfig"; sourceTree = "<group>"; };
 		358E4819EA45E0C653343EFF1D76F322 /* CQTSBorderStateButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSBorderStateButton.m; path = CQDemoKit/BaseUIKit/Button/CQTSBorderStateButton.m; sourceTree = "<group>"; };
 		35F76095616FD98144FE5232F46F8B0D /* CQDemoKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CQDemoKit.debug.xcconfig; sourceTree = "<group>"; };
-		368DA9687029576DBD76589441E2F42A /* TSCareAboutHideHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSCareAboutHideHomeViewController.m; sourceTree = "<group>"; };
-		37E5C6CC4CE00917174DD0C93FBBD067 /* WelcomePopupView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WelcomePopupView.h; sourceTree = "<group>"; };
+		378D1046BA6B78A4DED6C10366E5BD64 /* TSDemo_Popup-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TSDemo_Popup-Info.plist"; sourceTree = "<group>"; };
+		383DDE8D73DDC4181F741D8BA4C69DDC /* PopupInWindowVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PopupInWindowVC.m; sourceTree = "<group>"; };
 		38508CD33FBABF5DED0F2C3FFFF2679D /* TSDemo_Popup-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "TSDemo_Popup-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		3D8F7000FEF2928421A861A61210F087 /* CJPopupAction.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CJPopupAction.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3E3546F0B37BBE62A04054C8C957EEF5 /* CQDemoResource-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CQDemoResource-dummy.m"; sourceTree = "<group>"; };
+		3FB17E18521E780C8BDE3505B1D10044 /* WelcomePopupView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WelcomePopupView.xib; sourceTree = "<group>"; };
+		3FDEE275A852234C243028510C45B48E /* WelcomePopupView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WelcomePopupView.m; sourceTree = "<group>"; };
+		408A1BBECE7AF623F352E442ABD31927 /* TSToastHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSToastHomeViewController.m; sourceTree = "<group>"; };
 		408DFBB8BC39442133E83958AF62686D /* CQTSSandboxFileUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSSandboxFileUtil.h; path = CQDemoKit/Demo_Resource/SandboxUtil/CQTSSandboxFileUtil.h; sourceTree = "<group>"; };
 		40E75B9BFAC5B8B74EB82D0386B84269 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
 		40E78B80918B377FD6F08ED5F4A22FC4 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
-		411F160055EB84D6882FD371A112E881 /* WelcomePopupView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WelcomePopupView.m; sourceTree = "<group>"; };
 		431FC179F397EC54CE76811EF1A51A64 /* TSDemo_Popup-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSDemo_Popup-Swift-prefix.pch"; sourceTree = "<group>"; };
-		43FF302A1758E5AF67B45FE8F833806F /* WelcomeViewToPop.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WelcomeViewToPop.h; sourceTree = "<group>"; };
 		44B2522CC5A105E2EFB42C765451282F /* CQDemoKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CQDemoKit-Info.plist"; sourceTree = "<group>"; };
 		44CE23D37E5A0A7118D14FCF5826D323 /* CJKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJKeyboardAvoidingScrollView.m; path = CJBaseUIKit/UIScrollView/CJKeyboardAvoiding/CJKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		4553F3499C597838822081EE4082CEBA /* PopupInWindowHomeVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PopupInWindowHomeVC.h; sourceTree = "<group>"; };
 		462F29FDC062A12FEB457D55AAC9065C /* TSDemo_Popup */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TSDemo_Popup; path = TSDemo_Popup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		482552285D61136BE590412E48EC1588 /* TSDemo_Popup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TSDemo_Popup-dummy.m"; sourceTree = "<group>"; };
 		4957A9F62ABF5E680107434FC49A39C7 /* Pods-CJPopupActionDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CJPopupActionDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		49C98A34DC8075A0DC2E35E35EF4085E /* UIView+CJExpandFrameAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+CJExpandFrameAnimation.m"; path = "CJAnimationKit/PopupAnimation/Base/UIView+CJExpandFrameAnimation.m"; sourceTree = "<group>"; };
 		49FFD7D7B2C0EC351063AB709F584CFE /* CQTSContainerViewFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSContainerViewFactory.h; path = CQDemoKit/BaseUIKit/Container/CQTSContainerViewFactory.h; sourceTree = "<group>"; };
-		4B8EE4316D59BB460912CC49B4B5FF77 /* TSDemo_Popup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TSDemo_Popup-dummy.m"; sourceTree = "<group>"; };
 		4BE64E3648212BEA3C4B96C268ED19C0 /* CJPopupAction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CJPopupAction.debug.xcconfig; sourceTree = "<group>"; };
-		4C601D97FF59E6B8A36163BE8F0AA64E /* WelcomeViewToPop.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WelcomeViewToPop.xib; sourceTree = "<group>"; };
-		4CA5E66682DF914AC627F3D4F53DBC57 /* TSToastHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSToastHomeViewController.m; sourceTree = "<group>"; };
 		4EFB121405C9D866820ACAD2C187FF3D /* CJUIKitBaseTabBarViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseTabBarViewController.h; path = CQDemoKit/BaseVC/TabBar/CJUIKitBaseTabBarViewController.h; sourceTree = "<group>"; };
 		4F23B8092AEA0FEA134B713D098777D1 /* CJAnimationKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CJAnimationKit-umbrella.h"; sourceTree = "<group>"; };
 		4F4929908DC3C8C463572521ADDE144E /* cqts_jpg_avatar_02.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_jpg_avatar_02.jpg; path = CQDemoResource/Resources/jpg/cqts_jpg_avatar_02.jpg; sourceTree = "<group>"; };
@@ -469,7 +473,10 @@
 		521570A9FD21F4A4BC179955AD068A59 /* CJAnimationKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CJAnimationKit.release.xcconfig; sourceTree = "<group>"; };
 		52F294DCA7A6B5F35FD9BF4E8BABA171 /* CQDMSectionDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQDMSectionDataModel.h; path = CQDemoKit/BaseVC/Base/Model/CQDMSectionDataModel.h; sourceTree = "<group>"; };
 		530F15D14C805A56C0A0CC6BD297FBD7 /* CQTSSwitchViewFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSSwitchViewFactory.m; path = CQDemoKit/BaseUIKit/Switch/CQTSSwitchViewFactory.m; sourceTree = "<group>"; };
+		53FF3C4026447A96C0E9C61AA1B77C35 /* TSDemo_Popup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TSDemo_Popup.release.xcconfig; sourceTree = "<group>"; };
+		54B42765C65924B58A6A88AD22BFC2BD /* TSCareAboutHideHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSCareAboutHideHomeViewController.m; sourceTree = "<group>"; };
 		553F66F68AF5F76D27C2FB6BBD839AA6 /* CQTSSuspendWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSSuspendWindow.h; path = CQDemoKit/BaseVC/Base/BaseWindow/CQTSSuspendWindow.h; sourceTree = "<group>"; };
+		5641967684A926D35A254044FF435A85 /* WelcomeViewToPop.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WelcomeViewToPop.h; sourceTree = "<group>"; };
 		567F69BB3A67212DF50A462781AF5AF0 /* CJUIKitRandomUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitRandomUtil.h; path = CQDemoKit/Demo_Resource/String/CJUIKitRandomUtil.h; sourceTree = "<group>"; };
 		5752496BECD59631EB998218F43799CF /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		5850DD8CCFDCCBE7DF2729F36890AC2F /* cqts_jpg_avatar_05.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_jpg_avatar_05.jpg; path = CQDemoResource/Resources/jpg/cqts_jpg_avatar_05.jpg; sourceTree = "<group>"; };
@@ -485,9 +492,8 @@
 		635801396311F620154C64321C071DF1 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
 		63706D6121157CAC7056D0493C241EB5 /* TSDemo_Popup-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSDemo_Popup-Swift-umbrella.h"; sourceTree = "<group>"; };
 		637BB5201B40767F61534EF3E9C91598 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
-		639C4F0E745B64F984DE6C68905E977A /* ShowDropDownViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ShowDropDownViewController.h; sourceTree = "<group>"; };
+		63C1C0034299EE71A68A214AEE2E7848 /* TSCareAboutHideHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSCareAboutHideHomeViewController.h; sourceTree = "<group>"; };
 		64D7AF7A2723BB9E166D78AFBB8A5304 /* CJPopupAction-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CJPopupAction-prefix.pch"; sourceTree = "<group>"; };
-		650B1D8A1E95A87346540866A7DA4605 /* TSDemo_Popup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TSDemo_Popup.modulemap; sourceTree = "<group>"; };
 		65220D9360BA67F81778DBF681C4727A /* UIImage+CQDemoResource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+CQDemoResource.h"; path = "CQDemoResource/UIImage+CQDemoResource.h"; sourceTree = "<group>"; };
 		65A94663F89271220690BDBA13AC3DE8 /* Pods-CJPopupActionDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CJPopupActionDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6629C18F223DC889F9C0AEB91A759F1E /* cqts_jpg_04.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_jpg_04.jpg; path = CQDemoResource/Resources/jpg/cqts_jpg_04.jpg; sourceTree = "<group>"; };
@@ -499,18 +505,17 @@
 		6B06A4DCAF7FC60B0A93D4BB71D84B73 /* CJSlideCalculator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJSlideCalculator.h; path = CJAnimationKit/PopupAnimation/Core/CJSlideCalculator.h; sourceTree = "<group>"; };
 		6D2FAB79C1A5A6BA4D9A48F25E978E02 /* cqts_wp_01.webp */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_wp_01.webp; path = CQDemoResource/Resources/webp/cqts_wp_01.webp; sourceTree = "<group>"; };
 		6D4834E07096FB0E70A919A068F88A3D /* CQDMSectionDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQDMSectionDataModel.m; path = CQDemoKit/BaseVC/Base/Model/CQDMSectionDataModel.m; sourceTree = "<group>"; };
-		6D55439FF17FCF177FA9295EE412DD94 /* TSDemo_Popup-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSDemo_Popup-umbrella.h"; sourceTree = "<group>"; };
 		6E0CB04FA086DC07EC0F82BB04955E81 /* CQTSResourceInfoUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSResourceInfoUtil.m; path = CQDemoKit/Demo_Resource/CQTSResourceInfoUtil.m; sourceTree = "<group>"; };
 		6E3EFB753A3125D4958C45021E68FBC3 /* CQTSBorderStateButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSBorderStateButton.h; path = CQDemoKit/BaseUIKit/Button/CQTSBorderStateButton.h; sourceTree = "<group>"; };
 		6EFEDA9393522F8A1AEE2EEAB5104027 /* CJUIKitBaseHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseHomeViewController.m; path = CQDemoKit/BaseVC/TableView/CJUIKitBaseHomeViewController.m; sourceTree = "<group>"; };
 		6F3CB0F1D404E8729257B0DB86197734 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
 		6FF9AB8FE83F21BEEC8E4DEECF4B583A /* CQDMTabBarModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQDMTabBarModel.m; path = CQDemoKit/BaseVC/TabBar/Model/CQDMTabBarModel.m; sourceTree = "<group>"; };
 		707F2B71DB5DA2CADA2FD829CE791FFB /* Pods-CJPopupActionDemoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CJPopupActionDemoTests.modulemap"; sourceTree = "<group>"; };
+		70CE4753EABC5764F7D206C31E886123 /* PopupInWindowVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PopupInWindowVC.h; sourceTree = "<group>"; };
 		72549D7E7E5AA4ADB10F82FEE917555D /* Pods-CJPopupActionDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CJPopupActionDemo-dummy.m"; sourceTree = "<group>"; };
-		726B172124FF082FE11588560C57A566 /* ShowDropDownViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ShowDropDownViewController.m; sourceTree = "<group>"; };
-		72E050094338E4231FDA0D392FA38BE0 /* TSDemo_Popup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TSDemo_Popup.release.xcconfig; sourceTree = "<group>"; };
+		729A8CCBE7DC5E0410D7C7A08DEB7584 /* WelcomeViewToPop.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WelcomeViewToPop.xib; sourceTree = "<group>"; };
 		77C8B5502EAF70F194BCC7133AC55163 /* CQTSSandboxPhotoUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSSandboxPhotoUtil.h; path = CQDemoKit/Demo_Resource/SandboxUtil/CQTSSandboxPhotoUtil.h; sourceTree = "<group>"; };
-		7974CCA02B05433F0E55DC35FE4897D2 /* TSDemo_Popup.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TSDemo_Popup.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		783E52A892C8E76248DF5CBE7D838990 /* TSWindowAnimationHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSWindowAnimationHomeViewController.h; sourceTree = "<group>"; };
 		7AD066D308AE8E7728B3D44E49CFB256 /* CJUIKitBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseViewController.m; path = CQDemoKit/BaseVC/Base/CJUIKitBaseViewController.m; sourceTree = "<group>"; };
 		7B09CC9F58B00E84E45EEF5CB30CC81D /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
 		7B230C5D5615441F2C24C00B8A7C831D /* CJKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJKeyboardAvoidingTableView.m; path = CJBaseUIKit/UIScrollView/CJKeyboardAvoiding/CJKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
@@ -518,6 +523,7 @@
 		7C3D950990A69592CFB666BFD78106AA /* CJBaseUIKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CJBaseUIKit-Info.plist"; sourceTree = "<group>"; };
 		7D39EA2E274367D2AAD3621950071A8B /* UIView+CJCenterInWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+CJCenterInWindow.m"; path = "CJPopupAction/CareAboutHide_AutoAddToSuperView/UIView+CJCenterInWindow.m"; sourceTree = "<group>"; };
 		7DC9AFCB648F208A96B1FEF23B87B171 /* CJSlideCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJSlideCalculator.m; path = CJAnimationKit/PopupAnimation/Core/CJSlideCalculator.m; sourceTree = "<group>"; };
+		80D1D23FDB10BBB546DB6804B288AE8A /* TSDemo_Popup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TSDemo_Popup.modulemap; sourceTree = "<group>"; };
 		83424B6949D292B53FDB247E7CE0E182 /* UIView+CJExpandFrameAnimationBind.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CJExpandFrameAnimationBind.h"; path = "CJAnimationKit/PopupAnimation/BaseBind/UIView+CJExpandFrameAnimationBind.h"; sourceTree = "<group>"; };
 		841FBAEAB48598C2C2D2FBF96A7085A4 /* cqts_png_avatar_01.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = cqts_png_avatar_01.png; path = CQDemoResource/Resources/png/cqts_png_avatar_01.png; sourceTree = "<group>"; };
 		8521047E5DB5FC2A092BB7477CE8BA02 /* CJUIKitCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitCollectionViewCell.h; path = CQDemoKit/BaseVC/Collection/CJUIKitCollectionViewCell.h; sourceTree = "<group>"; };
@@ -536,17 +542,16 @@
 		8D2C751EBDAD62EF5CE538D0FC9E7974 /* cqts_jpg_avatar_01.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_jpg_avatar_01.jpg; path = CQDemoResource/Resources/jpg/cqts_jpg_avatar_01.jpg; sourceTree = "<group>"; };
 		8D692A39DE2ED687F33F71B2206B7A9B /* Pods-CJPopupActionDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CJPopupActionDemo.modulemap"; sourceTree = "<group>"; };
 		8F2C7CF18CF106CCA7311E4ECF1C2875 /* TSDemo_Popup-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "TSDemo_Popup-Swift.release.xcconfig"; sourceTree = "<group>"; };
-		8FA77004EF0D3C942FA1351930FB7677 /* TSExtendHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSExtendHomeViewController.m; sourceTree = "<group>"; };
 		90590325C309063A756BC804DE8CDCA7 /* CQTSRadioButtonsView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSRadioButtonsView.h; path = CQDemoKit/BaseUIKit/Button/CQTSRadioButtonsView.h; sourceTree = "<group>"; };
 		911B854880336CBF5C00CF95951E0A7A /* Pods-CJPopupActionDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CJPopupActionDemoTests-dummy.m"; sourceTree = "<group>"; };
-		920747D5877F5C94DD1308EABF83E8B9 /* TSDemo_Popup-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TSDemo_Popup-Info.plist"; sourceTree = "<group>"; };
 		924E6F5197A106219A4B4B969DCBB7A1 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
 		93460EB181C1A0F1589DA14ECE47AB34 /* cqts_jpg_avatar_03.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_jpg_avatar_03.jpg; path = CQDemoResource/Resources/jpg/cqts_jpg_avatar_03.jpg; sourceTree = "<group>"; };
 		93A3B77E4169F69B117AE6CF8C3DBB96 /* CQTSLocImageDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSLocImageDataModel.m; path = CQDemoKit/Demo_Resource/ImageModel/CQTSLocImageDataModel.m; sourceTree = "<group>"; };
-		93EC86CD8BF282501C19009D60278413 /* PopupInWindowVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PopupInWindowVC.h; sourceTree = "<group>"; };
 		93EF92EDC4011C389B5A97E26F287D32 /* CQDemoKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CQDemoKit.modulemap; sourceTree = "<group>"; };
+		942DB4C3AEB584F2F306236D2B99D4F2 /* WelcomePopupView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WelcomePopupView.h; sourceTree = "<group>"; };
 		9529FFD5E765479173A221AE1E8F95B6 /* CJBaseUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CJBaseUIKit.debug.xcconfig; sourceTree = "<group>"; };
 		95C7E501536F7A21AEE7AD87C3F74440 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		95ED8D0556153A64C165C035AE0C7CB8 /* TSDemo_Popup.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TSDemo_Popup.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		961A82A27495353F641FDCEC5455AB09 /* CQDemoResource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CQDemoResource.release.xcconfig; sourceTree = "<group>"; };
 		9622974D8779550153E771477FBFD809 /* cqts_jpg_long_horizontal_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_jpg_long_horizontal_1.jpg; path = CQDemoResource/Resources/jpg/cqts_jpg_long_horizontal_1.jpg; sourceTree = "<group>"; };
 		9829A0495CF163BAC3DD46AD0BC1E4FC /* CQTSNetImageDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSNetImageDataModel.h; path = CQDemoKit/Demo_Resource/ImageModel/CQTSNetImageDataModel.h; sourceTree = "<group>"; };
@@ -575,7 +580,6 @@
 		B384BBF899C80C61E380F2962916695A /* Pods-CJPopupActionDemoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CJPopupActionDemoTests-umbrella.h"; sourceTree = "<group>"; };
 		B3F5F09773C896A1E6640B44729851A3 /* CJExpandCalculateResultModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJExpandCalculateResultModel.m; path = CJAnimationKit/PopupAnimation/Core/CJExpandCalculateResultModel.m; sourceTree = "<group>"; };
 		B45AD1076D3142C3243EBB12078B7A9D /* CQDemoResource-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CQDemoResource-prefix.pch"; sourceTree = "<group>"; };
-		B4746B16B3AD8AA7BB2C6AA3C1069B70 /* TSExtendHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSExtendHomeViewController.h; sourceTree = "<group>"; };
 		B4CBD6B8133FB783856831663458D4E6 /* CQDemoKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CQDemoKit-umbrella.h"; sourceTree = "<group>"; };
 		B6C2AB1051F2156095C6FCCD373C89BB /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		B7498AD6ABD4AF62A397466450690C53 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
@@ -583,32 +587,30 @@
 		B7D63A5945F733DFF91A766EC0A5691B /* CJBaseUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CJBaseUIKit-prefix.pch"; sourceTree = "<group>"; };
 		B92541E2851A39FAB687F5E825647D95 /* CJUIKitCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitCollectionViewCell.m; path = CQDemoKit/BaseVC/Collection/CJUIKitCollectionViewCell.m; sourceTree = "<group>"; };
 		B978162E7B07AC1376222A19B75B3089 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
-		B9E4C54B1CEC05A0C258B8426B343349 /* TSCareAboutHideHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSCareAboutHideHomeViewController.h; sourceTree = "<group>"; };
 		BBFBD6B3291B0779D810D88A842B6B3D /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		BD04FF1BDFFDB4270BEEAE4EF26FA71A /* ShowExtendViewVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ShowExtendViewVC.m; sourceTree = "<group>"; };
 		BE201E2F54EDDE1C048BD4835F57AC23 /* Pods-CJPopupActionDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CJPopupActionDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		BF5C52B8D099820B6844AA532C91B552 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		C044A70C87836F4957E596ABC1AD4442 /* UIView+CJExpandByPoint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+CJExpandByPoint.m"; path = "CJPopupAction/CareAboutHide_AutoAddToSuperView/UIView+CJExpandByPoint.m"; sourceTree = "<group>"; };
 		C2FE47CD5AEFBBCDCC5CB3A7505EB4F6 /* CQDemoResource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CQDemoResource.debug.xcconfig; sourceTree = "<group>"; };
 		C321CD47F9B4EFACDDA8616B646BD1FB /* TSDemo_Popup-Swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "TSDemo_Popup-Swift.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C34A1E5CD2A0945E1DA38325DE148B50 /* CQTSSuspendButtonRootViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSSuspendButtonRootViewController.h; path = CQDemoKit/BaseVC/Base/BaseWindow/SuspendWindowFactory/CQTSSuspendButtonRootViewController.h; sourceTree = "<group>"; };
-		C5C9F6ECCBB640BAD02AAF1268D36495 /* PopupInViewVC.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PopupInViewVC.xib; sourceTree = "<group>"; };
 		C6CA2B87E7CCCB97F9210FDB46B99F4E /* cqts_jpg_bg_05.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_jpg_bg_05.jpg; path = CQDemoResource/Resources/jpg/cqts_jpg_bg_05.jpg; sourceTree = "<group>"; };
 		C7168223DE65DD23994DD240E11C46A6 /* CJUIKitCollectionViewHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitCollectionViewHeader.m; path = CQDemoKit/BaseVC/Collection/CJUIKitCollectionViewHeader.m; sourceTree = "<group>"; };
 		C962BF725AD9B5EAE5A76D516A0BF302 /* UIView+CJSlideConvenience.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CJSlideConvenience.h"; path = "CJAnimationKit/PopupAnimation/BaseConvenience/UIView+CJSlideConvenience.h"; sourceTree = "<group>"; };
 		C9B47DCFE16273773669682399C9C70E /* CQDMModuleModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQDMModuleModel.h; path = CQDemoKit/BaseVC/Base/Model/CQDMModuleModel.h; sourceTree = "<group>"; };
-		C9DE2B7DD9C98D17962A9269EC1FB563 /* TSWindowAnimationHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSWindowAnimationHomeViewController.h; sourceTree = "<group>"; };
 		CA2B72153AB8B8C270C8DF93F3E30770 /* UIView+CJSlideTransformAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+CJSlideTransformAnimation.m"; path = "CJAnimationKit/PopupAnimation/Base/UIView+CJSlideTransformAnimation.m"; sourceTree = "<group>"; };
 		CB6D6C6860A8157745B2F0C842D68A78 /* CJUIKitBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseViewController.h; path = CQDemoKit/BaseVC/Base/CJUIKitBaseViewController.h; sourceTree = "<group>"; };
 		CCA9BC8ABA867453D0EA3455F6ACB0CC /* CJBaseUIKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CJBaseUIKit-dummy.m"; sourceTree = "<group>"; };
 		CEF792E68C02CD8CBA669104ECA1A9A2 /* cqts_jpg_bg_03.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_jpg_bg_03.jpg; path = CQDemoResource/Resources/jpg/cqts_jpg_bg_03.jpg; sourceTree = "<group>"; };
 		CF75727FC3C66264A454D7BAEB0328BB /* CQTSImageLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSImageLoader.m; path = CQDemoKit/BaseUIKit/ImageLoader/CQTSImageLoader.m; sourceTree = "<group>"; };
 		D02D7C56E1F32B5F4BAA57894F1E14F0 /* CQTSRadioButtonsView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSRadioButtonsView.m; path = CQDemoKit/BaseUIKit/Button/CQTSRadioButtonsView.m; sourceTree = "<group>"; };
+		D0A3E8B93BEBA164466B31AE4B6C5D2F /* TSDemo_Popup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSDemo_Popup-prefix.pch"; sourceTree = "<group>"; };
 		D0F58F646F65ABD27DD472ECE673E0C1 /* cqts_bmp_02.bmp */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_bmp_02.bmp; path = CQDemoResource/Resources/bmp/cqts_bmp_02.bmp; sourceTree = "<group>"; };
 		D29AC06428C172877DBD2C2B443E5775 /* CJBaseUIKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CJBaseUIKit.modulemap; sourceTree = "<group>"; };
 		D2CF1E28C101B3AA4F7E3F161ED94885 /* CQTSSandboxPathUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSSandboxPathUtil.m; path = CQDemoKit/Demo_Resource/SandboxUtil/CQTSSandboxPathUtil.m; sourceTree = "<group>"; };
 		D618963019D925ADA0B2B0CA6E64E8ED /* CJUIKitAlertUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitAlertUtil.m; path = CQDemoKit/BaseUtil/CJUIKitAlertUtil.m; sourceTree = "<group>"; };
 		D6EC088ECB4C16ADC43EC1FF7012BB2F /* UIView+CJShowExtendView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CJShowExtendView.h"; path = "CJPopupAction/ShowExtendView/UIView+CJShowExtendView.h"; sourceTree = "<group>"; };
-		D6F1828D3689AA0D6369A8382881FCAD /* PopupInWindowVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PopupInWindowVC.m; sourceTree = "<group>"; };
 		D7C56EA40AF938B5E095F6E4328D9CB8 /* CQDemoKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CQDemoKit-prefix.pch"; sourceTree = "<group>"; };
 		D81AE78958702008787B2733C55F90C4 /* CJPopupAction */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CJPopupAction; path = CJPopupAction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C27C7D3BB2DC851309AC1ECB5D145F /* Pods-CJPopupActionDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CJPopupActionDemo-Info.plist"; sourceTree = "<group>"; };
@@ -623,22 +625,23 @@
 		DFB05FD749F0DA161D7931BACB067BD8 /* UISwitch+CQTSMoreProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISwitch+CQTSMoreProperty.h"; path = "CQDemoKit/BaseUIKit/Switch/UISwitch+CQTSMoreProperty.h"; sourceTree = "<group>"; };
 		E043314D0E8567A52E35F454E72AE53F /* Pods-CJPopupActionDemoTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CJPopupActionDemoTests-Info.plist"; sourceTree = "<group>"; };
 		E11919D7C10136008A3EB09B6DC972A6 /* CQTSIconDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSIconDataModel.m; path = CQDemoKit/Demo_Resource/ImageModel/CQTSIconDataModel.m; sourceTree = "<group>"; };
+		E1E48A4EF51A74C818302D452A64FCDF /* ShowDropDownViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ShowDropDownViewController.m; sourceTree = "<group>"; };
 		E2CF89E224BE4A099E58EE6157EBDC2F /* UIView+CJToastAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CJToastAnimation.h"; path = "CJPopupAction/Toast/UIView+CJToastAnimation.h"; sourceTree = "<group>"; };
-		E3B82FEF7EB05CA4D87DC3EAA6CA6B8C /* ShowExtendViewVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ShowExtendViewVC.h; sourceTree = "<group>"; };
+		E595666462AF07A0356CCC947F6725F4 /* PopupInViewVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PopupInViewVC.h; sourceTree = "<group>"; };
 		E5D4930F163DA260DED5F735E0E8CD93 /* CJAnimationKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CJAnimationKit-prefix.pch"; sourceTree = "<group>"; };
 		E64CE7FEC650891C82529747138F9B09 /* UIView+CJSlideConvenience.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+CJSlideConvenience.m"; path = "CJAnimationKit/PopupAnimation/BaseConvenience/UIView+CJSlideConvenience.m"; sourceTree = "<group>"; };
+		E67846EA35765CED1207F1213DF56301 /* TSExtendHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSExtendHomeViewController.h; sourceTree = "<group>"; };
 		E69CB9BE65F610EA7743EA54855CE9DA /* cqts_jpg_avatar_07.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_jpg_avatar_07.jpg; path = CQDemoResource/Resources/jpg/cqts_jpg_avatar_07.jpg; sourceTree = "<group>"; };
 		E6D10F448549D7C8FAA2A8610DDC31A5 /* UIView+CJSlideTransformAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CJSlideTransformAnimation.h"; path = "CJAnimationKit/PopupAnimation/Base/UIView+CJSlideTransformAnimation.h"; sourceTree = "<group>"; };
 		E8341CF48D6CC64E9A30D979217C9E9D /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		E83FF5E68B5B1FAEF9E73A297F94DD73 /* CJUIKitBaseScrollViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseScrollViewController.m; path = CQDemoKit/BaseVC/ScrollView/CJUIKitBaseScrollViewController.m; sourceTree = "<group>"; };
 		E8D0D7F2B9FF326830475E10FB918698 /* CQDemoResource-CQDemoResource */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "CQDemoResource-CQDemoResource"; path = CQDemoResource.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		E973484FCB9AC5C08CD43D6534EC2AAB /* ShowExtendViewVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ShowExtendViewVC.m; sourceTree = "<group>"; };
 		EB2F0A84C3BF96D2A33276A89E9432BC /* TSDemo_Popup-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "TSDemo_Popup-Swift.modulemap"; sourceTree = "<group>"; };
 		EB664D35B5544B194B53BD06542BDD5B /* CJUIKitAlertUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitAlertUtil.h; path = CQDemoKit/BaseUtil/CJUIKitAlertUtil.h; sourceTree = "<group>"; };
 		EC248AB0100478CC550F1473D9A43240 /* cqts_jpg_bg_04.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_jpg_bg_04.jpg; path = CQDemoResource/Resources/jpg/cqts_jpg_bg_04.jpg; sourceTree = "<group>"; };
 		EC7F86CAB6D4E3DC101B91EC1EC42541 /* CJAnimationKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CJAnimationKit-dummy.m"; sourceTree = "<group>"; };
+		EC944080D6806884E068601298A05FF3 /* TSExtendHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSExtendHomeViewController.m; sourceTree = "<group>"; };
 		ECA3F7F2C9604693C05EE1E1E97A9A50 /* Masonry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.debug.xcconfig; sourceTree = "<group>"; };
-		ED5702227FA1B67002C3BF97E23CF715 /* TSDemo_Popup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TSDemo_Popup.debug.xcconfig; sourceTree = "<group>"; };
 		EE99C3C97927FD6FA2B67CBACC44874A /* CJExpandCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJExpandCalculator.m; path = CJAnimationKit/PopupAnimation/Core/CJExpandCalculator.m; sourceTree = "<group>"; };
 		EFE74507E09869C4E62D2E83D97F1088 /* UIView+CJExpandFrameAnimationBind.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+CJExpandFrameAnimationBind.m"; path = "CJAnimationKit/PopupAnimation/BaseBind/UIView+CJExpandFrameAnimationBind.m"; sourceTree = "<group>"; };
 		F02E79DF8ABBE728253B831B928A493F /* UIScrollView+CJKeyboardAvoiding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+CJKeyboardAvoiding.m"; path = "CJBaseUIKit/UIScrollView/CJKeyboardAvoiding/UIScrollView+CJKeyboardAvoiding.m"; sourceTree = "<group>"; };
@@ -648,6 +651,7 @@
 		F286AD9AEDFF63958B1D1C21386D1877 /* Pods-CJPopupActionDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CJPopupActionDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F2C6EE6042A9F785036BDED033544FAD /* UIView+CJPopupInView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJPopupInView.m"; sourceTree = "<group>"; };
 		F660F76C4A0EF2E1D7158CFA2543E768 /* CQDemoAssets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = CQDemoAssets.xcassets; path = CQDemoResource/Resources/CQDemoAssets.xcassets; sourceTree = "<group>"; };
+		F7652197BB0D80861F74A88E1F02E147 /* ShowDropDownViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ShowDropDownViewController.h; sourceTree = "<group>"; };
 		F8136B7CBF9592F8685C847FC88BAAFB /* UIScrollView+CJKeyboardAvoiding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+CJKeyboardAvoiding.h"; path = "CJBaseUIKit/UIScrollView/CJKeyboardAvoiding/UIScrollView+CJKeyboardAvoiding.h"; sourceTree = "<group>"; };
 		F81E8523885902E8CC02D52948CE223C /* CJUIKitBaseCollectionHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseCollectionHomeViewController.h; path = CQDemoKit/BaseVC/Collection/CJUIKitBaseCollectionHomeViewController.h; sourceTree = "<group>"; };
 		F8E0E2DFBBD52E955CF4A45ED246B5B9 /* CJAnimationKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CJAnimationKit.debug.xcconfig; sourceTree = "<group>"; };
@@ -657,8 +661,8 @@
 		FAD0A61B9FBF852C87BD1C51D63BCB00 /* CQTSAssetModelGetter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSAssetModelGetter.h; path = CQDemoResource/DataSource/CQTSAssetModelGetter.h; sourceTree = "<group>"; };
 		FAE8A15444ACC79D79F5A5EDD4513FCF /* CQTSSandboxPhotoUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSSandboxPhotoUtil.m; path = CQDemoKit/Demo_Resource/SandboxUtil/CQTSSandboxPhotoUtil.m; sourceTree = "<group>"; };
 		FC3945E5C3DE0216EE1D64564E6E91FB /* CJKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJKeyboardAvoidingScrollView.h; path = CJBaseUIKit/UIScrollView/CJKeyboardAvoiding/CJKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		FD301FAEA0A91B4FBC1D16077E1B6AE3 /* TSWindowAnimationHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSWindowAnimationHomeViewController.m; sourceTree = "<group>"; };
 		FE38E26DCA14C0BA5E0560B09C2ED93B /* CJBaseUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CJBaseUIKit.release.xcconfig; sourceTree = "<group>"; };
-		FFE1760141E57BFCBB6C98CFCC7F1190 /* WelcomePopupView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WelcomePopupView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -680,12 +684,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2CA9567ADA9B03DC6CFC2071730657F4 /* Frameworks */ = {
+		121EB268795A52248D6DDEC21DD06179 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EA39CA4EFB13D3D5D79F97CBD96B92F /* Foundation.framework in Frameworks */,
-				B9E1A17531B401CD25A2B937BF6D59A1 /* UIKit.framework in Frameworks */,
+				1C582DCFEE048BDF0CA42D9E25774DA3 /* Foundation.framework in Frameworks */,
+				DFA5801E7A98B56D7DC263F65038E71A /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DB439E5722A4BCA8C9A36CAB8441C95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,19 +710,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		650566B53EF9847DE18A9C7FD584C302 /* Frameworks */ = {
+		9C627CFFDC8369ACDCB4A1FFFC7372C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		81196F5B06397ED9BEEE47958B2E1A48 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E92E537D0F3E1137DDD84A54A4FB2F2B /* Foundation.framework in Frameworks */,
-				6F75A40E2D4E043AF4B1032D8256B2AA /* UIKit.framework in Frameworks */,
+				04C9D3588DD18C4B505A79FAC58EAE92 /* Foundation.framework in Frameworks */,
+				1228975F5FB3498D6BF599DBE493C38B /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,6 +877,21 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/CQDemoResource";
+			sourceTree = "<group>";
+		};
+		242D72E0BF6B760D036F416D384E8461 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				80D1D23FDB10BBB546DB6804B288AE8A /* TSDemo_Popup.modulemap */,
+				482552285D61136BE590412E48EC1588 /* TSDemo_Popup-dummy.m */,
+				378D1046BA6B78A4DED6C10366E5BD64 /* TSDemo_Popup-Info.plist */,
+				D0A3E8B93BEBA164466B31AE4B6C5D2F /* TSDemo_Popup-prefix.pch */,
+				07CBB4B5809989E104D92CCA9AA96897 /* TSDemo_Popup-umbrella.h */,
+				1B0050C75C7EB3C69222987247237C73 /* TSDemo_Popup.debug.xcconfig */,
+				53FF3C4026447A96C0E9C61AA1B77C35 /* TSDemo_Popup.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "CJPopupActionDemo/Pods/Target Support Files/TSDemo_Popup";
 			sourceTree = "<group>";
 		};
 		253A4F40D3BD32853C0FE81195E64B4A /* Pod */ = {
@@ -1104,43 +1123,30 @@
 			name = TableView;
 			sourceTree = "<group>";
 		};
-		61E4E6E35F11E836F7A6E033D72CF8C7 /* Window */ = {
+		6973DEA57438B953E6720171044FF9D7 /* Window */ = {
 			isa = PBXGroup;
 			children = (
-				C9DE2B7DD9C98D17962A9269EC1FB563 /* TSWindowAnimationHomeViewController.h */,
-				0F03C717EFFE78A106BB6B7384850200 /* TSWindowAnimationHomeViewController.m */,
+				4553F3499C597838822081EE4082CEBA /* PopupInWindowHomeVC.h */,
+				13CF99962ED2DA21619D9DE459F68F8B /* PopupInWindowHomeVC.m */,
+				70CE4753EABC5764F7D206C31E886123 /* PopupInWindowVC.h */,
+				383DDE8D73DDC4181F741D8BA4C69DDC /* PopupInWindowVC.m */,
+				783E52A892C8E76248DF5CBE7D838990 /* TSWindowAnimationHomeViewController.h */,
+				FD301FAEA0A91B4FBC1D16077E1B6AE3 /* TSWindowAnimationHomeViewController.m */,
 			);
 			name = Window;
 			path = TSDemo_Popup/Window;
 			sourceTree = "<group>";
 		};
-		72D62EE9F089784B279A43D2BDCA3461 /* Extend */ = {
+		6AB8E70F25DCEACD85E2FE2F410D4997 /* TSDemo_Popup */ = {
 			isa = PBXGroup;
 			children = (
-				93EC86CD8BF282501C19009D60278413 /* PopupInWindowVC.h */,
-				D6F1828D3689AA0D6369A8382881FCAD /* PopupInWindowVC.m */,
-				639C4F0E745B64F984DE6C68905E977A /* ShowDropDownViewController.h */,
-				726B172124FF082FE11588560C57A566 /* ShowDropDownViewController.m */,
-				E3B82FEF7EB05CA4D87DC3EAA6CA6B8C /* ShowExtendViewVC.h */,
-				E973484FCB9AC5C08CD43D6534EC2AAB /* ShowExtendViewVC.m */,
-				1F519E574BA77AE730C71C7F948A9E74 /* ShowExtendViewVC.xib */,
-				B4746B16B3AD8AA7BB2C6AA3C1069B70 /* TSExtendHomeViewController.h */,
-				8FA77004EF0D3C942FA1351930FB7677 /* TSExtendHomeViewController.m */,
-			);
-			name = Extend;
-			path = TSDemo_Popup/Extend;
-			sourceTree = "<group>";
-		};
-		79F5FF4E19AF20ECD483C040B00F8D7A /* TSDemo_Popup */ = {
-			isa = PBXGroup;
-			children = (
-				F60C02F5FD72B73C9C8088851616163E /* CareAboutHide_AutoAddToSuperView */,
-				72D62EE9F089784B279A43D2BDCA3461 /* Extend */,
-				AFC7FE31773F1C7202835044DFCF503D /* Pod */,
-				8D39ECCE687C6C96CD6547BAD5ECDFB0 /* Support Files */,
-				7DD13A8F215FD00CEEDB8F415753D656 /* Toast */,
-				F7AAB6FD70766FDD998421309F9FFFD1 /* View */,
-				61E4E6E35F11E836F7A6E033D72CF8C7 /* Window */,
+				E64D47295FEEDAA8AB084496A6AAEA06 /* CareAboutHide_AutoAddToSuperView */,
+				A16571DE850E6747590AF950FD2BB327 /* Extend */,
+				9CE9F9A01DE0088E8DCBB39E7BEC35DC /* Pod */,
+				242D72E0BF6B760D036F416D384E8461 /* Support Files */,
+				A3D0CD4324FE0072069A77A34F8A60DE /* Toast */,
+				7E5C331A4B7B290979D992198E8771A1 /* View */,
+				6973DEA57438B953E6720171044FF9D7 /* Window */,
 			);
 			name = TSDemo_Popup;
 			path = ../..;
@@ -1184,14 +1190,18 @@
 			name = CareAboutHide_AutoAddToSuperView;
 			sourceTree = "<group>";
 		};
-		7DD13A8F215FD00CEEDB8F415753D656 /* Toast */ = {
+		7E5C331A4B7B290979D992198E8771A1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				216CC4B47AA30CCEAB76B6BA073BE06D /* TSToastHomeViewController.h */,
-				4CA5E66682DF914AC627F3D4F53DBC57 /* TSToastHomeViewController.m */,
+				942DB4C3AEB584F2F306236D2B99D4F2 /* WelcomePopupView.h */,
+				3FDEE275A852234C243028510C45B48E /* WelcomePopupView.m */,
+				3FB17E18521E780C8BDE3505B1D10044 /* WelcomePopupView.xib */,
+				5641967684A926D35A254044FF435A85 /* WelcomeViewToPop.h */,
+				16AD9F8667E2CCCA0F0B53809CE67B4F /* WelcomeViewToPop.m */,
+				729A8CCBE7DC5E0410D7C7A08DEB7584 /* WelcomeViewToPop.xib */,
 			);
-			name = Toast;
-			path = TSDemo_Popup/Toast;
+			name = View;
+			path = TSDemo_Popup/View;
 			sourceTree = "<group>";
 		};
 		89C6ADBE745F87C58F6A59E663C7CFA7 /* GitUtil */ = {
@@ -1212,21 +1222,6 @@
 			name = InFramework;
 			sourceTree = "<group>";
 		};
-		8D39ECCE687C6C96CD6547BAD5ECDFB0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				650B1D8A1E95A87346540866A7DA4605 /* TSDemo_Popup.modulemap */,
-				4B8EE4316D59BB460912CC49B4B5FF77 /* TSDemo_Popup-dummy.m */,
-				920747D5877F5C94DD1308EABF83E8B9 /* TSDemo_Popup-Info.plist */,
-				075D054CA5A701CBDBD528FAD1DBBCDF /* TSDemo_Popup-prefix.pch */,
-				6D55439FF17FCF177FA9295EE412DD94 /* TSDemo_Popup-umbrella.h */,
-				ED5702227FA1B67002C3BF97E23CF715 /* TSDemo_Popup.debug.xcconfig */,
-				72E050094338E4231FDA0D392FA38BE0 /* TSDemo_Popup.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "CJPopupActionDemo/Pods/Target Support Files/TSDemo_Popup";
-			sourceTree = "<group>";
-		};
 		98FEA1056AF417757D8AF6FC2A2ADF93 /* ScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1234,6 +1229,14 @@
 				E83FF5E68B5B1FAEF9E73A297F94DD73 /* CJUIKitBaseScrollViewController.m */,
 			);
 			name = ScrollView;
+			sourceTree = "<group>";
+		};
+		9CE9F9A01DE0088E8DCBB39E7BEC35DC /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				95ED8D0556153A64C165C035AE0C7CB8 /* TSDemo_Popup.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		9E1EE7AFA84D57389D06966CB935DBD4 /* Support Files */ = {
@@ -1260,6 +1263,31 @@
 			name = SandboxFileUtil;
 			sourceTree = "<group>";
 		};
+		A16571DE850E6747590AF950FD2BB327 /* Extend */ = {
+			isa = PBXGroup;
+			children = (
+				F7652197BB0D80861F74A88E1F02E147 /* ShowDropDownViewController.h */,
+				E1E48A4EF51A74C818302D452A64FCDF /* ShowDropDownViewController.m */,
+				22594CEA7FB417AB3E843629C5BB40A9 /* ShowExtendViewVC.h */,
+				BD04FF1BDFFDB4270BEEAE4EF26FA71A /* ShowExtendViewVC.m */,
+				06E54AB3417995832E4F14155154958B /* ShowExtendViewVC.xib */,
+				E67846EA35765CED1207F1213DF56301 /* TSExtendHomeViewController.h */,
+				EC944080D6806884E068601298A05FF3 /* TSExtendHomeViewController.m */,
+			);
+			name = Extend;
+			path = TSDemo_Popup/Extend;
+			sourceTree = "<group>";
+		};
+		A3D0CD4324FE0072069A77A34F8A60DE /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				14225F4D8590E2918FE30BFF7733866B /* TSToastHomeViewController.h */,
+				408A1BBECE7AF623F352E442ABD31927 /* TSToastHomeViewController.m */,
+			);
+			name = Toast;
+			path = TSDemo_Popup/Toast;
+			sourceTree = "<group>";
+		};
 		AF1950FFF43AE3C0368A25563C621B66 /* Toast */ = {
 			isa = PBXGroup;
 			children = (
@@ -1269,19 +1297,11 @@
 			name = Toast;
 			sourceTree = "<group>";
 		};
-		AFC7FE31773F1C7202835044DFCF503D /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				7974CCA02B05433F0E55DC35FE4897D2 /* TSDemo_Popup.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		B7A6C740EED11CD963D48FA8ED9681C8 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
 				D41DE6CCB6FB0713A016F87303CED357 /* CJPopupAction */,
-				79F5FF4E19AF20ECD483C040B00F8D7A /* TSDemo_Popup */,
+				6AB8E70F25DCEACD85E2FE2F410D4997 /* TSDemo_Popup */,
 				612F6B6840D4351A3B07C071D6A39B4F /* TSDemo_Popup-Swift */,
 			);
 			name = "Development Pods";
@@ -1437,6 +1457,19 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		E64D47295FEEDAA8AB084496A6AAEA06 /* CareAboutHide_AutoAddToSuperView */ = {
+			isa = PBXGroup;
+			children = (
+				E595666462AF07A0356CCC947F6725F4 /* PopupInViewVC.h */,
+				0BE0F87C66FB6CB8AADBA9B8B647A37E /* PopupInViewVC.m */,
+				1984A04B7574A56BD3479E2850DA9684 /* PopupInViewVC.xib */,
+				63C1C0034299EE71A68A214AEE2E7848 /* TSCareAboutHideHomeViewController.h */,
+				54B42765C65924B58A6A88AD22BFC2BD /* TSCareAboutHideHomeViewController.m */,
+			);
+			name = CareAboutHide_AutoAddToSuperView;
+			path = TSDemo_Popup/CareAboutHide_AutoAddToSuperView;
+			sourceTree = "<group>";
+		};
 		F23BC1D09EAB7C44E0C15529B932A057 /* UIScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1516,19 +1549,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F60C02F5FD72B73C9C8088851616163E /* CareAboutHide_AutoAddToSuperView */ = {
-			isa = PBXGroup;
-			children = (
-				1E4FA34DA5E1E359E43FF29F745FFF6D /* PopupInViewVC.h */,
-				1B831E96BBC39D3E696085B1FECAAE6A /* PopupInViewVC.m */,
-				C5C9F6ECCBB640BAD02AAF1268D36495 /* PopupInViewVC.xib */,
-				B9E4C54B1CEC05A0C258B8426B343349 /* TSCareAboutHideHomeViewController.h */,
-				368DA9687029576DBD76589441E2F42A /* TSCareAboutHideHomeViewController.m */,
-			);
-			name = CareAboutHide_AutoAddToSuperView;
-			path = TSDemo_Popup/CareAboutHide_AutoAddToSuperView;
-			sourceTree = "<group>";
-		};
 		F628C4C7B535C8248EC94A583E35D007 /* BaseConvenience */ = {
 			isa = PBXGroup;
 			children = (
@@ -1536,20 +1556,6 @@
 				E64CE7FEC650891C82529747138F9B09 /* UIView+CJSlideConvenience.m */,
 			);
 			name = BaseConvenience;
-			sourceTree = "<group>";
-		};
-		F7AAB6FD70766FDD998421309F9FFFD1 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				37E5C6CC4CE00917174DD0C93FBBD067 /* WelcomePopupView.h */,
-				411F160055EB84D6882FD371A112E881 /* WelcomePopupView.m */,
-				FFE1760141E57BFCBB6C98CFCC7F1190 /* WelcomePopupView.xib */,
-				43FF302A1758E5AF67B45FE8F833806F /* WelcomeViewToPop.h */,
-				238F7A1F270D8DF1F5C02846A32D8BC7 /* WelcomeViewToPop.m */,
-				4C601D97FF59E6B8A36163BE8F0AA64E /* WelcomeViewToPop.xib */,
-			);
-			name = View;
-			path = TSDemo_Popup/View;
 			sourceTree = "<group>";
 		};
 		F7AD1A9434A3F364A53C3CEE7C69198D /* Targets Support Files */ = {
@@ -1694,26 +1700,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56B66123B988CFF6596FFB37532FCCE7 /* Headers */ = {
+		3EEE0D823E8B0A1B686E74F622994A73 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AF6C24C4D5E39AA0DD7002B7C2D1D54 /* MASCompositeConstraint.h in Headers */,
-				760742DD4EB5B0EBD4BE019EC7C013DB /* MASConstraint.h in Headers */,
-				5DE956A4EA7229C44C181262AAE9D285 /* MASConstraint+Private.h in Headers */,
-				39786608BC19D380BBCB7ABCCBD4F59C /* MASConstraintMaker.h in Headers */,
-				1889D3D6C0903071F7E4542B861A07F5 /* MASLayoutConstraint.h in Headers */,
-				23B50F938D3AABDC85CDD3C675751BE9 /* Masonry.h in Headers */,
-				8686755DB601FADCD2AA297B57470BF2 /* Masonry-umbrella.h in Headers */,
-				30022521BA28A1D6B79390B3540FA397 /* MASUtilities.h in Headers */,
-				9C1093BE432B55AAA1018FAE1091B852 /* MASViewAttribute.h in Headers */,
-				E59EA10D44D215E8EA4CD124DBFB7143 /* MASViewConstraint.h in Headers */,
-				E3140003B05614106C1916EA111E9013 /* NSArray+MASAdditions.h in Headers */,
-				341355ED83D6C5D060D206E15B71B60F /* NSArray+MASShorthandAdditions.h in Headers */,
-				C04C804CEA2473EEDAC5F670AD21D1FC /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
-				3585E80FFE47C387B8A2A3601F2533FE /* View+MASAdditions.h in Headers */,
-				712EE342E2101E368F265ED05181C511 /* View+MASShorthandAdditions.h in Headers */,
-				2B780A67D78B504CB1C749CC6BAB31C1 /* ViewController+MASAdditions.h in Headers */,
+				41CFEBE2196E254150B0A0377DF240D5 /* PopupInViewVC.h in Headers */,
+				920DE78D13A75C455B7164BDC2A384F6 /* PopupInWindowHomeVC.h in Headers */,
+				E33CAA07584F815F0F8002A6BC8AEA9C /* PopupInWindowVC.h in Headers */,
+				4AC79880C5DDB66214E05AB48C40E031 /* ShowDropDownViewController.h in Headers */,
+				5E1391E74AF0D218225E79BB9C69A7E2 /* ShowExtendViewVC.h in Headers */,
+				D6DD324E623456DD8786C34B0F98363D /* TSCareAboutHideHomeViewController.h in Headers */,
+				8C925F9E1B3958EF01FFD8F41F99B7FA /* TSDemo_Popup-umbrella.h in Headers */,
+				30772B30D43722070FA63966D105A673 /* TSExtendHomeViewController.h in Headers */,
+				BC3F1D6067490D338ADAF369F4D7D2B5 /* TSToastHomeViewController.h in Headers */,
+				A13274CC93B7534A9294AD59A8EBA6E8 /* TSWindowAnimationHomeViewController.h in Headers */,
+				676F5A93761B2632C396AA97B06C10C7 /* WelcomePopupView.h in Headers */,
+				FC426FEC92465D4F3AA1E0650F10456E /* WelcomeViewToPop.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		544575E345D2AC15658608C02CC3DEB5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC24C082328660CBAFE1E13E301CA4C2 /* MASCompositeConstraint.h in Headers */,
+				C851394EA720933F49DA2B90A3A5FA8F /* MASConstraint.h in Headers */,
+				9854F1BB74308199F2E7C54FB7AD4CE1 /* MASConstraint+Private.h in Headers */,
+				B22723A51C1856CAF1AF8022273CF2AC /* MASConstraintMaker.h in Headers */,
+				EB391629BCC2F8F86062D3CE700E9ACC /* MASLayoutConstraint.h in Headers */,
+				7337677A7BD06066EF6B5111407120F2 /* Masonry.h in Headers */,
+				81DFD2F8133BFF639334C33F073460DD /* Masonry-umbrella.h in Headers */,
+				DD28351374A6AA3532680A547856AE71 /* MASUtilities.h in Headers */,
+				6A60B3AB349C4DADF8C224D8B1A5CA4F /* MASViewAttribute.h in Headers */,
+				2ED3FABB4A5071AFF5689D09F2EB7E93 /* MASViewConstraint.h in Headers */,
+				8912363F51988287D02652CE0285BDF5 /* NSArray+MASAdditions.h in Headers */,
+				451895726CC8D077B90E191078C8EE03 /* NSArray+MASShorthandAdditions.h in Headers */,
+				C189FD0239EE49F42C06061EFB030200 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				4FF9EBB59B64822945741A1403A30A62 /* View+MASAdditions.h in Headers */,
+				978B9B9C89F72CA31C1449AB727F20D3 /* View+MASShorthandAdditions.h in Headers */,
+				70DDC337AEEC0EF94BB192CB3ACC8787 /* ViewController+MASAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1733,24 +1758,6 @@
 				E6D32CE6535F22E2E911A642676886F7 /* CJKeyboardAvoidingScrollView.h in Headers */,
 				59CB4D4FA3546DAD2DA63AB0ABF92834 /* CJKeyboardAvoidingTableView.h in Headers */,
 				A41A1A52CB5F10FB71F6E3709F408D10 /* UIScrollView+CJKeyboardAvoiding.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		820108A887462C4C1C1CCC4C470C9202 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C45CE53011A733F619695B2F58B64296 /* PopupInViewVC.h in Headers */,
-				B59F25B0E7CC919087A553A55CCA2DEE /* PopupInWindowVC.h in Headers */,
-				AD899A0B2A2231CD684961ABDF6E63B4 /* ShowDropDownViewController.h in Headers */,
-				181A1AF6B4CD524AF14E6C47B200D41B /* ShowExtendViewVC.h in Headers */,
-				BFFCED500F835EE706966727A5D70559 /* TSCareAboutHideHomeViewController.h in Headers */,
-				92CB2EF66544A23243E7599367A76E72 /* TSDemo_Popup-umbrella.h in Headers */,
-				B10DBB11D9AD7855B1DEAB13D0561007 /* TSExtendHomeViewController.h in Headers */,
-				E0C1286FFC97C116D6C225AED98DE242 /* TSToastHomeViewController.h in Headers */,
-				3F8C19B2AB435E00AD7AAFBDCF285BBB /* TSWindowAnimationHomeViewController.h in Headers */,
-				EF2C97023BAA8744E38E93EB76728736 /* WelcomePopupView.h in Headers */,
-				FADD4190E9A3F298F3AC4B458FD16585 /* WelcomeViewToPop.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1810,19 +1817,19 @@
 		};
 		36D4108FBAAC35AC413A4060CA53C6C3 /* TSDemo_Popup */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48DA53DCEEAFFE2118B93C804BB9833D /* Build configuration list for PBXNativeTarget "TSDemo_Popup" */;
+			buildConfigurationList = A107AC6A01ADBCAE2947C148775FE230 /* Build configuration list for PBXNativeTarget "TSDemo_Popup" */;
 			buildPhases = (
-				820108A887462C4C1C1CCC4C470C9202 /* Headers */,
-				3FD89FA34FDE3DB05F0B11266E7ABEEB /* Sources */,
-				2CA9567ADA9B03DC6CFC2071730657F4 /* Frameworks */,
-				114B9C138D6A416AB0183C9B7C1EC1D2 /* Resources */,
+				3EEE0D823E8B0A1B686E74F622994A73 /* Headers */,
+				3B04475C3A8893B7230BA39573D48111 /* Sources */,
+				121EB268795A52248D6DDEC21DD06179 /* Frameworks */,
+				A233A2BAE3B83505AD59AE969814104C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D8D46B267DEB8CFAAF20F5BE45104F3F /* PBXTargetDependency */,
-				B3D6486DC7223CC2EE844E8889196A5A /* PBXTargetDependency */,
-				8265F4CEF781A74B7CE315EBCFDBB074 /* PBXTargetDependency */,
+				5DC2CFC453A8F2A84191FDEE3F260734 /* PBXTargetDependency */,
+				52B5DB57944E49959CDEAC5F6293E39F /* PBXTargetDependency */,
+				403367FF376C9AB9E1A07C01E324DC6E /* PBXTargetDependency */,
 			);
 			name = TSDemo_Popup;
 			productName = TSDemo_Popup;
@@ -1831,12 +1838,12 @@
 		};
 		55AF53E6C77A10ED4985E04D74A8878E /* Masonry */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C5C01BC82C3413BBB088D63BDAFB690 /* Build configuration list for PBXNativeTarget "Masonry" */;
+			buildConfigurationList = 512F689B14BBC98EA852BC86135F001E /* Build configuration list for PBXNativeTarget "Masonry" */;
 			buildPhases = (
-				56B66123B988CFF6596FFB37532FCCE7 /* Headers */,
-				D6F7C379130E91576F45E9E0A82AC37B /* Sources */,
-				81196F5B06397ED9BEEE47958B2E1A48 /* Frameworks */,
-				0877D9094D36B806C2A3EFF78500BD9A /* Resources */,
+				544575E345D2AC15658608C02CC3DEB5 /* Headers */,
+				A9EBA345BBC308D280C312A9BDC3B54E /* Sources */,
+				9C627CFFDC8369ACDCB4A1FFFC7372C2 /* Frameworks */,
+				A258E2BFE3A90353B005A4C3D6B47B1E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1877,9 +1884,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				5B376A2F70128B15B80CB25F36E0AF48 /* PBXTargetDependency */,
-				051DD298B2D1C1961E625E172BC2A96B /* PBXTargetDependency */,
-				2C44796CA9E121FF0D94C3B24CCC652A /* PBXTargetDependency */,
+				2C42DABA4082E7B0752CFE9AB783366A /* PBXTargetDependency */,
+				F0434CBB2A82B17F00D1DC6B2D7EB79D /* PBXTargetDependency */,
+				B6E0E6BB5BF1DC9D55E95C44378D8969 /* PBXTargetDependency */,
 			);
 			name = "TSDemo_Popup-Swift";
 			productName = TSDemo_Popup_Swift;
@@ -1898,14 +1905,14 @@
 			buildRules = (
 			);
 			dependencies = (
-				E3E4DEDE66AD8E3D79C120B9E67FFA54 /* PBXTargetDependency */,
-				F025F0A05CE6E7A4CE57246EF465084F /* PBXTargetDependency */,
-				C724067BD2E14A5FF39CCCF2A830B98D /* PBXTargetDependency */,
-				E78B75005863607F2501B3BA2CF03178 /* PBXTargetDependency */,
-				05D757A46574C331BB7304B79174FDA5 /* PBXTargetDependency */,
-				909B95DACD777DC3F728AA4DB496AD46 /* PBXTargetDependency */,
-				5B7CD0C20432097EDD6B69019B727634 /* PBXTargetDependency */,
-				CD7A8DED9F8B651D150142FB8FA9AE87 /* PBXTargetDependency */,
+				B85E89D30D65A9CC49B64D0E203D29BB /* PBXTargetDependency */,
+				5ED5FB3386D01AE768E643ACC8B641EA /* PBXTargetDependency */,
+				367F4C27D822B546606E62464A757468 /* PBXTargetDependency */,
+				BC0A85FDABBB416D5584003DADFD8C5C /* PBXTargetDependency */,
+				8CF9DBE35D11E34ED7DCC6D898AE47E1 /* PBXTargetDependency */,
+				7A437A89368591DD1A019A6F40659C52 /* PBXTargetDependency */,
+				4BC39898617E1C42AC301F5C29014273 /* PBXTargetDependency */,
+				89C082ABBB6238B1F57B832220F7A604 /* PBXTargetDependency */,
 			);
 			name = "Pods-CJPopupActionDemo";
 			productName = Pods_CJPopupActionDemo;
@@ -1924,7 +1931,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				369DCD6843770132984888A085ACAB5B /* PBXTargetDependency */,
+				E4F168968AF67607EC4F80C911108977 /* PBXTargetDependency */,
 			);
 			name = CQDemoKit;
 			productName = CQDemoKit;
@@ -1933,11 +1940,11 @@
 		};
 		B063F09F7E9D21D3305A4A90AE4E7C4A /* CQDemoResource-CQDemoResource */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FDCB107E44CC101AA15FF26AF3CA7797 /* Build configuration list for PBXNativeTarget "CQDemoResource-CQDemoResource" */;
+			buildConfigurationList = D3AD9D3E6258805B8FEBB164BC55CEDE /* Build configuration list for PBXNativeTarget "CQDemoResource-CQDemoResource" */;
 			buildPhases = (
-				3F3637DFF23278A67CAC3911F75B5186 /* Sources */,
-				650566B53EF9847DE18A9C7FD584C302 /* Frameworks */,
-				2289C70F121B0BF5FBFE2121958FF05A /* Resources */,
+				09892FE8A354C96E0EA30EA5DE409A2B /* Sources */,
+				4DB439E5722A4BCA8C9A36CAB8441C95 /* Frameworks */,
+				6410A85ECC21216DC67AFA69CCD14E5D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1960,8 +1967,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				646305AAAEAF233EB4A9CF27C8B8F85D /* PBXTargetDependency */,
-				8354813FF5A14DC15E6EBC0B783D8A93 /* PBXTargetDependency */,
+				E268B32F187B86C46AEA739A177CDA5A /* PBXTargetDependency */,
+				166F17C451A774B2F966373881275AD5 /* PBXTargetDependency */,
 			);
 			name = CQDemoResource;
 			productName = CQDemoResource;
@@ -1980,7 +1987,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3A0F4104E54DD7D20322F3A822D9427A /* PBXTargetDependency */,
+				74B5871EE1E6CB1ADCE05E76AB1E834B /* PBXTargetDependency */,
 			);
 			name = CJPopupAction;
 			productName = CJPopupAction;
@@ -2045,64 +2052,10 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0877D9094D36B806C2A3EFF78500BD9A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		114B9C138D6A416AB0183C9B7C1EC1D2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CEC46C05905B17CB89C9B0892EF42CBC /* PopupInViewVC.xib in Resources */,
-				765694D71E467E6B101D5962BE299EBD /* ShowExtendViewVC.xib in Resources */,
-				7FB992BAA42855E8ED6F78A584BF1B64 /* WelcomePopupView.xib in Resources */,
-				1281373B9616D987A7CF7122DDD27C15 /* WelcomeViewToPop.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		199E35D42158C9C75AD989ADB76E9769 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2289C70F121B0BF5FBFE2121958FF05A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FF73110922B3263907B045B91729C1AD /* CQDemoAssets.xcassets in Resources */,
-				2C89B34941665A673ACF96E1218E7665 /* cqts_bmp_01.bmp in Resources */,
-				D6094668744238C484432FD3F40E82DB /* cqts_bmp_02.bmp in Resources */,
-				4021CFB34391ECAC63D52C6EE5818455 /* cqts_heic_01.HEIC in Resources */,
-				74BD7214D78D94E5744F46210CD4383B /* cqts_jpg_01.jpg in Resources */,
-				5B18EF11E3F93B97BC4BB37BDE4E2A48 /* cqts_jpg_02.jpg in Resources */,
-				FC36A1E5674E016427DE12AA452283D4 /* cqts_jpg_03.jpg in Resources */,
-				E4D614C5A32884935A1CCF5C88442972 /* cqts_jpg_04.jpg in Resources */,
-				2B4C1F7177932C9B2F4849A96F4E4D9D /* cqts_jpg_avatar_01.jpg in Resources */,
-				D0D40F3B0FE91E572E8681970251A4A4 /* cqts_jpg_avatar_02.jpg in Resources */,
-				9202916D7AA95099511C8707D15F04FB /* cqts_jpg_avatar_03.jpg in Resources */,
-				2FBED51F953A2CC339E667B1EC77A6B9 /* cqts_jpg_avatar_04.jpg in Resources */,
-				ED3038A4745A95E264B61A65980E1307 /* cqts_jpg_avatar_05.jpg in Resources */,
-				0BE46D8DDA64930FB08AFD392F529054 /* cqts_jpg_avatar_06.jpg in Resources */,
-				0613761E118E42F0AD9DD94CF68E99E5 /* cqts_jpg_avatar_07.jpg in Resources */,
-				09327D996E496542006D6140230AA0AA /* cqts_jpg_avatar_08.jpg in Resources */,
-				7F01F447CB35088300A1C39E55D14721 /* cqts_jpg_bg_01.jpg in Resources */,
-				9E9C2C74A6CB8136DBC5AA5AEF48404C /* cqts_jpg_bg_02.jpg in Resources */,
-				3AE42A269CF0F05DCF90505827B64EE9 /* cqts_jpg_bg_03.jpg in Resources */,
-				B11984AB64F8DA523F83D25619426538 /* cqts_jpg_bg_04.jpg in Resources */,
-				825CA864AECF739DB4B4E094D9178EE4 /* cqts_jpg_bg_05.jpg in Resources */,
-				CA4B80816B9276D18AD8B94606792D6F /* cqts_jpg_long_horizontal_1.jpg in Resources */,
-				1A79E7E121B3EBA355D7625CCC370E76 /* cqts_jpg_long_vertical_1.jpg in Resources */,
-				42FB260C0AF48539B17FA932C8FBC4E0 /* cqts_placeholder_jpg_01.jpeg in Resources */,
-				DF35BB5854EFF91B707101EA710AF181 /* cqts_placeholder_jpg_02.jpeg in Resources */,
-				61BE7277CEF1E415C3AEBC1D734B157C /* cqts_placeholder_png_01.png in Resources */,
-				721E736B7FC933F3DA54C360EEA781A3 /* cqts_png_01.png in Resources */,
-				87462AE150E6173ABBDC4C1039723A6D /* cqts_png_avatar_01.png in Resources */,
-				96FC574205C56511E507434AACEF2B92 /* cqts_wp_01.webp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2127,6 +2080,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6410A85ECC21216DC67AFA69CCD14E5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D389DD76D8F9D5AD3AC6B844C484C21 /* CQDemoAssets.xcassets in Resources */,
+				83D86CC7147E4083EA2495111FCBFEBB /* cqts_bmp_01.bmp in Resources */,
+				4A126464E45E6EC5EE07821CB5DF0F96 /* cqts_bmp_02.bmp in Resources */,
+				76C680427385B36503CCF610BD397C8B /* cqts_heic_01.HEIC in Resources */,
+				3654580CF602C8A15D89D035CC59458D /* cqts_jpg_01.jpg in Resources */,
+				1F73824A4FE2F0F3EA5017645E1E5EDC /* cqts_jpg_02.jpg in Resources */,
+				8C823B0804C76D89A8366333547950B8 /* cqts_jpg_03.jpg in Resources */,
+				ABC96D3AED0F371C095CB888CDD594F3 /* cqts_jpg_04.jpg in Resources */,
+				D1C24FBAC9FFACF3E726F939074B0684 /* cqts_jpg_avatar_01.jpg in Resources */,
+				9B882EF3A97378552FE86533AD2D2C27 /* cqts_jpg_avatar_02.jpg in Resources */,
+				784544431E20F891ABF3D9E112D5FF7E /* cqts_jpg_avatar_03.jpg in Resources */,
+				EC34A0FB5CE5E478F746354B805785AD /* cqts_jpg_avatar_04.jpg in Resources */,
+				2244FA5686390E92065C75347CF7EDD7 /* cqts_jpg_avatar_05.jpg in Resources */,
+				4398FB13667A1DD834E320CC0EF78ED0 /* cqts_jpg_avatar_06.jpg in Resources */,
+				0A4E15355155888EAA2E9E28C778D3BC /* cqts_jpg_avatar_07.jpg in Resources */,
+				2934B265EB456F4EAAD8AC41C87764B7 /* cqts_jpg_avatar_08.jpg in Resources */,
+				0A89FC2C54668A2D9C687D0C14E26AC9 /* cqts_jpg_bg_01.jpg in Resources */,
+				25597A16F1D024F3F8A0BEDE4FFB803A /* cqts_jpg_bg_02.jpg in Resources */,
+				80123FB1D552561BF89A5C9222ABB821 /* cqts_jpg_bg_03.jpg in Resources */,
+				C95E806AC448C55166C6A99F09C1BAF5 /* cqts_jpg_bg_04.jpg in Resources */,
+				A86EBA1F0DE8293D8F4BF87A206CF83D /* cqts_jpg_bg_05.jpg in Resources */,
+				DBC59E932C6CA042691F60E9A8209F87 /* cqts_jpg_long_horizontal_1.jpg in Resources */,
+				1C01E9DDE98E79A813655EE52068E4F6 /* cqts_jpg_long_vertical_1.jpg in Resources */,
+				DA0836A7F4965F3673116316CF3174CB /* cqts_placeholder_jpg_01.jpeg in Resources */,
+				1DDF7CBA418EE84C116A02CCF9E9C3A0 /* cqts_placeholder_jpg_02.jpeg in Resources */,
+				164E7FFB751D8841DEB31C7B3AF503EC /* cqts_placeholder_png_01.png in Resources */,
+				539AF2903C5EF9D18627832561E1F773 /* cqts_png_01.png in Resources */,
+				4933216249CAF0F70532E30081FED137 /* cqts_png_avatar_01.png in Resources */,
+				0B7255D78D5A3D8B7A6865465709451B /* cqts_wp_01.webp in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7AF2941B1CFF036625AEA99986BBC6A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2135,6 +2124,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		94B7B1F3668346B27C4BDF592C183B59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A233A2BAE3B83505AD59AE969814104C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F253E154D7C8F6728230C80EFC487B2 /* PopupInViewVC.xib in Resources */,
+				A5823BEFF000D26FC6CF0DC588B8CBAF /* ShowExtendViewVC.xib in Resources */,
+				C87A77C023EF5110EFBEF4FF54502C6D /* WelcomePopupView.xib in Resources */,
+				3EB9DD789F8D59E8DD88CC31CA2C8E8F /* WelcomeViewToPop.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A258E2BFE3A90353B005A4C3D6B47B1E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2175,11 +2182,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		09892FE8A354C96E0EA30EA5DE409A2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21F6988EB5F46E6469EB043C44536F0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				248FE1CCD06587EF7FA6A44C66720BCF /* Pods-CJPopupActionDemoTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B04475C3A8893B7230BA39573D48111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF62D893C2503F7170901E54244F7576 /* PopupInViewVC.m in Sources */,
+				540D69BF9F2035B3784089A52B965176 /* PopupInWindowHomeVC.m in Sources */,
+				D2629AD177CAB3475273C12335983B30 /* PopupInWindowVC.m in Sources */,
+				258464C48D405C2761F52896B8036923 /* ShowDropDownViewController.m in Sources */,
+				C7D3586AFEF1CB3A5FCF162A470CB84A /* ShowExtendViewVC.m in Sources */,
+				5D50457CEFC85C769DB09B3F3954FAC8 /* TSCareAboutHideHomeViewController.m in Sources */,
+				41516767423BF4EC4956DCA805F86E1E /* TSDemo_Popup-dummy.m in Sources */,
+				F52228833EA42B05780A8B2611B7DCAD /* TSExtendHomeViewController.m in Sources */,
+				AFEED276F0ED79B8689A2E48F1B1AB6C /* TSToastHomeViewController.m in Sources */,
+				681EEE52CAE88B0C077AD974D6E83586 /* TSWindowAnimationHomeViewController.m in Sources */,
+				A597D2426D9753D2D2645C7317853181 /* WelcomePopupView.m in Sources */,
+				46CCA5E8DDA628CDC86D4EE0FEABE9B5 /* WelcomeViewToPop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2196,31 +2229,6 @@
 				3F63B8B433C1D50D0866E8FE0C57BBBB /* UIView+CJPopupInView.m in Sources */,
 				39104CEF97280AF6A02F2D7486654C2B /* UIView+CJShowExtendView.m in Sources */,
 				82533B7923A2FC4F81669C8A93FAC9C7 /* UIView+CJToastAnimation.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3F3637DFF23278A67CAC3911F75B5186 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3FD89FA34FDE3DB05F0B11266E7ABEEB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6AB621206EC32E69F51BEAC44BF0609A /* PopupInViewVC.m in Sources */,
-				B7388B4D1EFC7FB01ACC5618A39F2D38 /* PopupInWindowVC.m in Sources */,
-				0C5A2FB02D189EB00F538CCE07ED1230 /* ShowDropDownViewController.m in Sources */,
-				7540328CBDF85DE8FE82B80800E53132 /* ShowExtendViewVC.m in Sources */,
-				CD24E709F166E1DB3642A7D0CB0558D7 /* TSCareAboutHideHomeViewController.m in Sources */,
-				5F7C2DD2FB458D1F3622E28830B56DB2 /* TSDemo_Popup-dummy.m in Sources */,
-				26568B9F764194225532A50C92A8C52D /* TSExtendHomeViewController.m in Sources */,
-				84D118B93987E9F2893B2A799639B0C2 /* TSToastHomeViewController.m in Sources */,
-				0758DFFB89E49B814A4CDEA233BB22FA /* TSWindowAnimationHomeViewController.m in Sources */,
-				2FFB5AE73F65A0BF178560F73590DF8D /* WelcomePopupView.m in Sources */,
-				D76630BFD703B7BF8CF4AC5091846B7D /* WelcomeViewToPop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2275,6 +2283,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9EBA345BBC308D280C312A9BDC3B54E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8A97BB9C660FA5265DEA6BD8535D243 /* MASCompositeConstraint.m in Sources */,
+				DA7A4970DDFCB6AC0963FC6C73068338 /* MASConstraint.m in Sources */,
+				2BDB9E72F09589ABFFC519E498C091CF /* MASConstraintMaker.m in Sources */,
+				4F04D3F2F78407A82EFA009E5BF03F7C /* MASLayoutConstraint.m in Sources */,
+				CC170D5898DE258251915CA06B0B6EB2 /* Masonry-dummy.m in Sources */,
+				34F237FED0A5E91FDE49C5200460A13B /* MASViewAttribute.m in Sources */,
+				EF2C5D307867F394646971995110A223 /* MASViewConstraint.m in Sources */,
+				4751B2BB12E1DC50C5930497D7F43D4B /* NSArray+MASAdditions.m in Sources */,
+				12B7D4D34B39161039285F67E4AA3B08 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				193A2A991C5FF8DD77D46C199FBA0DB2 /* View+MASAdditions.m in Sources */,
+				D3A8BC6E5EE2B87462353250BA3EB942 /* ViewController+MASAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA35AC5E7711320DD5506A0243FED7C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2283,24 +2309,6 @@
 				D0BE9A23D81291515608AD794B42DDD9 /* CQTSAssetModelGetter.m in Sources */,
 				235FE6D4A194013CD41CFA9B60C53EFC /* CQTSAssetSourceUtil.m in Sources */,
 				3455A59BAEC265868A964CFBA0610711 /* UIImage+CQDemoResource.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D6F7C379130E91576F45E9E0A82AC37B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				97DAFF43E3D77605E4B16E01979DC61C /* MASCompositeConstraint.m in Sources */,
-				4EA91AEC9B7D643FF2729F039709DE15 /* MASConstraint.m in Sources */,
-				D2B08F0BDD915C85A726AD1F6306BD8A /* MASConstraintMaker.m in Sources */,
-				C8ACAEE581998790BF3497F62BEC26B7 /* MASLayoutConstraint.m in Sources */,
-				8BFCE6B60F3954FBB0F2B4B26EE18EC5 /* Masonry-dummy.m in Sources */,
-				3D30EF885C14704A3DE627BF0F082316 /* MASViewAttribute.m in Sources */,
-				0A509556F7CD7F8CCD5A6E19F3BA8607 /* MASViewConstraint.m in Sources */,
-				229FCB332A4937E90103878D68011869 /* NSArray+MASAdditions.m in Sources */,
-				3C9E449AEB3A150C47DBF022FA683BBE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				2A5F1428CC2128C70AE2F6E9C6539192 /* View+MASAdditions.m in Sources */,
-				904BFA11C14E5641F5F0AE255EA7EF01 /* ViewController+MASAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2327,113 +2335,113 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		051DD298B2D1C1961E625E172BC2A96B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CQDemoResource;
-			target = B215DEDD676D9708350AB2139958B6BF /* CQDemoResource */;
-			targetProxy = C538B046E662AB9CAE9A0685A9A9B483 /* PBXContainerItemProxy */;
-		};
-		05D757A46574C331BB7304B79174FDA5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CQDemoResource;
-			target = B215DEDD676D9708350AB2139958B6BF /* CQDemoResource */;
-			targetProxy = C62C4272D882D315A8F542DD988B5684 /* PBXContainerItemProxy */;
-		};
-		2C44796CA9E121FF0D94C3B24CCC652A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TSDemo_Popup;
-			target = 36D4108FBAAC35AC413A4060CA53C6C3 /* TSDemo_Popup */;
-			targetProxy = 8A069D4E05ECCE6F1441D8854382B7BF /* PBXContainerItemProxy */;
-		};
-		369DCD6843770132984888A085ACAB5B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Masonry;
-			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
-			targetProxy = EF1344B805EA0E15CFC45199DEF9E47B /* PBXContainerItemProxy */;
-		};
-		3A0F4104E54DD7D20322F3A822D9427A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CJAnimationKit;
-			target = 706D946CCC4A336CE0921F51F1EEDBDC /* CJAnimationKit */;
-			targetProxy = F0B1FC0ACB126E74541E77FEE9CF1955 /* PBXContainerItemProxy */;
-		};
-		5B376A2F70128B15B80CB25F36E0AF48 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CQDemoKit;
-			target = AC509E0B2457961842D06F82D4E8C691 /* CQDemoKit */;
-			targetProxy = 0AC8E134BEFED17EC7BCA3E605ADE873 /* PBXContainerItemProxy */;
-		};
-		5B7CD0C20432097EDD6B69019B727634 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TSDemo_Popup;
-			target = 36D4108FBAAC35AC413A4060CA53C6C3 /* TSDemo_Popup */;
-			targetProxy = 6F37BAE73979A1FCEAD7D13A1EC6C0D7 /* PBXContainerItemProxy */;
-		};
-		646305AAAEAF233EB4A9CF27C8B8F85D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CQDemoKit;
-			target = AC509E0B2457961842D06F82D4E8C691 /* CQDemoKit */;
-			targetProxy = 80B32ED1632A0DA7D44032DA3AD390EB /* PBXContainerItemProxy */;
-		};
-		8265F4CEF781A74B7CE315EBCFDBB074 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CQDemoKit;
-			target = AC509E0B2457961842D06F82D4E8C691 /* CQDemoKit */;
-			targetProxy = A6509B673C1E2C307CE259B2E095BF3C /* PBXContainerItemProxy */;
-		};
-		8354813FF5A14DC15E6EBC0B783D8A93 /* PBXTargetDependency */ = {
+		166F17C451A774B2F966373881275AD5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "CQDemoResource-CQDemoResource";
 			target = B063F09F7E9D21D3305A4A90AE4E7C4A /* CQDemoResource-CQDemoResource */;
-			targetProxy = FDE7F82C07ADBDA451A0DABB5A1A84A2 /* PBXContainerItemProxy */;
+			targetProxy = 15FBCF89F5267D1C267CF11E2712EACE /* PBXContainerItemProxy */;
 		};
-		909B95DACD777DC3F728AA4DB496AD46 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Masonry;
-			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
-			targetProxy = 9086AB15C7B4B2F6EE4794CB4DDED74C /* PBXContainerItemProxy */;
-		};
-		B3D6486DC7223CC2EE844E8889196A5A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CJPopupAction;
-			target = B3F2F6FD514EDBB9E1809452A8210A5F /* CJPopupAction */;
-			targetProxy = AA22523C22EEB156F592FE68375B04ED /* PBXContainerItemProxy */;
-		};
-		C724067BD2E14A5FF39CCCF2A830B98D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CJPopupAction;
-			target = B3F2F6FD514EDBB9E1809452A8210A5F /* CJPopupAction */;
-			targetProxy = 3890832418855CABBA138535E6E9B7BC /* PBXContainerItemProxy */;
-		};
-		CD7A8DED9F8B651D150142FB8FA9AE87 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "TSDemo_Popup-Swift";
-			target = 72E05446CF4721E9969F6AB7B437E9AB /* TSDemo_Popup-Swift */;
-			targetProxy = 1A42110D57A19089158DB6E0C7F1296E /* PBXContainerItemProxy */;
-		};
-		D8D46B267DEB8CFAAF20F5BE45104F3F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CJBaseUIKit;
-			target = 31936AD642017976266B9ED39110F157 /* CJBaseUIKit */;
-			targetProxy = 4846ED60877479AEA41FAF9398BDC800 /* PBXContainerItemProxy */;
-		};
-		E3E4DEDE66AD8E3D79C120B9E67FFA54 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CJAnimationKit;
-			target = 706D946CCC4A336CE0921F51F1EEDBDC /* CJAnimationKit */;
-			targetProxy = 05830646846308A85CF6C27C7F11D65F /* PBXContainerItemProxy */;
-		};
-		E78B75005863607F2501B3BA2CF03178 /* PBXTargetDependency */ = {
+		2C42DABA4082E7B0752CFE9AB783366A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CQDemoKit;
 			target = AC509E0B2457961842D06F82D4E8C691 /* CQDemoKit */;
-			targetProxy = 4C85B731AB2F60003491F43A2900A45F /* PBXContainerItemProxy */;
+			targetProxy = BEA0004CECC4434FB9FAD9C9F7D1C3D0 /* PBXContainerItemProxy */;
 		};
-		F025F0A05CE6E7A4CE57246EF465084F /* PBXTargetDependency */ = {
+		367F4C27D822B546606E62464A757468 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CJPopupAction;
+			target = B3F2F6FD514EDBB9E1809452A8210A5F /* CJPopupAction */;
+			targetProxy = 2F1E3F610371BBF941E0E2FE1DB0FC4A /* PBXContainerItemProxy */;
+		};
+		403367FF376C9AB9E1A07C01E324DC6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CQDemoKit;
+			target = AC509E0B2457961842D06F82D4E8C691 /* CQDemoKit */;
+			targetProxy = 659F50E7247E4302EC125703FE1F5472 /* PBXContainerItemProxy */;
+		};
+		4BC39898617E1C42AC301F5C29014273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TSDemo_Popup;
+			target = 36D4108FBAAC35AC413A4060CA53C6C3 /* TSDemo_Popup */;
+			targetProxy = 3A25B10ED01410C0B1B349E48386A05E /* PBXContainerItemProxy */;
+		};
+		52B5DB57944E49959CDEAC5F6293E39F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CJPopupAction;
+			target = B3F2F6FD514EDBB9E1809452A8210A5F /* CJPopupAction */;
+			targetProxy = 04BBDD10753B3E7025BFCCDC28A95BB4 /* PBXContainerItemProxy */;
+		};
+		5DC2CFC453A8F2A84191FDEE3F260734 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CJBaseUIKit;
 			target = 31936AD642017976266B9ED39110F157 /* CJBaseUIKit */;
-			targetProxy = 5ED37845B3E41C0708DCBEA9DAD7169E /* PBXContainerItemProxy */;
+			targetProxy = 4C2040330E9918968973B7913A61716E /* PBXContainerItemProxy */;
+		};
+		5ED5FB3386D01AE768E643ACC8B641EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CJBaseUIKit;
+			target = 31936AD642017976266B9ED39110F157 /* CJBaseUIKit */;
+			targetProxy = 05581B9205A719D0977287E43C97ED92 /* PBXContainerItemProxy */;
+		};
+		74B5871EE1E6CB1ADCE05E76AB1E834B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CJAnimationKit;
+			target = 706D946CCC4A336CE0921F51F1EEDBDC /* CJAnimationKit */;
+			targetProxy = 5B7D5292E823732D988894390304F72E /* PBXContainerItemProxy */;
+		};
+		7A437A89368591DD1A019A6F40659C52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
+			targetProxy = 179F34D23B951AC3DF651607454D2A25 /* PBXContainerItemProxy */;
+		};
+		89C082ABBB6238B1F57B832220F7A604 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "TSDemo_Popup-Swift";
+			target = 72E05446CF4721E9969F6AB7B437E9AB /* TSDemo_Popup-Swift */;
+			targetProxy = E8058F1EC47E9D56278A3BA18EFB9C2A /* PBXContainerItemProxy */;
+		};
+		8CF9DBE35D11E34ED7DCC6D898AE47E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CQDemoResource;
+			target = B215DEDD676D9708350AB2139958B6BF /* CQDemoResource */;
+			targetProxy = 630D304E1BFD16327CDF54BA824BEBB2 /* PBXContainerItemProxy */;
+		};
+		B6E0E6BB5BF1DC9D55E95C44378D8969 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TSDemo_Popup;
+			target = 36D4108FBAAC35AC413A4060CA53C6C3 /* TSDemo_Popup */;
+			targetProxy = 97CEA23550693B03E3E1590F5AFFC2CE /* PBXContainerItemProxy */;
+		};
+		B85E89D30D65A9CC49B64D0E203D29BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CJAnimationKit;
+			target = 706D946CCC4A336CE0921F51F1EEDBDC /* CJAnimationKit */;
+			targetProxy = FED8A18FCA87BA7D68B315AFAA83D85B /* PBXContainerItemProxy */;
+		};
+		BC0A85FDABBB416D5584003DADFD8C5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CQDemoKit;
+			target = AC509E0B2457961842D06F82D4E8C691 /* CQDemoKit */;
+			targetProxy = 8A3314BCD60C6A24896DB06EF27D0415 /* PBXContainerItemProxy */;
+		};
+		E268B32F187B86C46AEA739A177CDA5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CQDemoKit;
+			target = AC509E0B2457961842D06F82D4E8C691 /* CQDemoKit */;
+			targetProxy = DDD240DF7CD4A1B10F5126FFFBFAFBA7 /* PBXContainerItemProxy */;
+		};
+		E4F168968AF67607EC4F80C911108977 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
+			targetProxy = B4F9E483B0D856C43E1369AA51F99943 /* PBXContainerItemProxy */;
+		};
+		F0434CBB2A82B17F00D1DC6B2D7EB79D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CQDemoResource;
+			target = B215DEDD676D9708350AB2139958B6BF /* CQDemoResource */;
+			targetProxy = 6C79A95EA6B18DC7C5C7B622AD70A33F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2539,6 +2547,23 @@
 			};
 			name = Debug;
 		};
+		15D1CFB2E73BEB315CAC627830C0FE7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2FE47CD5AEFBBCDCC5CB3A7505EB4F6 /* CQDemoResource.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CQDemoResource";
+				IBSC_MODULE = CQDemoResource;
+				INFOPLIST_FILE = "Target Support Files/CQDemoResource/ResourceBundle-CQDemoResource-CQDemoResource-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = CQDemoResource;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		214E93D359E59F0AE9BB9AA1F360D054 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FE38E26DCA14C0BA5E0560B09C2ED93B /* CJBaseUIKit.release.xcconfig */;
@@ -2573,9 +2598,9 @@
 			};
 			name = Release;
 		};
-		244C9DB34B1CA500977E6FD52DE06F43 /* Debug */ = {
+		231776210CD2D49C7B00196FA6DA8F98 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECA3F7F2C9604693C05EE1E1E97A9A50 /* Masonry.debug.xcconfig */;
+			baseConfigurationReference = 1B0050C75C7EB3C69222987247237C73 /* TSDemo_Popup.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2587,15 +2612,15 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/TSDemo_Popup/TSDemo_Popup-prefix.pch";
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/TSDemo_Popup/TSDemo_Popup-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
-				PRODUCT_MODULE_NAME = Masonry;
-				PRODUCT_NAME = Masonry;
+				MODULEMAP_FILE = "Target Support Files/TSDemo_Popup/TSDemo_Popup.modulemap";
+				PRODUCT_MODULE_NAME = TSDemo_Popup;
+				PRODUCT_NAME = TSDemo_Popup;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -2705,57 +2730,6 @@
 			};
 			name = Debug;
 		};
-		2E98D192C1FF112520ED364F41DB10A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCD04438B0145B3347FD0DFECE71D843 /* Masonry.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
-				PRODUCT_MODULE_NAME = Masonry;
-				PRODUCT_NAME = Masonry;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3332C9C5A4776606D52D3D4F40A0ADE5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2FE47CD5AEFBBCDCC5CB3A7505EB4F6 /* CQDemoResource.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CQDemoResource";
-				IBSC_MODULE = CQDemoResource;
-				INFOPLIST_FILE = "Target Support Files/CQDemoResource/ResourceBundle-CQDemoResource-CQDemoResource-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = CQDemoResource;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		385B670EE0F9DD3B9A3F5EB6127A6581 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8F2C7CF18CF106CCA7311E4ECF1C2875 /* TSDemo_Popup-Swift.release.xcconfig */;
@@ -2791,6 +2765,39 @@
 			};
 			name = Release;
 		};
+		3C514138F2F53D7F61C0BAB843F80108 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECA3F7F2C9604693C05EE1E1E97A9A50 /* Masonry.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		3DC6614AE956DA87D3DDF7DA0EF2D924 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9CE2F69F380B71F24B383AD7E3DDBD9 /* CQDemoKit.release.xcconfig */;
@@ -2814,40 +2821,6 @@
 				MODULEMAP_FILE = "Target Support Files/CQDemoKit/CQDemoKit.modulemap";
 				PRODUCT_MODULE_NAME = CQDemoKit;
 				PRODUCT_NAME = CQDemoKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		49E90ACCC4DD8E1C25F22E965D0309CF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72E050094338E4231FDA0D392FA38BE0 /* TSDemo_Popup.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/TSDemo_Popup/TSDemo_Popup-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/TSDemo_Popup/TSDemo_Popup-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TSDemo_Popup/TSDemo_Popup.modulemap";
-				PRODUCT_MODULE_NAME = TSDemo_Popup;
-				PRODUCT_NAME = TSDemo_Popup;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -2924,6 +2897,57 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		62EDFD2D052DC34E7FDE8E5C39BE1196 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 961A82A27495353F641FDCEC5455AB09 /* CQDemoResource.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CQDemoResource";
+				IBSC_MODULE = CQDemoResource;
+				INFOPLIST_FILE = "Target Support Files/CQDemoResource/ResourceBundle-CQDemoResource-CQDemoResource-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = CQDemoResource;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		6E4D009B92C47868B460FD849B995551 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCD04438B0145B3347FD0DFECE71D843 /* Masonry.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/Masonry/Masonry-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		781536C7AF7E32450709F7F2762613D2 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3028,39 +3052,6 @@
 			};
 			name = Debug;
 		};
-		8BCA0FAE938997FF8F525FA78BC4A183 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED5702227FA1B67002C3BF97E23CF715 /* TSDemo_Popup.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/TSDemo_Popup/TSDemo_Popup-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/TSDemo_Popup/TSDemo_Popup-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TSDemo_Popup/TSDemo_Popup.modulemap";
-				PRODUCT_MODULE_NAME = TSDemo_Popup;
-				PRODUCT_NAME = TSDemo_Popup;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		A2B17DA514789494D62204B32A60AE43 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 521570A9FD21F4A4BC179955AD068A59 /* CJAnimationKit.release.xcconfig */;
@@ -3092,23 +3083,6 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A973FD89577BF24768004DFA163F47D3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 961A82A27495353F641FDCEC5455AB09 /* CQDemoResource.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CQDemoResource";
-				IBSC_MODULE = CQDemoResource;
-				INFOPLIST_FILE = "Target Support Files/CQDemoResource/ResourceBundle-CQDemoResource-CQDemoResource-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = CQDemoResource;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -3171,6 +3145,40 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D0EB6B474315AA309D06E86A34D3BEA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53FF3C4026447A96C0E9C61AA1B77C35 /* TSDemo_Popup.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/TSDemo_Popup/TSDemo_Popup-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/TSDemo_Popup/TSDemo_Popup-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TSDemo_Popup/TSDemo_Popup.modulemap";
+				PRODUCT_MODULE_NAME = TSDemo_Popup;
+				PRODUCT_NAME = TSDemo_Popup;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -3297,15 +3305,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C5C01BC82C3413BBB088D63BDAFB690 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				244C9DB34B1CA500977E6FD52DE06F43 /* Debug */,
-				2E98D192C1FF112520ED364F41DB10A7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -3315,11 +3314,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		48DA53DCEEAFFE2118B93C804BB9833D /* Build configuration list for PBXNativeTarget "TSDemo_Popup" */ = {
+		512F689B14BBC98EA852BC86135F001E /* Build configuration list for PBXNativeTarget "Masonry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8BCA0FAE938997FF8F525FA78BC4A183 /* Debug */,
-				49E90ACCC4DD8E1C25F22E965D0309CF /* Release */,
+				3C514138F2F53D7F61C0BAB843F80108 /* Debug */,
+				6E4D009B92C47868B460FD849B995551 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3351,6 +3350,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A107AC6A01ADBCAE2947C148775FE230 /* Build configuration list for PBXNativeTarget "TSDemo_Popup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				231776210CD2D49C7B00196FA6DA8F98 /* Debug */,
+				D0EB6B474315AA309D06E86A34D3BEA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C22577D610C6DAA6B843FB7A4672FA02 /* Build configuration list for PBXNativeTarget "CJAnimationKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -3369,20 +3377,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		D3AD9D3E6258805B8FEBB164BC55CEDE /* Build configuration list for PBXNativeTarget "CQDemoResource-CQDemoResource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15D1CFB2E73BEB315CAC627830C0FE7C /* Debug */,
+				62EDFD2D052DC34E7FDE8E5C39BE1196 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FDBEB9260043A94845DB591B23CBE47F /* Build configuration list for PBXNativeTarget "Pods-CJPopupActionDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7C3DA223A018563071919F6853F02AE8 /* Debug */,
 				F2F76219470F34A2E5BA9D5B62064720 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FDCB107E44CC101AA15FF26AF3CA7797 /* Build configuration list for PBXNativeTarget "CQDemoResource-CQDemoResource" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3332C9C5A4776606D52D3D4F40A0ADE5 /* Debug */,
-				A973FD89577BF24768004DFA163F47D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

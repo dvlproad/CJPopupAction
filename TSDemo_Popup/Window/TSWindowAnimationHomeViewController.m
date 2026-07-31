@@ -9,6 +9,7 @@
 #import "TSWindowAnimationHomeViewController.h"
 
 #import "PopupInWindowVC.h"
+#import "PopupInWindowHomeVC.h"
 
 @interface TSWindowAnimationHomeViewController ()
 
@@ -30,6 +31,13 @@
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"PopupInWindow (居中/底部弹出到Window)";
             module.classEntry = [PopupInWindowVC class];
+            module.isCreateByXib = NO;
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"PopupInWindow (弹出到Window)";
+            module.classEntry = [PopupInWindowHomeVC class];
             module.isCreateByXib = NO;
             [sectionDataModel.values addObject:module];
         }

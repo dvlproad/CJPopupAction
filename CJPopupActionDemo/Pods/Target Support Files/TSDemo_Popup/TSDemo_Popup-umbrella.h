@@ -12,13 +12,14 @@
 
 #import "PopupInViewVC.h"
 #import "TSCareAboutHideHomeViewController.h"
-#import "PopupInWindowVC.h"
 #import "ShowDropDownViewController.h"
 #import "ShowExtendViewVC.h"
 #import "TSExtendHomeViewController.h"
 #import "TSToastHomeViewController.h"
 #import "WelcomePopupView.h"
 #import "WelcomeViewToPop.h"
+#import "PopupInWindowHomeVC.h"
+#import "PopupInWindowVC.h"
 #import "TSWindowAnimationHomeViewController.h"
 
 FOUNDATION_EXPORT double TSDemo_PopupVersionNumber;
