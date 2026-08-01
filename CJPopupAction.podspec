@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CJPopupAction"
-  s.version      = "1.6.2"
+  s.version      = "1.7.0"
   s.summary      = "UIView的类别，用来实现UIView弹出popupView的一个UIView的类别"
 
   s.description  = <<-DESC
@@ -93,7 +93,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupAction.git", :tag => "CJPopupAction_1.6.2_1" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupAction.git", :tag => "CJPopupAction_1.7.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

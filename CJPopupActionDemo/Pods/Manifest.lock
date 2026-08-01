@@ -12,16 +12,16 @@ PODS:
     - CJAnimationKit/PopupAnimation/BaseBind
   - CJAnimationKit/PopupAnimation/Core (0.0.4)
   - CJBaseUIKit/UIScrollView/CJKeyboardAvoiding (0.8.1)
-  - CJPopupAction (1.6.2):
-    - CJPopupAction/CareAboutHide_AutoAddToSuperView (= 1.6.2)
-    - CJPopupAction/ShowExtendView (= 1.6.2)
-    - CJPopupAction/Toast (= 1.6.2)
-  - CJPopupAction/CareAboutHide_AutoAddToSuperView (1.6.2):
+  - CJPopupAction (1.7.0):
+    - CJPopupAction/CareAboutHide_AutoAddToSuperView (= 1.7.0)
+    - CJPopupAction/ShowExtendView (= 1.7.0)
+    - CJPopupAction/Toast (= 1.7.0)
+  - CJPopupAction/CareAboutHide_AutoAddToSuperView (1.7.0):
     - CJAnimationKit/PopupAnimation/BaseBind
-  - CJPopupAction/ShowExtendView (1.6.2):
+  - CJPopupAction/ShowExtendView (1.7.0):
     - CJAnimationKit/PopupAnimation/BaseConvenience
     - CJPopupAction/CareAboutHide_AutoAddToSuperView
-  - CJPopupAction/Toast (1.6.2)
+  - CJPopupAction/Toast (1.7.0)
   - CQDemoKit/BaseUIKit (0.9.13):
     - CQDemoKit/BaseUIKit/Button (= 0.9.13)
     - CQDemoKit/BaseUIKit/Container (= 0.9.13)
@@ -116,7 +116,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CJAnimationKit: 88a43ffcd737999fe0b077453ae696a127409b44
   CJBaseUIKit: 1445f55a4c9f942351fcd1964694f32196472837
-  CJPopupAction: 0fe09289e4eede4a302a7cd1d6dd826d261c0331
+  CJPopupAction: 75ff8691fca97ca059273f02c39542a46eb17d9c
   CQDemoKit: 0d6351e9a948e3c214aa1727c4421dc288208630
   CQDemoResource: efdf1a0231767f665f5e6e0df59ed8a5042680f7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201

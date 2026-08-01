@@ -32,6 +32,29 @@
              tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
 {
     CJPopupMainThreadAssert();
+    
+    // 1. 挂载popupView（内部完成blankView创建与挂载、frame设置、tapBlankComplete存储，无动画）
+    BOOL canAdd = [self cj_mountInBottomWindowWithHeight:popupViewHeight
+                                                  edgeInsets:edgeInsets
+                                                   blankView:blankView
+                                            tapBlankComplete:tapBlankViewCompleteBlock];
+    if (!canAdd) {  // 挂载失败
+        return;
+    }
+    
+    // 2. 显示（动画）
+    [self cj_showAnimateInBottomWindow:animated
+                           showComplete:showPopupViewCompleteBlock];
+}
+
+#pragma mark - 挂载popupView（无动画）
+/** 完整的描述请参见文件头部 */
+- (BOOL)cj_mountInBottomWindowWithHeight:(CGFloat)popupViewHeight
+                                  edgeInsets:(UIEdgeInsets)edgeInsets
+                                   blankView:(nullable UIView *)blankView
+                            tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
+{
+    CJPopupMainThreadAssert();
     NSAssert(popupViewHeight != 0, @"弹出视图的高都不能为0");
     
     // 弹出在window的中间或底部的不能没有 blankBG 视图，所以强制创建默认遮罩来保证后续能创建出 blankBG 视图
@@ -52,16 +75,16 @@
     
     UIView *popupView = self;
     
+    // 1. 挂载 popupView 进 keyWindow（本次所使用的blankView存储在self.cjTapView）
     BOOL canAdd = [self letkeyWindowAddPopupView:popupView blankView:blankView];
-    if (!canAdd) {
-        return;
+    if (!canAdd) {  // 挂载失败
+        return NO;
     }
     
-    self.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;
     self.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
 
     
-    //popupViewShowFrame
+    // 2. 设置 popupView 的最终显示位置（无动画，直接落位）
     CGFloat popupViewX = edgeInsets.left;
     CGFloat popupViewShowY = CGRectGetHeight(keyWindow.frame) - popupViewHeight - edgeInsets.bottom;
     CGRect popupViewShowFrame = CGRectZero;
@@ -69,29 +92,32 @@
                                     popupViewShowY,
                                     popupViewWidth,
                                     popupViewHeight);
+    popupView.frame = popupViewShowFrame;
     
-    if (animated == NO) {
-        popupView.frame = popupViewShowFrame;
-        !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
-        
-    } else {
-        CGFloat slideOffset = CGRectGetHeight(keyWindow.frame) - popupViewShowY;
+    return YES;
+}
 
-        
-        // 平移的情况下，初始就得设置好可能存在的 blankView 的显示1.0，及popupView的showFrame
-        UIView *blankView = self.cjTapView;
-        blankView.alpha = 1.0;
-        
-        popupView.frame = popupViewShowFrame;
-        
-        popupView.alpha = 0.2;
-        [UIView cj_showSlideAnimateBindView:self
-                           withShowDirection:CJSlideFromDirectionBottom
-                               animateOffset:slideOffset
-                                  completion:^(BOOL finished) {
-            !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
-        }];
+#pragma mark - 显示（动画）
+/** 显示popupView（动画，blankView通过self属性获取，showComplete由外部传入） */
+- (void)cj_showAnimateInBottomWindow:(BOOL)animated
+                         showComplete:(void(^)(void))showPopupViewCompleteBlock {
+    if (animated == NO) {
+        !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
+        return;
     }
+    
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    CGFloat slideOffset = CGRectGetHeight(keyWindow.frame) - CGRectGetMinY(self.frame);
+    
+    // 平移的情况下，初始就得设置好可能存在的 blankView 的显示1.0，及popupView的showFrame
+    self.cjTapView.alpha = 1.0;
+    self.alpha = 0.2;
+    [UIView cj_showSlideAnimateBindView:self
+                       withShowDirection:CJSlideFromDirectionBottom
+                           animateOffset:slideOffset
+                              completion:^(BOOL finished) {
+        !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
+    }];
 }
 
 /** 完整的描述请参见文件头部 */

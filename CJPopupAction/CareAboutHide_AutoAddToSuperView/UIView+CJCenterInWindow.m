@@ -43,6 +43,28 @@
 {
     CJPopupMainThreadAssert();
     
+    // 1. 挂载popupView（内部完成blankView创建与挂载、frame设置、tapBlankComplete存储，无动画）
+    BOOL canAdd = [self cj_mountInCenterWindowWithSize:popupViewSize
+                                                 blankView:blankView
+                                          tapBlankComplete:tapBlankViewCompleteBlock];
+    if (!canAdd) {  // 挂载失败
+        return;
+    }
+    
+    self.cjPopupCenterAnimationType = animationType;
+    
+    // 2. 显示（动画）
+    [self cj_showAnimateInCenterWindow:showPopupViewCompleteBlock];
+}
+
+#pragma mark - 挂载popupView（无动画）
+/** 完整的描述请参见文件头部 */
+- (BOOL)cj_mountInCenterWindowWithSize:(CGSize)popupViewSize
+                                 blankView:(nullable UIView *)blankView
+                          tapBlankComplete:(void(^)(void))tapBlankViewCompleteBlock
+{
+    CJPopupMainThreadAssert();
+    
     // 弹出在window的中间或底部的不能没有 blankBG 视图，所以强制创建默认遮罩来保证后续能创建出 blankBG 视图
     if (blankView == nil) {
         blankView = [UIView cj_defaultBlankView];
@@ -60,31 +82,39 @@
     frame.size.height = popupViewSize.height;
     popupView.frame = frame;
     
+    // 1. 挂载 popupView 进 keyWindow（本次所使用的blankView存储在self.cjTapView）
     BOOL canAdd = [self letkeyWindowAddPopupView:popupView blankView:blankView];
-    if (!canAdd) {
+    if (!canAdd) {  // 挂载失败
+        return NO;
+    }
+    
+    self.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
+    
+    // 2. 设置 popupView 的最终显示位置（无动画，直接落位）
+    CGRect popupShowFrame = [CJExpandCalculator showFrameFromCenter:popupSuperview.center size:popupViewSize];
+    popupView.frame = popupShowFrame;
+    
+    return YES;
+}
+
+#pragma mark - 显示（动画）
+/** 显示popupView（动画，blankView通过self属性获取，showComplete由外部传入） */
+- (void)cj_showAnimateInCenterWindow:(void(^)(void))showPopupViewCompleteBlock {
+    CJCenterWindowAnimationType animationType = self.cjPopupCenterAnimationType;
+    
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    
+    if (animationType == CJCenterWindowAnimationTypeNone) {
+        !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
         return;
     }
     
-    
-    self.cjPopupCenterAnimationType = animationType;
-    self.cjShowPopupViewCompleteBlock = showPopupViewCompleteBlock;
-    self.cjTapBlankViewCompleteBlock = tapBlankViewCompleteBlock;
-
-    CGRect popupShowFrame = [CJExpandCalculator showFrameFromCenter:popupSuperview.center size:popupViewSize];
-
-    if (animationType == CJCenterWindowAnimationTypeNone) {
-        popupView.frame = popupShowFrame;
-        !showPopupViewCompleteBlock ?: showPopupViewCompleteBlock();
-
-    } else if (animationType == CJCenterWindowAnimationTypeSlideToCenter
-               || animationType == CJCenterWindowAnimationType3DSlideToCenter) {
+    if (animationType == CJCenterWindowAnimationTypeSlideToCenter
+        || animationType == CJCenterWindowAnimationType3DSlideToCenter) {
         // 平移的情况下，初始就得设置好可能存在的 blankView 的显示1.0，及popupView的showFrame
-        UIView *blankView = self.cjTapView;
-        blankView.alpha = 1.0;
+        self.cjTapView.alpha = 1.0;
         
-        popupView.frame = popupShowFrame;
-        
-        popupView.alpha = 0.0;
+        self.alpha = 0.0;
         if (animationType == CJCenterWindowAnimationTypeSlideToCenter) {
             [UIView cj_showSlideAnimateBindView:self
                                withShowDirection:CJSlideFromDirectionBottom
@@ -104,7 +134,7 @@
 
     } else if (animationType == CJCenterWindowAnimationTypeExpandToCenter) {
         [UIView cj_showExpandAnimateBindView:self
-                              withShowFrame:popupShowFrame
+                              withShowFrame:self.frame
                                   direction:CJExpandToDirectionCenter
                                   blankView:self.cjTapView
                                  completion:showPopupViewCompleteBlock];
