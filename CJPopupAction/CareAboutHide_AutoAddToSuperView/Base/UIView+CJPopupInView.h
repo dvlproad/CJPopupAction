@@ -34,7 +34,7 @@ typedef void(^CJTapBlankViewCompleteBlock)(void);
 }
 @property (nonatomic, strong) UIView *cjShowInView; /**< 弹出视图被add到的view */
 @property (nonatomic, assign, getter=isCJPopupViewShowing) BOOL cjPopupViewShowing;   /**< 判断当前是否有弹出视图显示 */
-@property (nonatomic, strong) UIView *cjTapView;    /**< 空白区域（指radioButtons组合下的点击区域（不包括radioButtons区域），用来点击之后隐藏列表） */
+@property (nonatomic, strong, nullable) UIView *cjTapView;   /**< popupView关联的空白遮罩视图（即blankView，nil表示无遮罩），hide时据此找到遮罩 */
 
 @property (nonatomic, copy) void(^cjTapBlankViewCompleteBlock)(void);   /**< 点击空白区域执行的操作 */
 @property (nonatomic, copy) void(^cjShowPopupViewCompleteBlock)(void);  /**< 显示弹出视图后的操作 */
@@ -43,9 +43,9 @@ typedef void(^CJTapBlankViewCompleteBlock)(void);
  *  将popupView添加进keyWindow中(会默认添加进blankView及对popupView做一些默认设置)
  *
  *  @param popupView                要被添加的视图
- *  @param blankView                空白遮罩视图（nil则不添加遮罩，frame由内部自动设置）
+ *  @param blankView                空白遮罩视图（nil则不添加遮罩，frame由内部自动设置为window大小）
  *
- *  @return 是否可以被添加成功
+ *  @return 是否挂载成功（挂载成功后，本次所使用的blankView可通过self.cjTapView获取）
  */
 - (BOOL)letkeyWindowAddPopupView:(UIView *)popupView
                        blankView:(nullable UIView *)blankView;
@@ -57,7 +57,7 @@ typedef void(^CJTapBlankViewCompleteBlock)(void);
  *  @param popupView                要被添加的视图
  *  @param blankView                空白遮罩视图（nil则不添加遮罩，frame由内部自动设置为popupSuperview.bounds）
  *
- *  @return 是否可以被添加成功
+ *  @return 是否挂载成功（挂载成功后，本次所使用的blankView可通过self.cjTapView获取）
  */
 - (BOOL)letPopupSuperview:(UIView *)popupSuperview
              addPopupView:(UIView *)popupView

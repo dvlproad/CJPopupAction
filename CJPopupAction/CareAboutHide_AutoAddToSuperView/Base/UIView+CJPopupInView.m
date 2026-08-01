@@ -134,9 +134,6 @@ static NSString *cjTapBlankViewCompleteBlockKey = @"cjTapBlankViewCompleteBlock"
         /* 添加点击手势 */
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cj_TapBlankViewAction:)];
         [blankView addGestureRecognizer:tapGesture];
-        
-        /* 存储blankView */
-        self.cjTapView = blankView;
     }
     
     
@@ -150,6 +147,9 @@ static NSString *cjTapBlankViewCompleteBlockKey = @"cjTapBlankViewCompleteBlock"
     
     self.cjShowInView = popupSuperview;
     self.cjPopupViewShowing = YES;
+    
+    /* 存储blankView（无遮罩时存nil，避免沿用上次残留的遮罩） */
+    self.cjTapView = blankView;
     
     return YES;
 }
