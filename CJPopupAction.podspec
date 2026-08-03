@@ -28,12 +28,11 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CJPopupAction"
-  s.version      = "1.7.0"
-  s.summary      = "UIView的类别，用来实现UIView弹出popupView的一个UIView的类别"
+  s.version      = "1.8.0"
+  s.summary      = "UIView的类别，用来实现UIView弹出popupView的一个UIView的类别(1.8.0开始将 CJPopupAction/Toast/UIView+CJToastAnimation 移入 CJToastPresenter）"
 
   s.description  = <<-DESC
                      UIView的类别，用来实现UIView弹出popupView的一个UIView的类别。支持多种弹出方式：从上方弹出、从下方弹出、从中间弹出等。，可按需独立引入：
-                     • CJPopupAction/Toast - 关心隐藏且视图自动添加进superView，但没有blankView的简单显示动画（UIView+CJToastAnimation），与CareAboutHide_AutoAddToSuperView区别：Toast无遮罩、无blankView，仅做简单居中显示+延迟隐藏
                      • CJPopupAction/CareAboutHide_AutoAddToSuperView - 关心隐藏且视图自动添加进superView的动画：内部有封装以简化hide的动画（UIView+CJBottomInWindow \ UIView+CJCenterInWindow \ UIView+CJExpandByPoint \ UIView+CJExpandForView)
                      
                      • CJPopupAction/ShowExtendView - 由视图本身(非弹出视图，如按钮本身)调用直接展开一个弹出视图的方法
@@ -93,7 +92,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupAction.git", :tag => "CJPopupAction_1.7.0" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupAction.git", :tag => "CJPopupAction_1.8.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -104,11 +103,6 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
   
-  # 关心隐藏且视图自动添加进superView，但没有blankView的简单显示动画（UIView+CJToastAnimation），与CareAboutHide_AutoAddToSuperView区别：Toast无遮罩、无blankView，仅做简单居中显示+延迟隐藏
-  s.subspec 'Toast' do |toast|
-    toast.source_files = "CJPopupAction/Toast/**/*.{h,m}"
-  end
-
   # 关心隐藏且视图自动添加进superView的动画：内部有封装以简化hide的动画（UIView+CJBottomInWindow \ UIView+CJCenterInWindow \ UIView+CJExpandByPoint \ UIView+CJExpandForView）
   s.subspec 'CareAboutHide_AutoAddToSuperView' do |popup|
     popup.source_files = "CJPopupAction/CareAboutHide_AutoAddToSuperView/**/*.{h,m}"

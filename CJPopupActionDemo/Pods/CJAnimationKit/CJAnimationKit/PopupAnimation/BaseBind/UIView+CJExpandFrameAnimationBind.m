@@ -16,7 +16,7 @@
                         withShowFrame:(CGRect)showFrame
                             direction:(CJExpandToDirection)direction
                             blankView:(nullable UIView *)blankView
-                           completion:(void(^)(void))completion {
+                           completion:(nullable void(^)(void))completion {
     animatedView.cjExpandShowFrame = showFrame;
     animatedView.cjExpandDirection = direction;
     animatedView.cjExpandBlankView = blankView;
@@ -29,7 +29,7 @@
 }
 
 + (void)cj_hideExpandAnimateBindView:(UIView *)animatedView
-                           completion:(void(^)(void))completion {
+                           completion:(nullable void(^)(void))completion {
     [UIView cj_expandAnimateView:animatedView
                          forShow:NO
                    withShowFrame:animatedView.cjExpandShowFrame

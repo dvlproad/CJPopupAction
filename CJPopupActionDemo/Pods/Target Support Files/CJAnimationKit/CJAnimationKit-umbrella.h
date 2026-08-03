@@ -18,6 +18,10 @@
 #import "CJExpandCalculateResultModel.h"
 #import "CJExpandCalculator.h"
 #import "CJSlideCalculator.h"
+#import "UIView+CJExpandInterceptor.h"
+#import "UIView+CJInterceptorChain.h"
+#import "UIView+CJSlide3DInterceptor.h"
+#import "UIView+CJSlideInterceptor.h"
 
 FOUNDATION_EXPORT double CJAnimationKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char CJAnimationKitVersionString[];

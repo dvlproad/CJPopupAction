@@ -7,10 +7,7 @@
 //
 
 #import "UIView+CJSlideTransformAnimation.h"
-#import <objc/runtime.h>
-
-static NSMutableArray<CJSlideInterceptor> *_globalSlideInterceptors = nil;
-static NSMutableArray<CJSlide3DInterceptor> *_globalSlide3DInterceptors = nil;
+#import "UIView+CJInterceptorChain.h"
 
 @implementation UIView (CJSlideTransformAnimation)
 
@@ -22,7 +19,7 @@ static NSMutableArray<CJSlide3DInterceptor> *_globalSlide3DInterceptors = nil;
                   completion:(void (^ __nullable)(BOOL finished))completion
 {
     NSArray<CJSlideInterceptor> *instanceInterceptors = animatedView.slideInterceptors;
-    NSArray<CJSlideInterceptor> *globalInterceptors = _globalSlideInterceptors ?: @[];
+    NSArray<CJSlideInterceptor> *globalInterceptors = [UIView cj_slideGlobalInterceptors];
     
     NSMutableArray<CJSlideInterceptor> *allInterceptors = [NSMutableArray array];
     if (instanceInterceptors.count > 0) {
@@ -41,25 +38,21 @@ static NSMutableArray<CJSlide3DInterceptor> *_globalSlide3DInterceptors = nil;
         return;
     }
     
-    void(^chain)(NSInteger index) = nil;
+    // 构建拦截器链
+    NSMutableArray *chainInterceptors = [NSMutableArray arrayWithCapacity:allInterceptors.count];
+    for (CJSlideInterceptor interceptor in allInterceptors) {
+        [chainInterceptors addObject:^(void(^next)(void)) {
+            interceptor(animatedView, forShow, showFromDirection, animateOffset, next);
+        }];
+    }
     
-    chain = ^(NSInteger index) {
-        if (index >= allInterceptors.count) {
-            [self cj_slideAnimateView_default:animatedView
-                                      forShow:forShow
-                            withShowDirection:showFromDirection
-                                animateOffset:animateOffset
-                                   completion:completion];
-            return;
-        }
-        
-        CJSlideInterceptor interceptor = allInterceptors[index];
-        interceptor(animatedView, forShow, showFromDirection, animateOffset, ^{
-            chain(index + 1);
-        });
-    };
-    
-    chain(0);
+    [UIView cj_runInterceptorChain:chainInterceptors withDefaultBlock:^{
+        [self cj_slideAnimateView_default:animatedView
+                                  forShow:forShow
+                        withShowDirection:showFromDirection
+                            animateOffset:animateOffset
+                               completion:completion];
+    }];
 }
 
 + (void)cj_slideAnimateView_default:(UIView *)animatedView
@@ -98,7 +91,7 @@ static NSMutableArray<CJSlide3DInterceptor> *_globalSlide3DInterceptors = nil;
                     completion:(void (^ __nullable)(BOOL finished))completion
 {
     NSArray<CJSlide3DInterceptor> *instanceInterceptors = animatedView.slide3DInterceptors;
-    NSArray<CJSlide3DInterceptor> *globalInterceptors = _globalSlide3DInterceptors ?: @[];
+    NSArray<CJSlide3DInterceptor> *globalInterceptors = [UIView cj_slide3DGlobalInterceptors];
     
     NSMutableArray<CJSlide3DInterceptor> *allInterceptors = [NSMutableArray array];
     if (instanceInterceptors.count > 0) {
@@ -118,26 +111,22 @@ static NSMutableArray<CJSlide3DInterceptor> *_globalSlide3DInterceptors = nil;
         return;
     }
     
-    void(^chain)(NSInteger index) = nil;
+    // 构建拦截器链
+    NSMutableArray *chainInterceptors = [NSMutableArray arrayWithCapacity:allInterceptors.count];
+    for (CJSlide3DInterceptor interceptor in allInterceptors) {
+        [chainInterceptors addObject:^(void(^next)(void)) {
+            interceptor(animatedView, forShow, showFromDirection, animateOffset, rotateAngle, next);
+        }];
+    }
     
-    chain = ^(NSInteger index) {
-        if (index >= allInterceptors.count) {
-            [self cj_slide3DAnimateView_default:animatedView
-                                        forShow:forShow
-                              withShowDirection:showFromDirection
-                                  animateOffset:animateOffset
-                                    rotateAngle:rotateAngle
-                                     completion:completion];
-            return;
-        }
-        
-        CJSlide3DInterceptor interceptor = allInterceptors[index];
-        interceptor(animatedView, forShow, showFromDirection, animateOffset, rotateAngle, ^{
-            chain(index + 1);
-        });
-    };
-    
-    chain(0);
+    [UIView cj_runInterceptorChain:chainInterceptors withDefaultBlock:^{
+        [self cj_slide3DAnimateView_default:animatedView
+                                    forShow:forShow
+                          withShowDirection:showFromDirection
+                              animateOffset:animateOffset
+                                rotateAngle:rotateAngle
+                                 completion:completion];
+    }];
 }
 
 + (void)cj_slide3DAnimateView_default:(UIView *)animatedView
@@ -153,9 +142,9 @@ static NSMutableArray<CJSlide3DInterceptor> *_globalSlide3DInterceptors = nil;
                      showFromDirection == CJSlideFromDirectionTop) ? 1.0 : -1.0;
 
     CATransform3D hideTransform3D = [UIView __updateTransform3DFromDirection:showFromDirection
-                                                            animateOffset:animateOffset
-                                                               rotateAngle:rotateAngle
-                                                                    zAxis:zAxis];
+                                                             animateOffset:animateOffset
+                                                                rotateAngle:rotateAngle
+                                                                     zAxis:zAxis];
 
     if (forShow) {
         animatedView.layer.transform = hideTransform3D;
@@ -214,94 +203,6 @@ static NSMutableArray<CJSlide3DInterceptor> *_globalSlide3DInterceptors = nil;
     CATransform3D rotate = CATransform3DMakeRotation(rotateAngle, 0.0, 0.0, zAxis);
 
     return CATransform3DConcat(rotate, translate);
-}
-
-@end
-
-#pragma mark - 全局拦截器
-@implementation UIView (CJSlideTransformGlobalInterceptor)
-
-+ (void)addSlideInterceptor:(CJSlideInterceptor)interceptor {
-    if (!_globalSlideInterceptors) {
-        _globalSlideInterceptors = [NSMutableArray array];
-    }
-    [_globalSlideInterceptors addObject:[interceptor copy]];
-}
-
-+ (void)removeSlideInterceptor:(CJSlideInterceptor)interceptor {
-    [_globalSlideInterceptors removeObject:interceptor];
-}
-
-+ (void)removeAllSlideInterceptors {
-    [_globalSlideInterceptors removeAllObjects];
-}
-
-+ (void)addSlide3DInterceptor:(CJSlide3DInterceptor)interceptor {
-    if (!_globalSlide3DInterceptors) {
-        _globalSlide3DInterceptors = [NSMutableArray array];
-    }
-    [_globalSlide3DInterceptors addObject:[interceptor copy]];
-}
-
-+ (void)removeSlide3DInterceptor:(CJSlide3DInterceptor)interceptor {
-    [_globalSlide3DInterceptors removeObject:interceptor];
-}
-
-+ (void)removeAllSlide3DInterceptors {
-    [_globalSlide3DInterceptors removeAllObjects];
-}
-
-@end
-
-#pragma mark - 实例拦截器
-@implementation UIView (CJSlideTransformInstanceInterceptor)
-
-- (NSArray<CJSlideInterceptor> *)slideInterceptors {
-    return objc_getAssociatedObject(self, @selector(slideInterceptors));
-}
-
-- (void)setSlideInterceptors:(NSArray<CJSlideInterceptor> *)slideInterceptors {
-    objc_setAssociatedObject(self, @selector(slideInterceptors), slideInterceptors, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (NSArray<CJSlide3DInterceptor> *)slide3DInterceptors {
-    return objc_getAssociatedObject(self, @selector(slide3DInterceptors));
-}
-
-- (void)setSlide3DInterceptors:(NSArray<CJSlide3DInterceptor> *)slide3DInterceptors {
-    objc_setAssociatedObject(self, @selector(slide3DInterceptors), slide3DInterceptors, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (void)addInstanceSlideInterceptor:(CJSlideInterceptor)interceptor {
-    NSMutableArray *interceptors = [NSMutableArray arrayWithArray:self.slideInterceptors ?: @[]];
-    [interceptors addObject:[interceptor copy]];
-    self.slideInterceptors = interceptors;
-}
-
-- (void)removeInstanceSlideInterceptor:(CJSlideInterceptor)interceptor {
-    NSMutableArray *interceptors = [NSMutableArray arrayWithArray:self.slideInterceptors ?: @[]];
-    [interceptors removeObject:interceptor];
-    self.slideInterceptors = interceptors;
-}
-
-- (void)removeAllInstanceSlideInterceptors {
-    self.slideInterceptors = @[];
-}
-
-- (void)addInstanceSlide3DInterceptor:(CJSlide3DInterceptor)interceptor {
-    NSMutableArray *interceptors = [NSMutableArray arrayWithArray:self.slide3DInterceptors ?: @[]];
-    [interceptors addObject:[interceptor copy]];
-    self.slide3DInterceptors = interceptors;
-}
-
-- (void)removeInstanceSlide3DInterceptor:(CJSlide3DInterceptor)interceptor {
-    NSMutableArray *interceptors = [NSMutableArray arrayWithArray:self.slide3DInterceptors ?: @[]];
-    [interceptors removeObject:interceptor];
-    self.slide3DInterceptors = interceptors;
-}
-
-- (void)removeAllInstanceSlide3DInterceptors {
-    self.slide3DInterceptors = @[];
 }
 
 @end

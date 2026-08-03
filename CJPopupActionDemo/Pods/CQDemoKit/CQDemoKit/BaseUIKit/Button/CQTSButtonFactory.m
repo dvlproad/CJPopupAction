@@ -178,6 +178,8 @@
                        clickHandle:(void(^)(UIButton *button))clickHandle
 {
     UIButton *radioButton = [self themeNormalSelectedButtonWithNormalTitle:title selectedTitle:title];
+    radioButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+    radioButton.titleLabel.minimumScaleFactor = 0.5;    // 避免有时候显示不下
     radioButton.cqtsTouchUpInsideBlock = ^(UIButton *bButton) {
         !clickHandle ?: clickHandle(bButton);
     };

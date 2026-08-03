@@ -32,14 +32,6 @@ import TSDemo_Popup
 
         do {
             let model = CQDMTabBarModel()
-            model.title = NSLocalizedString("Toast", comment: "")
-            model.normalImage = UIImage.cqresource_imageNamed("icons8-folder")
-            model.classEntry = NSClassFromString("TSToastHomeViewController")
-            tabBarModels.append(model)
-        }
-        
-        do {
-            let model = CQDMTabBarModel()
             model.title = NSLocalizedString("Window", comment: "")
             model.normalImage = UIImage.cqresource_imageNamed("icons8-folder")
             model.classEntry = NSClassFromString("TSWindowAnimationHomeViewController")

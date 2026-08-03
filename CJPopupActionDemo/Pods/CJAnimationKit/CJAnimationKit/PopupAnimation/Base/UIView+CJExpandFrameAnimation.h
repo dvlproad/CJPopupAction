@@ -8,7 +8,7 @@
 //  展开动画：不一定需要blankView
 
 #import <UIKit/UIKit.h>
-#import "CJExpandCalculator.h"   // 需要 CJExpandToDirection
+#import "UIView+CJExpandInterceptor.h"   // 需要 CJExpandToDirection、CJExpandInterceptor
 
 static CGFloat kCJPopupAnimationDuration = 0.3;
 
@@ -19,11 +19,6 @@ typedef void(^CJExpandAnimateBlock)(UIView *animatedView, BOOL forShow,
                                     UIView * _Nullable blankView,
                                     void(^ _Nullable completion)(void));
 
-typedef void(^CJExpandInterceptor)(UIView *animatedView, BOOL forShow,
-                                    CGRect showFrame, CJExpandToDirection direction,
-                                    UIView * _Nullable blankView,
-                                    void(^next)(void));
-
 #pragma mark - 类方法
 @interface UIView (CJExpandFrameAnimation)
 
@@ -32,27 +27,7 @@ typedef void(^CJExpandInterceptor)(UIView *animatedView, BOOL forShow,
                 withShowFrame:(CGRect)popupViewShowFrame
                     direction:(CJExpandToDirection)direction
                     blankView:(nullable UIView *)blankView
-                   completion:(void(^)(void))completion;
-
-@end
-
-#pragma mark - 全局拦截器（类级别）
-@interface UIView (CJExpandFrameGlobalInterceptor)
-
-+ (void)addExpandInterceptor:(CJExpandInterceptor)interceptor;
-+ (void)removeExpandInterceptor:(CJExpandInterceptor)interceptor;
-+ (void)removeAllExpandInterceptors;
-
-@end
-
-#pragma mark - 实例拦截器（per-view）
-@interface UIView (CJExpandFrameInstanceInterceptor)
-
-@property (nonatomic, copy, nullable) NSArray<CJExpandInterceptor> *expandInterceptors;
-
-- (void)addInstanceExpandInterceptor:(CJExpandInterceptor)interceptor;
-- (void)removeInstanceExpandInterceptor:(CJExpandInterceptor)interceptor;
-- (void)removeAllInstanceExpandInterceptors;
+                   completion:(nullable void(^)(void))completion;
 
 @end
 

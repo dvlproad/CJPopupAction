@@ -18,9 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
                         withShowFrame:(CGRect)showFrame
                             direction:(CJExpandToDirection)direction
                             blankView:(nullable UIView *)blankView
-                           completion:(void(^)(void))completion;
+                           completion:(nullable void(^)(void))completion;
 + (void)cj_hideExpandAnimateBindView:(UIView *)animatedView
-                           completion:(void(^)(void))completion;
+                           completion:(nullable void(^)(void))completion;
 
 @end
 
