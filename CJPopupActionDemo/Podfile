@@ -31,7 +31,7 @@ target 'CJPopupActionDemo' do
   pod 'CQDemoKit',    :subspecs => ['BaseVC']
   pod 'CJBaseUIKit',        '~> 0.8.1',   :subspecs => ['UIScrollView/CJKeyboardAvoiding']
   
-  pod 'CJAnimationKit',     '~> 0.0.4',   :subspecs => ['PopupAnimation']
+  pod 'CJAnimationKit',     '~> 0.0.6',   :subspecs => ['PopupAnimation']
   
   pod 'CJPopupAction',      :path => '../'
   pod 'TSDemo_Popup',       :path => '../'

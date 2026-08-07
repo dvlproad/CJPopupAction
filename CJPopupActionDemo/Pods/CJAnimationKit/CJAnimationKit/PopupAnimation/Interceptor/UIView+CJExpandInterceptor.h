@@ -8,13 +8,16 @@
 //  展开动画拦截器：全局拦截器(类级别) + 实例拦截器(per-view)
 
 #import <UIKit/UIKit.h>
-#import "CJExpandCalculator.h"   // 需要 CJExpandToDirection
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 展开动画的"状态设置"block：把 animatedView 设置成显示/隐藏状态（通常通过修改约束实现）
+/// @param animatedView 动画视图
+/// @param forShow 是否为目标显示状态（YES=显示，NO=隐藏）
+typedef void(^CJExpandAnimateBlock)(UIView *animatedView, BOOL forShow);
+
 typedef void(^CJExpandInterceptor)(UIView *animatedView, BOOL forShow,
-                                   CGRect showFrame, CJExpandToDirection direction,
-                                   UIView * _Nullable blankView,
+                                   CJExpandAnimateBlock animateBlock,
                                    void(^ _Nullable next)(void));
 
 #pragma mark - 全局拦截器（类级别）

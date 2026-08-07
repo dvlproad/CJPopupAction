@@ -30,7 +30,7 @@ NSString *cqtsRandomName(NSInteger minLength, NSInteger maxLength) {
 #pragma mark - OC方法
 /// 获取随机的颜色
 + (UIColor *)randomColorWithAlpha:(CGFloat)alpha {
-    return [UIColor colorWithRed:arc4random()%255/256.0f green:arc4random()%255/256.0f blue:arc4random()%255/256.0f alpha:1.0f];
+    return [UIColor colorWithRed:arc4random()%255/256.0f green:arc4random()%255/256.0f blue:arc4random()%255/256.0f alpha:alpha];
 }
 
 /*

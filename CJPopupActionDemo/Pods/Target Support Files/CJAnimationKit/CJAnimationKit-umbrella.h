@@ -10,9 +10,9 @@
 #endif
 #endif
 
-#import "UIView+CJExpandFrameAnimation.h"
+#import "UIView+CJExpandRectAnimation.h"
 #import "UIView+CJSlideTransformAnimation.h"
-#import "UIView+CJExpandFrameAnimationBind.h"
+#import "UIView+CJExpandRectAnimationBind.h"
 #import "UIView+CJSlideTransformAnimationBind.h"
 #import "UIView+CJSlideConvenience.h"
 #import "CJExpandCalculateResultModel.h"

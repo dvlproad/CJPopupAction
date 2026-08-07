@@ -11,7 +11,7 @@
 #import "UIView+CJBlankView.h"
 #import "UIView+CJPopupInView.h"
 #import "UIView+CJSlideTransformAnimationBind.h"
-#import "UIView+CJExpandFrameAnimationBind.h"
+#import "UIView+CJExpandRectAnimationBind.h"
 #import "CJExpandCalculator.h"
 
 @interface UIView ()

@@ -20,7 +20,7 @@
 //     向四周展开：居中弹窗、确认对话框（从中心点向四周"长"出）
 
 #import <UIKit/UIKit.h>
-#import <CJAnimationKit/UIView+CJExpandFrameAnimation.h>
+#import <CJAnimationKit/UIView+CJExpandRectAnimation.h>
 #import <CJAnimationKit/UIView+CJSlideTransformAnimation.h>
 
 NS_ASSUME_NONNULL_BEGIN

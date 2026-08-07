@@ -1,83 +1,84 @@
 PODS:
-  - CJAnimationKit/PopupAnimation (0.0.5):
-    - CJAnimationKit/PopupAnimation/Base (= 0.0.5)
-    - CJAnimationKit/PopupAnimation/BaseBind (= 0.0.5)
-    - CJAnimationKit/PopupAnimation/BaseConvenience (= 0.0.5)
-    - CJAnimationKit/PopupAnimation/Core (= 0.0.5)
-    - CJAnimationKit/PopupAnimation/Interceptor (= 0.0.5)
-  - CJAnimationKit/PopupAnimation/Base (0.0.5):
+  - CJAnimationKit/PopupAnimation (0.0.6):
+    - CJAnimationKit/PopupAnimation/Base (= 0.0.6)
+    - CJAnimationKit/PopupAnimation/BaseBind (= 0.0.6)
+    - CJAnimationKit/PopupAnimation/BaseConvenience (= 0.0.6)
+    - CJAnimationKit/PopupAnimation/Core (= 0.0.6)
+    - CJAnimationKit/PopupAnimation/Interceptor (= 0.0.6)
+  - CJAnimationKit/PopupAnimation/Base (0.0.6):
     - CJAnimationKit/PopupAnimation/Interceptor
-  - CJAnimationKit/PopupAnimation/BaseBind (0.0.5):
+  - CJAnimationKit/PopupAnimation/BaseBind (0.0.6):
     - CJAnimationKit/PopupAnimation/Base
-  - CJAnimationKit/PopupAnimation/BaseConvenience (0.0.5):
+  - CJAnimationKit/PopupAnimation/BaseConvenience (0.0.6):
     - CJAnimationKit/PopupAnimation/BaseBind
-  - CJAnimationKit/PopupAnimation/Core (0.0.5)
-  - CJAnimationKit/PopupAnimation/Interceptor (0.0.5):
+  - CJAnimationKit/PopupAnimation/Core (0.0.6)
+  - CJAnimationKit/PopupAnimation/Interceptor (0.0.6):
     - CJAnimationKit/PopupAnimation/Core
   - CJBaseUIKit/UIScrollView/CJKeyboardAvoiding (0.8.1)
-  - CJPopupAction (1.8.0):
-    - CJPopupAction/CareAboutHide_AutoAddToSuperView (= 1.8.0)
-    - CJPopupAction/ShowExtendView (= 1.8.0)
-  - CJPopupAction/CareAboutHide_AutoAddToSuperView (1.8.0):
+  - CJPopupAction (1.8.1):
+    - CJPopupAction/CareAboutHide_AutoAddToSuperView (= 1.8.1)
+    - CJPopupAction/ShowExtendView (= 1.8.1)
+  - CJPopupAction/CareAboutHide_AutoAddToSuperView (1.8.1):
     - CJAnimationKit/PopupAnimation/BaseBind
-  - CJPopupAction/ShowExtendView (1.8.0):
+  - CJPopupAction/ShowExtendView (1.8.1):
     - CJAnimationKit/PopupAnimation/BaseConvenience
     - CJPopupAction/CareAboutHide_AutoAddToSuperView
-  - CQDemoKit/BaseUIKit (0.9.15):
-    - CQDemoKit/BaseUIKit/Button (= 0.9.15)
-    - CQDemoKit/BaseUIKit/Container (= 0.9.15)
-    - CQDemoKit/BaseUIKit/ImageLoader (= 0.9.15)
-    - CQDemoKit/BaseUIKit/Segment (= 0.9.15)
-    - CQDemoKit/BaseUIKit/Switch (= 0.9.15)
-  - CQDemoKit/BaseUIKit/Button (0.9.15):
+  - CQDemoKit/BaseUIKit (0.9.17):
+    - CQDemoKit/BaseUIKit/Button (= 0.9.17)
+    - CQDemoKit/BaseUIKit/Container (= 0.9.17)
+    - CQDemoKit/BaseUIKit/ImageLoader (= 0.9.17)
+    - CQDemoKit/BaseUIKit/Segment (= 0.9.17)
+    - CQDemoKit/BaseUIKit/Switch (= 0.9.17)
+  - CQDemoKit/BaseUIKit/Button (0.9.17):
     - Masonry
-  - CQDemoKit/BaseUIKit/Container (0.9.15):
+  - CQDemoKit/BaseUIKit/Container (0.9.17):
     - Masonry
-  - CQDemoKit/BaseUIKit/ImageLoader (0.9.15)
-  - CQDemoKit/BaseUIKit/Segment (0.9.15):
+  - CQDemoKit/BaseUIKit/ImageLoader (0.9.17)
+  - CQDemoKit/BaseUIKit/Segment (0.9.17):
     - Masonry
-  - CQDemoKit/BaseUIKit/Switch (0.9.15):
+  - CQDemoKit/BaseUIKit/Switch (0.9.17):
     - Masonry
-  - CQDemoKit/BaseUtil (0.9.15)
-  - CQDemoKit/BaseVC (0.9.15):
-    - CQDemoKit/BaseVC/Base (= 0.9.15)
-    - CQDemoKit/BaseVC/Collection (= 0.9.15)
-    - CQDemoKit/BaseVC/ScrollView (= 0.9.15)
-    - CQDemoKit/BaseVC/TabBar (= 0.9.15)
-    - CQDemoKit/BaseVC/TableView (= 0.9.15)
-  - CQDemoKit/BaseVC/Base (0.9.15):
+  - CQDemoKit/BaseUtil (0.9.17):
+    - Masonry
+  - CQDemoKit/BaseVC (0.9.17):
+    - CQDemoKit/BaseVC/Base (= 0.9.17)
+    - CQDemoKit/BaseVC/Collection (= 0.9.17)
+    - CQDemoKit/BaseVC/ScrollView (= 0.9.17)
+    - CQDemoKit/BaseVC/TabBar (= 0.9.17)
+    - CQDemoKit/BaseVC/TableView (= 0.9.17)
+  - CQDemoKit/BaseVC/Base (0.9.17):
     - CQDemoKit/BaseUIKit
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.9.15):
+  - CQDemoKit/BaseVC/Collection (0.9.17):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/ScrollView (0.9.15):
+  - CQDemoKit/BaseVC/ScrollView (0.9.17):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TabBar (0.9.15):
+  - CQDemoKit/BaseVC/TabBar (0.9.17):
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TableView (0.9.15):
+  - CQDemoKit/BaseVC/TableView (0.9.17):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/Demo_Resource (0.9.15):
-    - CQDemoKit/Demo_Resource/GitUtil (= 0.9.15)
-    - CQDemoKit/Demo_Resource/ImageModel (= 0.9.15)
-    - CQDemoKit/Demo_Resource/InFramework (= 0.9.15)
-    - CQDemoKit/Demo_Resource/RandomUtil (= 0.9.15)
-    - CQDemoKit/Demo_Resource/ResourceInfoUtil (= 0.9.15)
-    - CQDemoKit/Demo_Resource/SandboxFileUtil (= 0.9.15)
-    - CQDemoKit/Demo_Resource/SandboxPathUtil (= 0.9.15)
-    - CQDemoKit/Demo_Resource/SandboxPhotoUtil (= 0.9.15)
-  - CQDemoKit/Demo_Resource/GitUtil (0.9.15)
-  - CQDemoKit/Demo_Resource/ImageModel (0.9.15)
-  - CQDemoKit/Demo_Resource/InFramework (0.9.15)
-  - CQDemoKit/Demo_Resource/RandomUtil (0.9.15)
-  - CQDemoKit/Demo_Resource/ResourceInfoUtil (0.9.15)
-  - CQDemoKit/Demo_Resource/SandboxFileUtil (0.9.15):
+  - CQDemoKit/Demo_Resource (0.9.17):
+    - CQDemoKit/Demo_Resource/GitUtil (= 0.9.17)
+    - CQDemoKit/Demo_Resource/ImageModel (= 0.9.17)
+    - CQDemoKit/Demo_Resource/InFramework (= 0.9.17)
+    - CQDemoKit/Demo_Resource/RandomUtil (= 0.9.17)
+    - CQDemoKit/Demo_Resource/ResourceInfoUtil (= 0.9.17)
+    - CQDemoKit/Demo_Resource/SandboxFileUtil (= 0.9.17)
+    - CQDemoKit/Demo_Resource/SandboxPathUtil (= 0.9.17)
+    - CQDemoKit/Demo_Resource/SandboxPhotoUtil (= 0.9.17)
+  - CQDemoKit/Demo_Resource/GitUtil (0.9.17)
+  - CQDemoKit/Demo_Resource/ImageModel (0.9.17)
+  - CQDemoKit/Demo_Resource/InFramework (0.9.17)
+  - CQDemoKit/Demo_Resource/RandomUtil (0.9.17)
+  - CQDemoKit/Demo_Resource/ResourceInfoUtil (0.9.17)
+  - CQDemoKit/Demo_Resource/SandboxFileUtil (0.9.17):
     - CQDemoKit/Demo_Resource/SandboxPathUtil
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_Resource/SandboxPathUtil (0.9.15):
+  - CQDemoKit/Demo_Resource/SandboxPathUtil (0.9.17):
     - CQDemoKit/Demo_Resource/ResourceInfoUtil
-  - CQDemoKit/Demo_Resource/SandboxPhotoUtil (0.9.15):
+  - CQDemoKit/Demo_Resource/SandboxPhotoUtil (0.9.17):
     - CQDemoKit/Demo_Resource/ResourceInfoUtil
-  - CQDemoKit/Helper (0.9.15)
+  - CQDemoKit/Helper (0.9.17)
   - CQDemoResource/Core (0.3.2):
     - CQDemoKit/Demo_Resource
   - CQDemoResource/Images (0.3.2):
@@ -94,7 +95,7 @@ PODS:
     - TSDemo_Popup
 
 DEPENDENCIES:
-  - CJAnimationKit/PopupAnimation (~> 0.0.4)
+  - CJAnimationKit/PopupAnimation (~> 0.0.6)
   - CJBaseUIKit/UIScrollView/CJKeyboardAvoiding (~> 0.8.1)
   - CJPopupAction (from `../`)
   - CQDemoKit/BaseVC
@@ -118,15 +119,15 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CJAnimationKit: f08816a998ad95db9206ac3727dc8d59d896ff12
+  CJAnimationKit: eeee22052f99c09ae0521a7a2d056f9875fb5868
   CJBaseUIKit: 1445f55a4c9f942351fcd1964694f32196472837
-  CJPopupAction: c34bd5d079294b0721584b43bf9ca52d46abc44d
-  CQDemoKit: 174e2a414589bc4f1d860a7d94c633d312174ca0
+  CJPopupAction: 8b96420b57bfa2a498d98c56200fc2e368ab2d94
+  CQDemoKit: 984c61284e80742f1284ab4c9ad8fbe487789680
   CQDemoResource: efdf1a0231767f665f5e6e0df59ed8a5042680f7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   TSDemo_Popup: ebfa6eca02bc4f055501a36761e3a491363fafc9
   TSDemo_Popup-Swift: 5f5e532e84c945a0b42954a25642456c0ae69923
 
-PODFILE CHECKSUM: f24caadcd6d4ba2322a05130708b7bcbb54fba81
+PODFILE CHECKSUM: 8b8b070f79be961f5edb91c8ae0762ca5a65e7c2
 
 COCOAPODS: 1.16.2

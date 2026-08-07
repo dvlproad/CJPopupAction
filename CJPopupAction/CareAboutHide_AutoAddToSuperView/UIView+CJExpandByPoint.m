@@ -8,7 +8,7 @@
 
 #import "UIView+CJExpandByPoint.h"
 #import "UIView+CJPopupInView.h"
-#import "UIView+CJExpandFrameAnimationBind.h"
+#import "UIView+CJExpandRectAnimationBind.h"
 #import "UIView+CJSlideTransformAnimation.h"
 #import "CJExpandCalculator.h"
 
